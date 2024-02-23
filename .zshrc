@@ -1,10 +1,232 @@
 ## 2024 Februar
+theme.sh elementary
+#theme.sh mellow-purple #https://github.com/lemnos/theme.sh
 
-theme.sh mellow-purple #https://github.com/lemnos/theme.sh
+
+###################################
+# 	███╗   ███╗██╗  ██╗██╗  ██╗
+# 	████╗ ████║╚██╗██╔╝╚██╗██╔╝
+# 	██╔████╔██║ ╚███╔╝  ╚███╔╝
+# 	██║╚██╔╝██║ ██╔██╗  ██╔██╗
+# 	██║ ╚═╝ ██║██╔╝ ██╗██╔╝ ██╗
+#  ╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝
+############################### #### ansi shadow                        # 
+# 	┌─┐┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+# 	├┤ │ │││││   │ ││ ││││└─┐
+#   └  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘└─┘
+###################################calvin
+ fpath=($ZDOTDIR $fpath)
+
+fuck () {
+        TF_PYTHONIOENCODING=$PYTHONIOENCODING;
+        export TF_SHELL=zsh;
+   		export TF_ALIAS=fuck;
+  		TF_SHELL_ALIASES=$(alias);
+   		export TF_SHELL_ALIASES;
+    	TF_HISTORY="$(fc -ln -10)";
+        export TF_HISTORY;
+    	export PYTHONIOENCODING=utf-8;
+     	TF_CMD=$(
+         thefuck THEFUCK_ARGUMENT_PLACEHOLDER $@
+   		 ) && eval $TF_CMD;
+         unset TF_HISTORY;
+         export PYTHONIOENCODING=$TF_PYTHONIOENCODING;
+         test -n "$TF_CMD" && print -s $TF_CMD
+      }
+
+
+### ------------------------------ ###
+##      globale 
+##       Suffix-Aliases erweitern
+### ------------------------------ ###
+# realisiert, dass man die globalen Suffix
+# -Aliases erweitern aka sehen kann
+ globalias() {
+			   if [[ $LBUFFER =~ ' [A-Z0-9]+$' ]]; then
+			     zle _expand_alias
+			     zle expand-word
+			   fi
+			   zle self-insert
+ 			}
+	 zle -N globalias
+	 bindkey " " globalias
+ # control-space to bypass completion
+ 	bindkey "^ " magic-space   
+ # normal space during searches       
+ 	bindkey -M isearch " " magic-space 
+
+### ------------------------------ ###
+#        Funktion COPYto .... aliases.maybe  
+# Speichert den letzten Befehl in die Datei #
+# $ZDOTDIR/aliases.maybe und gibt eine Bestätigungsmeldung aus.
+### ------------------------------ ###
+ function COPYtoZ() {
+	 # 'echo $(fc -ln -1)' gibt den letzten Befehl aus.
+	 # 'tee -a $ZDOTDIR/aliases.maybe' fügt den Ausgabetext 
+	 # an die Datei $ZDOTDIR/aliases.maybe an.
+	  echo $(fc -ln -1) | tee -a $ZDOTDIR/aliases.maybe
+	 # Überprüft, ob der letzte Befehl erfolgreich ausgeführt wurde.
+	 if [ $? -eq 0 ]; then
+		   # Wenn der Befehl erfolgreich ausgeführt wurde, gibt diese Funktion eine Bestätigungsmeldung aus.
+		   echo "Befehl $(fc -ln -1) wurde erfolgreich an $ZDOTDIR/aliases.maybe angehängt."
+	 else
+		   # Wenn der Befehl fehlgeschlagen ist, gibt diese Funktion eine Fehlermeldung aus.
+		   echo "Fehler beim Anhängen des Befehls $(fc -ln -1) an $ZDOTDIR/aliases.maybe."
+	 fi
+}
+########################################################
+
+    # ___          ___                     _
+   # / __)        / __)     _             | |
+ # _| |__ _____ _| |__    _| |_ ___   ___ | |  ___
+# (_   __|___  |_   __)  (_   _) _ \ / _ \| | /___)
+  # | |   / __/  | |       | || |_| | |_| | ||___ |
+  # |_|  (_____) |_|        \__)___/ \___/ \_|___/
+                                              # 
+
+function FZFedit()  {
+	fzf --preview 'bat --color=always {}' --preview-window '~6' | xargs -o micro   	}	
+							
+function FZFman()  {
+	# Beschreibung: Durchsucht die Man-Pages nach  
+	# Suchbegriff mithilfe von fzf und zeigt die ausgewählte Man-Page an.
+	man -k . \
+	| fzf -q "$1" --prompt='man> ' --preview $'echo {} | tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' | xargs -r man' \
+	| tr -d '()' \
+	| awk '{printf "%s ", $2} {print $1}' \
+	| xargs -r man  }
+
+function FZFsysctl()  {
+	systemctl --no-legend --type=service --state=running | fzf | awk '{print $1}' | xargs sudo systemctl restart			}
+ function FZFkill()  {
+ # Beschreibung: fuzzy pid killer
+    local pid
+    # Informationen über alle Prozesse des aktuellen Benutzers abzurufen.
+    pid=$(ps aufxc --user $(id -u) \
+        | sed 1d \
+        | fzf -m \
+        | awk '{print $2}')
+        #mit if wird überprüft, ob pid nicht leer ist 
+    if [[ -n "$pid" ]]; then
+    # Wenn das erste Argument ($1) nicht gesetzt ist, verwende 'TERM'
+     kill -${1:-TERM} $pid
+    fi                   }
+
+#--------------------------------------------------------------------------------------------
+# fff 
+	# Add this to your .zshrc or equivalent.
+	# Run 'fff' with 'f' or whatever you decide to name the function.
+	FF() {
+	    fff "$@"
+	    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
+	}
+	# Show/Hide hidden files on open. 1=on
+	export FFF_HIDDEN=1
+	# Use LS_COLORS to color fff. 1= on
+	export FFF_LS_COLORS=1
+
+	export FFF_OPENER="xdg-open"
+	# File Attributes Command
+	export FFF_STAT_CMD="stat"
+	
+	export FFF_FILE_FORMAT="%f"
+	export FFF_MARK_FORMAT=">  %f*"
+	# w3m-img offsets.
+	export FFF_W3M_XOFFSET=0
+	export FFF_W3M_YOFFSET=0
+
+### ------------------------------ ###
+#    * *  S O U R C E plugins   * * ##
+### ------------------------------ ###
+
+# ███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗     
+# ██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝     
+# ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗       
+# ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝       
+# ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗     
+# ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝     
+                                                       
+# ██████╗ ██╗     ██╗   ██╗ ██████╗ ██╗███╗   ██╗███████╗
+# ██╔══██╗██║     ██║   ██║██╔════╝ ██║████╗  ██║██╔════╝
+# ██████╔╝██║     ██║   ██║██║  ███╗██║██╔██╗ ██║███████╗
+# ██╔═══╝ ██║     ██║   ██║██║   ██║██║██║╚██╗██║╚════██║
+# ██║     ███████╗╚██████╔╝╚██████╔╝██║██║ ╚████║███████║
+# ╚═╝     ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝╚══════╝            
+####### https://manytools.org/hacker-tools/ascii-banner/
+fpath=($ZDOTDIR $fpath)
+
+if [ -f "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh" ]; then
+    source "$ZDOTDIR/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh"
+fi
+## zsh plugin for colorifies man pages and less 
+if [ -f "$ZDOTDIR/zsh-colored-man-pages/colored-man-pages.plugin.zsh" ]; then
+source "$ZDOTDIR/zsh-colored-man-pages/colored-man-pages.plugin.zsh" 
+fi
+
+# aliases file
+source "$ZDOTDIR/aliases.zsh"
+# config für die "completion" gesourct
+if [ -f "$ZDOTDIR/nix-zsh-completions/nix-zsh-completions.plugin.zsh" ]; then 
+source "$ZDOTDIR/nix-zsh-completions/nix-zsh-completions.plugin.zsh"
+fi
 
 
 
-##############################################
+fpath=($HOME/zsh/nix-zsh-completions $fpath)
+
+autoload -U compinit && compinit
+
+#################  #################################  ################
+
+# konfig  Fzf-Zsh-Tab-Plugin #################  ################
+
+# #? ZSH_AUTOSUGGEST_STRATEGY=()
+# 
+ # if [ -f "/run/current-system/sw/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh" ]; then
+     # source "/run/current-system/sw/share/zsh/pluginsfzf-tab/fzf-tab.plugin.zsh"
+ # fi
+# 
+	# # basic file preview for ls (you can replace with something more sophisticated than head)
+	# zstyle ':completion::*:lsd::*' fzf-completion-opts --preview='eval head {1}'
+# 
+	# # preview when completing env vars (note: only works for exported variables)
+	# # eval twice, first to unescape the string, second to expand the $variable
+	# zstyle ':completion::*:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-completion-opts --preview='eval eval echo {1}'
+# 
+	# # preview a `git status` when completing git add
+	# zstyle ':completion::*:git::git,add,*' fzf-completion-opts --preview='git -c color.status=always status --short'
+# 
+	# # if other subcommand to git is given, show a git diff or git log
+	# zstyle ':completion::*:git::*,[a-z]*' fzf-completion-opts --preview='
+	# eval set -- {+1}
+	# for arg in "$@"; do
+	    # { git diff --color=always -- "$arg" | git log --color=always "$arg" } 2>/dev/null
+	# done'
+# 
+	# # Aktiviert die Fzf-basierte Tab-Vervollständigung beim Drücken der Tab-Taste
+# #?	bindkey '^I' fzf-tab-complete-or-accept
+	# # Navigiere durch die Ergebnisse der Fzf-Vervollst ändigung mit den Pfeiltasten
+	# bindkey '^P' fzf-tab-up
+	# bindkey '^N' fzf-tab-down
+	# # Anzahl der angezeigten Ergebnisse auf 30 begrenzen
+	# export FZF_COMPLETION_TRIGGER_MAX=30
+	# # Mehrfachauswahl erlauben
+	# export FZF_COMPLETION_MULTI=1
+
+#prompt
+# autoload -Uz promptinit
+#  promptinit
+#  prompt bigfade
+
+
+#ANSI SHADOW#########################################
+# ███████╗ ██████╗ ██╗  ██╗██╗██████╗ ███████╗
+# ╚══███╔╝██╔═══██╗╚██╗██╔╝██║██╔══██╗██╔════╝
+#   ███╔╝ ██║   ██║ ╚███╔╝ ██║██║  ██║█████╗  
+#  ███╔╝  ██║   ██║ ██╔██╗ ██║██║  ██║██╔══╝  
+# ███████╗╚██████╔╝██╔╝ ██╗██║██████╔╝███████╗
+# ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚═════╝ ╚══════╝
+#ANSI SHADOW#########################################
 
 eval "$(zoxide init zsh)"
 #╰─○ zoxide init --cmd cd zsh
@@ -83,224 +305,61 @@ fi
 \builtin alias cd=__zoxide_z
 \builtin alias cdi=__zoxide_zi
 
-#--------------------------------------------------------------------------------------------
-
-### ------------------------------ ###
-#    * *  S O U R C E plugins   * * ##
-### ------------------------------ ###
-
-
-# aliases file
-#source "$ZDOTDIR/aliases.zsh"   
-
-
-# config für die "completion" gesourct
-source $HOME/zsh/nix-zsh-completions/nix-zsh-completions.plugin.zsh
-fpath=($HOME/zsh/nix-zsh-completions $fpath)
-autoload -U compinit && compinit
-
-
-
-
-
-
-# Workaround for nix-shell --pure
-#if [ "$IN_NIX_SHELL" == "pure" ]; then
-#    if [ -x "$HOME/.nix-profile/bin/powerline-go" ]; then
-#        alias powerline-go="$HOME/.nix-profile/bin/powerline-go"
-#    elif [ -x "/run/current-system/sw/bin/powerline-go" ]; then
-#        alias powerline-go="/run/current-system/sw/bin/powerline-go"
-#    fi
-#fi
-
-#	 █████╗ ██╗     ██╗ █████╗ ███████╗███████╗███████╗
-#	██╔══██╗██║     ██║██╔══██╗██╔════╝██╔════╝██╔════╝
-#	███████║██║     ██║███████║███████╗█████╗  ███████╗
-#	██╔══██║██║     ██║██╔══██║╚════██║██╔══╝  ╚════██║
-#	██║  ██║███████╗██║██║  ██║███████║███████╗███████║
-#	╚═╝  ╚═╝╚══════╝╚═╝╚═╝  ╚═╝╚══════╝╚══════╝╚══════╝
-#		# https://manytools.org/hacker-tools/ascii-banner/
-
-
-## ---------------------------  ## 
-##  CAT/ BATCAT      
-## ---------------------------  ## 
-
-alias bat='bat -pp --terminal-width 76 --theme=ansi'
-# gute themes für batcat ansi OneHalfDark Dracula Coldark-Dark
-alias bat1='bat --force-colorization --terminal-width 76 --theme=ansi'
-alias bat2='bat --force-colorization --terminal-width 76 --wrap=auto --theme=Dracula'
-alias bat3='bat --number --terminal-width 76 --decorations=always --color=always --wrap=auto --theme=Coldark-Dark'
-alias bat4='bat --number --terminal-width 76 --decorations=always --color=always --wrap=auto --theme=OneHalfDark'
-
-
-#### --%%%%%%%%%%%%%%-- #####
-###    globale aliase (zsh only)
-###### --%%%%%%%%%%%%%%-- #####
-alias -g SRC='source'
-alias -g L='|less -X -j5 --tilde --save-marks --incsearch --RAW-CONTROL-CHARS --LINE-NUMBERS --line-num-width=3 --quit-if-one-screen --use-color --color=NWr --color=EwR  --color=PbC --color=Swb'
- alias -g G='|grep --ignore-case --color=auto' # ..usage$ file G pattern
- alias -g H='--help'
+#################################################
+### ------------------------ ###
+##   Z S H    - P R O M P T
+### ------------------------ ###
+#!!!! " prompt off "  before setting your prompt. 
+# otherwise will interact wired w/config
+prompt off 
  
- #### --%%%%%%%%%%%%%%-- #####
- ###    aliase 
- ###### --%%%%%%%%%%%%%%-- #####
+ ###  powerlevel10k
+ ### ------------------ ###
+ # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git
+ #% p10k configure # to config
+ if [[ -r $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme ]]; 
+ then 
+ 	source "$ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme"
+	POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+ fi
+ 
+ # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/ZSH/.zshrc.
+ # Initialization code that may require console input (password prompts, [y/n]
+ # confirmations, etc.) must go above this block; everything else may go below.
+ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+	   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+ fi
+ # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.
+	#alt:    [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh
+	[[ ! -f $ZDOTDIR/prompt-p10.zsh ]] || source $ZDOTDIR/prompt-p10.zsh
 
-alias ZRC='micro $HOME/.zshrc && source $HOME/.zshrc'
-alias -- -='cd -'
-alias ..='cd ..'
-alias BRC='nano $HOME/.bashrc && source $HOME/.bashrc'
-alias BRCg='gedit $HOME/.bashrc &'
-alias BSRC=''
-alias COPYls='{ lsd | xargs -I {} echo {} | xargs -I {} echo {} | xclip -selection clipboard }'
-alias EIN='sudo shutdown -r now'
-alias FOR='fortune -e 50% debian-hints 30% debian 10% anarchism 10% ascii-art | lolcat'
-alias Iad='ssh admin@8mai.cloud'
-alias Iro='ssh root@212.227.183.196'
-		
-alias NIXconf='sudo gnome-text-editor /etc/nixos/configuration.nix &'
-#alias NIX='sudo nano /etc/nixos/configuration.nix'
-alias NIXHWcopy='cp /etc/nixos/hardware-configuration.nix $HOME/$(date +%F)_hardware-configuration.nix; lsd -ahl $HOME/*.nix'
-alias NIXcopy='cp /etc/nixos/configuration.nix $HOME/$(date +%F)_configuration.nix; lsd -ahl $HOME/*.nix'
-alias NIXenv='nix-env --query --installed'
-alias NIXupt='sudo nixos-rebuild switch'
-alias NIXinfo='nix-shell -p nix-info --run "nix-info -m"'
-
-alias RSY='echo "sudo rsync --recursive --archive --update --copy-links --info=progress2  path/to/source path/to/ziel"'
-alias _='sudo'
-alias a2g='ali2g'
-alias alais='alias'
-alias ali2g='alias | grep --colour=always'
-alias c='clear'
-alias cd..='cd ..'
-alias cp='cp -vdr'
-alias env2g='printenv | grep --colour=always'
-alias h='history'
-alias h2g='history2grep'
-alias h2gC='history2grepC'
-alias history2grep='cat $HOME/.bash_history | grep --colour=always'
-alias history2grepC='cat $HOME/.bash_history | grep --colour=always -c'
-alias l="lsd -AlrhF --total-size" #'ls -Alrsh'
-alias la='lsd -AFhr'
-alias ld="lsd -dhrF */ && lsd -dhr .*/" #'lsd -dhr */'
-alias lf='lsd -ltFrh --total-size --group-directories-first'
-alias lh='lsd -dFhr .*'
-alias ll='lsd -FAlhr --total-size --group-directories-first'
-
-alias lolcat='clolcat'
-alias ls='ls --color=auto'
-alias md='mkdir -p'
-alias mv='mv -vdr'
-alias neofetch2='neofetch --config ~/.config/neofetch/config2.conf'
-
-alias q='exit'
-alias rm='rm -vdr'
-alias sl='ls'
-alias tdlr='tldr'
-
-#### aliases
-  ### NEW
-alias d1=du -h --max-depth=1
-alias d2= du -h --max-depth=2
-#du -sh # Estimate file and directory space usage:
-alias df='df -h' #Disk space usage in human-readable format
-alias ll='echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd)${PINK}(mit relativer  Zeit ohne Gruppenberechtigung): ${RESET}\t" &&	lsd --header --blocks 'permission' --blocks 'size'  --blocks 'links' --blocks 'name' --blocks 'user' --blocks 'date' \
-	--total-size \
-	--almost-all \
-	--icon-theme 'fancy' \
-	--human-readable \
-	--date "relative" \
-	--no-symlink  \
-	--classify \
-	--hyperlink 'always' \
-	--long  \
-	--size short \
-	--group-dirs 'none' \
-	--reverse
-	'
-	
-alias lll='echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd)${PINK} (mit absoluter Zeit und Gruppenberechtigung): ${RESET}\t" && lsd --date="+%d. %b %Y %H:%M Uhr" --long --header --blocks 'permission' --blocks 'size'  --blocks 'links' --blocks 'name' --blocks 'user' --blocks 'group' --blocks 'date' \
-	--total-size \
-	--almost-all \
-	--icon-theme 'fancy' \
-	--human-readable \
-	--classify \
-	--hyperlink 'always' \
-	--long  \
-	--size short \
-	--group-dirs 'none' \
-	--reverse
-	'
-	
-
-
-## printf Ende
-#printf "Hello, $(alias).\n\n" | clolcat  
-
-##### --%%%%%%%%%%%%%%-- #####
-##	                        ##
-##	        g i t           ##
-##	                        ##
-##### --%%%%%%%%%%%%%%-- #####
-
-# Git Status
-alias gs='echo -e "${GELB}\nZeigt den Status des Arbeitsverzeichnisses und des Staging-Bereichs an${RESET}\n" && git status'
-
-alias gss='echo -e "${PINK}\n\t git status --short ${RESET} with abbr.:${RESET}\n
-${GELB}?? ... Untracked files${RESET}\t${GELB}U ... Files with merge conflicts${RESET}\t ${GELB}A ... New files added to staging ${RESET}\t${GELB}M ... Modified files${RESET}\t${GELB}D ... Deleted files${RESET}\t${GELB}R ... Renamed files${RESET}\t${GELB}C ... Copied files${RESET}\n" && git status -s'
-
-#alias gss='cowsay "${GELB}\n git status --short w\:\n\t "M" for file is modified\n\t "A" for is new and has been added to staging \n\t "\?\? " indicates file is untracked.${RESET}\n" && git status -s'
-
-# Git Add
-alias ga='echo -e "${GELB}\nFügt Änderungen im Arbeitsverzeichnis zum Staging-Bereich hinzu${RESET}\n" && git add'
-
-# Git Push
-alias gp='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch${RESET}\n" && git push'
-alias gpo='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
-alias gpof='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check${RESET}\n" && git push origin --force-with-lease'
-alias gpofn='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check und ohne Verifizierung${RESET}\n" && git push origin --force-with-lease --no-verify'
-alias gpt='echo -e "${GELB}\nPushed alle Tags auf den Remote-Branch${RESET}\n" && git push --tag'
-
-# Git Tag
-alias gtd='echo -e "${GELB}\nLöscht einen lokalen Tag${RESET}\n" && git tag --delete'
-alias gtdr='echo -e "${GELB}\nLöscht einen Remote-Tag${RESET}\n" && git tag --delete origin'
-
-# Git Branch
-alias grb='echo -e "${GELB}\nZeigt die Remote-Branches an${RESET}\n" && git branch -r'
-alias gb='echo -e "${GELB}\nZeigt alle Branches im aktuellen Repository an${RESET}\n" && git branch'
-
-# Git Pull
-alias gplo='echo -e "${GELB}\nHolt die neuesten Änderungen vom Remote-Branch \"origin\"${RESET}\n" && git pull origin'
-
-# Git Commit
-alias gc='echo -e "${GELB}\nErstellt einen Commit mit den im Staging-Bereich befindlichen Änderungen${RESET}\n" && git commit'
-
-# Git Diff
-alias gd='echo -e "${GELB}\nZeigt die Unterschiede zwischen Arbeitsverzeichnis und Staging-Bereich an${RESET}\n" && git diff'
-alias gdc='echo -e "${GELB}\nZeigt die Unterschiede zwischen Staging-Bereich und letztem Commit an${RESET}\n" && git diff --cached'
-
-# Git Checkout
-alias gco='echo -e "${GELB}\nWechselt zu einem anderen Branch oder Commit${RESET}\n" && git checkout'
-
-# Git Log
-alias gll='echo -e "${GELB}\nFarbig formatierte Ausgabe der Commit-Historie in Graph-Darstellung${RESET}\n" && git log --graph --format=format:"%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%an%C(reset)%C(bold yellow)%d%C(reset) %C(dim white)- %s%C(reset)" --all'
-
-alias gl='echo -e "${GELB}\nZeigt die Commit-Historie in einer Zeile an${RESET}\n" && git log --pretty=oneline'
-
-alias glol='echo -e "${GELB}\nZeigt die Commit-Historie in einer graphischen Darstellung an${RESET}\n" && git log --graph --abbrev-commit --oneline --decorate'
-
-# Git Remote
-alias gr='echo -e "${GELB}\nZeigt die Namen der Remote-Repositories an${RESET}\n" && git remote'
-alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${RESET}\n" && git remote show'
-
-
-#Der git for-each-ref Befehl listet Referenzen (refs) in einem Git-Repository auf, wie z.B. Branches, Tags und andere
-  #  Aktueller Branch: Schnell erkennen, auf welchem Branch man sich gerade befindet (%(HEAD) zeigt ein Sternchen neben dem aktuellen Branch).
-#    Branch-Übersicht: Eine Liste aller Branches im Repository erhalten.
-#    Commit-Informationen: Sehen, welcher Commit zuletzt auf jedem Branch gemacht wurde, inklusive Commit-Hash, Nachricht, Autor und Datum.
-alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:red)%(refname:short)%(color:reset) - %(color:yellow)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:blue)%(committerdate:relative)%(color:reset))'"       
-
-
-
-
+	POWERLEVEL9K_MODE="nerdfont-complete"
+	POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)
+	POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)
+	POWERLEVEL9K_CONTEXT_TEMPLATE=$'\ue795'
+	POWERLEVEL9K_CONTEXT_DEFAULT_FOREGROUND='#0abdc6'
+	POWERLEVEL9K_CONTEXT_DEFAULT_BACKGROUND='#321959'
+	POWERLEVEL9K_DIR_HOME_FOREGROUND='#0abdc6'
+	POWERLEVEL9K_DIR_HOME_BACKGROUND='#0b2956'
+	POWERLEVEL9K_DIR_HOME_SUBFOLDER_FOREGROUND='#0abdc6'
+	POWERLEVEL9K_DIR_HOME_SUBFOLDER_BACKGROUND='#0b2956'
+	POWERLEVEL9K_DIR_DEFAULT_FOREGROUND='#0abdc6'
+	POWERLEVEL9K_DIR_DEFAULT_BACKGROUND='#0b2956'
+	POWERLEVEL9K_DIR_ETC_FOREGROUND='#0abdc6'
+	POWERLEVEL9K_DIR_ETC_BACKGROUND='#0b2956'
+	POWERLEVEL9K_VCS_CLEAN_FOREGROUND='#ea00d9'
+	POWERLEVEL9K_VCS_CLEAN_BACKGROUND='#321959'
+	POWERLEVEL9K_VCS_UNTRACKED_FOREGROUND='#f57800'
+	POWERLEVEL9K_VCS_UNTRACKED_BACKGROUND='#321959'
+	POWERLEVEL9K_VCS_MODIFIED_FOREGROUND='#00ff00'
+	POWERLEVEL9K_VCS_MODIFIED_BACKGROUND='#321959'
+	POWERLEVEL9K_STATUS_OK_BACKGROUND='#321959'
+	POWERLEVEL9K_STATUS_ERROR_FOREGROUND='#ff0000'
+	POWERLEVEL9K_STATUS_ERROR_BACKGROUND='#321959'
+	POWERLEVEL9K_HISTORY_BACKGROUND='#0b2956'
+	POWERLEVEL9K_HISTORY_FOREGROUND='#0abdc6'
+	POWERLEVEL9K_TIME_BACKGROUND='#321959'
+	POWERLEVEL9K_TIME_FOREGROUND='#ea00d9'
+	POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
+################################################################################
 
