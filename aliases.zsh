@@ -22,7 +22,8 @@ alias NIXpkgs='lsd --oneline --classify --no-symlink /run/current-system/sw/bin/
 
 alias -g NIXref='nix-store -q --references'
 alias NIXconf="sudo micro /etc/nixos/configuration.nix"
-alias NIXupt="sudo nixos-rebuild switch"
+alias NIXupt='sudo nixos-rebuild switch && xcowthink --image="$HOME/Bilder/nixOS-logo.png" --time=3 --at=1200,200 --monitor=0 --left --font=unifont "nixos-rebuild switch ist jetzt fertig"'
+
 alias NIXHWcopy="cp /etc/nixos/hardware-configuration.nix /share/nixos/$(date +%F)_hardware-configuration.nix"
 alias NIXcopy="cp /etc/nixos/configuration.nix /share/nixos/$(date +%F)_configuration.nix"
 alias NIXenv="nix-env --query --installed"
@@ -117,12 +118,18 @@ alias LOG='cat "$ZDOTDIR/log_error/log_error.txt" | grep "error" | sort'
 alias LOGseparate='tail -f "$ZDOTDIR/log_error/log_error.txt"'
 alias LOGinline='less -F "$ZDOTDIR/log_error/log_error.txt"'
 
-##### --%%%%%%%%%%%%%%-- #####
-## ---------------------------  ## 
-##    globale aliase (zsh only)
-## ---------------------------  ##
-##### --%%%%%%%%%%%%%%-- #####
-# ..usage '$ file G pattern'
+
+
+
+### ---------------------------  #### 
+      # ┌─┐┬  ┌─┐┌┐ ┌─┐┬  ┌─┐
+      # │ ┬│  │ │├┴┐├─┤│  ├┤
+      # └─┘┴─┘└─┘└─┘┴ ┴┴─┘└─┘
+# ┌─┐┌─┐┬ ┬  ┌─┐┬  ┬┌─┐┌─┐┌─┐
+# ┌─┘└─┐├─┤  ├─┤│  │├─┤└─┐├┤
+# └─┘└─┘┴ ┴  ┴ ┴┴─┘┴┴ ┴└─┘└─┘
+# ..usage % file G 'pattern'
+### ---------------------------  #### 
 alias -g SRC='source'
 alias -g L=' | less -X -j5 --tilde --save-marks \
 				--incsearch --RAW-CONTROL-CHARS \
@@ -134,28 +141,45 @@ alias -g G='|grep --ignore-case --color=auto'
 
 alias -g H='--help'
 
-## ---------------------------  ## 
-##    suffix alias (zsh only)
-## ---------------------------  ## 
-#alias -s ffuck='tldr'
-alias -s mp4='vlc --fullscreen \
-				  --no-video-title-show \
-				  --no-video-border \
-				  --no-video-menu'
+alias -g fgrep='fgrep --color=auto'
+alias -g egrep='egrep --color=auto'
+ #... grep ... in History auf WORD
+alias -g  h='history' 
+# zhistory.zsh  
+alias -g  g2history='cat "$ZDOTDIR/zhistory.zsh"  | grep -i --colour=always'
+alias -g g2h=g2history
+alias -g h2g=g2history
 
-alias -s mp3='vlc'
-alias -s avi='vlc'
-alias -s opus='vlc'
-alias -s flac='vlc'
-alias -s m4a='vlc'
-alias -s mkv='vlc'
-alias -s jpg='img2sixel'
-alias -s jpeg='img2sixel'
-alias -s png='img2sixel'
-alias -s jpeg='img2sixel'
+#grep...auf [ENV] printable enviroment variable auf WORD
+alias -g  g2env='printenv | grep -i --colour=always'
+alias -g env2g='g2env'
+#... grep ... in printable aliases auf WORDnc	
+alias -g g2ali='alias | grep -i --colour=always'
+alias -g ali2g='g2ali'
+alias -g g2lol='g2ali'
+alias -g lol2g='g2ali'
 
-alias -s md='marker --preview' #--display'
-#alias -s zsh='micro'
+
+### ---------------------------  #### 
+#        ┌─┐┬ ┬┌─┐┌─┐┬─┐ ┬  
+#        └─┐│ │├┤ ├┤ │┌┴┬┘  
+#        └─┘└─┘└  └  ┴┴ └─  
+# ┌─┐┌─┐┬ ┬  ┌─┐┬  ┬┌─┐┌─┐┌─┐
+# ┌─┘└─┐├─┤  ├─┤│  │├─┤└─┐├┤ 
+# └─┘└─┘┴ ┴  ┴ ┴┴─┘┴┴ ┴└─┘└─┘
+### ---------------------------  #### 
+#alias -s mp4='vlc --fullscreen \				  --no-video-title-show \				  --no-video-border 	  --no-video-menu'
+alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
+alias -s {jpg,jpeg,png,bmp,svg,gif}='img2sixel'
+alias -s md='marker --preview' #--display
+alias -s {js,json,env,md,html,css,toml}=bat
+alias -s {bash,zsh,sh,csh,txt}='micro'
+alias -s py=python
+alias -s log=less 
+# "Run" ssh links to clone repos
+# % git@github.com:stefanjudis/dotfiles.git wir zu % git clone git@github.com:stefanjudis/dotfiles.git
+alias -s git="git clone"
+
 
 ##### --%%%%%%%%%%%%%%-- #####
 ## ---------------------------  ## 
@@ -253,28 +277,14 @@ alias lll='echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pw
 ## ---------------------------  ## 
 ##### --%%%%%%%%%%%%%%-- #####
 
-alias e1='echo -e "\n\t${GELB} exa -A -l --tree --level 1--no-time --no-permissions --git --group-directories-first     ${RESET}\n" && exa --no-time --no-permissions --tree --level 1 --all --long --color-scale --icons --git --group-directories-first'
+alias e1='echo -e "\n\t${GELB} eza -A -l --tree --level 1--no-time --no-permissions --git --group-directories-first     ${RESET}\n" && eza --no-time --no-permissions --tree --level 1 --all --long --color-scale --icons --git --group-directories-first'
 
-alias e2='echo -e "\n\t${GELB} exa --no-time --no-permissions -A -l --tree --level 2 --git --group-directories-first${RESET}\n" && exa --tree --level 2 --all --long --color-scale --icons --no-time --no-permissions --git --group-directories-first'
+alias e2='echo -e "\n\t${GELB} eza --no-time --no-permissions -A -l --tree --level 2 --git --group-directories-first${RESET}\n" && eza --tree --level 2 --all --long --color-scale --icons --no-time --no-permissions --git --group-directories-first'
 
-alias e3='echo -e "\t${GELB} exa -A -l --tree -level 3--no-time --no-permissions --git --group-directories-first${RESET}\n" && exa --tree --level 3 --all --long --color-scale --icons --no-time --no-permissions --git --group-directories-first'
+alias e3='echo -e "\t${GELB} eza -A -l --tree -level 3--no-time --no-permissions --git --group-directories-first${RESET}\n" && eza --tree --level 3 --all --long --color-scale --icons --no-time --no-permissions --git --group-directories-first'
 
-alias e4='echo -e "\t${GELB} exa --no-time --no-permissions --A -l --tree -level 4 --git--group-directories-first${RESET}\n" && exa --tree --level 4 --all --long --color-scale --icons --no-time --no-permissions --git --group-directories-first'
+alias e4='echo -e "\t${GELB} eza --no-time --no-permissions --A -l --tree -level 4 --git--group-directories-first${RESET}\n" && eza --tree --level 4 --all --long --color-scale --icons --no-time --no-permissions --git --group-directories-first'
 
- alias fgrep='fgrep --color=auto'
- alias egrep='egrep --color=auto'
- #... grep ... in History auf WORD
- alias h='history'
-alias g2history='cat "$ZDOTDIR/.zhistory"  | grep -i --colour=always'
-alias g2h=g2history
-
-#grep...auf [ENV] printable enviroment variable auf WORD
-alias g2env='printenv | grep -i --colour=always'
-
-#... grep ... in printable aliases auf WORDnc	
-alias g2ali='alias | grep -i --colour=always'
-alias g2lol='g2ali'
-alias lol2g='g2ali'
 
 ## ---------------------------  ## 
 ##  digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions

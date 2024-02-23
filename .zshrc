@@ -115,8 +115,8 @@ function FZFsysctl()  {
 #--------------------------------------------------------------------------------------------
 # fff 
 	# Add this to your .zshrc or equivalent.
-	# Run 'fff' with 'f' or whatever you decide to name the function.
-	FF() {
+	# Run 'FFF' with 'fff' or whatever you decide to name the function.
+FFF() {
 	    fff "$@"
 	    cd "$(cat "${XDG_CACHE_HOME:=${HOME}/.cache}/fff/.fff_d")"
 	}
@@ -165,6 +165,7 @@ fi
 
 # aliases file
 source "$ZDOTDIR/aliases.zsh"
+
 # config für die "completion" gesourct
 if [ -f "$ZDOTDIR/nix-zsh-completions/nix-zsh-completions.plugin.zsh" ]; then 
 source "$ZDOTDIR/nix-zsh-completions/nix-zsh-completions.plugin.zsh"
@@ -172,138 +173,37 @@ fi
 
 
 
+#### meine functions
+if [ -f "$ZDOTDIR/zfunctions.zsh" ]; then
+# versch. functions wie:
+#	Hstat -Display the command more often used in the shell
+#	backup - a file w/EXT: bkp
+#	cheat - tldr
+#	Zcomp - Display all autocompleted command in zsh
+#	Ports  - offene lan ports
+#	GENplaylist - 
+#	PRspeed - Zeigt die Zeit an, zur Prompt beim Öffnen
+#             einer neuen zsh-Instanz angezeigt wird
+    source "$ZDOTDIR/zfunctions.zsh"
+fi
+
+if [ -f "$ZDOTDIR/zfunctions2.zsh" ]; then
+# todo: buggy
+    source "$ZDOTDIR/zfunctions2.zsh"
+fi
+
+
 fpath=($HOME/zsh/nix-zsh-completions $fpath)
 
 autoload -U compinit && compinit
 
-#################  #################################  ################
 
-# konfig  Fzf-Zsh-Tab-Plugin #################  ################
-
-# #? ZSH_AUTOSUGGEST_STRATEGY=()
-# 
- # if [ -f "/run/current-system/sw/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh" ]; then
-     # source "/run/current-system/sw/share/zsh/pluginsfzf-tab/fzf-tab.plugin.zsh"
- # fi
-# 
-	# # basic file preview for ls (you can replace with something more sophisticated than head)
-	# zstyle ':completion::*:lsd::*' fzf-completion-opts --preview='eval head {1}'
-# 
-	# # preview when completing env vars (note: only works for exported variables)
-	# # eval twice, first to unescape the string, second to expand the $variable
-	# zstyle ':completion::*:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-completion-opts --preview='eval eval echo {1}'
-# 
-	# # preview a `git status` when completing git add
-	# zstyle ':completion::*:git::git,add,*' fzf-completion-opts --preview='git -c color.status=always status --short'
-# 
-	# # if other subcommand to git is given, show a git diff or git log
-	# zstyle ':completion::*:git::*,[a-z]*' fzf-completion-opts --preview='
-	# eval set -- {+1}
-	# for arg in "$@"; do
-	    # { git diff --color=always -- "$arg" | git log --color=always "$arg" } 2>/dev/null
-	# done'
-# 
-	# # Aktiviert die Fzf-basierte Tab-Vervollständigung beim Drücken der Tab-Taste
-# #?	bindkey '^I' fzf-tab-complete-or-accept
-	# # Navigiere durch die Ergebnisse der Fzf-Vervollst ändigung mit den Pfeiltasten
-	# bindkey '^P' fzf-tab-up
-	# bindkey '^N' fzf-tab-down
-	# # Anzahl der angezeigten Ergebnisse auf 30 begrenzen
-	# export FZF_COMPLETION_TRIGGER_MAX=30
-	# # Mehrfachauswahl erlauben
-	# export FZF_COMPLETION_MULTI=1
 
 #prompt
 # autoload -Uz promptinit
 #  promptinit
 #  prompt bigfade
 
-
-#ANSI SHADOW#########################################
-# ███████╗ ██████╗ ██╗  ██╗██╗██████╗ ███████╗
-# ╚══███╔╝██╔═══██╗╚██╗██╔╝██║██╔══██╗██╔════╝
-#   ███╔╝ ██║   ██║ ╚███╔╝ ██║██║  ██║█████╗  
-#  ███╔╝  ██║   ██║ ██╔██╗ ██║██║  ██║██╔══╝  
-# ███████╗╚██████╔╝██╔╝ ██╗██║██████╔╝███████╗
-# ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚═════╝ ╚══════╝
-#ANSI SHADOW#########################################
-
-eval "$(zoxide init zsh)"
-#╰─○ zoxide init --cmd cd zsh
-# =============================================================================
-## Utility functions for zoxide.
-## pwd based on the value of _ZO_RESOLVE_SYMLINKS.
-function __zoxide_pwd() {
-    \builtin pwd -L
-}
-# cd + custom logic based on the value of _ZO_ECHO.
-function __zoxide_cd() {
-    # shellcheck disable=SC2164
-    \builtin cd -- "$@"
-}
-# =============================================================================
-# Hook configuration for zoxide.
-# Hook to add new entries to the database.
-function __zoxide_hook() {
-    # shellcheck disable=SC2312
-    \command zoxide add -- "$(__zoxide_pwd)"
-}
-# Initialize hook.
-# shellcheck disable=SC2154
-if [[ ${precmd_functions[(Ie)__zoxide_hook]:-} -eq 0 ]] && [[ ${chpwd_functions[(Ie)__zoxide_hook]:-} -eq 0 ]]; then
-    chpwd_functions+=(__zoxide_hook)
-fi
-# When using zoxide with --no-cmd, alias these internal functions as desired.
-#
-__zoxide_z_prefix='z#'
-# Jump to a directory using only keywords.
-function __zoxide_z() {
-    # shellcheck disable=SC2199
-    if [[ "$#" -eq 0 ]]; then
-        __zoxide_cd ~
-    elif [[ "$#" -eq 1 ]] && { [[ -d "$1" ]] || [[ "$1" = '-' ]] || [[ "$1" =~ ^[-+][0-9]$ ]]; }; then
-        __zoxide_cd "$1"
-    elif [[ "$@[-1]" == "${__zoxide_z_prefix}"?* ]]; then
-        # shellcheck disable=SC2124
-        \builtin local result="${@[-1]}"
-        __zoxide_cd "${result:${#__zoxide_z_prefix}}"
-    else
-        \builtin local result
-        # shellcheck disable=SC2312
-        result="$(\command zoxide query --exclude "$(__zoxide_pwd)" -- "$@")" &&
-            __zoxide_cd "${result}"
-    fi
-}
-# Jump to a directory using interactive search.
-function __zoxide_zi() {
-    \builtin local result
-    result="$(\command zoxide query --interactive -- "$@")" && __zoxide_cd "${result}"
-}
-# Completions.
-if [[ -o zle ]]; then
-    function __zoxide_z_complete() {
-        # Only show completions when the cursor is at the end of the line.
-        # shellcheck disable=SC2154
-        [[ "${#words[@]}" -eq "${CURRENT}" ]] || return 0
-        if [[ "${#words[@]}" -eq 2 ]]; then
-            _files -/
-        elif [[ "${words[-1]}" == '' ]] && [[ "${words[-2]}" != "${__zoxide_z_prefix}"?* ]]; then
-            \builtin local result
-            # shellcheck disable=SC2086,SC2312
-            if result="$(\command zoxide query --exclude "$(__zoxide_pwd)" --interactive -- ${words[2,-1]})"; then
-                result="${__zoxide_z_prefix}${result}"
-                # shellcheck disable=SC2296
-                compadd -Q "${(q-)result}"
-            fi
-            \builtin printf '\e[5n'
-        fi
-        return 0
-    }
-    \builtin bindkey '\e[0n' 'reset-prompt'
-    [[ "${+functions[compdef]}" -ne 0 ]] && \compdef __zoxide_z_complete __zoxide_z
-fi
-\builtin alias cd=__zoxide_z
-\builtin alias cdi=__zoxide_zi
 
 #################################################
 ### ------------------------ ###
@@ -363,3 +263,59 @@ prompt off
 	POWERLEVEL9K_TIME_FORMAT='%D{%H:%M}'
 ################################################################################
 
+#ANSI SHADOW#########################################
+# ███████╗ ██████╗ ██╗  ██╗██╗██████╗ ███████╗
+# ╚══███╔╝██╔═══██╗╚██╗██╔╝██║██╔══██╗██╔════╝
+#   ███╔╝ ██║   ██║ ╚███╔╝ ██║██║  ██║█████╗  
+#  ███╔╝  ██║   ██║ ██╔██╗ ██║██║  ██║██╔══╝  
+# ███████╗╚██████╔╝██╔╝ ██╗██║██████╔╝███████╗
+# ╚══════╝ ╚═════╝ ╚═╝  ╚═╝╚═╝╚═════╝ ╚══════╝
+#ANSI SHADOW#########################################
+
+## ZOXIDE
+# Die Funktion "eval "$(zoxide init zsh)"" in der .zshrc-Datei 
+# hat die Aufgabe, zoxide in der Zsh-Shell zu initialisieren 
+# und die entsprechenden Funktionen und Aliase für die 
+# Verwendung von zoxide bereitzustellen 
+eval "$(zoxide init zsh)"
+
+
+
+
+
+#################  #################################  ################
+
+# konfig  Fzf-Zsh-Tab-Plugin #################  ################
+
+# #? ZSH_AUTOSUGGEST_STRATEGY=()
+# 
+ # if [ -f "/run/current-system/sw/share/zsh/plugins/fzf-tab/fzf-tab.plugin.zsh" ]; then
+     # source "/run/current-system/sw/share/zsh/pluginsfzf-tab/fzf-tab.plugin.zsh"
+ # fi
+# 
+	# # basic file preview for ls (you can replace with something more sophisticated than head)
+	# zstyle ':completion::*:lsd::*' fzf-completion-opts --preview='eval head {1}'
+# 
+	# # preview when completing env vars (note: only works for exported variables)
+	# # eval twice, first to unescape the string, second to expand the $variable
+	# zstyle ':completion::*:(-command-|-parameter-|-brace-parameter-|export|unset|expand):*' fzf-completion-opts --preview='eval eval echo {1}'
+# 
+	# # preview a `git status` when completing git add
+	# zstyle ':completion::*:git::git,add,*' fzf-completion-opts --preview='git -c color.status=always status --short'
+# 
+	# # if other subcommand to git is given, show a git diff or git log
+	# zstyle ':completion::*:git::*,[a-z]*' fzf-completion-opts --preview='
+	# eval set -- {+1}
+	# for arg in "$@"; do
+	    # { git diff --color=always -- "$arg" | git log --color=always "$arg" } 2>/dev/null
+	# done'
+# 
+	# # Aktiviert die Fzf-basierte Tab-Vervollständigung beim Drücken der Tab-Taste
+# #?	bindkey '^I' fzf-tab-complete-or-accept
+	# # Navigiere durch die Ergebnisse der Fzf-Vervollst ändigung mit den Pfeiltasten
+	# bindkey '^P' fzf-tab-up
+	# bindkey '^N' fzf-tab-down
+	# # Anzahl der angezeigten Ergebnisse auf 30 begrenzen
+	# export FZF_COMPLETION_TRIGGER_MAX=30
+	# # Mehrfachauswahl erlauben
+	# export FZF_COMPLETION_MULTI=1
