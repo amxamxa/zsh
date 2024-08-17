@@ -1,60 +1,31 @@
-
-
-#################################################
-#		╔═╗╦═╗╔═╗╔╦╗╔═╗╔╦╗
-#zsh -	╠═╝╠╦╝║ ║║║║╠═╝ ║ 
-#		╩  ╩╚═╚═╝╩ ╩╩   ╩ 
-#################################################
-
-#!!!! " prompt off "  before setting your prompt. 
-# otherwise will interact wired w/config
-prompt off
- ### ------------------ ###
- ###  lecacy prompt
- ### ------------------ ###
-   
-# Benutzerdefinierter Prompt mit Git-Branch und Exit-Status
-# function prompt_info() {
-#     local exit_status="%(?..%F{red}%?%f)"
-#     local git_branch="%{$fg[cyan]%}%F{240}%f%B%1v%b%f"
-# 
-#     PS1="$exit_status$git_branch> "
-# }
-# 
-# PROMPT=prompt_info
-# autoload -Uz promptinit
-#  promptinit
-#  prompt bigfade
+# /share/zsh/prompt/cyber.zsh
 
  ### ------------------ ###
  ###  powerlevel10k  config
  ### ------------------ ###
    
 # git clone --depth=1 https://github.com/romkatv/powerlevel10k.git  
-POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=false
 
 
 
 #DIREKT FOLGENDES NICHT FÜR NIXOS:
-	#$ p10k configure 
-	# to config  
-	#if [[ -r $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme ]];
-	#then   
-	# source "$ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme"   
-	#  POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true  
-	# fi
-
-
-    
+	# to config : 	#$ p10k configure 
+#if [[ -r $ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme ]];
+#  then   
+#    source "$ZDOTDIR/powerlevel10k/powerlevel10k.zsh-theme"   
+#	POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true  
+#  fi
  # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/ZSH/.zshrc. 
+
   # Initialization code that may require console input (password prompts, [y/n]  
   # confirmations, etc.) must go above this block; everything else may go below.  
-#  if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"  fi 
-  
-   # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.  
+  # if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then     source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"  fi 
+  # 
+ # To customize prompt, run `p10k configure` or edit ~/.config/zsh/.p10k.zsh.  
    #alt:    [[ ! -f ~/.config/zsh/.p10k.zsh ]] || source ~/.config/zsh/.p10k.zsh  [[ ! -f $ZDOTDIR/prompt-p10.zsh ]] || source $ZDOTDIR/prompt-p10.zsh   
    
-POWERLEVEL9K_MODE="lalezar-fonts"  
+#POWERLEVEL9K_MODE="lalezar-fonts"  
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(context dir rbenv vcs)  
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator background_jobs history time)  
 # cyberpunk color schema
@@ -83,5 +54,3 @@ POWERLEVEL9K_HISTORY_BACKGROUND='#0b2956'  # dunkel-türkis
 POWERLEVEL9K_HISTORY_FOREGROUND='#0abdc6'  # hell-türkis
 POWERLEVEL9K_TIME_BACKGROUND='#321959'  # dunkel-lila
 POWERLEVEL9K_TIME_FOREGROUND='#ea00d9'  # hell-lila
-
-
