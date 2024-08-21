@@ -22,6 +22,7 @@ autoload -U compinit && compinit
 fpath=($ZDOTDIR:$ZDOTDIR/functions:$ZDOTDIR/plugins $fpath)
 # History-Einstellungen
 export HISTIGNORE="ls:cd:pwd:exit:tldr:cheat"
+export HISTTIMEFORMAT="%D{%Y-%m-%d %H:%M} "
 setopt EXTENDED_HISTORY    # Zeitstempel speichern
 setopt SHARE_HISTORY       # History sofort speichern
 setopt HIST_SAVE_NO_DUPS        # Do not write a duplicate event to the history file.
@@ -30,7 +31,7 @@ setopt INC_APPEND_HISTORY 	# append the command without for shell exit
 
 unsetopt MULTIBYTE
 ### ------------------------------ ##
-# **ZSH DIRECTORY STACK** aka DS
+#   **ZSH DIRECTORY STACK** aka DS
 ### ------------------------------ ##
 setopt AUTO_PUSHD           # Push the current directory visited on the stack.
 setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
@@ -43,11 +44,11 @@ setopt AUTO_CD   	# '..' statt 'cd ..'
 REPORTTIME=3 		# display cpu usage, if command taking more than 3s
 
 ### ------------------------------ ##
-## **ZSH GLOBBING**
+##       **ZSH GLOBBING**
 ### ------------------------------ ##
-setopt EXTENDEDGLOB	# for superglob for ls **/*.txt oder ls -d *(D)
-unsetopt CASEGLOB
-setopt ALIAS_FUNC_DEF 	# if set, aliases can be used for defining functions
+setopt 		EXTENDEDGLOB	# for superglob for ls **/*.txt oder ls -d *(D)
+unsetopt 	CASEGLOB
+setopt 		ALIAS_FUNC_DEF 	# if set, aliases can be used for defining functions
 setopt INTERACTIVE_COMMENTS 	# allow comments even in interactive shells
 setopt PRINT_EXIT_VALUE		# print the exit value of programs with non-zero exit status
 setopt RM_STAR_WAIT		# wait 10s and ignore anything typed, avoid problem
@@ -56,8 +57,7 @@ setopt sh_word_split	# split multi-word variables into individual elements
 			# try (n)with, and "unsetopt sh_word_split":
 			# for word in $kitchen_items; do print "$word"; end
 setopt notify		    # notifier fir big jobs
-unsetopt beep		# beep ausschalten
-
+unsetopt beep			# beep ausschalten
 
  # autoload command load a file containing shell commands
  # autoload looks in directories of the "_Zsh file search path_", defined in the 
@@ -66,7 +66,7 @@ unsetopt beep		# beep ausschalten
   _comp_options+=(globdots) 	# With hidden files
 
 ## -----------------------------------------
-#		Z S H Env definition
+#	**ZSH Env definition**
 ## -----------------------------------------
 # Farb- und Textformatierungsvariablen
 export INVERT="\e[7m"
@@ -238,23 +238,26 @@ source_or_error() {
 }
 # Sourcen von Konfigurationsdateien
 echo "--------------------------------------------------------" | blahaj -i -r
-	sleep 0.1
+	sleep 0.05
 	source_or_error "$ZDOTDIR/functions/my-functions.zsh"
-	sleep 0.1
+	sleep 0.05
 	source_or_error "$ZDOTDIR/prompt/cyber.zsh"
-	sleep 0.1
+	sleep 0.05
 	source_or_error "$ZDOTDIR/plugins/fff-fuck.zsh"
-	sleep 0.1
+	sleep 0.05
 	source_or_error "$ZDOTDIR/plugins/fzf-key-bind.zsh"
-	sleep 0.1
+	sleep 0.05
 	source_or_error "$ZDOTDIR/plugins/shortcuts.zsh"
-	sleep 0.1
+	sleep 0.05
+	source_or_error "$ZDOTDIR/plugins/tetris.zsh"
+	sleep 0.05
 	source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
-	sleep 0.1
+	sleep 0.05
 	source_or_error "$ZDOTDIR/functions/zfunctions2.zsh"  # todo: buggy
-	sleep 0.1
+	sleep 0.05
 	source_or_error "$ZDOTDIR/aliases.zsh"
-	source "$ZDOTDIR/plugins/zgreeting.zsh"
+	sleep 1
+	source_or_error "$ZDOTDIR/plugins/zgreeting.zsh"
 echo "--------------------------------------------------------" | blahaj -i -r
 
 # autoload -Uz run-help
