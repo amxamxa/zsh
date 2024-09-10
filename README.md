@@ -1,1 +1,0 @@
-zsh Ordner für nixOS

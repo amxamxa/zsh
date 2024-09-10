@@ -1,3 +1,0 @@
-nix-store --query --requisites /run/current-system
-nix-store -q --tree /nix/var/nix/profiles/system
-ls /run/current-system/sw/bin
