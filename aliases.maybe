@@ -1,0 +1,72 @@
+
+sudo nixos-rebuild switch --show-trace --verbose --cores 4 --profile-name "stable-test"
+/share/zsh/prompt/basic-prompt.zsh
+sudo nixos-rebuild switch -p mod42 -I nixos-config=./configuration.nix
+bat1 /home/alice/.config/tealdeer/config.toml 
+
+mount /dev/disk/by-label/project /home/project 
+sudo mount /dev/disk/by-label/project /home/project 
+
+sudo chown -Rv mxxkee:users /home
+sudo chown -Rv mxxkee:users /share
+
+nix-store --query --requisites /run/current-system
+
+nix-store -q --tree /nix/var/nix/profiles/system
+
+ls /run/current-system/sw/bin
+
+
+nix-env --list-generations
+nix-env --delete-generations #+number
+
+sudo nix-store --optimise -vv
+
+sudo dmesg | ccze -A | less
+-xfconf-query -c xfce4-session -p /compat/LaunchGNOME -s true
+# sudo nix-collect-garbage --delete-older-than 3d && sudo nix-store --optimize
+
+kitty +kitten icat 20201111_161437.jpg
+unbuffer lsd -l|& less
+blahaj -s -b -r
+terminal-colors -n
+terminal-colors -l
+xdpyinfo -ext all | less -X -j5 --tilde --save-marks --incsearch --RAW-CONTROL-CHARS	--LINE-NUMBERS --line-num-width=3 --quit-if-one-screen --use-color --color=NWr --color=EwR --color=PbC --color=Swb
+
+MANGOHUD_CONFIG="gpu_stats=0,font_size=12" mangohud glxgear
+MANGOHUD_CONFIG="gpu_stats=0,font_size=12" mangohud glxgears
+
+
+for i in {0..255}; do print -Pn "%K{$i} %k%F{$i}${(l:3::0:)i}%f " ${${(M)
+$((i%6)):#3}:+$'
+'}; done
+
+rm .xsession-errors.old
+# fd "^temp" 2> /dev/null
+
+
+sudo du -h /var/log
+du -h ~/.cache/thumbnails
+du -h ~/.local/share/Trash/*
+
+systemctl list-timers --all
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+man --html=w3m nix-build
+# gnome-text-editor --ignore-session --standalone *.nix
+
+
+blahaj -i -r -b /etc/os-release
+blahaj -w -r -b /etc/os-release
+
+du -h -s -m -c --apparent-size * | sort -rn
+du -h --max-depth=1
+
+rm rm -i /share/nixos/configurationNix/v5-modules/*~
+
+git log --graph --decorate --all
+
+alias hss='hugo server --noHTTPCache'
+modinfo $(lsmod | cut -d " " -f 1 )
+tree -CFxh --du
+find . -type f -name "*.jpg" | xargs -I {} sh -c 'convert "{}" -resize 800x800 -quality 85 "$(dirname "{}")"/$(basename "{}" .jpg)_optimized.jpg; cwebp -q 80 "$(dirname "{}")"/$(basename "{}" .jpg)_optimized.jpg -o "$(dirname "{}")"/$(basename "{}" .jpg)_optimized.webp'
+l
