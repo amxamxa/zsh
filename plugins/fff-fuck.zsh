@@ -43,8 +43,14 @@ FF() {
 	export FFF_STAT_CMD="stat"
 	export FFF_FILE_FORMAT="%f"
 	export FFF_MARK_FORMAT=">  %f*"
+		export FFF_CD_ON_EXIT=1
 	# w3m-img offsets.
-	export FFF_W3M_XOFFSET=0
+	export FFF_W3M_XOFFSET=40
 	export FFF_W3M_YOFFSET=0
+	
+	export FFF_FAV1=$HOME
+	export FFF_FAV2=/home/projects
+	export FFF_FAV3=/share
+	export FFF_FAV4=/share/wallpaper
 
 	

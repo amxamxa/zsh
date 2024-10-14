@@ -1,13 +1,31 @@
-120;6u120;6u---
+---
 tags: [ kitty ]
 ---
-
+  		alt+f4 →  			close_window
+  		ctrl+alt+c →  		copy_file_to_clipboard
+	  	ctrl+alt+down →  	resize_window shorter
+        ctrl+alt+l →  		next_layout
+        ctrl+alt+s → 	 	goto_layout stack
+        ctrl+alt+up →  		resize_window taller
+        ctrl+end →  		scroll_end
+        ctrl+home →  		scroll_home
+        ctrl+left →  		resize_window narrower
+        ctrl+right →  		resize_window wider
+        ctrl+super+down →  	scroll_line_down
+        ctrl+super+up   	scroll_line_up
+        ctrl+v →  			paste_from_clipboard
+        page_down →  		scroll_page_down
+        page_up →  			scroll_page_up
+        shift+enter →  		launch --cwd=current
+        shift+tab →  		previous_tab
+       
+        super+i →  set_tab_title
 # Scrolling
 ctrl+shift+up        - Line up					- ok
 ctrl+shift+down      - Line down 				-ok
 ctrl+shift+page_up   - Page up       	-ok
 ctrl+shift+page_down - Page down 			-ok
-ctrl+shift+home      - Top 		-ok
+ctrl+shift+home      - qqq 		-ok
 ctrl+shift+end       - Bottom			-ok
 ctrl+shift+z         - Previous shell prompt  -ok
 ctrl+shift+x         - Next shell prompt		-Nok

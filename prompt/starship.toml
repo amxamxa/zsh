@@ -13,15 +13,15 @@ palette = "gruvbox_dark"
 
 [palettes.gruvbox_dark]
 color_green = "#98971a"
-color_fg0 = "#fbf1c7"
-color_orange = "#d65d0e"
-color_bg3 = "#665c54"
-color_purple = "#b16286"
+color_fg0 = "#1F0128"
+color_orange = "#cf3023"
+color_bg3 = "#64b7cc"
+color_purple = "#502962"
 color_red = "#cc241d"
-color_yellow = "#d79921"
+color_yellow = "#fdaa38"
 color_aqua = "#689d6a"
 color_blue = "#458588"
-color_bg1 = "#3c3836"
+color_bg1 = "#ff0035"
 
 [profiles]
 

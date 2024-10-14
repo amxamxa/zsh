@@ -70,3 +70,34 @@ modinfo $(lsmod | cut -d " " -f 1 )
 tree -CFxh --du
 find . -type f -name "*.jpg" | xargs -I {} sh -c 'convert "{}" -resize 800x800 -quality 85 "$(dirname "{}")"/$(basename "{}" .jpg)_optimized.jpg; cwebp -q 80 "$(dirname "{}")"/$(basename "{}" .jpg)_optimized.jpg -o "$(dirname "{}")"/$(basename "{}" .jpg)_optimized.webp'
 l
+edit $(cheat --conf)
+bat3 --line-range=455:525 aliases.zsh
+
+for file in pic/*.webp; do dwebp "$file" -o "${file%.webp}.png"; done
+
+find . -type f -name "*.png" | xargs jp2a --colors --invert --background=dark
+
+micro -filetype zsh startup.conf
+
+jp2a --chars=" 2244-- __ ..ooxx@@##$$" nikw2.png
+
+systemctl --no-legend --type=service --state=running | fzf | awk '{print $1}' | xargs sudo systemctl restart
+
+ls /run/current-system/sw/share/consolefonts/
+
+gnome-text-editor --ignore-session --standalone --new-window /etc/nixos/*.nix
+
+bat aliases.maybe --line-range=80:80
+
+ln -s /share/zsh/functions/NIXbuilder.sh .
+
+# Suche rekursiv nach allen .conf-Dateien im aktuellen Verzeichnis
+find . -name "*.conf" | while read -r file; do
+    # Zeige den Pfad der aktuellen Datei an
+    echo "$file"
+    # Führe neofetch mit der aktuellen Konfigurationsdatei aus
+    neofetch --config "$file"
+    # Warte 2 Sekunden vor der nächsten Iteration
+    sleep 2
+done
+# alias nixref='nix-store -q --references $(nix-env -q -u-out-path | grep -m 1 "$1" | awk "{print \$2}")'

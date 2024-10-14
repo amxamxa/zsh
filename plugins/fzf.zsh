@@ -55,12 +55,11 @@ _fzf_compgen_dir() {
 _fzf_comprun() {
   local command=$1
   shift
-
   case "$command" in
-    cd)           fzf --preview 'tree -C {} | head -200'   "$@" ;;
-    export|unset) fzf --preview "eval 'echo \$'{}"         "$@" ;;
-    ssh)          fzf --preview 'dig {}'                   "$@" ;;
-    *)            fzf --preview 'bat -n --color=always {}' "$@" ;;
+    cd)           fzf --preview 'tree -FCshx {} | head -200'   "$@" ;;
+    export|unset) fzf --preview "eval 'echo \$'{}"         	   "$@" ;;
+    ssh)          fzf --preview 'dig {}'                       "$@" ;;
+    *)            fzf --preview 'bat -n --color=always {}'     "$@" ;;
   esac
 }
 
@@ -111,41 +110,41 @@ export FZF_PREVIEW_ADVANCED="bat"
   # Setting fd as the default source for fzf, follow symbolic links and don't want it to exclude hidden 
   export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
 
-# 	  CTRL_T
-#	----------
-# Preview file content using bat (https://github.com/sharkdp/bat)
+# 	 CTRL_T - Preview file content using bat (https://github.com/sharkdp/bat)
+#	-------------------------------------------
 		export FZF_CTRL_T_OPTS="
 		  --walker-skip .git,node_modules,target
 		  --preview 'bat -n --color=always {}'
-		  --bind 'ctrl-/:change-preview-window(down|hidden|)'"	
-
+		  --bind 'alt-t:change-preview-window(down|hidden|)'
+		   --header	'alt-t to change preview'"
 #  	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #	export FZF_CTRL_T_KEY='^[T' # Esc+T
+#	_________________________________________________________
  
-# 	  CTRL_R
-#	----------
-# CTRL-s to toggle small preview window to see the full command
-# CTRL-Y to copy the command into clipboard using pbcopy
+# 	  CTRL-R  - SEARCH HISTORY
+#	---------------------------------
+# alt-t CTRL-s to toggle small preview window to see the full command
+# alt-c CTRL-Y to copy the command into clipboard using pbcopy
 export FZF_CTRL_R_OPTS="
   --preview 'echo {}' --preview-window up:3:hidden:wrap
-  --bind 'ctrl-s:toggle-preview'
-  --bind 'ctrl-y:execute-silent(echo -n {2..} | pbcopy)+abort'
+  --bind 'alt-t:toggle-preview'
+  --bind 'alt-c:execute-silent(echo -n {2..} | pbcopy)+abort'
   --color header:italic
-  --header 'Press CTRL-Y to copy command into clipboard'"
+  --header 'COPY to clipboard: alt-c || Toggle preview: alt+t'"
 
 # 	... oder ...
 # use --preview option to display the full command on the preview window. In the following example, we bind ? key for toggling the preview window.
 # export FZF_CTRL_R_OPTS="--preview 'echo {}' --preview-window down:3:hidden:wrap --bind '?:toggle-preview'"
-
-# 	  ALT_C
+#__________________________________________________________
+# 	  ALT_C - # Print tree structure in the preview window
 #	----------
-# Print tree structure in the preview window
 export FZF_ALT_C_OPTS="
   			--walker-skip .git,node_modules,target \
- 			 --preview 'tree -Cxh {}'"
+ 	 			--preview 'bat {}' --bind               \ 'alt-t:change-preview-window(right,70%|down,40%,border-horizontal|hidden|right)'"
 # ... oder (The following example uses tree command to show the entries of the directory.)
 # export FZF_ALT_C_OPTS="
 #				--preview 'tree -Cxh {} | head -n 10'"
+	#	--preview 'tree -FCxh {}| head -n 20'"
 # export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 #  fzf --preview 'cat {}' --bind 'ctrl-/:change-preview-window(right,70%|down,40%,border-horizontal|hidden|right)'
 

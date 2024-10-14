@@ -16,3 +16,11 @@ spaceduck
 unikitty-dark
 xcode-dusk
 yachiyo
+spaceduck
+chalk
+hemisu-dark
+seti
+harmonic-dark
+vs-code-dark-plus
+unikitty-dark
+gruvbox-dark-soft

@@ -8,3 +8,5 @@
  zsh-syntax-highlighting/
 *.bkp
 *bkp
+spaceship/
+tldr/

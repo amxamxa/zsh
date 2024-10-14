@@ -1,0 +1,235 @@
+#  $all is shorthand for $username$hostname$localip$shlvl$singularity$kubernetes$directory$vcsh$fossil_branch$fossil_metrics$git_branch$git_commit$git_state$git_metrics$git_status$hg_branch$pijul_channel$docker_context$package$bun$c$cmake$cobol$daml$dart$deno$dotnet$elixir$elm$erlang$fennel$golang$gradle$haskell$haxe$helm$java$julia$kotlin$lua$nim$nodejs$ocaml$opa$perl$php$pulumi$purescript$python$raku$rlang$red$ruby$rust$scala$solidity$swift$terraform$typst$vlang$vagrant$zig$buf$guix_shell$nix_shell$conda$meson$spack$memory_usage$aws$gcloud$openstack$azure$direnv$env_var$crystal$custom$sudo$cmd_duration$line_break$jobs$battery$time$status$container$os$shell$character
+
+# "$schema" = "https://starship.rs/config-schema.json"
+
+# format = "[<U+E0B6>](color_orange)$os$username[<U+E0B0>](bg:color_yellow fg:color_orange)$directory[ <U+E0B0> ](fg:color_yellow bg:color_aqua)$git_branch$git_status[<U+E0B0>](fg:color_aqua bg:color_blue)$c$rust$golang$nodejs$php$java$kotlin$haskell$python[<U+E0B0>](fg:color_blue bg:color_bg3)$docker_context[ U+E0B0>](fg:color_bg3 bg:color_bg1)$time[<U+E0B4> ](fg:color_bg1)$line_break$character"
+#format = '''
+#[┌───────────────────>](bold lila)
+#[│](bold green)$directory$rust$package
+#[└─>](bold green) '''
+
+format = """
+[](#9c1698)$os$username\
+[](bg:#DA627D fg:#2a0934)$directory\
+[](fg:#DA627D bg:#FCA17D)$git_branch$git_status\
+[](fg:#FCA17D bg:#86BBD8)$java$nodejs$rust
+[](fg:#86BBD8 bg:#06969A)$docker_context\
+[](fg:#06969A bg:#33658A)$time\
+[ ](fg:#33658A)$line_break$character
+"""
+
+# Globale Formatierungseinstellungen
+add_newline = true
+command_timeout = 500
+continuation_prompt = "[∙](red)"
+follow_symlinks = true
+palette = "gruvbox_dark"
+scan_timeout = 30
+
+# Palette Definition: Gruvbox Dark
+[palettes.gruvbox_dark]
+color_aqua = "#689d6a"
+color_bg1 = "#3c3836"
+color_bg3 = "#665c54"
+color_blue = "#458588"
+color_fg0 = "#e2cc6e"
+color_green = "#98971a"
+color_orange = "#d65d0e"
+color_purple = "#b16286"
+color_red = "#cc241d"
+color_yellow = "#d79921"
+lila = "#874aaf"
+lila2 = "#9c1698"
+red = "#c90033"
+# character - Anpassung der ANSI-Farben für Erfolg und Fehler
+[character]
+error_symbol = "󰧼 "
+error_symbol_style = "bold red"
+success_symbol = "󰌽 -"
+success_symbol_style = "bold green"
+
+# cmd_duration - Dauer des letzten Befehls
+[cmd_duration]
+disabled = false
+format = "took [$duration]($style)"
+min_time = 2000
+show_milliseconds = false
+show_notifications = false
+style = "red bold"
+
+# conda - Informationen zu Conda-Umgebungen
+[conda]
+disabled = false
+format = "via [$symbol$environment]($style) "
+ignore_base = true
+symbol = "🅒 "
+style = "green bold"
+truncation_length = 1
+
+# container - Container-Informationen
+[container]
+disabled = false
+format = '[$symbol \[$name\]]($style) '
+style = "red bold dimmed"
+symbol = "⬢ "
+
+# directory - Aktuelles Verzeichnis
+[directory]
+disabled = false
+fish_style_pwd_dir_length = 0
+format = "[ $path ]($style)"
+home_symbol = "<U+f7dc>"
+read_only = "🔒"
+read_only_style = "red"
+repo_root_format = "[$before_root_path]($before_repo_root_style)[$repo_root]($repo_root_style)[$path]($style)[$read_only]($read_only_style)"
+style = "fg:color_fg0 bg:color_yellow"
+truncation_length = 3
+truncation_symbol = "<U+f19a6>"
+use_logical_path = true
+use_os_path_sep = true
+
+# directory.substitutions - Pfad-Substitutionen
+[directory.substitutions]
+"/home/user" = "~"
+"/home/project" = "<U+F0C8B>"
+"/share" = "<U+f1e0>"
+Documents = "<U+F0219>"
+Downloads = "<U+F019>"
+Music = "<U+F075A>"
+Pictures = "<U+F03E>"
+
+# docker_context - Docker-Kontextinformationen
+[docker_context]
+disabled = false
+detect_extensions = []
+detect_files = [
+    "docker-compose.yml",
+    "docker-compose.yaml",
+    "Dockerfile",
+]
+format = "[[ $symbol($context) ](fg:#83a598 bg:color_bg3)]($style)"
+only_with_files = true
+style = "bg:color_bg3"
+symbol = "<U+F308>"
+
+# git_branch - Git-Branch-Informationen
+[git_branch]
+disabled = false
+format = "[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)"
+ignore_branches = []
+style = "bg:color_aqua"
+symbol = "<U+F418>"
+truncation_length = 9223372036854775807
+truncation_symbol = "…"
+
+# hostname - Hostname nur bei SSH-Verbindung anzeigen
+[hostname]
+disabled = false
+format = "[$ssh_symbol$hostname]($style)"
+ssh_only = true
+ssh_symbol = "🌐 "
+style = "green dimmed bold"
+trim_at = "."
+
+# nix_shell - Informationen zur Nix Shell
+[nix_shell]
+disabled = false
+format = 'via [$symbol$state( \($name\))]($style) '
+heuristic = false
+impure_msg = "impure"
+pure_msg = "pure"
+style = "bold blue"
+symbol = "❄️  "
+
+# package - Paketversionen anzeigen
+[package]
+disabled = false
+format = "is [$symbol$version]($style) "
+style = "208 bold"
+symbol = "📦 "
+version_format = "v${raw}"
+
+# python - Informationen zu Python-Umgebungen
+[python]
+disabled = false
+detect_extensions = ["py"]
+detect_files = [
+    "requirements.txt",
+    ".python-version",
+    "pyproject.toml",
+    "Pipfile",
+    "tox.ini",
+    "setup.py",
+    "__init__.py",
+]
+format = "[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)"
+style = "bg:color_blue"
+symbol = "<U+E606>"
+#####################################
+[shlvl]
+threshold = 2
+format = "[$symbol$shlvl]($style) "
+symbol = "↕️  "
+repeat = false
+repeat_offset = 0
+style = "bold cyan"
+disabled = true
+
+############
+[shell]
+format = "[$indicator]($style) "
+bash_indicator = "bsh"
+fish_indicator = "fsh"
+zsh_indicator = "zsh"
+powershell_indicator = "psh"
+ion_indicator = "ion"
+elvish_indicator = "esh"
+tcsh_indicator = "tsh"
+nu_indicator = "nu"
+xonsh_indicator = "xsh"
+cmd_indicator = "cmd"
+unknown_indicator = ""
+style = "fg:color_bg1 bg:lila"
+disabled = true
+
+
+[sudo]
+format = "[as $symbol]($style)"
+symbol = "<U+1fa96> "
+style = "bold red"
+allow_windows = false
+disabled = true
+
+[status]
+format = "[$symbol$status]($style) "
+symbol = "<U+1f5fd> "
+success_symbol = "🟢 "
+failure_symbol = "🔴 "
+not_executable_symbol = "🚫"
+not_found_symbol = "🔍 "
+sigint_symbol = "🧱 "
+signal_symbol = "<U+f0e7> "
+style = "bold red"
+map_symbol = false
+recognize_signal_code = true
+pipestatus = false
+pipestatus_separator = "|"
+pipestatus_format = '\[$pipestatus\] => [$symbol$common_meaning$signal_name$maybe_int]($style)'
+disabled = true
+
+# time - Aktuelle Uhrzeit anzeigen
+[time]
+disabled = false
+format = "[[ <U+F43A> $time ](fg:color_fg0 bg:color_bg1)]($style)"
+style = "bg:color_bg1"
+time_format = "%R"
+use_12hr = false
+
+# username - Benutzernamen anzeigen
+[username]
+disabled = false
+format = "[ $user ]($style)"
+show_always = true
+style_root = "bg:color_orange fg:color_fg0"
+style_user = "bg:color_orange fg:color_fg0"
+
