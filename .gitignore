@@ -1,5 +1,4 @@
 # .gitignore
-
  bkp/
  nix-zsh-completions/
  powerlevel10k/
@@ -11,3 +10,4 @@
 spaceship/
 tldr/
 .zcompdump
+
