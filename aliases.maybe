@@ -101,3 +101,4 @@ find . -name "*.conf" | while read -r file; do
     sleep 2
 done
 # alias nixref='nix-store -q --references $(nix-env -q -u-out-path | grep -m 1 "$1" | awk "{print \$2}")'
+sudo bat /var/log/lightdm/lightdm.log

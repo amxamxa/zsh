@@ -161,10 +161,13 @@ alias untar='tar -xvjf'
 alias hack='hackertyper'
 #	_______________________________neofetch_______________________________
 
-alias neo0='echo -e "\t${PINK} neofetch w/ ${LILA} \t $ZDOTDIR/neofetch/spaceinv.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/spaceinv.conf'
-alias neo1='echo -e "\t${PINK} neofetch w/ ${LILA} \t 	$ZDOTDIR/neofetch/neofetch-short.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/neofetch-short.conf'
- alias neo2='echo -e "\t${PINK} neofetch w/ ${LILA} \t	$ZDOTDIR/neofetch/config2.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/config2.conf'
-alias neo3='echo -e "\t${PINK} neofetch w/ ${LILA} \t	$ZDOTDIR/neofetch/neofetch-long.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/neofetch-long.conf'
+alias neo='echo -e "\t${PINK} neofetch w/ ${LILA} \t $ZDOTDIR/neofetch/spaceinv.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/spaceinv.conf'
+alias neo0='neo'
+alias neo1='echo -e "\t  ${PINK}neofetch w/ ${LILA} \t 	$ZDOTDIR/neofetch/neofetch-short.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/neofetch-short.conf'
+alias neo2='echo -e "\t${PINK} neofetch w/ ${LILA} \t	$ZDOTDIR/neofetch/config2.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/config2.conf'
+alias neo3='echo -e "\t${LIME}   -  󱚡  --   --  🙼 🙼 🙼      󱢇     🙽 🙽 🙽   --    --  󱚡  --    -" && echo -e "\t${PINK}  neofetch w/ ${LILA} \t	$ZDOTDIR/neofetch/neofetch-long.conf\t${RESET}" && echo -e "\t${CYAN}   -  󱚡  --   --  🙼 🙼 🙼   󱢇     󱢇  🙽 🙽 🙽   --    --  󱚡  --    -" &&  neofetch --config $ZDOTDIR/neofetch/neofetch-long.conf'	
+alias neo4='echo -e "\t${PINK} neofetch w/ ${LILA} \t  a for loop of themes	/home/project/neofetch-themes${RESET}" && bash -c /home/project/neofetch-themes/for-loop.sh'							
+# 	 	  \
 
 #	____________________________________________________________________
 #alias sudo='sudo --preserve-env=HOME'
@@ -282,7 +285,7 @@ du --human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M
 #gtk-update-icon-cache
 #	____________________________________________________________________________________
 #       e x a / e z a .. ls  ll  lh  ld ...
-
+alias e-hugo='eza --no-git --total-size  --git-ignore -A -tree'
 alias e1='echo -e "\t${GELB} eza --tree -level 1 ${RESET}\n" && \
 														 \
 	 eza --all 			--long --group-directories-first \
