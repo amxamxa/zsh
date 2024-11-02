@@ -1,12 +1,47 @@
 #!/usr/bin/env zsh
-
-# auth:        _______max_kempter_________
-# filename:    _______my-function.zsh_____
-
+#########################################
+## ╔═╗╦╦  ╔═╗           ________________
+## ╠╣ ║║  ║╣     
+## ╚  ╩╩═╝╚═╝           ''''''''''''''''
+##   -NAME:     my-functions.zsh 
+##   -PATH:     $ZDOTDIR/functions
+##   -STATUS:   work in progress
+##   -USAGE:    
+## -------------------------------------
+# FILE DATES    [yyyy-mmm-dd]
+##..SAVE:       2024-...
+##..CREATION:   2024-07
+## -----------------------------------------
+## AUTHOR:      mxx
+## COMMENTS:    
+###########################################
 SKY="\033[38;2;62;36;129m\033[48;2;135;206;235m"
 RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
 RASPBERRY="\033[38;2;32;0;21m\033[48;2;221;160;221m"
 RESET="\033[0m"
+#   ┌─┐┬ ┬┌┐┌┌─┐┌┬┐┬┌─┐┌┐┌┌─┐
+#   ├┤ │ │││││   │ ││ ││││└─┐
+#   └  └─┘┘└┘└─┘ ┴ ┴└─┘┘└┘└─┘
+###################################calvin
+
+BKP() {
+
+# todo:
+# 1. Unter-Verzeichnis bkp/ anlegen
+# 2. Datei nach bkp/ kopieren
+    for file in "$@"; do
+        # Extrahiere den Dateinamen ohne Pfad und die Erweiterung
+        #  Der "basename" Befehl entfernt den Pfadteil eines Dateipfads und gibt nur den Namen der Datei zurück. Das -- Argument wird verwendet, um sicherzustellen, dass keine weiteren Argumente als Dateinamen interpretiert werden, falls $file mehrere Wörter enthält
+        filename=$(basename -- "$file")
+           #${variable##pattern}: Diese Syntax extrahiert den längsten Teil eines Strings vor dem Muster (pattern). In diesem Fall sucht es nach dem letzten Punkt (.) im Dateinamen und entfernt alles vor diesem Punkt. Da der Punkt selbst nicht in das Ergebnis aufgenommen wird, bleibt nur der Teil nach dem letzten Punkt übrig, also die Dateierweiterung.
+        extension="${filename##*.}"   
+      #${variable%pattern}: Ähnlich wie oben, aber diese Syntax entfernt den kürzesten Teil eines Strings nach dem Muster (pattern). In diesem Fall sucht es nach dem ersten Punkt (.) im Dateinamen und entfernt alles danach, einschließlich des Punktes selbst. Dadurch bleibt nur der Teil des Namens vor dem letzten Punkt übrig, also der Dateiname ohne die Erweiterung.
+      name="${filename%.*}"
+
+        # Erstelle das Backup mit dem aktuellen Datum und behalte die ursprüngliche Erweiterung bei
+        cp -vi "$file" "${name}.$(date +%Y-%m-%d).bkp.${extension}"
+    done
+}
 #_______________________________________________________________
 NIXcopy() {
     local destination_dir="/share/nixos/bkp/$(date +%F)"
@@ -40,6 +75,20 @@ wonix() {
     else
         echo "\n\t${SKY}No Nix package found for '$1'.${RESET}"
     fi
+}
+#	___________________________________________________________________________
+BKP() {
+ for file in "$@"; do
+# Extrahiere den Dateinamen ohne Pfad und die Erweiterung
+#  Der "basename" Befehl entfernt den Pfadteil eines Dateipfads und gibt nur den Namen der Datei zurück. Das -- Argument wird verwendet, um sicherzustellen, dass keine weiteren Argumente als Dateinamen interpretiert werden, falls $file mehrere Wörter enthält
+        filename=$(basename -- "$file")
+           #${variable##pattern}: Diese Syntax extrahiert den längsten Teil eines Strings vor dem Muster (pattern). In diesem Fall sucht es nach dem letzten Punkt (.) im Dateinamen und entfernt alles vor diesem Punkt. Da der Punkt selbst nicht in das Ergebnis aufgenommen wird, bleibt nur der Teil nach dem letzten Punkt übrig, also die Dateierweiterung.
+        extension="${filename##*.}"   
+      #${variable%pattern}: Ähnlich wie oben, aber diese Syntax entfernt den kürzesten Teil eines Strings nach dem Muster (pattern). In diesem Fall sucht es nach dem ersten Punkt (.) im Dateinamen und entfernt alles danach, einschließlich des Punktes selbst. Dadurch bleibt nur der Teil des Namens vor dem letzten Punkt übrig, also der Dateiname ohne die Erweiterung.
+      name="${filename%.*}"
+# Erstelle das Backup mit dem aktuellen Datum und behalte die ursprüngliche Erweiterung bei
+      cp -vi "$file" "${name}.$(date +%Y-%m-%d).bkp.${extension}"
+ done
 }
 #	___________________________________________________________________________
 Htop() {

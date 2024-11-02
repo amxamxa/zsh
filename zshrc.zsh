@@ -1,16 +1,19 @@
 #!/usr/bin/env zsh
 ########################################################
+## ___   ___ ALL RIGHTS BY max kempter ___   ___ 
 ## ╔═╗╦╦  ╔═╗           ________________
 ## ╠╣ ║║  ║╣  -NAME:	    zshrc.zsh
 ## ╚  ╩╩═╝╚═╝           ''''''''''''''''
 ##	 -PATH:    	/share/zsh/
 ##	 -STATUS:	work in progress
 ##	 -USAGE:	RC-File for zsh
-## -------------------------------------
+## ____________________________________________________
+##              󰌽   󰧻       󱚡    󰧼            
+## ----------------------------------------------------
 # FILE DATES	[yyyy-mmm-dd]ŝ
 ##..SAVE:	  	2024-...
 ##..CREATION:   2023
-## -----------------------------------------
+## ----------------------------------------------------
 ## 	set filetyte zsh
 ## COMMENTS:	nixOS-version
 #####################################################
@@ -77,7 +80,7 @@ REPORTTIME=3 		# display cpu usage, if command taking more than 3s
 #   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
 #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
 #  _______________________________________________________
-export BOLD="\033[1m" 
+export BOLD="\e[1m" 
 export RESET="\e[0m" 
 export GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
 export RED="\033[38;2;240;138;100m\033[48;2;147;18;61m" 
@@ -149,6 +152,8 @@ export EZA_COLORS=$LS_COLORS
  eval "$(hugo completion zsh)"
  eval "$(npm completion zsh)"
  eval "$(rg --generate=complete-zsh)"
+ # eval "$(colorless -a)"
+  
 # --------------------------------------------
 #		████─████─████─█───█─████─███
 #		█──█─█──█─█──█─██─██─█──█──█─
@@ -285,7 +290,6 @@ rm -f  "$HOME/.xsession-errors "
 rm -f  "$HOME/.xsession-errors.old"
 rm -f  "$HOME/.ICEauthority"
 rm -fr "$HOME/.compose-cache"
-
 #	_________________________________________________
 #	 less
 #	------------------------------------------------
@@ -303,9 +307,28 @@ else
     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
     echo "less -FRX als man-pager  ... check ${RESET}"
 fi
+#	_________________________________________________
 
-echo "--------------------------------------------------------" | blahaj -i -r
-
+echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄ u𝓈𝑒 𝓉𝒽𝒾𝓈 𝓀𝒾𝓉𝓉𝓎 𝓈𝒽𝑜𝓇𝓉𝒸𝓊𝓉𝓈 4 𝓀𝑒𝓎𝒷𝑜𝒶𝓇𝒹 𝓀𝓊𝓃𝑔-𝒻𝓊 ▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}" 
+#echo -e "\n${SKY}	-----USE mxx kitty <3 Shortcutsreal :--------" # | blahaj -i -r
+echo "  	 kitty_mod+(down)||(right)||(up) →  resize_window
+         super+i →  set_tab_title"	| blahaj -w -c Nb				
+echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
+echo "\t kitty_mod+0 →  layout_action rotate
+         kitty_mod+1 →  goto_layout grid
+         kitty_mod+2 →  goto_layout stack
+         kitty_mod+3 →  goto_layout horizontal
+         kitty_mod+4 →  goto_layout vertical
+         kitty_mod+5 →  goto_layout splits
+         kitty_mod+6 →  goto_layout fat:bias=50;full_size=1;mirrored=false
+         kitty_mod+7 →  goto_layout tall
+         kitty_mod+8 →  goto_layout tall:bias=50;full_size=1;mirrored=false
+         kitty_mod+9 →  next_layout			"| blahaj -w -c Nb
+echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
+echo "         kitty_mod+n →  launch --cwd=current --location=neighbor
+         kitty_mod+t →  launch --cwd=current --location=after
+         super+enter →  launch --cwd=current --location=vsplit"| blahaj -w -c Nb
+echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
 
 # 	  Aktualisiere die Shell-Hash-Tabelle
 #	--------------------------------------
