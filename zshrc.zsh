@@ -324,10 +324,19 @@ echo "\t kitty_mod+0 →  layout_action rotate
          kitty_mod+7 →  goto_layout tall
          kitty_mod+8 →  goto_layout tall:bias=50;full_size=1;mirrored=false
          kitty_mod+9 →  next_layout			"| blahaj -w -c Nb
+
+
 echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
-echo "         kitty_mod+n →  launch --cwd=current --location=neighbor
-         kitty_mod+t →  launch --cwd=current --location=after
-         super+enter →  launch --cwd=current --location=vsplit"| blahaj -w -c Nb
+echo " 
+map super+t launch --cwd=current --type=tab
+map kitty_mod+t launch --cwd=current --type=tab
+ map kitty_mod+f10 focus_visible_window
+ map kitty_mod+f11 swap_with_window
+map kitty_mod+f12 launch --stdin-source=@screen_scrollback less
+ map super+enter launch --cwd=current --location=hsplit
+
+map kitty_mod+left neighboring_window left
+map ctrl+down neighboring_window bottom"| blahaj -w -c Nb
 echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
 
 # 	  Aktualisiere die Shell-Hash-Tabelle

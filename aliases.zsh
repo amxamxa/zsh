@@ -92,9 +92,7 @@ alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix ${LILA}which can s
 # alias NcurrCopy= NIXcurrentCopy
 
 alias Ncopy=NIXcopy
-# alias WO='echo -e "${PINK}nixOS ONLY:${RESET}${LILA} \
-#	      Zeigt das Package das zu der Funktion gehört:${RESET}" \
-#		  && which -s'  #  readlink -f `which fortune`
+alias WO='echo -e "${PINK}nixOS ONLY:${RESET}${LILA}   Zeigt das Package das zu der Funktion gehört:${RESET}" && which -s'  #  readlink -f `which fortune`
 
 #	_____________________________________________________zsh_______________
 ##      * *   Z S H *  *
