@@ -503,10 +503,16 @@ alias GIT='echo -e "\t${PINK}git aliase aus Zeile 480 bis 556\t $ZDOTDIR/aliases
 # Git Status
 alias gs='echo -e "${GELB}\nZeigt den Status des Arbeitsverzeichnisses und des Staging-Bereichs an${RESET}\n" && git status'
 
-alias gss='echo -e "${PINK}\n\t git status --short ${RESET} with abbr.:${RESET}\n
+alias gsss='echo -e "${PINK}\n\t git status --short ${RESET} with abbr.:${RESET}\n
 ${GELB}?? ... Untracked files${RESET}\t${GELB}U ... Files with merge conflicts${RESET}\t ${GELB}A ... New files added to staging ${RESET}\t${GELB}M ... Modified files${RESET}\t${GELB}D ... Deleted files${RESET}\t${GELB}R ... Renamed files${RESET}\t${GELB}C ... Copied files${RESET}\n" && git status -s'
-
-alias gsss='cowsay "${GELB}\n git status --short w\:\n\t "M" for file is modified\n\t "A" for is new and has been added to staging \n\t "\?\? " indicates file is untracked.${RESET}\n" && git status -s'
+alias gss='cowsay -W 34 \
+"${NIGHT}     git status -s crypt:       -
+ 1st row: NOT- & 2nd row: -STAGED-
+${PINK} ---------------------------------
+   ...M for  modified          -
+   ...A for new and staged     -
+   ...C for copied             -
+   ...R for renamed            - ${NIGHT} " && git status -s'
 
 # Git Add
 alias ga='echo -e "${GELB}\nFügt Änderungen im Arbeitsverzeichnis zum Staging-Bereich hinzu${RESET}\n" && git add'
