@@ -520,10 +520,6 @@ alias gpt='echo -e "${GELB}\nPushed alle Tags auf den Remote-Branch${RESET}\n" &
 alias gtd='echo -e "${GELB}\nLöscht einen lokalen Tag${RESET}\n" && git tag --delete'
 alias gtdr='echo -e "${GELB}\nLöscht einen Remote-Tag${RESET}\n" && git tag --delete origin'
 
-# Git Branch
-alias grb='echo -e "${GELB}\nZeigt die Remote-Branches an${RESET}\n" && git branch -r'
-alias gb='echo -e "${GELB}\nZeigt alle Branches im aktuellen Repository an${RESET}\n" && git branch'
-
 # Git Pull
 alias gplo='echo -e "${GELB}\nHolt die neuesten Änderungen vom Remote-Branch \"origin\"${RESET}\n" && git pull origin'
 
@@ -544,8 +540,11 @@ alias gl='echo -e "${GELB}\nZeigt die Commit-Historie in einer Zeile an${RESET}\
 
 alias glol='echo -e "${GELB}\nZeigt die Commit-Historie in einer graphischen Darstellung an${RESET}\n" && git log --graph --abbrev-commit --oneline --decorate'
 
+# Git Branch
+alias grb='echo -e "${GELB}\nZeigt die Remote-Branches an${RESET}\n" && git branch --remotes --show-current --verbose'
+alias gb='echo -e "${GELB}\nZeigt alle Branches im aktuellen Repository an${RESET}\n" && git branch --show-current --verbose'
 # Git Remote
-alias gr='echo -e "${GELB}\nZeigt die Namen der Remote-Repositories an${RESET}\n" && git remote'
+alias gr='echo -e "${GELB}\nZeigt die Namen der Remote-Repositories an${RESET}\n" && git remote -v'
 alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${RESET}\n" && git remote show'
 
 #Der git for-each-ref Befehl listet Referenzen (refs) in einem Git-Repository auf, wie z.B. Branches, Tags und andere
@@ -553,6 +552,7 @@ alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${
 #    Branch-Übersicht: Eine Liste aller Branches im Repository erhalten.
 #    Commit-Informationen: Sehen, welcher Commit zuletzt auf jedem Branch gemacht wurde, inklusive Commit-Hash, Nachricht, Autor und Datum.
 alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:red)%(refname:short)%(color:reset) - %(color:yellow)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:blue)%(committerdate:relative)%(color:reset))'"
+alias gv="git remote -v && git remote get-url origin --all"
 
 #	_______GIT - AUSGABE ENDE   li:455-530___________________________________________
 

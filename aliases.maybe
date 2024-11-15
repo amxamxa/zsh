@@ -105,3 +105,5 @@ sudo bat /var/log/lightdm/lightdm.log
 colorz -n 15 --font-size 2 /share/wallpaper/dffppt1.png
 # ςοπτακτ
 fd --absolute-path --hidden --extension="nix" --exclude="/home/amxamxa/nixos/nixpkgs/nixpkgs/"
+#	🮐 U+1fb90 Inverse medium shade 
+#	🮖 U+1fb96 Inverse checker board fill

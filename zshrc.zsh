@@ -123,8 +123,8 @@ export EZA_GRID_ROWS=3
 export EZA_GRID_COLUMNS=3
 export EZA_MIN_LUMINANCE=10
 export EZA_COLORS=$LS_COLORS
+# ------- ist in configuration.nix---------------------Projektpfade# TEALDEER_CONFIG_DIR="$ZDOTDIR/tldr"
 
-# -------in conf.nix------------------------------------Projektpfade
 #export PRO="/home/project"
 #export NIX="/share/nixos/configurationNix"
 #export S="/share"
@@ -152,6 +152,7 @@ export EZA_COLORS=$LS_COLORS
  eval "$(hugo completion zsh)"
  eval "$(npm completion zsh)"
  eval "$(rg --generate=complete-zsh)"
+  eval "$(mcfly init zsh)"
  # eval "$(colorless -a)"
   
 # --------------------------------------------
@@ -314,29 +315,47 @@ echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄ u𝓈𝑒 𝓉𝒽�
 echo "  	 kitty_mod+(down)||(right)||(up) →  resize_window
          super+i →  set_tab_title"	| blahaj -w -c Nb				
 echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
-echo "\t kitty_mod+0 →  layout_action rotate
-         kitty_mod+1 →  goto_layout grid
-         kitty_mod+2 →  goto_layout stack
-         kitty_mod+3 →  goto_layout horizontal
-         kitty_mod+4 →  goto_layout vertical
-         kitty_mod+5 →  goto_layout splits
-         kitty_mod+6 →  goto_layout fat:bias=50;full_size=1;mirrored=false
-         kitty_mod+7 →  goto_layout tall
-         kitty_mod+8 →  goto_layout tall:bias=50;full_size=1;mirrored=false
-         kitty_mod+9 →  next_layout			"| blahaj -w -c Nb
+echo "\t
+	       alt+left →  layout_action move_to_screen_edge left
+        alt+right →  layout_action move_to_screen_edge right
+        alt+up →  layout_action move_to_screen_edge top
+              
+        ctrl+f5 →  background_opacity -0.1
+        ctrl+f6 →  background_opacity +0.1
+       
+        kitty_mod+f12 →  launch--stdin-source=@screen_
+        shift+f5 →  launch --type=overlay sh -c 'echo".."
+       
+        kitty_mod+b →  copy_to_buffer BUFFER
+        kitty_mod+f →  copy_file_to_clipboard
+        kitty_mod+f11 →  focus_visible_window
+        kitty_mod+t →  launch --cwd=current --type=tab
+	"| blahaj -w -c Nb
 
 
 echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
 echo " 
-map super+t launch --cwd=current --type=tab
-map kitty_mod+t launch --cwd=current --type=tab
- map kitty_mod+f10 focus_visible_window
- map kitty_mod+f11 swap_with_window
-map kitty_mod+f12 launch --stdin-source=@screen_scrollback less
- map super+enter launch --cwd=current --location=hsplit
+  super+enter →  launch     --cwd=current 
+        super+i →  set_tab_title
+        super+t →  launch --cwd=current --type=tab
 
-map kitty_mod+left neighboring_window left
-map ctrl+down neighboring_window bottom"| blahaj -w -c Nb
+        shift+kp_add →  layout_action   bias 10 25
+        shift+kp_divide →  toggle_layout  stack
+        shift+kp_enter →  next_layout
+        shift+kp_multiply →  launch   --cwd=current 
+        super+kp_multiply →  new_tab
+        shift+kp_subtract →  swap_with_window
+        
+        alt+f3 →  close_window
+        alt+f6 →  close_tab
+         
+        ctrl+1 →  goto_layout   grid
+        ctrl+2 →  goto_layout   stack
+        ctrl+3 →  goto_layout  fat:bias=50
+        ctrl+4 →  goto_layout   tall:bias=50
+        ctrl+5 →  goto_layout   vertical
+          
+m"| blahaj -w -c Nb
 echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
 
 # 	  Aktualisiere die Shell-Hash-Tabelle
