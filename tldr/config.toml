@@ -22,5 +22,5 @@ underline = true
 auto_update = false
 
 [directories]
-cache_dir = "/share/zsh/tldr/tldr-cache/"
+cache_dir = "/share/zsh/tldr/"
 custom_pages_dir = "/share/zsh/tldr/custom-tldr-pages/"
