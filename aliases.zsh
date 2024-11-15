@@ -316,7 +316,13 @@ alias eee='echo -e "\t${GELB} eza --tree -level 99 --git ${RESET}\n" && \
 
 alias ee='echo -e "eza  ... läuft"  && \
 	eza --git  --almost-all --long --group-directories-first \
-		 	 --colour-scale all --color-scale-mode gradient ' #	--no-time \
+		 	 --colour-scale all --color-scale-mode gradient ' 
+alias ep='echo -e "eza  ... läuft"  && \
+	eza --git  --almost-all --long --group-directories-first \
+		 	 --colour-scale all --color-scale-mode gradient --octal-permissions' 		 	 
+		 	
+		 	 
+		 	 #	--no-time \
 	#	 	 --no-permissions --git --width 76'
 
 	#	eza --grid --long --no-permissions \

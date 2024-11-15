@@ -121,7 +121,7 @@ export EZA_ICONS_AUTO="always"
 export EZA_ICON_SPACING=2
 export EZA_GRID_ROWS=3
 export EZA_GRID_COLUMNS=3
-export EZA_MIN_LUMINANCE=10
+export EZA_MIN_LUMINANCE=50
 export EZA_COLORS=$LS_COLORS
 # ------- ist in configuration.nix---------------------Projektpfade# TEALDEER_CONFIG_DIR="$ZDOTDIR/tldr"
 
@@ -316,7 +316,7 @@ echo "  	 kitty_mod+(down)||(right)||(up) →  resize_window
          super+i →  set_tab_title"	| blahaj -w -c Nb				
 echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
 echo "\t
-	       alt+left →  layout_action move_to_screen_edge left
+alt+left →  layout_action move_to_screen_edge left
         alt+right →  layout_action move_to_screen_edge right
         alt+up →  layout_action move_to_screen_edge top
               
@@ -335,9 +335,9 @@ echo "\t
 
 echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
 echo " 
-  super+enter →  launch     --cwd=current 
-        super+i →  set_tab_title
+super+enter →  launch     --cwd=current 
         super+t →  launch --cwd=current --type=tab
+        super+i →  set_tab_title
 
         shift+kp_add →  layout_action   bias 10 25
         shift+kp_divide →  toggle_layout  stack
@@ -353,10 +353,8 @@ echo "
         ctrl+2 →  goto_layout   stack
         ctrl+3 →  goto_layout  fat:bias=50
         ctrl+4 →  goto_layout   tall:bias=50
-        ctrl+5 →  goto_layout   vertical
-          
-m"| blahaj -w -c Nb
-echo -e "\n\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
+        ctrl+5 →  goto_layout   vertical "| blahaj -w -c Nb
+echo -e "\t${NIGHT}▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄▀▄${RESET}"
 
 # 	  Aktualisiere die Shell-Hash-Tabelle
 #	--------------------------------------
