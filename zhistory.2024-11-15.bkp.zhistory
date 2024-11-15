@@ -13429,3 +13429,17 @@ fi
 : 1731704190:0;..
 : 1731704197:0;edit .gitignore
 : 1731704218:0;ga .
+: 1731704220:0;gs
+: 1731704247:0;gc -m "tldr/config.toml added"
+: 1731704272:0;git fetch origin
+: 1731704282:0;git push
+: 1731704295:0;gs
+: 1731704299:0;git checkout main
+: 1731704345:0;edit .gitignore
+: 1731704357:0;gs
+: 1731704369:0;git reset  history/zhistory
+: 1731704375:0;gs
+: 1731704389:0;git restore --staged .\
+
+: 1731704392:0;gs
+: 1731704418:0;BKP history/zhistory
