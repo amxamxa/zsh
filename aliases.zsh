@@ -30,9 +30,7 @@
 alias FARBE='source_or_error "$ZDOTDIR/functions/colors.zsh" ||  source "$ZDOTDIR/functions/colors.zsh"'
 
 alias man='man --wildcard' # dann wird die man-page auf Terminal gepagt!
-
 alias RM~='find . -type f -name "*~" -delete'
-
 alias gitgit='git config -f $GIT_CONFIG user.email "max.kempter@gmail.com" && \
 	          git config -f $GIT_CONFIG user.name "amxamxa" 			   && \
 	          git config -l | bat3 -l "sh"'
@@ -44,12 +42,9 @@ alias gitloc='git config -f ~/.gitlocal user.email "max.kempter@gmail.com"  && \
 alias COLsw='color-theme-switch && echo -e "${BROWN}color-theme-switch aus my-function.zsh${RESET}"'
 
 alias COL+='theme.sh --dark -i2 >> color-theme.md  && echo -e "${BROWN}theme.sh --dark -i2 >> color-theme.md ${RESET}"'
-
 alias FC-list='fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort'
-
 alias cp='xcp --verbose'
 #	______________________________
-
 alias NIXpkgs='lsd --oneline --classify --no-symlink /run/current-system/sw/bin/'
 alias NIXenv='nix-env --query --installed' # um eine Liste aller installierten Pakete anzuzeigen
 alias NIXinfo='nix-shell -p nix-info --run "nix-info -m"' # öffnet eine temporäre Shell-Umgebung mit einem bestimmten Paket installiert und führt dann einen Befehl aus. In diesem Fall wird das Paket nix-info installiert und der Befehl nix-info -m ausgeführt, der Informationen über die Nix-Installation gib
@@ -92,10 +87,6 @@ alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix ${LILA}which can s
 # alias NcurrCopy= NIXcurrentCopy
 
 alias Ncopy=NIXcopy
-# alias WO='echo -e "${PINK}nixOS ONLY:${RESET}${LILA} \
-#	      Zeigt das Package das zu der Funktion gehört:${RESET}" \
-#		  && which -s'  #  readlink -f `which fortune`
-
 #	_____________________________________________________zsh_______________
 ##      * *   Z S H *  *
 ##  .zshenv .zshrc aliases.zsh
@@ -172,9 +163,7 @@ alias neo4='echo -e "\t${PINK} neofetch w/ ${LILA} \t  a for loop of themes	/hom
 #	____________________________________________________________________
 #alias sudo='sudo --preserve-env=HOME'
 
-alias diff='echo -e "\t${GREEN}"colordiff w/ --ignore-case --ignore-tab-expansion --ignore-trailing-space --ignore-space-change --ignore-all-space --ignore-blank-line" && 	 colordiff --ignore-case           --ignore-tab-expansion /
-	 		   										   --ignore-trailing-space --ignore-space-change  /
-	 		   										   --ignore-all-space      --ignore-blank-lines'
+alias diff='echo -e "\t${GREEN}"colordiff w/ --ignore-case --ignore-tab-expansion --ignore-trailing-space --ignore-space-change --ignore-all-space --ignore-blank-line" && 	 colordiff --ignore-case           --ignore-tab-expansion    --ignore-trailing-space --ignore-space-change   --ignore-all-space      --ignore-blank-lines'
 
 alias LSblk='echo -e "\t${GREEN}enhanced lsblk .. als Tabelle mit --merge --zoned --ascii --topology ${RESET}" && /
 		lsblk 	--width 80 --merge --zoned      /

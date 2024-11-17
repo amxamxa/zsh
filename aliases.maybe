@@ -102,3 +102,39 @@ find . -name "*.conf" | while read -r file; do
 done
 # alias nixref='nix-store -q --references $(nix-env -q -u-out-path | grep -m 1 "$1" | awk "{print \$2}")'
 sudo bat /var/log/lightdm/lightdm.log
+
+
+#---------------------------------
+ WOnix() {
+  # wonix: Findet den Pfad eines Befehls und zeigt zugehörige NixOS-Paketinformationen an.
+  
+ # Argument überprüfen
+    if [[ -z "$1" ]]; then
+        echo -e "${RED}Bitte einen Befehl angeben.${RESET}"
+        return 1
+    fi
+# Den Pfad des Befehls suchen
+    path=$(command -v "$1") # Sicherstellen, dass wir den ursprünglichen `which` verwenden
+    if [[ -z $path ]]; then
+        echo -e "${RED}Command '$1' not found.${RESET}"
+        return 1
+    fi
+
+    echo -e "${SKY}Path: $path ${RESET}"
+    readlink -fv "$path" || echo -e "${RED}Could not resolve symbolic links for '$path'.${RESET}"
+
+    # Paketnamen finden
+    pkg_name=$(nix-env -q --installed | grep -E "^$1" | awk '{print $1}')
+    if [[ -n $pkg_name ]]; then
+        echo -e "\n\t${RASPBERRY}Package Name: $pkg_name ${RESET}"
+
+        # Paketbeschreibung ausgeben
+        nix-env -q --description "$pkg_name" || echo -e "${RED}No description found for package '$pkg_name'.${RESET}"
+
+        # Abhängigkeiten anzeigen
+        echo -e "\nDependencies:"
+        nix-store --query --referrers "$path" || echo -e "${RED}No dependencies found for '$pkg_name'.${RESET}"
+    else
+        echo -e "\n\t${SKY}No Nix package found for '$1'.${RESET}"
+    fi
+}

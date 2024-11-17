@@ -118,7 +118,7 @@ export EZA_ICONS_AUTO="always"
 export EZA_ICON_SPACING=2
 export EZA_GRID_ROWS=3
 export EZA_GRID_COLUMNS=3
-export EZA_MIN_LUMINANCE=10
+export EZA_MIN_LUMINANCE=50
 export EZA_COLORS=$LS_COLORS
 
 # -------in conf.nix------------------------------------Projektpfade

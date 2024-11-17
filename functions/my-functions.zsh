@@ -7,6 +7,7 @@ SKY="\033[38;2;62;36;129m\033[48;2;135;206;235m"
 RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
 RASPBERRY="\033[38;2;32;0;21m\033[48;2;221;160;221m"
 RESET="\033[0m"
+
 #_______________________________________________________________
 NIXcopy() {
     local destination_dir="/share/nixos/bkp/$(date +%F)"
@@ -14,34 +15,67 @@ NIXcopy() {
     xcp --verbose /etc/nixos/*.nix "$destination_dir/"
 }
 #_______________________________________________________________
-wonix() {
-# Sucht den Pfad des Befehls.
-    path=$(command which "$1")
-    if [[ -z $path ]]; then
-        echo "${RED}Command '$1' not found."
+WO() {
+    # Überprüfen, ob ein Argument übergeben wurde
+   if [ -z "$1" ]; then
+       echo -e "${PINK}Bitte einen Befehl angeben.${RESET}"
+        return 1
+    fi
+# Zeige die Nachricht an
+    echo -e "${PINK}nixOS ONLY:${RESET}${SKY} \
+    Zeigt den Path zu dem Befehl, auf den verwiesen wird:${RESET}\n"
+# Führen Sie die Befehle aus und zeigen Sie die Ergebnisse an
+    echo -e "${PINK}\twhich -s "$1" ${RESET}"
+    which -s "$1"
+
+    echo -e "${PINK}\treadlink -f $(which $1) ${RESET}"
+    readlink -f "$(which "$1")"
+}
+
+#---------------------------------
+bap-NoComment() {
+    # Überprüfen, ob ein Dateiname übergeben wurde
+    if [[ -z "$1" ]]; then
+        echo "Bitte einen Dateinamen angeben."
         return 1
     fi
 
-    echo "${SKY}Path: $path ${RESET}"
-    readlink -fv "$path"
-    
-    # Paketnamen
-    # Listet installierte Pakete auf und filtert nach dem gesuchten Befehl.
-    pkg_name=$(nix-env -q --installed | grep -E "^$1" | awk '{print $1}')
-    if [[ -n $pkg_name ]]; then
-        echo "\n\t${RASPBERRY}Package Name: $pkg_name ${RESET}"
-      # Paketbeschreibung
-      # Gibt eine Beschreibung des Pakets aus.
-        nix-env -q --description "$pkg_name"
-      # Abhängigkeiten
-      # Zeigt alle Pakete, die auf das gefundene Paket verweisen.
-        echo "Dependencies:"
-        nix-store --query --referrers "$path" || echo "No dependencies found."
-    else
-        echo "\n\t${SKY}No Nix package found for '$1'.${RESET}"
+    # Überprüfen, ob die Datei existiert
+    if [[ ! -f "$1" ]]; then
+        echo "Die Datei '$1' existiert nicht."
+        return 1
     fi
+
+    # Überprüfen, ob `bat` installiert ist
+    if ! command -v bat > /dev/null 2>&1; then
+        echo "Das Tool 'bat' ist nicht installiert. Bitte installieren und erneut versuchen."
+        return 1
+    fi
+
+    # Datei mit bat ausgeben, Kommentare entfernen
+   command bat --color=always --language=zsh -p "$1" | awk '
+        BEGIN { in_string = 0 }
+        {
+            # Überprüfen, ob wir uns in einem String befinden
+            for (i = 1; i <= length($0); i++) {
+                char = substr($0, i, 1)
+
+                # Umschalten bei Stringbeginn oder -ende
+                if (char == "\"" && (i == 1 || substr($0, i - 1, 1) != "\\")) {
+                    in_string = !in_string
+                }
+
+                # Nur Kommentare entfernen, die nicht in Strings stehen
+                if (!in_string && char == "#") {
+                    $0 = substr($0, 1, i - 1) # Kommentar abschneiden
+                    break
+                }
+            }
+        }
+        NF { print } # Nur nicht-leere Zeilen ausgeben
+    '
 }
-#	___________________________________________________________________________
+	#_____________________________________
 Htop() {
     local max_lines=${1:-25}
     
@@ -55,7 +89,7 @@ Htop() {
         printf "${SKY}%s${RASPBERRY} %s${RESET}\n" "$count" "$cmd"
     done
 }
-	#___________________________________________________________________________________
+	#_________________________
 
 PROspeed() {
 # Display the time for the prompt to appear when opening a new zsh instance
