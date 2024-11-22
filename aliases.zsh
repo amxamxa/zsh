@@ -1,9 +1,9 @@
 #!/usr/bin/env zsh
 ###########################################
 ##  filename:    	aliases.zsh
-##  filepath:     	/home/ZSH/
+##  filepath:     	/share/zsh
 ##  author:       	mxx
-##  file save date: 	04.12.23
+##  file save date: 04.12.23
 ##  file creation\
 ##  date: 	[yy-mmm]: 23 oct
 ##  file status		 work in progess
