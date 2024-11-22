@@ -29,7 +29,7 @@ WO() {
     which -s "$1"
 
     echo -e "${PINK}\treadlink -f $(which $1) ${RESET}"
-    readlink -f "$(which "$1")"
+    du -ah $(readlink -f "$(which "$1")")
 }
 
 #---------------------------------

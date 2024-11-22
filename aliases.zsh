@@ -329,6 +329,8 @@ alias ld='echo -e "\t${PINK} eza ${GELB}$(pwd)${PINK} only (hidden and non-hidde
  				--total-size --almost-all 	  --no-time \
  				--color-scale age --color-scale-mode gradient \
  				--classify --header --only-dirs --width 76'
+
+alias lp='eza --octal-permissions --git -Al --git-repos --no-permissions --time-style=relative --group-directories-first --smart-group'
 #------------------------------------------------------------------  eza ende
 
 alias l='
@@ -563,7 +565,7 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
  alias -g ED='		gnome-text-editor 	--ignore-session 	--standalone 	--new-window 	&'
  alias -g gedit='	gnome-text-editor 	--ignore-session  	--standalone 	--new-windows 	&'
  alias -g cmd='command'
- alias -g src='source'
+ alias -g SRC='source'
  alias -g L=' |  less'
  alias -g LL=' | less -X -j5 --tilde --save-marks \
  				--incsearch --RAW-CONTROL-CHARS \
