@@ -205,7 +205,7 @@ if command -v zoxide &> /dev/null; then
 else
     echo "\t${RED} zoxide ist nicht installiert. \
     Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
-	sleep 0.5
+	sleep 0.2
 
 fi
 #	----------__------------_----------------
@@ -224,6 +224,19 @@ else
     Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
    sleep 0.1
 fi
+
+# navi
+if command -v navi &> /dev/null; then
+    export NAVI_CONFIG_YAML="$ZDOTDIR/navi/config.yaml"
+    echo "\t${PINK} navi  ... check ${RESET}\t"
+    sleep 0.1
+else
+    echo "\t${RED} navi ist nicht installiert. }\n
+    Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
+   sleep 0.1
+fi
+
+
 #   _________________________________________________________
 #	╔═╗╔═╗╦ ╦    ╦ ╦╦╔═╗╦ ╦╦  ╦╔═╗╦ ╦╔╦╗╦╔╗╔╔═╗
 #	╔═╝╚═╗╠═╣    ╠═╣║║ ╦╠═╣║  ║║ ╦╠═╣ ║ ║║║║║ ╦
@@ -298,7 +311,7 @@ export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-scree
 # MANPAGER-Einstellungen
 if command -v bat &> /dev/null; then
     export MANPAGER="bat --paging=always --style=changes -l man -p"
-    echo "${PINK} \t... bat als man-pager ... check ${RESET}\t"
+    echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
 else
     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
     echo "less -FRX als man-pager  ... check ${RESET}"
@@ -306,7 +319,7 @@ fi
 
 echo "--------------------------------------------------------" | blahaj -i -r
 
-
+curl 'wttr.in/Dresden?m0&lang=de'
 # 	  Aktualisiere die Shell-Hash-Tabelle
 #	--------------------------------------
 # ...  häufig Programme installierst oder aktualisierst,

@@ -138,3 +138,8 @@ sudo bat /var/log/lightdm/lightdm.log
         echo -e "\n\t${SKY}No Nix package found for '$1'.${RESET}"
     fi
 }
+echo " "
+fd --changed-after=1d config.yaml
+du -hsmc --si *|sort -n|tail
+curl 'wttr.in/Dresden?mnF1&lang=de'
+curl 'wttr.in/01127?mnF2&lang=de'
