@@ -151,3 +151,6 @@ echo "
 	8eeee 8eee8 8 8 8eee8e 8e 8e 8e 8 8e 8eeee
 	 88 88 8 8 8 88 8 88 88 88 8 88 88
 	8ee88 88 8 8eee8 88 8 88 88e8 88ee8 88 8ee88""" |blahaj --colors=gay
+eza --git -lA
+pw-cli info all
+
