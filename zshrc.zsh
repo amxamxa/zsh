@@ -227,16 +227,18 @@ fi
 
 # navi
 if command -v navi &> /dev/null; then
-    export NAVI_CONFIG_YAML="$ZDOTDIR/navi/config.yaml"
-    echo "\t${PINK} navi  ... check ${RESET}\t"
-    sleep 0.1
-else
-    echo "\t${RED} navi ist nicht installiert. }\n
-    Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
-   sleep 0.1
+  echo "\t${PINK} navi  ... check ${RESET}\t"
+    if [[ -z ${NAVI_CONFIG+-v} ]]; then
+	 export NAVI_CONFIG="$ZDOTDIR/navi"
+	 echo "\t${GELB} NAVI_CONFIG wurde auf ${YELLOW}'$ZDOTDIR/navi'${GREEN} gesetzt. ${RESET}"
+    else
+     echo "\t${PINK} NAVI_CONFIG ist bereits gesetzt auf: ${YELLOW}'$NAVI_CONFIG'${GREEN}. ${RESET}"
 fi
-
-
+else
+echo "\t${RED} navi ist nicht installiert. }\n
+    Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
+sleep 0.1
+fi
 #   _________________________________________________________
 #	╔═╗╔═╗╦ ╦    ╦ ╦╦╔═╗╦ ╦╦  ╦╔═╗╦ ╦╔╦╗╦╔╗╔╔═╗
 #	╔═╝╚═╗╠═╣    ╠═╣║║ ╦╠═╣║  ║║ ╦╠═╣ ║ ║║║║║ ╦
@@ -346,7 +348,7 @@ echo "	    	    __              __              __
  if command -v curl &> /dev/null; then
  	echo "\n${VIOLET}" && curl 'wttr.in/Dresden?m0&lang=de'
   else
-    echo "\t${RED} zoxide ist nicht installiert. \
+    echo "\t${RED} curl ist nicht installiert. \
     Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
 	sleep 0.2	
  fi 	
