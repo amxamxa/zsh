@@ -36,7 +36,7 @@ countdown() {
 # 1. Editor öffnen
 read -p "$(echo -e "\t${SKY}Soll der Editor für /etc/nixos/*.nix geöffnet werden? \n\t\t${RASPBERRY}(Enter für Ja, nN für Nein): ${RESET}")" editor_choice
 if [[ "$editor_choice" != "n" && "$editor_choice" != "N" ]]; then
-    gnome-text-editor --ignore-session --standalone --new-window /etc/nixos/*.nix 2>/dev/null￼￼
+    gnome-text-editor --ignore-session --standalone --new-window /etc/nixos/*.nix 2>/dev/null￼￼ || micro  /etc/nixos/*.nix 2>/dev/null
 fi
 echo
 # 2. $BUILD setzen
@@ -57,7 +57,9 @@ else
 fi
 echo
 # 4. $NAME setzen
-default_name="_test_Date_$(date +'%d.%m.%Y')"
+
+default_name="4xam"
+echo "def. Name ist 4xam               Datum: $(date +'%d.%m.%Y') "
 read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name
 NAME=${profile_name:-$default_name}
 echo

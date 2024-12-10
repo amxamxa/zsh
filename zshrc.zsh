@@ -21,7 +21,7 @@ fpath=($ZDOTDIR:$ZDOTDIR/functions:$ZDOTDIR/plugins:$ZDOTDIR/prompts $fpath)
 
 # History-Einstellungen
 # ----------------------
-export 	HISTIGNORE="ls:cd:pwd:exit:tldr:cheat:printf:micro:man:rm:cp:echo:z:bat:git:sudo:grep"
+export 	HISTIGNORE="ls:cd:pwd:exit:tldr:cheat:printf:micro:man:rm:cp:echo:z:bap:bat:git:sudo:grep"
 export 	HISTTIMEFORMAT="%D{%Y-%m-%d %H:%M} "
 
 setopt 	EXTENDED_HISTORY    	# Zeitstempel speichern
@@ -77,6 +77,24 @@ REPORTTIME=3 		# display cpu usage, if command taking more than 3s
 #   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
 #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
 #  _______________________________________________________
+
+# eza-Einstellungen
+export COLUMNS=78
+export EZA_ICONS_AUTO="always"
+export EZA_ICON_SPACING=2
+export EZA_GRID_ROWS=3
+export EZA_GRID_COLUMNS=3
+export EZA_MIN_LUMINANCE=50
+
+export LS_COLORS="$(vivid generate molokai)"
+export LS_COLORS="$(vivid generate  $ZDOTDIR/vivid/color-schema.yml)"
+
+export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR=38;5;197:uG=38;5;198"
+# man eza_colors
+# The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
+#   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done            
+
+
 export BOLD="\033[1m" 
 export RESET="\e[0m" 
 export GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
@@ -112,14 +130,6 @@ source_or_error() {
 	sleep 0.02
 	source_or_error "$ZDOTDIR/plugins/zgreeting.zsh"
 
-# eza-Einstellungen
-export COLUMNS=78
-export EZA_ICONS_AUTO="always"
-export EZA_ICON_SPACING=2
-export EZA_GRID_ROWS=3
-export EZA_GRID_COLUMNS=3
-export EZA_MIN_LUMINANCE=50
-export EZA_COLORS=$LS_COLORS
 
 # -------in conf.nix------------------------------------Projektpfade
 #export PRO="/home/project"

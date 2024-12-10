@@ -1,0 +1,40 @@
+# .gitignore_global
+
+
+# Ignore build files
+build/
+
+# Ignore coverage reports
+coverage/
+
+# Ignore log files
+*.log
+
+# Ignore temporary files
+*.tmp
+
+# Ignore IDE specific files and folders
+.idea/
+.vscode/
+
+# Ignore compiled binaries
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore package-lock.json for npm
+package-lock.json
+
+# Ignore node_modules folder
+node_modules/
+
+# Ignore virtual environments for Python projects
+venv/
+
+
+
+

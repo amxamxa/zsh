@@ -1,0 +1,220 @@
+colors:
+    # mxx theme
+    # 2023 dez
+    bg-main         : 'ffffff' #ffffff
+    bg-dim          : 'f0f0f0'
+    fg-main         : '000000'
+    fg-dim          : '595959' #595959
+    fg-alt          : '193668' #193668
+    bg-active       : 'c4c4c4'  #c4c4c4
+    bg-inactive     : 'e0e0e0' #e0e0e0
+    border          : '9f9f9f' #9f9f9f
+
+    red             : 'a60000' #a60000
+    red-warmer      : '972500' #972500
+    red-cooler      : 'a0132f' #a0132f
+    red-faint       : '7f0000' #7f0000
+    red-intense     : 'd00000' #d00000
+    green           : '006800' #006800
+    green-warmer    : '316500' #316500
+    green-cooler    : '00663f' #00663f
+    green-faint     : '2a5045' #2a5045
+    green-intense   : '008900' #008900
+    yellow          : '6f5500' #6f5500
+    yellow-warmer   : '884900' #884900
+    yellow-cooler   : '7a4f2f' #7a4f2f
+    yellow-faint    : '624416' #624416
+    yellow-intense  : '808000' #808000
+    blue            : '0031a9' #0031a9
+    blue-warmer     : '354fcf' #354fcf
+    blue-cooler     : '0000b0' #0000b0
+    blue-faint      : '003497' #003497
+    blue-intense    : '0000ff' #0000ff
+    magenta         : '721045' #721045
+    magenta-warmer  : '8f0075' #8f0075
+    magenta-cooler  : '531ab6' #531ab6
+    magenta-faint   : '7c318f' #7c318f
+    magenta-intense : 'dd22dd' #dd22dd
+    cyan            : '005e8b' #005e8b
+    cyan-warmer     : '3f578f' #3f578f
+    cyan-cooler     : '005f5f' #005f5f
+    cyan-faint      : '005077' #005077
+    cyan-intense    : '008899' #008899
+      
+    gelb-hell       : 'E8C536' #E8C536 
+    gelb            : 'FFCA5B' #FFCA5B 
+    orange          : 'ff5713' #ff5713
+    orange-d        : '805700' #805700  
+    gruen-l         : '8ae234' #8ae234
+    gruen-l-neo     : '3DFF2C' #3DFF2C
+    gruen-mint      : '0cde70' #0cde70
+    gruen-d         : '0a9e45' #0a9e45
+    blue-l          : 'f9fff9' #f9fff9
+    bg-1            : '171211' #171211  
+    bg-2            : '181818' #181818
+    bg-3            : '001500' #001500
+    bg-4            : '150000' #150000
+    bg-5            : '363C3E' #363C3E
+    bg-6            : '555753' #555753
+    gold            : "ea9d34" #ea9d34
+    rose            : "d7827e" #d7827e
+    blau-l-neo      : "39c7e0" #39c7e0
+    blau-ll         : "78c7ff" #78c7ff
+    blau-dunkel     : '100438' #100438 
+    pink            : 'db29c8' #db29c8
+    pink-l          : 'd4ace9' #d4ace9
+    pink-d          : 'C80045' #c80045
+    lila            : '39257D' #39257D 
+    lila-dunkel     : '3B0045' #3B0045
+    
+core:
+  normal_text:
+    foreground: gruen-mint
+
+  regular_file:
+    foreground: gruen-l-neo
+
+  reset_to_normal:
+    foreground: bg-6
+
+  directory:
+    foreground:   blau-l-neo # cyan-intense #  magenta-intense
+    #    background: bg-1
+    font-style: bold
+
+  symlink:
+    foreground: red-cooler
+    font-style: bold
+    background: bg-4
+    
+  multi_hard_link: {}
+
+  fifo:
+    foreground: yellow
+    background: bg-3
+   # font-style: bold
+
+  socket:
+    foreground: magenta
+    background: bg-3
+   # font-style: bold
+
+  door:
+    foreground: magenta-intense
+    background: bg-3
+    font-style: bold
+
+  block_device:
+    foreground: yellow
+    background: bg-3
+    font-style: bold
+
+  character_device:
+    foreground: yellow
+    background: bg-3
+    font-style: bold
+
+  broken_symlink:
+    foreground: red-cooler
+    background: bg-4
+    font-style: bold
+
+  missing_symlink_target:
+    foreground: red
+    background: bg-4
+    font-style: bold
+
+  setuid: 
+    background: bg-3
+ 
+  setgid: 
+       background: bg-3
+    
+  file_with_capability: 
+      background: bg-3
+
+  sticky_other_writable: 
+      background: bg-4
+
+  other_writable:
+    background: bg-5
+
+  sticky:   
+    background: bg-5
+
+  executable_file:
+    foreground: cyan-intense  # lila-dunkel 
+    background: bg-4
+    font-style: bold
+    
+    
+text:
+  special:
+    foreground: yellow-warmer
+    background: bg-6
+
+  todo:
+    foreground: fg-main
+    #font-style: bold
+    background: bg-6
+
+  licenses:
+    foreground: blue-l
+
+  configuration:
+    foreground: gelb
+    font-style: bold
+
+  other:
+    foreground: pink
+    font-style: bold
+
+markup:
+  foreground: cyan-faint  
+  background: blau-dunkel
+  font-style: bold
+
+programming:
+  source:
+    foreground: gruen-l-neo 
+    font-style: bold
+    
+  tooling:
+    foreground: gruen-l
+
+    continuous-integration:
+      foreground: gruen-mint  
+  #font-style: bold
+media:
+  image:
+    foreground: blau-l-neo
+    background: bg-3
+   
+  audio:
+    foreground: pink-d
+    background: lila-dunkel
+  video:
+    foreground: blau-ll
+    background: bg-3
+    font-style: bold
+
+  fonts:
+    foreground: pink
+    background: fg-dim 
+    # lila-dunkel #595959
+
+office:
+  foreground:   blue-faint  
+ # background: fg-dim
+
+archives:
+  foreground: orange
+ # font-style: bold
+
+executable:
+  foreground: orange-d
+
+unimportant:
+  foreground: fg-alt
+  background: bg-6
+  
