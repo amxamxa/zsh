@@ -69,16 +69,16 @@ colors:
     
 core:
   normal_text:
-    foreground: gruen-mint
-
+    foreground: bg-inactive
+    
   regular_file:
-    foreground: gruen-l-neo
+    foreground: border
 
   reset_to_normal:
     foreground: bg-6
 
   directory:
-    foreground:   blau-l-neo # cyan-intense #  magenta-intense
+    foreground:   gruen-mint
     #    background: bg-1
     font-style: bold
 
@@ -187,24 +187,24 @@ programming:
   #font-style: bold
 media:
   image:
-    foreground: blau-l-neo
-    background: bg-3
-   
+    foreground: magenta-cooler
+    background: bg-3  
   audio:
-    foreground: pink-d
-    background: lila-dunkel
+    foreground: magenta-faint
+    background: bg-3
   video:
-    foreground: blau-ll
+    foreground: magenta-warmer
     background: bg-3
     font-style: bold
 
   fonts:
-    foreground: pink
-    background: fg-dim 
+    foreground: pink-l
+    font-style: bold
+    # background: fg-dim 
     # lila-dunkel #595959
 
 office:
-  foreground:   blue-faint  
+  foreground:   cyan-cooler
  # background: fg-dim
 
 archives:
@@ -212,9 +212,10 @@ archives:
  # font-style: bold
 
 executable:
-  foreground: orange-d
+  foreground: green-intense
+  background: bg-3
 
 unimportant:
   foreground: fg-alt
-  background: bg-6
+#  background: bg-6
   

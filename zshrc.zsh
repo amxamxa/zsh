@@ -86,8 +86,8 @@ export EZA_GRID_ROWS=3
 export EZA_GRID_COLUMNS=3
 export EZA_MIN_LUMINANCE=50
 
-export LS_COLORS="$(vivid generate molokai)"
-export LS_COLORS="$(vivid generate  $ZDOTDIR/vivid/color-schema.yml)"
+#export LS_COLORS="$(vivid generate molokai)"
+export LS_COLORS="$(vivid generate  $ZDOTDIR/colors/color-schema.yml)"
 
 export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR=38;5;197:uG=38;5;198"
 # man eza_colors

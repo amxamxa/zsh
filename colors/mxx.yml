@@ -1,0 +1,171 @@
+# mxx.yml
+colors:     
+  bg-1: '282c34' # bg blau
+  bg-2: '1f0e0e' # bg red
+  bg-3: '1a1f0e' # bg brown
+  bg-4: '122717' # bg green
+  bg-0: '000000'
+  gray-0: '999999' # very light 
+  gray-1: '666666' # light grey
+  gray-2: '333333'    # mid grey
+  white:  'eceff4'  # brightwhite
+  cyan-1:  '8fbcbb'  # brightcyan
+  cyan-2:  '88c0d0'  # cyan
+  blue-0: '2e3440'  # blue-grey  
+  blue-1:  '81a1c1'  # blue
+  blue-2: '5e81ac'  # darkblue
+  oran-1: 'd08770'  # orange light
+  oran-2: 'ff3d00'  # orange 
+  oran-3: 'ff3d00'
+  yell-1: 'fff06d' # yellow light
+  yell-2: 'ffe600' # yellow
+  yell-3: '7c6f00' # yellow -dark
+  purp-1: 'b480ff'
+  purp-2: '6900ff'
+  purp-3: '2c006a'
+  red-1: 'fb696c'
+  red-2: 'ff0004'
+  red-3: '910000'
+  pink-1: 'ff8ef3'
+  pink-2: 'ff00e3'
+  pink-3: '68005d'
+  nord10: '00010a ' #dark blue
+  nord5: '8788bc' # light blue
+  
+core:
+  normal_text:
+    foreground: cyan-1
+
+  reset_to_normal:
+    background: bg-1
+    foreground: oran-1
+    font-style: regular
+
+# File Types
+  regular_file:
+    foreground: cyan-1
+
+  directory:
+    background: bg-1
+    foreground: purp-3
+    font-style: bold
+
+  multi_hard_link:
+    foreground: yell-1
+    font-style: underline
+
+  symlink:
+    foreground: nord5 q#yell-2
+
+  broken_symlink:
+    background: bg-2
+    foreground: red-2  
+    font-style: underline
+  
+  missing_symlink_target:
+    background: bg-2
+    foreground: red-2  
+    font-style: bold
+
+  fifo:
+    foreground: gray-1
+    font-style:
+      - bold
+      - underline
+
+  character_device:
+    foreground: yell-3
+
+  block_device:
+     background: bg-3
+    foreground: yell-1
+    font-style: underline
+
+  door:
+    background: bg-3
+    foreground: yell-2
+    font-style: italic
+
+  socket:
+    background: bg-4
+    foreground: yell-3
+    font-style: bold
+
+# File Permissions
+
+  executable_file:
+    foreground: cyan-2
+    font-style: bold
+
+  file_with_capability:
+    foreground: cyan-1
+    font-style:
+      - bold
+      - underline
+
+  setuid:
+    foreground: cyan-1
+    font-style:
+      - bold
+      - underline
+
+  setgid:
+    foreground: cyan-1
+    font-style:
+      - bold
+      - underline
+
+  sticky:
+    background: nord10  # nord9
+    foreground: nord5   # nord4
+    font-style: underline
+
+  other_writable:
+    background: nord10  # nord9
+    foreground: nord5   # nord4
+    font-style: bold
+
+  sticky_other_writable:
+    background: nord10  # nord9
+    foreground: nord5   # nord4
+    font-style:
+      - bold
+      - underline
+
+# Document Types
+
+archives:
+  foreground: yell-1
+  font-style: bold
+
+executable:
+  foreground: pink-2
+  font-style: bold
+
+markup:
+  foreground: blue-1
+  web:
+    foreground: blue-0
+
+media:
+  foreground: pink-1
+  fonts:
+    foreground:  pink-2
+
+office:
+  foreground: cyan-1
+
+programming:
+  source:
+    background: bg-2
+    foreground: gray-2
+  tooling:
+    background: bg-4
+    foreground: white
+
+text:
+  foreground: oran-2
+
+unimportant:
+  foreground: gray-2
+  

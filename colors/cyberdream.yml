@@ -1,0 +1,174 @@
+# mxx.yml
+colors:   #  
+  bg-1: '282c34' # bg blau
+  bg-2: '1f0e0e' # bg red
+  bg-3: '1a1f0e' # bg brown
+  bg-4: '122717' # bg green
+  bg-0: '000000'
+  gray-0: '999999' # very light 
+  gray-1: '666666' # light grey
+  gray-2: '333333'    # mid grey
+  
+  white:  'eceff4'  # brightwhite
+  cyan-1:  '8fbcbb'  # brightcyan
+  cyan-2:  '88c0d0'  # cyan
+  blue-0: '2e3440'  # blue-grey  
+  blue-1:  '81a1c1'  # blue
+  blue-2: '5e81ac'  # darkblue
+  oran-1: 'd08770'  # orange light
+  oran-2: 'ff3d00'  # orange 
+  oran-3: 'ff3d00'
+  yell-1: 'fff06d' # yellow light
+  yell-2: 'ffe600' # yellow
+  yell-3: '7c6f00' # yellow -dark
+  purp-1: 'b480ff'
+  purp-2: '6900ff'
+  purp-3: '2c006a'
+  red-1: 'fb696c'
+  red-2: 'ff0004'
+  red-3: '910000'
+  pink-1: 'ff8ef3 '
+  pink-2: 'ff00e3 '
+  pink-3: '68005d '
+
+  pink-1: ' '
+  pink-1: ' '
+
+ 
+  nord13: 'ebcb8b'  # yellow
+  nord14: 'a3be8c'  # green
+  nord15: 'b48ead'  # magenta
+
+
+core:
+  normal_text:
+    foreground: dim-foreground
+
+  reset_to_normal:
+    background: nord0
+    foreground: nord4
+    font-style: regular
+
+# File Types
+
+  regular_file:
+    foreground: nord4
+
+  directory:
+    foreground: nord10  # nord9
+    font-style: bold
+
+  multi_hard_link:
+    foreground: nord8
+    font-style: underline
+
+  symlink:
+    foreground: nord8
+
+  broken_symlink:
+    foreground: nord11
+
+  missing_symlink_target:
+    # NOTE: Also used for readline completion shell builtin and function suffix
+    background: nord11
+    foreground: nord5  # nord4
+    font-style: bold
+
+  fifo:
+    foreground: nord7
+    font-style:
+      - bold
+      - underline
+
+  character_device:
+    foreground: nord13
+
+  block_device:
+    foreground: nord13
+    font-style: underline
+
+  door:
+    foreground: nord13
+    font-style: italic
+
+  socket:
+    # NOTE: Swapped with block device as used for readline completion prefix
+    foreground: nord13
+    font-style: bold
+
+# File Permissions
+
+  executable_file:
+    foreground: nord7
+    font-style: bold
+
+  file_with_capability:
+    foreground: nord4
+    font-style:
+      - bold
+      - underline
+
+  setuid:
+    foreground: nord4
+    font-style:
+      - bold
+      - underline
+
+  setgid:
+    foreground: nord4
+    font-style:
+      - bold
+      - underline
+
+  sticky:
+    background: nord10  # nord9
+    foreground: nord5   # nord4
+    font-style: underline
+
+  other_writable:
+    background: nord10  # nord9
+    foreground: nord5   # nord4
+    font-style: bold
+
+  sticky_other_writable:
+    background: nord10  # nord9
+    foreground: nord5   # nord4
+    font-style:
+      - bold
+      - underline
+
+# Document Types
+
+archives:
+  foreground: nord5
+  font-style: bold
+
+executable:
+  foreground: nord7
+  font-style: bold
+
+markup:
+  foreground: nord6
+  web:
+    foreground: nord4
+
+media:
+  foreground: nord15
+  fonts:
+    foreground: nord4
+
+office:
+  foreground: nord14
+
+programming:
+  source:
+    foreground: nord7
+  tooling:
+    foreground: nord4
+
+text:
+  foreground: nord4
+
+unimportant:
+  foreground: nord3
+  
