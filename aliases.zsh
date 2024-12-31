@@ -262,13 +262,14 @@ alias bat6='bat 	--wrap=auto  	--decorations=always 	--theme=gruvbox-dark'
 #        du - estimate file space usage
 # alias DU='echo -e "\t${PINK}Zeige die 22 größten Verzeichnisse und Dateien${RESET}\n" && command du -cah --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' | sort -hr | head -n 22'
 D3() {
- echo -e "\n\t${GELB} du --max-depth=3 --separate-dirs --threshold=16K -BM -x $(pwd) 2> /dev/null | sort -hr | head -n 24${LILA} \t... wir reden über Pfad $(pwd)${RESET}}\n"
-du --human-readable --max-depth=3 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' $pwd 2> /dev/null | sort -hr | head -n 24
+ echo -e "\n\t${GELB} du --max-depth=3 --separate-dirs --threshold=16K -BM -x $(pwd) 2> /dev/null | sort -hr | head -n 24 ${LILA} \t... wir reden über Pfad $(pwd)${RESET}}\n"
+du --human-readable --max-depth=3 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' $pwd 2> /dev/null | sort -hr | head -n 24 
 }
 
 D1() {
- echo -e "\n\t${GELB} du --max-depth=1 --separate-dirs --threshold=16K -BM -x $(pwd) 2> /dev/null | sort -hr | head -n 24${LILA} \t... wir reden über Pfad $(pwd)${RESET}}\n"
-du --human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' $pwd 2> /dev/null | sort -hr | head -n 24
+ echo -e "\n\t${GREEN} du --max-depth=1 --separate-dirs --threshold=16K -BM -x \n$(pwd) 2> /dev/null | sort -hr | head -n 24 "
+ echo " ${LILA} \t\n... wir reden über Pfad $(pwd)${RESET}\n"
+du --human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' $pwd 2> /dev/null | sort -hr | head -n 24 
 }
 #	____________________________________________________________________________________
 #gtk-update-icon-cache
@@ -554,23 +555,25 @@ alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${
 alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:red)%(refname:short)%(color:reset) - %(color:yellow)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:blue)%(committerdate:relative)%(color:reset))'"
 
 #	_______GIT - AUSGABE ENDE   li:455-530___________________________________________
-
- #	_____________________________________________________
+#	_____________________________________________________
  #	 ┌─┐┬  ┌─┐┌┐ ┌─┐┬  ┌─┐  ┌─┐┌─┐┬ ┬  ┌─┐┬  ┬┌─┐┌─┐┌─┐
  #	 │ ┬│  │ │├┴┐├─┤│  ├┤   ┌─┘└─┐├─┤  ├─┤│  │├─┤└─┐├┤
  #	 └─┘┴─┘└─┘└─┘┴ ┴┴─┘└─┘  └─┘└─┘┴ ┴  ┴ ┴┴─┘┴┴ ┴└─┘└─┘
  # 	  usage% file G 'pattern'
  ### ---------------------------  ####
  # alias -g OK='~/zsh/testbed.zsh'
- alias -g ED='		gnome-text-editor 	--ignore-session 	--standalone 	--new-window 	&'
- alias -g gedit='	gnome-text-editor 	--ignore-session  	--standalone 	--new-windows 	&'
+
+alias -g REC='asciinema rec --idle-time-limit=2 --overwrite --title'
+
+ alias -g ED='	 gnome-text-editor 	--ignore-session 	--standalone 	--new-window  &'
+ alias -g gedit='gnome-text-editor 	--ignore-session  	--standalone 	--new-window &'
  alias -g cmd='command'
  alias -g SRC='source'
- alias -g L=' |  less'
+ alias -g L='  |  less'
  alias -g LL=' | less -X -j5 --tilde --save-marks \
- 				--incsearch --RAW-CONTROL-CHARS \
+ 				--incsearch --RAW-CONTROL-CHARS   \
  				--LINE-NUMBERS --line-num-width=3 \
- 				--quit-if-one-screen --use-color \
+ 				--quit-if-one-screen --use-color  \
  				--color=NWr --color=EwR  --color=PbC --color=Swb'
 
  alias -g G='|grep --ignore-case --color=auto'

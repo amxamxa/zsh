@@ -1,4 +1,5 @@
 # costumize vivid
+
 LS_COLORS="$(vivid generate $ZDOTDIR/vivid/color-schema.yml)"
 
 echo 'export LS_COLORS="$(vivid generate color-schema.yml)"' >> .zshrc
@@ -8,7 +9,7 @@ for theme in $(vivid themes); do
     echo "Theme: $theme"
     LS_COLORS=$(vivid generate $theme)
     command ls -Al
-    echo
+    echoDatei in eine Markdown-Tabelle mit Spal
 done
 ``` ￼￼￼
 EZA_COLORS="uu=38;5;121"

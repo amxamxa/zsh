@@ -159,6 +159,22 @@ source_or_error() {
  eval "$(hugo completion zsh)"
  eval "$(npm completion zsh)"
  eval "$(rg --generate=complete-zsh)"
+ 
+ # mcfly als CTRL + R
+ # -----
+ if command -v mcfly &> /dev/null; then
+	 echo "\t${PINK} Mcfly  ... check ${RESET}\t"
+	 eval "$(mcfly init zsh)"
+	 export MCFLY_FUZZY=2 # 0 is off; Values in the 2-5 range get good results so far
+	 export MCFLY_RESULTS=50
+	 export MCFLY_DELETE_WITHOUT_CONFIRM=true
+	 export MCFLY_INTERFACE_VIEW=BOTTOM
+	 export MCFLY_RESULTS_SORT=LAST_RUN
+	 export MCFLY_PROMPT="❯❯❯"
+  else
+     echo "\t${RED} Mc_Fly ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}\n"
+ fi
+ 
 # --------------------------------------------
 #		████─████─████─█───█─████─███
 #		█──█─█──█─█──█─██─██─█──█──█─
@@ -317,7 +333,7 @@ rm -fr "$HOME/.compose-cache"
 export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --hilite-unread"
 # --RAW-CONTROL-CHARS: 	Steuerzeichen (wie Farbcodes) im Terminal korrekt anzuzeigen
 # --chop-long-lines: 	Zeilen nicht umbrechen
-# --no-init: 			verhindert, dass Bildschirm nach dem Verlassen löscht
+# --no-init: 			verhindert, dass Bildschirm nach dem Verlassen löscht	
 # --long-prompt:  		zeigt in der Statuszeile ausführliche Informationen 
 
 # MANPAGER-Einstellungen
@@ -328,6 +344,7 @@ else
     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
     echo "less -FRX als man-pager  ... check ${RESET}"
 fi
+ echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 
 echo "	    	    __              __              __      
 	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
@@ -352,7 +369,6 @@ echo "	    	    __              __              __
   ctrl+4			tall:bias=50;full_size=1;mirrored=false 
   ctrl+5			vertical${RESET}"
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
-  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 
 # Wetteransage auf Console
  if command -v curl &> /dev/null; then
