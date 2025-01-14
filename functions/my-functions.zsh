@@ -8,6 +8,48 @@ RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
 RASPBERRY="\033[38;2;32;0;21m\033[48;2;221;160;221m"
 RESET="\033[0m"
 
+#________________________________________________
+
+BKP() {
+# Skript erstellt Backup-Dateien oder -Verzeichnisse mit einem Zeitstempel 
+# im Namen. Es unterstützt:
+# - **Prüfung auf `xcp` oder `cp`**: Verwendet `xcp` für effizienteres Kopieren, falls verfügbar. Falls nicht, wird `cp` verwendet. Gibt eine Fehlermeldung aus, wenn beide Befehle fehlen.
+# - **Rekursive Verarbeitung**: Unterstützt die Verarbeitung von Verzeichnissen und deren Unterinhalten.
+# - **Fehlermeldungen und Warnungen**: Informiert, wenn ungültige Dateien/Verzeichnisse übergeben wurden.
+  
+ # Prüfe, ob xcp oder cp verfügbar ist
+ if command -v xcp >/dev/null 2>&1; then
+        copy_command="xcp --verbose"
+    elif command -v cp >/dev/null 2>&1; then
+        copy_command="cp -i --verbose"
+    else
+        echo "Fehler: Weder 'xcp' noch 'cp' ist verfügbar. Bitte installiere eines von beiden." >&2
+        return 1
+ fi
+
+    # Funktion zur rekursiven Verarbeitung von Dateien und Verzeichnissen
+ process_file_or_directory() {
+     local file="$1"
+     if [ -d "$file" ]; then
+            # Verzeichnis -> rekursiv alle Dateien verarbeiten
+        for subfile in "$file"/*; do
+                process_file_or_directory "$subfile"
+         done
+        elif [ -f "$file" ]; then
+            # Datei -> Backup erstellen
+            filename=$(basename -- "$file")
+            extension="${filename##*.}"
+            name="${filename%.*}"
+            $copy_command "$file" "${name}.$(date +%Y-%m-%d).bkp.${extension}"
+        else
+           echo "Warnung: '$file' ist weder eine Datei noch ein Verzeichnis, überspringe." >&2
+       fi
+    }
+    # Verarbeite alle übergebenen Argumente
+    for file in "$@"; do
+        process_file_or_directory "$file"
+    done
+}
 #_______________________________________________________________
 NIXcopy() {
     local destination_dir="/share/nixos/bkp/$(date +%F)"

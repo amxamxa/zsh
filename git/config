@@ -122,3 +122,5 @@
 [init]		# Definiert den Standardbranchnamen für neue Repositories.
         defaultBranch = main
     
+[advice]
+	statusHints = on
