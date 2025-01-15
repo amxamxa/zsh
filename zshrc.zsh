@@ -77,6 +77,9 @@ REPORTTIME=3 		# display cpu usage, if command taking more than 3s
 #   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
 #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
 #  _______________________________________________________
+# export LS_COLORS="$(vivid generate molokai)"
+# export LS_COLORS="$(vivid generate jellybeans)"
+export LS_COLORS="$(vivid generate $ZDOTDIR/colors/color-schema.yml)"
 
 # eza-Einstellungen
 export COLUMNS=78
@@ -86,10 +89,8 @@ export EZA_GRID_ROWS=3
 export EZA_GRID_COLUMNS=3
 export EZA_MIN_LUMINANCE=50
 
-#export LS_COLORS="$(vivid generate molokai)"
-export LS_COLORS="$(vivid generate  $ZDOTDIR/colors/color-schema.yml)"
 
-export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR=38;5;197:uG=38;5;198"
+ export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR=38;5;197:uG=38;5;198"
 # man eza_colors
 # The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
 #   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done            

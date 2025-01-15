@@ -1,0 +1,142 @@
+#gpt.toml
+# Allgemeines Format des Prompts
+format = """
+$hostname $username in $directory\
+via $git_branch $git_status\
+$nodejs $python $docker_context $kubernetes $package $java $ruby\
+$cmd_duration $memory_usage $battery $time\
+$character"""
+
+add_newline = true
+command_timeout = 1000
+
+# Hostname
+[hostname]
+ssh_only = true
+format = "[$hostname](fg:#2635ff bg:#00060e bold)"
+
+# Username
+[username]
+show_always = true
+format = "[$user](fg:#3fff2d bg:#00060e bold)"
+style_root = "fg:#ff2a6d bg:#00060e bold"
+
+# Directory
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+format = "[$path](fg:#54c1e6 bg:#00060e bold)"
+read_only = " 🔒"
+home_symbol = "🏠"
+
+# Git branch
+[git_branch]
+symbol = "🌱 "
+format = "[$symbol$branch](fg:#ff5bf8 bg:#00060e bold)"
+
+# Git status
+[git_status]
+style = "fg:#ff2a6d bg:#00060e bold"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+conflicted = "⚠️"
+ahead = "⇡$count"
+behind = "⇣$count"
+diverged = "⇕⇡$ahead_count⇣$behind_count"
+untracked = "🚧"
+stashed = "📦"
+modified = "✏️"
+staged = "✓"
+deleted = "🗑️"
+renamed = "🔄"
+
+# Node.js
+[nodejs]
+format = "⬡ v$version"
+style = "fg:#9a9f17 bg:#00060e bold"
+
+# Python
+[python]
+format = "🐍 v$version ($virtualenv)"
+style = "fg:#feff6e bg:#00060e bold"
+pyenv_version_name = true
+
+# Docker context
+[docker_context]
+symbol = "🐳 "
+format = "[$symbol$context](fg:#39c4b6 bg:#00060e bold)"
+
+# Kubernetes context
+[kubernetes]
+symbol = "☸️ "
+format = "[$symbol$context](fg:#fee801 bg:#00060e bold)"
+
+# Package
+[package]
+symbol = "📦 "
+format = "[$symbol$version](fg:#54c1e6 bg:#00060e bold)"
+
+# Java
+[java]
+symbol = "☕ "
+format = "[$symbol v$version](fg:#39c4b6 bg:#00060e bold)"
+
+# Ruby
+[ruby]
+symbol = "💎 "
+format = "[$symbol v$version](fg:#ff5bf8 bg:#00060e bold)"
+
+# Command duration
+[cmd_duration]
+format = "⏱ $duration"
+style = "fg:#fee801 bg:#00060e bold"
+min_time = 5000
+show_milliseconds = true
+
+# Memory usage
+[memory_usage]
+symbol = "🧠 "
+format = "$symbol$usage"
+style = "fg:#d1f7ff bg:#00060e bold"
+threshold = 75
+disabled = false
+
+# Battery
+[battery]
+format = "🔋 $percentage$indicator"
+style = "fg:#3fff2d bg:#00060e bold"
+full_symbol = "⚡"
+charging_symbol = "🔌"
+discharging_symbol = "⚠️"
+
+# Time
+[time]
+format = "🕒 %H:%M:%S"
+style = "fg:#05d9e8 bg:#00060e bold"
+disabled = false
+
+# Character
+[character]
+success_symbol = "❯"
+error_symbol = "✖"
+style_success = "fg:#3fff2d bg:#00060e bold"
+style_error = "fg:#ff2a6d bg:#00060e bold"
+
+# Shell
+[shell]
+format = "[$indicator](fg:#2635ff bg:#00060e bold)"
+fish_indicator = "🐟 fish"
+bash_indicator = "🐚 bash"
+zsh_indicator = "🦄 zsh"
+
+# Status
+[status]
+format = "[$status]($style)"
+style = "fg:#ff2a6d bg:#00060e bold"
+disabled = false
+
+# Jobs
+[jobs]
+symbol = "⚙️"
+style = "fg:#54c1e6 bg:#00060e bold"
+number_threshold = 1
+

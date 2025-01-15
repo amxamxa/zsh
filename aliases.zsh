@@ -276,6 +276,8 @@ du --human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M
 #	____________________________________________________________________________________
 #       e x a / e z a .. ls  ll  lh  ld ...
 alias e-hugo='eza --no-git --total-size  --git-ignore -A -tree'
+alias l-hugo='e-hugo'
+
 alias e1='echo -e "\t${GELB} eza --tree -level 1 ${RESET}\n" && \
 														 \
 	 eza --all 			--long --group-directories-first \

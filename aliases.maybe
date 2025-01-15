@@ -156,3 +156,4 @@ pw-cli info all
 
 print -l **/*(e:'[[ -d $REPLY/.git ]]':)
 # yt-dlp -x --audio-format mp3 --split-chapters --paths "%(section_title)s.%(ext)s" "https://youtu.be/sCJPHeli-sc?si=U5wEaa02ZN5dxLY_"
+grep -r -i "vivid" .
