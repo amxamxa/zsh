@@ -196,10 +196,12 @@ source_or_error() {
 # source /share/zsh/prompt/basic-prompt.zsh
 #_______________________________________________________
 # ggf. SPACESHIP PROMPT
-#export STARSHIP_CONFIG="$ZDOTDIR/prompt/starship.toml" # Starship Prompt
-export STARSHIP_CONFIG="$ZDOTDIR/prompt/starship.toml" # Starship Prompt v2
-eval "$(starship init zsh)"
-eval "$(starship completions zsh)"
+#export STARSHIP_CONFIG="$ZDOTDIR/prompt/starship.toml"  # Starship Prompt v2
+#export STARSHIP_CONFIG=$ZDOTDIR/prompt/pure.toml 		 # Alternative 1
+#export STARSHIP_CONFIG=$ZDOTDIR/prompt/jetpack.toml 	 # Alternative 2
+ export STARSHIP_CONFIG=$ZDOTDIR/prompt/purify.toml 	 # Alternative 3
+ eval "$(starship init zsh)"
+ eval "$(starship completions zsh)"
 #	__________________________________________
 #		  __ _  (_)__________ 
 #		 /  ' \/ / __/ __/ _ \
