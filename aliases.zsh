@@ -280,38 +280,38 @@ alias l-hugo='e-hugo'
 
 alias e1='echo -e "\t${GELB} eza --tree -level 1 ${RESET}\n" && \
 														 \
-	 eza --all 			--long --group-directories-first \
-	 	 --color-scale 	--no-time --no-permissions --width 76 \
+	 eza --all 			--long    --group-directories-first \
+	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 1 --color-scale-mode gradient'
 
 alias e2='echo -e "\t${GELB} eza --tree -level 2${RESET}\n" && \
 														 \
-	 eza --all 			--long --group-directories-first \
-	 	 --color-scale 	--no-time --no-permissions --width 76 \
+	 eza --all 			--long    --group-directories-first \
+	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 2  --color-scale-mode gradient'
 
 alias e3='echo -e "\t${GELB} eza --tree -level 3  ${RESET}\n" && \
 														 \
 	 eza --all 			--long --group-directories-first \
-	 	 --color-scale 	--no-time --no-permissions --width 76 \
+	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 3	--color-scale-mode gradient'
 
 alias e4='echo -e "\t${GELB} eza --tree -level 4 --git ${RESET}\n" && \
 														 \
 	 eza --all 			--long --group-directories-first \
-	 	 --no-time --no-permissions   --width 76 \
+	 	 --no-time --octal-permissions   --width 76 \
 	 	 --color-scale age --color-scale-mode gradient \
 	 	 --tree 		--level 4	--git --color-scale-mode gradient'
 
 alias eee='echo -e "\t${GELB} eza --tree -level 99 --git ${RESET}\n" && \
 	 eza --all 			--long --group-directories-first \
 	 	 --colour-scale all --color-scale-mode gradient	--no-time \
-	 	 --no-permissions   --tree 		--level 99	--git --width 76'
+	 	 --octal-permissions   --tree 		--level 99	--git --width 76'
 
 alias ee='echo -e "eza  ... läuft"  && \
 	eza --git  --almost-all --long --group-directories-first \
-		 	 --colour-scale all --color-scale-mode gradient ' #	--no-time \
-	#	 	 --no-permissions --git --width 76'
+		 	 --colour-scale all --color-scale-mode gradient --octal-permissions
+		 	 ' #	--no-time 	 --no-permissions --git --width 76'
 
 	#	eza --grid --long --no-permissions \
 	#		 --no-time \
@@ -334,6 +334,7 @@ alias ld='echo -e "\t${PINK} eza ${GELB}$(pwd)${PINK} only (hidden and non-hidde
  				--classify --header --only-dirs --width 76'
 
 alias lp='eza --octal-permissions --git -Al --git-repos --no-permissions --time-style=relative --group-directories-first --smart-group'
+alias ep=lp
 #------------------------------------------------------------------  eza ende
 
 alias l='
@@ -443,7 +444,7 @@ alias df="df -Tha --total"
 # alias du="du -ach | sort -h" # -a...allfiles/path -c...complete
 alias fhere="find . -name "
 alias free="free -gt"
-alias ps="ps auxf"
+alias PS="ps auxf"
 
 # searches process for an argument
 alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"

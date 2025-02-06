@@ -49,7 +49,7 @@ case $build_choice in
 esac
 echo
 # 3. $UPGRADE Option
-read -p "$(echo -e "\t${SKY}Soll die Option --upgrade gesetzt werden? \n\t\t${RASPBERRY}(Enter für Nein, up für --upgrade): ${RESET}")" upgrade_choice
+read -p "$(echo -e "\t${SKY}Soll die Option --upgrade gesetzt werden? \n\t\t${RASPBERRY}(Enter für 'Nein', up für '--upgrade'): ${RESET}")" upgrade_choice
 if [[ "$upgrade_choice" == "up" ]]; then
     UPGRADE="--upgrade"
 else
@@ -57,15 +57,16 @@ else
 fi
 echo
 # 4. $NAME setzen
-
-default_name="4xam"
-echo "def. Name ist 4xam               Datum: $(date +'%d.%m.%Y') "
-read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name
+default_name="24-11-4xam"
+echo -e "\t${RASPBERRY}echo "Default Name ist: \t ${RED} $default_name"
+read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name"
 NAME=${profile_name:-$default_name}
 echo
+
 # 5. Hinweis über -I nixos-config
 echo -e "\t${SKY}Hinweis: -I nixos-config=/etc/nixos/configuration.nix wird verwendet.${RESET}"
 echo
+
 # 6. Bestätigung vor Ausführung
 echo -e "\n\t${SKY}Der folgende Befehl wird ausgeführt:"
 echo -e "\t\t${RASPBERRY}sudo nixos-rebuild "$BUILD""
