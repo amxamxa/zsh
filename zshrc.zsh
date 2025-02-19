@@ -77,10 +77,20 @@ REPORTTIME=3 		# display cpu usage, if command taking more than 3s
 #   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
 #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
 #  _______________________________________________________
-# export LS_COLORS="$(vivid generate molokai)"
 # export LS_COLORS="$(vivid generate jellybeans)"
-export LS_COLORS="$(vivid generate $ZDOTDIR/colors/color-schema.yml)"
-
+# LS_COLORS mit der benutzerdefinierten Farbdatei zu setzen
+if [[ -f "$ZDOTDIR/colors/color-schema.yml" ]]; then
+  LS_COLORS_OUTPUT="$(vivid generate "$ZDOTDIR/colors/color-schema.yml" 2>/dev/null)"
+  if [[ $? -eq 0 ]]; then
+    export LS_COLORS="$LS_COLORS_OUTPUT"
+  else
+    # Falls der Befehl fehlschlägt, verwende das molokai-Schema
+    export LS_COLORS="$(vivid generate molokai)"
+  fi
+else
+  # Falls die Datei nicht existiert, verwende das molokai-Schema
+  export LS_COLORS="$(vivid generate molokai)"
+fi
 # eza-Einstellungen
 export COLUMNS=78
 export EZA_ICONS_AUTO="always"

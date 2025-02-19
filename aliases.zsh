@@ -87,6 +87,9 @@ alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix ${LILA}which can s
 # alias NcurrCopy= NIXcurrentCopy
 
 alias Ncopy=NIXcopy
+alias NIXboom='echo -e "\t${PINK}sudo nixos-rebuild switch --profile-name 24-11-4xam " && nixos-rebuild switch --show-trace  --profile-name "24-11-4xam" -I nixos-config=/etc/nixos/configuration.nix'
+alias Nboom=NIXboom
+
 #	_____________________________________________________zsh_______________
 ##      * *   Z S H *  *
 ##  .zshenv .zshrc aliases.zsh
@@ -439,21 +442,27 @@ alias ..='cd ..'
 # alias NC ="ncdu"
 
 # list our disk usage in human-readable units including filesystem type, and print a total at the bottom
-alias df="df -Tha --total"
+alias df='echo -e "\t${PINK}df -Tha --total${RESET}\n" && \
+		df -Tha --total'
 
 # alias du="du -ach | sort -h" # -a...allfiles/path -c...complete
-alias fhere="find . -name "
-alias free="free -gt"
-alias PS="ps auxf"
+alias fhere='echo -e "\t${PINK}find . -name $1 {RESET}\n" && \
+			"find . -name'
+alias free='echo -e "\t${PINK}free -gt {RESET}\n" && \
+			free -gt'
+alias PS='echo -e "\t${PINK} ps auxf{RESET}\n" && \ 
+			ps auxf'
 
 # searches process for an argument
-alias psg="ps aux | grep -v grep | grep -i -e VSZ -e"
+alias psg='echo -e "\t${PINK}ps aux | grep -v grep | grep -i -e VSZ -e {RESET}\n" && \
+		ps aux | grep -v grep | grep -i -e VSZ -e'
 # wget-c: continue download if problems
 alias wget="wget -c"
 alias top="btop"
 
 # upgraded utility for df as well that’s called pydf. It provides colorized output and text-based usage bars.
-alias DF="pydf"
+alias DF='echo -e "\t${PINK} pydf -hgB{RESET}\n" && \
+		pydf -hgB'
 alias EIN="sudo shutdown -r now"
 #alias AUS="sudo nala update && sudo shutdown now"
 # make DIR
@@ -472,7 +481,7 @@ alias cd..='echo -e "\t${PINK}Gehe ein Verzeichnis höher${RESET}\n" && cd ..'
 #alias alais='echo -e "\t${PINK}Alias für Alias${RESET}\n" && alias'
 #alias _='echo -e "\t${PINK}Führe als Superuser (sudo) aus${RESET}\n" && sudo'
 
-alias c='clear; neo0'
+alias c='clear; motd || neo0'
 alias q='echo -e "\t${PINK}Beenden${RESET}\n" && exit'
 alias lol='alias | sort -k1,1 -k1.1,1.2 -k1.3,1.4| clolcat; echo -e "\n${GREEN}... das sind die aktuellen aliase, alphabetisch sortiert ${RESET}\n"'
 
