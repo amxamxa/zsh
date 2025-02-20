@@ -27,7 +27,7 @@
 #	awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
 #_____________________________________________________________________________
-alias FARBE='source_or_error "$ZDOTDIR/functions/colors.zsh" ||  source "$ZDOTDIR/functions/colors.zsh"'
+alias FARBE='source_or_error "$ZDOTDIR/functions/colors.sh" ||  source "$ZDOTDIR/functions/colors.sh"'
 
 alias man='man --wildcard' # dann wird die man-page auf Terminal gepagt!
 alias RM~='find . -type f -name "*~" -delete'
@@ -135,7 +135,7 @@ alias Kmap=KITTYmap
 
 alias COL='terminal-colors -n \
 			&& echo -e "${GREEN}\n...für Hex-Codes der Farben:${RED}%${LILA} \
-			erminal-colors -l ${RESET}\n"'
+			terminal-colors -l ${RESET}\n"'
 
 alias Col='for i in {0..255};
  				do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
