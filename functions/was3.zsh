@@ -1,14 +1,16 @@
 #!/usr/bin/env bash
 
-# Header
 # auth: max_kempter
 # filename: was.sh
 # howto: ./was.sh lsd
-# Erklärung Aufgaben des Skripts:
-# Dieses Skript dient dazu, Informationen über einen bestimmten Befehl zu sammeln und anzuzeigen.
-# Es verwendet verschiedene Tools wie tldr, cheat, man, und navi, um Informationen zu beschaffen.
+# Aufgaben des Skripts:
+#   Dieses Skript dient dazu, Informationen über einen 
+#   bestimmten Befehl zu sammeln und anzuzeigen.
+#   Es verwendet verschiedene Tools wie tldr, cheat, man, 
+#   und navi, um Informationen zu beschaffen.
 # Anleitung zur Nutzung:
-# Führen Sie das Skript mit einem Befehl als Argument aus, z.B. ./was.sh lsd, um Informationen über den Befehl "lsd" zu erhalten.
+#   Führen Sie das Skript mit einem Befehl als Argument 
+#   aus, z.B. ./was.sh lsd, um Informationen über den Befehl "lsd" zu erhalten.
 
 # Farbcodes definieren für die Ausgabe im Terminal
 export SKY=$(echo -e "\033[38;2;62;36;129m\033[48;2;135;206;235m")
@@ -56,23 +58,23 @@ get_command_info() {
         options+=("man")
     fi
 
-    # Wenn keine Optionen verfügbar sind, Fehler ausgeben
+# Wenn keine Optionen verfügbar sind, Fehler ausgeben
     if [[ ${#options[@]} -eq 0 ]]; then
         echo -e "${RED}\tKeine Informationen für $cmd gefunden.${RESET}\n"
         return
     fi
 
-    # Verfügbare Optionen anzeigen
+# Verfügbare Optionen anzeigen
     echo -e "${SKY}\tVerfügbare Informationsquellen für '$cmd':${RESET}"
     for i in "${!options[@]}"; do
         echo -e "${SKY}\t$((i+1)). ${options[$i]}${RESET}"
     done
 
-    # Benutzerauswahl
+# Benutzerauswahl
     echo -e "${SKY}\tBitte wählen Sie eine Option (1-${#options[@]}):${RESET}"
     read -r choice
 
-    # Auswahl validieren und entsprechende Ausgabe anzeigen
+ # Auswahl validieren und entsprechende Ausgabe anzeigen
     if [[ $choice -ge 1 && $choice -le ${#options[@]} ]]; then
         selected_option="${options[$((choice-1))]}"
         case "$selected_option" in
