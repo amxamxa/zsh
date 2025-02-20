@@ -1,44 +1,17 @@
 # config file 4 navi
- 
-# ENVIRONMENT VARIABLES:
-#    NAVI_CONFIG            # path to config file
-#    NAVI_CONFIG_YAML       # config file content
-
-  tag:
-    color: dark_yellow # red # text color. possible values: https://bit.ly/3gloNNI
-    width_percentage: 5 # column width relative to the terminal window
-#    min_width: 1 # minimum column width as number of characters
-# "dark_red" "green"  "dark_green" "yellow"  "dark_yellow"   "blue" 
-# "dark_blue" "magenta"    "dark_magenta" "cyan" "dark_cyan"  "white" "grey"
-
+# navi info config-path
+# navi info cheats-path
+# navi info config-example 
 style:
+  tag:
+    color: magenta
+    width_percentage: 5 # column width relative to the terminal window
+    min_width: 5 # minimum column width as number of characters
   comment:
-    color: cyan
-    width_percentage: 40
-    # min_width: 45
+    color: dark_yellow
+    width_percentage: 42
+    min_width: 45
   snippet:
-    color: red
-    width_percentage: 60
-    #min_width: 
-
-finder:
-  command: fzf # equivalent to the --finder option
-  overrides: '--with-nth 2,3 --nth 1,2 --no-select-1 --no-exact' #'--nth 1 --no-select-1 --no-exact' # equivalent to the --fzf-overrides option
-   # overrides_var: '--no-select-1' # equivalent to the --fzf-overrides-var option
-
-# cheats:
-#   paths:
-#     - /path/to/some/dir # on unix-like os
-#     - F:\\path\\to\\dir # on Windows
-# path: /path/to/some/dir # (DEPRECATED) equivalent to the --path option
-
-# search:
-# tags: git,!checkout # equivalent to the --tag-rules option
-
-shell:
-  # Shell used for shell out. Possible values: bash, zsh, dash, ...
-  # For Windows, use `cmd.exe` instead.
-  command: zsh
-  
-  # finder_command: bash # similar, but for fzf's internals
-
+    color: dark_blue
+    width_percentage: 55
+    min_width: 45    

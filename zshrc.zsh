@@ -86,11 +86,14 @@ if [[ -f "$ZDOTDIR/colors/color-schema.yml" ]]; then
   else
     # Falls der Befehl fehlschlägt, verwende das molokai-Schema
     export LS_COLORS="$(vivid generate molokai)"
+    printf "\t${GREEN}󰞷 .... vivid mit molokai${RESET}\n"
   fi
 else
   # Falls die Datei nicht existiert, verwende das molokai-Schema
   export LS_COLORS="$(vivid generate molokai)"
+  printf "\t${GREEN}󰞷 .... vivid mit molokai${RESET}\n"
 fi
+
 # eza-Einstellungen
 export COLUMNS=78
 export EZA_ICONS_AUTO="always"
@@ -98,9 +101,7 @@ export EZA_ICON_SPACING=2
 export EZA_GRID_ROWS=3
 export EZA_GRID_COLUMNS=3
 export EZA_MIN_LUMINANCE=50
-
-
- export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR=38;5;197:uG=38;5;198"
+export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR=38;5;197:uG=38;5;198"
 # man eza_colors
 # The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
 #   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done            
@@ -129,7 +130,6 @@ source_or_error() {
 	sleep 0.03
 	source_or_error "$ZDOTDIR/plugins/fzf.zsh"
 	sleep 0.02
-
 #	sleep 0.05
 	source_or_error "$ZDOTDIR/plugins/fzf-key-bind.zsh"
 	sleep 0.02
@@ -142,16 +142,14 @@ source_or_error() {
 	source_or_error "$ZDOTDIR/plugins/zgreeting.zsh"
 
 
-# -------in conf.nix------------------------------------Projektpfade
+# bereits-------in conf.nix
+# --------------------------Projektpfade
 #export PRO="/home/project"
 #export NIX="/share/nixos/configurationNix"
 #export S="/share"
 #export KITTY_CONFIG_DIRECTORY="/share/kitty"
 #export GIT_CONFIG="/share/git/config"
 #export EMACSDIR="/share/emacs"
-# 	GIT config
-# export GIT_CONFIG="/share/git/config"
-# 	BAT config
 #export BAT_CONFIG_FILE="/share/bat/config.toml"
 
 #--------------------------------------------
@@ -267,7 +265,8 @@ fi
 # navi
 if command -v navi &> /dev/null; then
   echo "\t${PINK} navi  ... check ${RESET}\t"
-    if [[ -z ${NAVI_CONFIG+-v} ]]; then
+    if [[ -z ${NAVI_CONFIG+-v} ]]; then  #  Operator -z überprüft, ob der folgende String leer is, 
+    # und +-v ist eine spezielle Syntax, um zu überprüfen, ob eine Variable existiert, und gleichzeitig einen Standardwert (-v) zurückzugeben, falls sie existiert.
 	 export NAVI_CONFIG="$ZDOTDIR/navi"
 	 echo "\t${GELB} NAVI_CONFIG wurde auf ${YELLOW}'$ZDOTDIR/navi'${GREEN} gesetzt. ${RESET}"
     else

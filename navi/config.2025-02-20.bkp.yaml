@@ -1,0 +1,19 @@
+# config file 4 navi
+# navi info config-path
+# navi info cheats-path
+# navi info config-example 
+
+# text color. possible values: # https://github.com/crossterm-rs/crossterm/blob/a9d9aff3f0397643be6f834f3f2777f6d8d996e9/src/style/types/color.rs#L174-L189
+style:
+  tag:
+    color: red
+    entage: 26 # column width relative to the terminal window
+    min_width: 20 # minimum column width as number of characters
+  comment:
+    color: blue
+    width_percentage: 42
+    min_width: 45
+  snippet:
+    color: white
+    
+    

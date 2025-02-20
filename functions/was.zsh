@@ -4,8 +4,7 @@
 GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
 RED="\033[38;2;240;138;100m\033[48;2;147;18;61m"
 YELLOW="\033[38;2;232;197;54m\033[48;2;128;87;0m"
-	BLINK	= "\033[5m";  	# blink	 txt 
-		
+BLINK="\033[5m"  	# blink	 txt 
 RESET="\033[0m"
 
 # Prüfen, ob die benötigten Info-Apps installiert sind
