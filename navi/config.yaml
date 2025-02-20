@@ -10,8 +10,16 @@ style:
   comment:
     color: dark_yellow
     width_percentage: 42
-    min_width: 45
+    min_width: 55
   snippet:
     color: dark_blue
     width_percentage: 55
     min_width: 45    
+    
+finder:
+  command: fzf
+  overrides: '--with-nth 2,3 --nth 1,2 --no-select-1' 
+ # overrides: '--with-nth 2,3 --nth 1,2 --no-select-1 --no-exact'
+  overrides-var: '--no-select-1'
+shell:
+  command: zsh
