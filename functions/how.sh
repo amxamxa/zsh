@@ -4,7 +4,7 @@
 ## ╠╣ ║║  ║╣ 
 ## ╚  ╩╩═╝╚═╝
 ##  -NAME:        how.sh
-##  -VERSION/tag: 0.1
+##  -VERSION/tag: 0.2
 ##  -AUTHOR:      max kempter
 ##  -Github:      github.com/amxamxa/was.sh
 ## - DATE:        2025-Feb-20                
@@ -27,100 +27,110 @@
 ## ---------------------------------------
 ## COMMENTS: Advanced formatting and color support included.
 ##########################################
+#!/usr/bin/env bash
 
-# Define color codes for terminal output
-GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
-RED="\033[38;2;240;138;100m\033[48;2;147;18;61m"
-YELLOW="\033[38;2;232;197;54m\033[48;2;128;87;0m"
-BLINK="\033[5m"  	# blink	 txt 
+# Define color codes for terminal output to enhance readability
+COL_USER="\033[38;2;0;17;204m\033[48;2;147;112;219m"
+COL_ACCENT="\033[38;2;32;0;21m\033[48;2;163;64;217m"
+COL_RES="\033[38;2;252;222;90m\033[48;2;0;0;139m"
+COL_SUCCESS="\033[38;2;0;255;0m\033[48;2;0;100;0m"
+COL_ERROR="\033[38;2;240;128;128m\033[48;2;139;0;0m"
 RESET="\033[0m"
 
-# Help function
-show_help() {
-    echo -e "${WINE}was.sh - Command Documentation Explorer${RESET}"
-    echo -e "Usage: ${WINE}./was.sh [OPTIONS] [COMMAND]${RESET}"
-    echo -e "\nOptions:"
-    echo -e "  ${WINE}-h${RESET}    Show this help"
-    echo -e "  ${WINE}-v${RESET}    Show version information"
-    echo -e "\nExamples:"
-    echo -e "  ${WINE}./was.sh curl${RESET}     # Info about curl"
-    echo -e "  ${WINE}./was.sh -v${RESET}      # Show version"
+# Display help information
+function show_help() {
+    echo -e "\t${COL_ACCENT}how.sh - Command Documentation Explorer${RESET}"
+    echo -e "\tUsage: ${COL_ACCENT}./how.sh [OPTIONS] [COMMAND]${RESET}"
+    echo -e "\n\tOptions:"
+    echo -e "\t  ${COL_ACCENT}-h, --help${RESET}    Show this help message"
+    echo -e "\t  ${COL_ACCENT}-v, --version${RESET} Show version information"
+    echo -e "\n\tExamples:"
+    echo -e "\t  ${COL_ACCENT}./how.sh curl${RESET}     # Get information about curl command"
+    echo -e "\t  ${COL_ACCENT}./how.sh -v${RESET}       # Display version details"
 }
 
-# Version info
-show_version() {
-    echo -e "${WINE}was.sh ${RESET}| Version 0.1 | (c) 2025 max kempter"
-    echo -e "Documentation tools: tldr ${WINE}•${RESET} cheat ${WINE}•${RESET} man"
+# Display version information
+function show_version() {
+    echo -e "\t${COL_ACCENT}how.sh${RESET} | Version 0.2 | (c) 2025 Max Kempter"
+    echo -e "\tDocumentation tools: ${COL_USER}•${RESET} tldr ${COL_USER}•${RESET} cheat ${COL_USER}•${RESET}•${RESET} man"
 }
 
-# Dependency check
-check_deps() {
+# Check if required dependencies are installed
+function check_deps() {
     for cmd in tldr cheat man; do
         if ! command -v "$cmd" &>/dev/null; then
-            echo -e "${RED}ERROR:${RESET} '$cmd' not installed!"
-            echo -e "Install: ${WINE}os install $cmd${RESET}"
+            echo -e "\t${COL_ERROR}ERROR:${RESET} '$cmd' not installed!"
+            echo -e "\tInstall: ${COL_ACCENT}sudo apt install $cmd${RESET}"
             exit 1
         fi
     done
 }
 
-# Last command
-last_command() {
+# Show the last executed command
+function last_command() {
     local last_cmd=$(fc -nl -1 | cut -d' ' -f2-)
-    echo -e "${WINE}▸ Last command:${RESET} ${PUNK}$last_cmd${RESET}\n"
+    echo -e "\t${COL_ACCENT}▸ Last command:${RESET} ${COL_RES}$last_cmd${RESET}\n"
 }
 
-# Dynamic info query
-get_command_info() {
+# Fetch command documentation
+function get_command_info() {
     local cmd="$1"
-    local sources=()
+    local sources=("cheat fuzzy" "cheat regex" "tldr" "man")
 
-  # Find available sources
-    tldr "$cmd" &>/dev/null && sources+=("tldr")
-    cheat "$cmd" &>/dev/null && sources+=("cheat")
-    man "$cmd" &>/dev/null && sources+=("man")
-
-  # Error case
-    ((${#sources[@]} == 0)) && {
-        echo -e "${RED}✗ No docs for '$cmd'${RESET}"
-        return 1
-    }
-  # Interactive selection
-    echo -e "${WINE}▸ Documentation for '${PUNK}$cmd${WINE}':${RESET}"
-    PS3=$'\t'"${WINE}➤ Choose (1-${#sources[@]}):__"
-   
+  echo -e "${COL_ACCENT}___▸ Documentation for '${COL_RES}_▸  $cmd${COL_ACCENT}   ':${RESET}"
+  
+  PS3="${COL_RES}Choose between opt.: (1-${#options[@]}):${RESET} "
+    select selected_option in "${options[@]}"; do
+        [[ -n "$selected_option" ]] && break
+        echo -e "${RED}Ungültige Auswahl. Bitte 1-${#options[@]} eingeben.${RESET}"
+    done
+    
+    
+    
     select src in "${sources[@]}"; do
         [[ -n $src ]] && break
-        echo -e "${RED}❗ Invalid choice${RESET}"
+        echo -e "\t${COL_ERROR}❗ Invalid choice${RESET}"
     done
-
-  # Output with original formatting
+    
     case "$src" in
-        "tldr") tldr --color always "$cmd" ;;
-        "cheat") cheat -p "$cmd" ;;
-        "man") man -P "less -R" "$cmd" ;;
+        "cheat fuzzy") cheat -s "$cmd" ;;  # Uses cheat with fuzzy search
+        "cheat regex") cheat -r "$cmd" ;;  # Uses cheat with regex search
+        "tldr") tldr --color always "$cmd" ;;  # Retrieves TLDR page with colors
+        "man") 
+            if command -v bat &> /dev/null; then
+                export MANPAGER="bat --paging=always --style=changes -l man -p"
+            else
+                export MANPAGER="less -FRX --quit-if-one-screen --no-init"
+            fi
+            man "$cmd"
+            ;;
     esac
 }
 
-# Main program
-main() {
-    # Process options
-    while getopts ":hv" opt; do
+# Main script execution
+function main() {
+    while getopts ":hv-:" opt; do
         case $opt in
-            h) show_help; exit 0 ;;
-            v) show_version; exit 0 ;;
-            \?) echo -e "${RED}Unknown option: -$OPTARG${RESET}" >&2; exit 1 ;;
+            h) show_help; exit 0 ;;  
+            v) show_version; exit 0 ;;  
+            -)
+                case "${OPTARG}" in
+                    help) show_help; exit 0 ;;  
+                    version) show_version; exit 0 ;;  
+                    *) echo -e "\t${COL_ERROR}Unknown option: --${OPTARG}${RESET}" >&2; exit 1 ;;  
+                esac
+                ;;
+            \?) echo -e "\t${COL_ERROR}Unknown option: -$OPTARG${RESET}" >&2; exit 1 ;;  
         esac
     done
-    shift $((OPTIND -1))
+    shift $((OPTIND -1))  
     
-    check_deps
-
-    # Process command
+    check_deps  
+    
     if (($# == 0)); then
-        last_command
+        last_command  
     else
-        get_command_info "$1"
+        get_command_info "$1"  
     fi
 }
 
