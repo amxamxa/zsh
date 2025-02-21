@@ -1,11 +1,32 @@
 #!/usr/bin/env bash
-# Author: max kempter
-# Filename: was.sh
-# Version: 0.1
-# Usage: ./was.sh [OPTIONS] [COMMAND]
-# Purpose: 
-#   Collects information about commands using tldr, cheat, and man
-#   with advanced formatting options and help functions.
+##########################################
+## ╔═╗╦╦  ╔═╗ ############################
+## ╠╣ ║║  ║╣ 
+## ╚  ╩╩═╝╚═╝
+##  -NAME:        how.sh
+##  -VERSION/tag: 0.1
+##  -AUTHOR:      max kempter
+##  -Github:      github.com/amxamxa/was.sh
+## - DATE:        2025-Feb-20                
+## ---------------------------------------
+## To do/ Known Bugs /or depends:
+##   • Requires tldr, cheat, and man to be installed.
+## ---------------------------------------
+## Command Documentation Explorer
+## ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+## This script collects information about commands using tldr, cheat, and man
+## with advanced formatting options and help functions. It provides an interactive
+## way to explore command documentation and supports dynamic source selection.
+##
+## Main functions/workflow:
+##   • Checks for required dependencies (tldr, cheat, man).
+##   • Displays help and version information.
+##   • Retrieves and displays documentation for a specified command.
+##   • Supports interactive selection of documentation sources (tldr, cheat, man).
+##   • Displays the last executed command if no arguments are provided.
+## ---------------------------------------
+## COMMENTS: Advanced formatting and color support included.
+##########################################
 
 # Define color codes for terminal output
 GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
