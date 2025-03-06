@@ -14,6 +14,13 @@
 ## 	set filetyte zsh
 ## COMMENTS:	nixOS-version
 #####################################################
+
+export BOLD="\033[1m" 
+export RESET="\e[0m" 
+export GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
+export RED="\033[38;2;240;138;100m\033[48;2;147;18;61m" 
+export PINK="\033[38;2;255;0;53m\033[48;2;34;0;82m"
+
 # Füge den Pfad für Custom- u Autoload-Funktionen hinzu. When we run a 
 #command that corresponds to an autoloaded function, ZSH searches for 
 #it in the “fpath” and loads it into the memory if located.
@@ -106,11 +113,6 @@ export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR
 # The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
 #   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done            
 
-
-export BOLD="\033[1m" 
-export RESET="\e[0m" 
-export GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
-export RED="\033[38;2;240;138;100m\033[48;2;147;18;61m" 
 # Funktion zum Sourcen von Dateien oder Ausgabe einer Fehlermeldung
 source_or_error() {
     if [ -f "$1" ]; then
@@ -361,7 +363,7 @@ fi
 echo "	    	    __              __              __      
 	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
 	     (_-< / _ \/ _ \ / __// __// __// // // __/ (_-<
-	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
+	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay#
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
   echo "${BOLD}  shift+KP_MULTIPLY		next_layout
   shift+KP_DIVIDE		swap_with_window

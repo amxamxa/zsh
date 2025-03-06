@@ -87,7 +87,7 @@ alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix ${LILA}which can s
 # alias NcurrCopy= NIXcurrentCopy
 
 alias Ncopy=NIXcopy
-alias NIXboom='echo -e "\t${PINK}sudo nixos-rebuild switch --profile-name 24-11-4xam " && nixos-rebuild switch --show-trace  --profile-name "24-11-4xam" -I nixos-config=/etc/nixos/configuration.nix'
+alias NIXboom='echo -e "\t${PINK}sudo nixos-rebuild switch --profile-name xam4boom " && nixos-rebuild switch --show-trace --profile-name "xam4boom" -I nixos-config=/etc/nixos/configuration.nix'
 alias Nboom=NIXboom
 
 #	_____________________________________________________zsh_______________
