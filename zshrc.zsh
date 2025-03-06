@@ -363,7 +363,7 @@ fi
 echo "	    	    __              __              __      
 	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
 	     (_-< / _ \/ _ \ / __// __// __// // // __/ (_-<
-	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay#
+	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
   echo "${BOLD}  shift+KP_MULTIPLY		next_layout
   shift+KP_DIVIDE		swap_with_window
