@@ -87,8 +87,9 @@ alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix ${LILA}which can s
 # alias NcurrCopy= NIXcurrentCopy
 
 alias Ncopy=NIXcopy
-alias NIXboom='echo -e "\t${PINK}sudo nixos-rebuild switch --profile-name xam4boom " && nixos-rebuild switch --show-trace --profile-name "xam4boom" -I nixos-config=/etc/nixos/configuration.nix'
-alias Nboom=NIXboom
+alias NIXoi='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name xam4boom --upgrade${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "xam4boom" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
+alias Nboom=NIXoi
+alias Nixboom=NIXoi
 
 #	_____________________________________________________zsh_______________
 ##      * *   Z S H *  *
@@ -236,11 +237,42 @@ alias g2history='cat "$HISTFILE" | grep -i --colour=always'
 alias g2h=g2history
 alias h2g=g2history
 
-#grep...auf [ENV] printable enviroment variable auf WORD
-alias g2env='printenv | grep -i --colour=always'
+# Funktion zum Suchen von WORD in ALIAS
+g2ali() {
+if [[ -z "$1" ]]; then
+   echo "\t${RED}Fehler: Kein Suchbegriff angegeben.${RESET}\n"
+   echo "\t${PINK}Verwendung: g2ali <Suchbegriff>${RESET}"
+     return 1312
+  fi
+ # Suche in Umgebungsvariablen mit optionaler Syntaxhervorhebung durch `bat`
+  if command -v bat &>/dev/null; then
+    alias | grep -i --color=always "$1" | command bat -l toml
+    echo "\t${PINK} alias | grep -i --color=always "$1" | command bat -l toml ${RESET}\n"
+    else
+        alias | grep -i --color=always "$1"
+   fi
+}   
+
+
+ 
+# Funktion zum Suchen von WORD in ENV
+g2env() {
+if [[ -z "$1" ]]; then
+   echo "\t${RED}Fehler: Kein Suchbegriff angegeben.${RESET}"
+   echo "\t${PINK}Verwendung: g2env <Suchbegriff>${RESET}"
+     return 1312
+  fi
+ # Suche in Umgebungsvariablen mit optionaler Syntaxhervorhebung durch `bat`
+  if command -v bat &>/dev/null; then
+     printenv | grep -i --color=always "$1" | command bat -l toml
+     echo "\t${PINK} printenv | grep -i --color=always "$1" | command bat -l toml ${RESET}\n"
+     else
+        printenv | grep -i --color=always "$1"
+   fi
+}    
+
+#alias g2env='env | grep -i --colour=always "$1"'
 alias env2g='g2env'
-#... grep ... in printable aliases auf WORDnc
-alias g2ali='alias | grep -i --colour=always'
 alias ali2g='g2ali'
 alias g2lol='g2ali'
 alias lol2g='g2ali'
@@ -629,3 +661,20 @@ alias -s html='firefox'  #TODO: andere Formate ergänzen
 
 # -->greeting.zsh aliases.zsh
 # export SCRIPT_RUN_aliaseszsh="true"
+# 
+# # Überprüfen, ob die Standardausgabe (stdout) ein Terminal ist
+# if [ -t 1 ]; then
+#     echo "${PINK}Farbige Ausgabe im Terminal durch [ -t 1 ]${RESET}"
+#     echo "Terminal erkannt. Hier sind die relevanten Umgebungsvariablen:"
+#     echo "----------------------------------------"
+# #    echo "TERM: ${TERM}"          # Terminal-Typ
+#  #   echo "COLORTERM: ${COLORTERM}" # Unterstützung für farbige Ausgabe
+#     exit 1
+# else
+#     echo "KEINE farbige Ausgabe im Terminal durch [ -t 1 ]"
+#     echo "Kein Terminal erkannt. Hier sind die relevanten Umgebungsvariablen:"
+#     echo "----------------------------------------"
+#   #  echo "TERM: ${TERM}"
+#   #  echo "COLORTERM: ${COLORTERM}"
+#     exit 1312
+# fi

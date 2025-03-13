@@ -126,7 +126,7 @@ source_or_error() {
 # echo "   󰞷 "
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 #	sleep 0.05
-	source_or_error "$ZDOTDIR/functions/colors.zsh" &> /dev/null
+	source_or_error "$ZDOTDIR/functions/colors.zsh" # > /dev/null
 #       source_or_error "$ZDOTDIR/prompt/purify.zsh"
 	source_or_error "$ZDOTDIR/plugins/shortcuts.zsh"
 	sleep 0.03

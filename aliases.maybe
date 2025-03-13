@@ -158,3 +158,4 @@ print -l **/*(e:'[[ -d $REPLY/.git ]]':)
 # yt-dlp -x --audio-format mp3 --split-chapters --paths "%(section_title)s.%(ext)s" "https://youtu.be/sCJPHeli-sc?si=U5wEaa02ZN5dxLY_"
 grep -r -i "vivid" .
 fd wallpaper --type file --extension svg /nix --exec-batch kitty +kitten icat {}
+find . -type f -name "*.pdf" -readable -newermt '4 hours ago' 2>/dev/null nemo &

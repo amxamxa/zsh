@@ -57,11 +57,20 @@ else
 fi
 echo
 # 4. $NAME setzen
-default_name="24-11-4xam"
-echo -e "\t${RASPBERRY}echo "Default Name ist: \t ${RED} $default_name"
-read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name"
+# Zeile für Ausgabe von 'default_name'
+echo -e "\t${RASPBERRY}Default Name ist: \t ${RED}$default_name${RESET}"
+# Eingabeaufforderung für den Benutzernamen
+read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name
+# Setze den Namen auf den Wert des Benutzers oder den Standardwert
 NAME=${profile_name:-$default_name}
-echo
+# Zeige den gesetzten Namen an
+echo "${SKY}Der gesetzte Name und die Wahloption in GRUB: ${PINK} $NAME ${RESET}"
+
+#default_name="24.11_4xam"
+#echo -e "\t${RASPBERRY}echo "Default Name ist: \t ${RED} $default_name"
+#read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name"
+#NAME=${profile_name:-$default_name}
+#echo
 
 # 5. Hinweis über -I nixos-config
 echo -e "\t${SKY}Hinweis: -I nixos-config=/etc/nixos/configuration.nix wird verwendet.${RESET}"

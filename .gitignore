@@ -3,9 +3,9 @@
 # Neue Einträge
 history/zhistory
 zoxide/db.zo
+presenterm/
 
 # Einträge
-
 bkp/
 nix-zsh-completions/
 powerlevel10k/
