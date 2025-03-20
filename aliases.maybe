@@ -159,3 +159,7 @@ print -l **/*(e:'[[ -d $REPLY/.git ]]':)
 grep -r -i "vivid" .
 fd wallpaper --type file --extension svg /nix --exec-batch kitty +kitten icat {}
 find . -type f -name "*.pdf" -readable -newermt '4 hours ago' 2>/dev/null nemo &
+nmcli dev status
+nmcli connection edit type ethernet
+
+

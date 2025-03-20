@@ -26,9 +26,9 @@
 # 				ODER
 #	awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
-#_____________________________________________________________________________
-alias FARBE='source_or_error "$ZDOTDIR/functions/colors.sh" ||  source "$ZDOTDIR/functions/colors.sh"'
 
+
+alias FARBE='source_or_error "$ZDOTDIR/functions/colors.sh" ||  source "$ZDOTDIR/functions/colors.sh"'
 alias man='man --wildcard' # dann wird die man-page auf Terminal gepagt!
 alias RM~='find . -type f -name "*~" -delete'
 alias gitgit='git config -f $GIT_CONFIG user.email "max.kempter@gmail.com" && \
@@ -106,11 +106,11 @@ alias Zconf='ZRC'
 
 # alias ZENV='micro -filetype zsh $HOME/.zshenv" && source "$HOME/.zshenv" && echo -e "\n\t${PINK}source ~/.zshenv erfolgreich!${RESET}\n" || echo -e "\n\t${GELB}source ~/.zshenv ---NICHT---  erfolgreich!${RESET}\n"'
 ZEconf='ZENV'
-alias ZALI='micro $ZDOTDIR/aliases.zsh \
+alias ZALI=' gnome-text-editor $ZDOTDIR/aliases.zsh \
 		&& source $ZDOTDIR/aliases.zsh 				 \
 		&& echo -e "\n\t${PINK}source $ZDOTDIR/aliases.zsh erfolgreich!${RESET}\n" \
 		|| echo -e "\n\t${GELB}source $ZDOTDIR/aliases.zsh   ---NICHT---  erfolgreich!${RESET}\n"'
-alias Zalias='ZALI'
+alias Zali='ZALI'
 alias Zfunc='micro "$ZDOTDIR/functions/my-functions.zsh" \
 			&& source "$ZDOTDIR/functions/my-functions.zsh"'
 			#			&& echo -e "\n\t${PINK}source $ZDOTDIR/zfunctions.zsh  erfolgreich!${RESET}\n" \
@@ -167,11 +167,18 @@ alias neo4='echo -e "\t${PINK} neofetch w/ ${LILA} \t  a for loop of themes	/hom
 #	____________________________________________________________________
 #alias sudo='sudo --preserve-env=HOME'
 
-alias diff='echo -e "\t${GREEN}"colordiff w/ --ignore-case --ignore-tab-expansion --ignore-trailing-space --ignore-space-change --ignore-all-space --ignore-blank-line" && 	 colordiff --ignore-case           --ignore-tab-expansion    --ignore-trailing-space --ignore-space-change   --ignore-all-space      --ignore-blank-lines'
+alias diff='echo -e "\t${GREEN} colordiff w               \
+			--ignore-case --ignore-tab-expansion          \
+			--ignore-trailing-space --ignore-space-change \			
+			--ignore-case --ignore-tab-expansion          \
+            --ignore-all-space --ignore-blank-line" &&    \
+	 colordiff --ignore-case  --ignore-tab-expansion      \
+	  --ignore-trailing-space --ignore-space-change       \
+	  --ignore-all-space      --ignore-blank-lines'
 
-alias LSblk='echo -e "\t${GREEN}enhanced lsblk .. als Tabelle mit --merge --zoned --ascii --topology ${RESET}" && /
-		lsblk 	--width 80 --merge --zoned      /
-				--ascii --topology --output     /
+alias LSblk='echo -e "\t${GREEN}enhanced lsblk .. als Tabelle mit --merge --zoned --ascii --topology ${RESET}" && \
+		lsblk 	--width 80 --merge --zoned      \
+				--ascii --topology --output     \
 				MODEL,MOUNTPOINTS,PATH,SIZE,TRAN,LABEL,FSTYPE,TYPE'
 
 alias LSmod='echo -e "\t${GREEN}enhanced ls mod w/ Kernel-Modul -Name and -description ${RESET}"  && while IFS= read -r name; do printf "%s\t\t%s\n" "${name}" "$(sudo modinfo "$name" | grep "description" | cut -c17-)"; done <<< "$(lsmod | cut -d " " -f1 | tail -n +2)"'
@@ -252,8 +259,6 @@ if [[ -z "$1" ]]; then
         alias | grep -i --color=always "$1"
    fi
 }   
-
-
  
 # Funktion zum Suchen von WORD in ENV
 g2env() {
@@ -286,56 +291,64 @@ alias bat='bat6'
 # gute themes für batcat:       ansi, OneHalfDark, Dracula, Coldark-Dark
 alias bat1='bat 	--wrap=auto 	--plain 	--terminal-width 76   	--theme=ansi'
 alias bat2='bat 	--wrap=auto 	--plain 	--terminal-width 80 	--theme=Dracula'
-alias bat3='bat 	--wrap=auto  				--decorations=always 	--theme=Coldark-Dark'
+alias bat3='bat 	--wrap=auto  			--decorations=always 	--theme=Coldark-Dark'
 alias bat4='bat 	--wrap=auto 	--number 	--decorations=always 	--theme=OneHalfDark'
 alias bat5='bat 	--wrap=never 	--number 	--decorations=always 	--theme=base16'
-alias bat6='bat 	--wrap=auto  	--decorations=always 	--theme=gruvbox-dark'
+alias bat6='bat 	--wrap=auto  	                --decorations=always 	--theme=gruvbox-dark'
 # ALT: alias batc='egrep -v "(^\s*$|^#)" $1 | bat -'
 # ____________________________________________________________
 
 
 #        du - estimate file space usage
 # alias DU='echo -e "\t${PINK}Zeige die 22 größten Verzeichnisse und Dateien${RESET}\n" && command du -cah --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' | sort -hr | head -n 22'
-D3() {
- echo -e "\n\t${GELB} du --max-depth=3 --separate-dirs --threshold=16K -BM -x $(pwd) 2> /dev/null | sort -hr | head -n 24 ${LILA} \t... wir reden über Pfad $(pwd)${RESET}}\n"
-du --human-readable --max-depth=3 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' $pwd 2> /dev/null | sort -hr | head -n 24 
-}
-
 D1() {
- echo -e "\n\t${GREEN} du --max-depth=1 --separate-dirs --threshold=16K -BM -x \n$(pwd) 2> /dev/null | sort -hr | head -n 24 "
- echo " ${LILA} \t\n... wir reden über Pfad $(pwd)${RESET}\n"
-du --human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' $pwd 2> /dev/null | sort -hr | head -n 24 
+    local du_options="--human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc'"
+    local current_dir=$(pwd)
+    echo -e "\n\t${PINK}Zeigt 24 direkte Unterverzeichnisse, nach Größe sortiert an!" 
+    echo -e "\n\t${GREEN}du ${du_options} ${current_dir} 2> /dev/null | sort -hr | head -n 24 ${PINK} \n... wir reden über Pfad ${NIGHT}${current_dir}${RESET}\n"
+    du $du_options $current_dir 2> /dev/null | sort -hr | head -n 24
+        echo -e "\n\t${GREEN}\t... und das Unterverzeichniss ist ${NIGHT}${current_dir}${GREEN}insgesamt:${RESET}"
+    du -sh 2> /dev/null
 }
+D3() {
+    local du_options="--human-readable --max-depth=3 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc'"
+    local current_dir=$(pwd)
+    echo -e "\n\t${PINK}Zeigt 24 Unterverzeichnisse in 3ter Ebene, nach Größe sortiert an!" 
+    echo -e "\t${GREEN}du ${du_options} ${current_dir} 2> /dev/null | sort -hr | head -n 24 ${PINK} \n... wir reden über Pfad${NIGHT}${current_dir}${RESET}\n"
+    du $du_options $current_dir 2> /dev/null | sort -hr | head -n 24
+    echo -e "\n\t${GREEN}\t... und das Unterverzeichniss ist ${NIGHT}${current_dir}${GREEN}insgesamt:${RESET}"
+    du -sh 2> /dev/null
+    }
 #	____________________________________________________________________________________
 #gtk-update-icon-cache
 #	____________________________________________________________________________________
 #       e x a / e z a .. ls  ll  lh  ld ...
-alias e-hugo='eza --no-git --total-size  --git-ignore -A -tree'
-alias l-hugo='e-hugo'
+alias eweb='eza --no-git --total-size  --git-ignore -A -tree'
+alias e-hugo='eweb'
 
-alias e1='echo -e "\t${GELB} eza --tree -level 1 ${RESET}\n" && \
-														 \
-	 eza --all 			--long    --group-directories-first \
+
+alias lp='eza --octal-permissions --git -Al --git-repos --no-permissions --time-style=relative --group-directories-first --smart-group'
+alias ep=lp
+
+alias e1='echo -e "\t${GELB} eza --tree -level 1 ${RESET}\n" &&       \
+								      \
+	 eza     --all 	        --long    --group-directories-first   \
 	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 1 --color-scale-mode gradient'
 
-alias e2='echo -e "\t${GELB} eza --tree -level 2${RESET}\n" && \
-														 \
-	 eza --all 			--long    --group-directories-first \
+alias e2='echo -e "\t${GELB} eza --tree -level 2${RESET}\n" &&           \					 	 eza --all 			--long    --group-directories-first      \
 	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 2  --color-scale-mode gradient'
 
-alias e3='echo -e "\t${GELB} eza --tree -level 3  ${RESET}\n" && \
-														 \
+alias e3='echo -e "\t${GELB} eza --tree -level 3  ${RESET}\n" &&         \
 	 eza --all 			--long --group-directories-first \
 	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 3	--color-scale-mode gradient'
 
-alias e4='echo -e "\t${GELB} eza --tree -level 4 --git ${RESET}\n" && \
-														 \
+alias e4='echo -e "\t${GELB} eza --tree -level 4 --git ${RESET}\n" &&    \
 	 eza --all 			--long --group-directories-first \
-	 	 --no-time --octal-permissions   --width 76 \
-	 	 --color-scale age --color-scale-mode gradient \
+	 	 --no-time --octal-permissions   --width 76              \
+	 	 --color-scale age --color-scale-mode gradient           \
 	 	 --tree 		--level 4	--git --color-scale-mode gradient'
 
 alias eee='echo -e "\t${GELB} eza --tree -level 99 --git ${RESET}\n" && \
@@ -343,20 +356,14 @@ alias eee='echo -e "\t${GELB} eza --tree -level 99 --git ${RESET}\n" && \
 	 	 --colour-scale all --color-scale-mode gradient	--no-time \
 	 	 --octal-permissions   --tree 		--level 99	--git --width 76'
 
-alias ee='echo -e "eza  ... läuft"  && \
+alias ee='echo -e "eza  ... läuft"  &&                          \
 	eza --git  --almost-all --long --group-directories-first \
-		 	 --colour-scale all --color-scale-mode gradient --octal-permissions
-		 	 ' #	--no-time 	 --no-permissions --git --width 76'
-
-	#	eza --grid --long --no-permissions \
-	#		 --no-time \
-	#		--almost-all --header \
-	#		--colour-scale all --color-scale-mode gradient'
+		 	 --colour-scale all --color-scale-mode gradient --octal-permissions'
 
 alias e='echo -e "eza  ... pure" && \
 			eza --group-directories-first --git --width 76'
 
-alias lf='echo -e "\t${PINK} eza ${GELB}$(pwd)${PINK} - Files only (hidden and non-hidden)files:${RESET}" && \\
+alias lf='echo -e "\t${PINK} eza ${GELB}$(pwd)${PINK} - Files only (hidden and non-hidden)files:${RESET}" && \
  		eza 	--grid 		 --no-permissions --long \
  				--total-size --almost-all 	  --no-time \
  				--color-scale age --color-scale-mode gradient \
@@ -368,8 +375,6 @@ alias ld='echo -e "\t${PINK} eza ${GELB}$(pwd)${PINK} only (hidden and non-hidde
  				--color-scale age --color-scale-mode gradient \
  				--classify --header --only-dirs --width 76'
 
-alias lp='eza --octal-permissions --git -Al --git-repos --no-permissions --time-style=relative --group-directories-first --smart-group'
-alias ep=lp
 #------------------------------------------------------------------  eza ende
 
 alias l='
@@ -388,7 +393,7 @@ alias la='
     --classify '
 
 alias ll='
-  echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd)\n${PINK}(mitrelativer Zeit ohne Gruppenberechtigung): ${RESET}\t" && \
+  echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd)\n${PINK}(mit relativer Zeit ohne Gruppenberechtigung): ${RESET}\t" && \
   lsd   --almost-all     	--total-size \
     	--classify     		--group-dirs=first \
     	--date "relative"   --no-symlink \
@@ -609,7 +614,7 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
 
 alias -g REC='asciinema rec --idle-time-limit=2 --overwrite --title'
 
- alias -g ED='	 gnome-text-editor 	--ignore-session 	--standalone 	--new-window  &'
+ alias -g ED='	 gnome-text-editor --standalone &'
  alias -g gedit='gnome-text-editor 	--ignore-session  	--standalone 	--new-window &'
  alias -g cmd='command'
  alias -g SRC='source'
@@ -641,9 +646,13 @@ alias -g REC='asciinema rec --idle-time-limit=2 --overwrite --title'
 alias -s mp4='vlc --fullscreen 	--no-video-title-show --no-video-menu	--no-video-border'
 alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
 alias -s {jpg,jpeg,png,bmp,svg,gif,webp}='kitty +kitten icat'
-alias -s md='typora' # --preview #--display
+# alias -s md='typora' # --preview #--display
+alias -s md='bat -p && marker --preview --display=:0' # --preview #--display
 alias -s {js,json,env,html,css,toml}='bat0|bat|cat'
-#alias -s {bash,zsh,csh,txt}='micro'
+alias -s {sh,bash,zsh,csh,txt}='gnome-text-editor'
+
+#alias -s {sh,bash,zsh,csh,txt}='gnome-text-editor'
+
 alias -s {conf}='micro -filetype bash'
 alias -s {nix}='gnome-text-editor'
 alias -s {txt}='micro -filetype bash'

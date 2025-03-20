@@ -30,17 +30,17 @@
 #!/usr/bin/env bash
 
 # Define color codes for terminal output to enhance readability
-COL_USER="\033[38;2;0;17;204m\033[48;2;147;112;219m"
-COL_ACCENT="\033[38;2;32;0;21m\033[48;2;163;64;217m"
-COL_RES="\033[38;2;252;222;90m\033[48;2;0;0;139m"
-COL_SUCCESS="\033[38;2;0;255;0m\033[48;2;0;100;0m"
-COL_ERROR="\033[38;2;240;128;128m\033[48;2;139;0;0m"
-RESET="\033[0m"
+COL_USER="\033[38;2;0;17;204m\033[48;2;147;112;219m"       # fg: Dark Blue (0,17,204) | bg: Light Purple (147,112,219)
+COL_ACCENT="\033[38;2;32;0;21m\033[48;2;163;64;217m"       # fg: Very Dark Purple (32,0,21) | bg: Bright Purple (163,64,217)
+VIO="\033[38;2;255;0;53m\033[48;2;34;0;82m"
+COL_RES="\033[38;2;252;222;90m\033[48;2;0;0;139m"          # fg: Light Yellow (252,222,90) | bg: Dark Blue (0,0,139)
+COL_SUCCESS="\033[38;2;0;255;0m\033[48;2;0;100;0m"        # fg: Bright Green (0,255,0) | bg: Dark Green (0,100,0)
+COL_ERROR="\033[38;2;240;128;128m\033[48;2;139;0;0m"      # fg: Light Coral (240,128,128) | bg: Dark Red (139,0,0)RESET="\033[0m"
 
 # Display help information
 function show_help() {
     echo -e "\t${COL_ACCENT}how.sh - Command Documentation Explorer${RESET}"
-    echo -e "\tUsage: ${COL_ACCENT}./how.sh [OPTIONS] [COMMAND]${RESET}"
+    echo -e "\tUsage: ${COL_RES}./how.sh [OPTIONS] [COMMAND]${RESET}"
     echo -e "\n\tOptions:"
     echo -e "\t  ${COL_ACCENT}-h, --help${RESET}    Show this help message"
     echo -e "\t  ${COL_ACCENT}-v, --version${RESET} Show version information"
@@ -76,22 +76,14 @@ function last_command() {
 function get_command_info() {
     local cmd="$1"
     local sources=("cheat fuzzy" "cheat regex" "tldr" "man")
-
-  echo -e "${COL_ACCENT}___▸ Documentation for '${COL_RES}_▸  $cmd${COL_ACCENT}   ':${RESET}"
-  
-  PS3="${COL_RES}Choose between opt.: (1-${#options[@]}):${RESET} "
-    select selected_option in "${options[@]}"; do
-        [[ -n "$selected_option" ]] && break
-        echo -e "${RED}Ungültige Auswahl. Bitte 1-${#options[@]} eingeben.${RESET}"
-    done
     
     
-    
-    select src in "${sources[@]}"; do
-        [[ -n $src ]] && break
-        echo -e "\t${COL_ERROR}❗ Invalid choice${RESET}"
-    done
-    
+    echo -e "${COL_RES} ___${COL_ACCENT}Documentation for '${COL_RES}_▸  $cmd _ ${COL_ACCENT}':${RESET}"
+ echo -e "${VIO}Choose between an option: (1-${#sources[@]}):${RESET}"
+select src in "${sources[@]}"; do
+    [[ -n $src ]] && break
+    echo -e "\t${COL_ERROR} NOPE: Invalid choice  ${RESET}"
+done
     case "$src" in
         "cheat fuzzy") cheat -s "$cmd" ;;  # Uses cheat with fuzzy search
         "cheat regex") cheat -r "$cmd" ;;  # Uses cheat with regex search
