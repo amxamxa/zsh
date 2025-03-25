@@ -81,14 +81,14 @@ alias Nupt=NIXupdate
 alias Nupg=NIXupgrade
 
 alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix ${LILA}which can select by grub" && \
-	eza /nix/var/nix/profiles/* --long --no-time --no-user --no-permissions --header --almost-all --grid'
+	 eza  --git  --almost-all --long --group-directories-first  --colour-scale all --color-scale-mode gradient --octal-permissions'
 
 # alias NIXcurrentCopy='echo -e "\t${PINK}cp  /run/current-system/configuration.nix ${LILA}to /share/nixos/current-system-bkp${RESET}" && cp -fv /run/current-system/configuration.nix /share/nixos/current-system-bkp/$(date +%F)-conf.nix'
 # alias NcurrCopy= NIXcurrentCopy
 
 alias Ncopy=NIXcopy
 alias NIXoi='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name xam4boom --upgrade${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "xam4boom" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
-alias Nboom=NIXoi
+alias Nboom='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name xam4boom --upgrade${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "audio" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
 alias Nixboom=NIXoi
 
 #	_____________________________________________________zsh_______________
@@ -560,7 +560,7 @@ alias ga='echo -e "${GELB}\nFügt Änderungen im Arbeitsverzeichnis zum Staging-
 
 # Git Push
 alias gp='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch${RESET}\n" && git push'
-alias gpo='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
+alias gpo='echo -e "${GELBninjas2}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
 alias gpof='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check${RESET}\n" && git push origin --force-with-lease'
 alias gpofn='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check und ohne Verifizierung${RESET}\n" && git push origin --force-with-lease --no-verify'
 alias gpt='echo -e "${GELB}\nPushed alle Tags auf den Remote-Branch${RESET}\n" && git push --tag'
@@ -649,7 +649,7 @@ alias -s {jpg,jpeg,png,bmp,svg,gif,webp}='kitty +kitten icat'
 # alias -s md='typora' # --preview #--display
 alias -s md='bat -p && marker --preview --display=:0' # --preview #--display
 alias -s {js,json,env,html,css,toml}='bat0|bat|cat'
-alias -s {sh,bash,zsh,csh,txt}='gnome-text-editor'
+alias -s {txt}='gnome-text-editor'
 
 #alias -s {sh,bash,zsh,csh,txt}='gnome-text-editor'
 
