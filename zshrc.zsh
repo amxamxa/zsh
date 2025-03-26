@@ -169,7 +169,7 @@ source_or_error() {
  eval "$(navi widget zsh)"   # mit "^g" fürs widget
  eval "$(hugo completion zsh)"
  eval "$(npm completion zsh)"
- eval "$(rg --generate=complete-zsh)"
+ #eval "$(rg --generate=complete-zsh)"
  
  # mcfly als CTRL + R
  # -----
@@ -360,31 +360,40 @@ else
     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
     echo "less -FRX als man-pager  ... check ${RESET}"
 fi
- echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+ 
+ echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 
-echo "	    	    __              __              __      
+echo "        	    __              __              __      
 	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
 	     (_-< / _ \/ _ \ / __// __// __// // // __/ (_-<
 	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
-  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
-  echo "${BOLD}  shift+KP_MULTIPLY		next_layout
-  shift+KP_DIVIDE		swap_with_window
-  shift+KP_SUBTRACT  		layout_action bias 10 25 40 55 75 85
-  shift+KP_ENTER  		toggle_layout stack 
-  shift+KP_ADD 			launch --cwd=current --location=vsplit
-  super+KP_ADD 			launch --cwd=current --location=split
-  super+enter 			launch --cwd=current --location=hsplit
-  kitty_mod+t 			launch --cwd=current --type=tab
-  super+i 			set_tab_title  
-  super+F9 			pass_selection_to_program gnome-text-editor 
-  				--ignore-session --standalone --new-window"
-  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"				
-    echo "${BOLD}  ctrl+1			grid
-  ctrl+2			stack
-  ctrl+3			fat:bias=50;full_size=1;mirrored=false
-  ctrl+4			tall:bias=50;full_size=1;mirrored=false 
-  ctrl+5			vertical${RESET}"
-  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+ echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+ # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"				
+  echo "${BOLD}  ctrl+1		grid
+  ctrl+2		stack
+  ctrl+3		fat:bias=50;full_size=1;mirrored=false
+  ctrl+4		tall:bias=50;full_size=1;mirrored=false 
+  ctrl+5		vertical ${RESET} "
+  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+ echo "${BOLD}  shift+KP_MULTIPLY	next_layout
+  shift+KP_DIVIDE	swap_with_window
+  shift+KP_SUBTRACT layout_action bias 10 25 40 55 75 85
+  shift+KP_ENTER toggle_layout stack 
+  shift+KP_ADD	launch --cwd=current --location=vsplit
+  super+KP_ADD	launch --cwd=current --location=split
+  super+enter 	launch --cwd=current --location=hsplit
+  kitty_mod+t	launch --cwd=current --type=tab
+  super+i 		set_tab_title  
+  super+F9		pass_selection_to_program gnome-text-editor      			--ignore-session --standalone --new-window"
+  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+  echo "  ------------------------------------------------------
+  CTRL+T:	preview file content using bat 
+  CTRL+E:	edit selected file
+  CRTL+R:	history widget or mc fly
+  ALT +C:	print tree structure in the preview window
+  CTRL+X CTRL+r history fzf widget
+  CTRL+H 	fzf-man-widget
+  ------------------------------------------------------  " |  clolcat -S 5 -F 0.06
 
 # Wetteransage auf Console
  if command -v curl &> /dev/null; then

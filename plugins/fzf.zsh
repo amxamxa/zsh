@@ -14,8 +14,9 @@
 # select multiple items with TAB 
 # INHALT:
 # CTRL+t:	preview file content using bat 
-# CRTL+r: 	history widget
+# CRTL+r: 	history widget or mc fly
 # ALT +c:	print tree structure in the preview window
+# CTRL+ X CTRL+ r history fzf widget
 # fzf zoxide
 
 #	 HOW TOO
@@ -29,6 +30,13 @@
 #	kill -9 **<TAB>
 #	export **<TAB> 
 # 	setopt** #?
+  #CTRL+T:	preview file content using bat 
+  #CTRL+E: edit selected file
+  
+  #CRTL+R: 	history widget or mc fly
+  #ALT +C:	print tree structure in the preview window
+  #CTRL+X CTRL+ r history fzf widget
+  #CTRL+H  fzf-man-widget
 
 ## ---------------- ##
 ##   f z f config   ##
@@ -74,11 +82,11 @@ export FZF_DEFAULT_OPTS="
 
 # 	 CTRL_T - Preview file content using bat (https://github.com/sharkdp/bat)
 #	-------------------------------------------
-export FZF_CTRL_T_OPTS="
-	  --walker-skip .git,node_modules,target
-	  --preview 'bat -n --color=always {}'
-	  --bind 'alt-t:change-preview-window(down|hidden|)'
-	  --header	'alt-t to change preview'"
+#export FZF_CTRL_T_OPTS="
+#	  --walker-skip .git,node_modules,target
+#	  --preview 'bat -n --color=always {}'
+#	  --bind 'alt-t:change-preview-window(down|hidden|)'
+#	  --header	'alt-t to change preview'"
 #  	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #	export FZF_CTRL_T_KEY='^[T' # Esc+T
 #	_________________________________________________________
@@ -138,9 +146,18 @@ bindkey '^X^R' fzf-history-widget-accept
 ##   f z f functions config   ##
 ## -------------------------- ##       
 
- function FZFedit()  {
-	fzf --preview 'bat --color=always {}' --preview-window '~6' | xargs -o micro   	
+ function FZFedit() {
+	#fzf --preview 'bat --color=always {}' --preview-window '~6' | xargs -o micro	
+	local file
+	file=$(rg --color=never --files-with-matches "$1" | fzf --height 50% --bind 'alt-t:change-preview-window(down|hidden|)'
+	  --header	'alt-t to change preview')
+	[[ -n "$file" ]] && ${EDITOR} "$file"
+  zle reset-prompt
 	}	
+# `Ctrl-e` keybinding to launch the widget 
+
+bindkey '^e' FZFedit
+zle -N FZFedit
 
 fzf-man-widget() {
     local query="$1"
