@@ -36,29 +36,8 @@
 
 # Options to fzf command
 export FZF_COMPLETION_OPTS='--border --info=inline'
-# Use fd (https://github.com/sharkdp/fd) for listing path candidates.
-# - The first argument to the function ($1) is the base path to start traversal
-# - See the source code (completion.{bash,zsh}) for the details.
-_fzf_compgen_path() {
-  fd --hidden --follow --exclude ".git" . "$1"
-}
-# Use fd to generate the list for directory completion
-_fzf_compgen_dir() {
-  fd --type d --hidden --follow --exclude ".git" . "$1"
-}
-# Advanced customization of fzf options via _fzf_comprun function
-# - The first argument to the function is the name of the command.
-# - You should make sure to pass the rest of the arguments to fzf.
-_fzf_comprun() {
-  local command=$1
-  shift
-  case "$command" in
-    cd)           fzf --preview 'tree -FCshx {} | head -200'   "$@" ;;
-    export|unset) fzf --preview "eval 'echo \$'{}"             "$@" ;;
-    ssh)          fzf --preview 'dig {}'                       "$@" ;;
-    *)            fzf --preview 'bat -n --color=always {}'     "$@" ;;
-  esac
-}
+
+
 # eval "$(fzf --zsh)" # Syntax 4 bash
 source <(fzf --zsh) # Syntax 4  zsh
 
@@ -95,11 +74,11 @@ export FZF_DEFAULT_OPTS="
 
 # 	 CTRL_T - Preview file content using bat (https://github.com/sharkdp/bat)
 #	-------------------------------------------
-	export FZF_CTRL_T_OPTS="
-		  --walker-skip .git,node_modules,target
-		  --preview 'bat -n --color=always {}'
-		  --bind 'alt-t:change-preview-window(down|hidden|)'
-		  --header	'alt-t to change preview'"
+export FZF_CTRL_T_OPTS="
+	  --walker-skip .git,node_modules,target
+	  --preview 'bat -n --color=always {}'
+	  --bind 'alt-t:change-preview-window(down|hidden|)'
+	  --header	'alt-t to change preview'"
 #  	export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 #	export FZF_CTRL_T_KEY='^[T' # Esc+T
 #	_________________________________________________________
@@ -162,51 +141,37 @@ bindkey '^X^R' fzf-history-widget-accept
  function FZFedit()  {
 	fzf --preview 'bat --color=always {}' --preview-window '~6' | xargs -o micro   	
 	}	
-	
+
 fzf-man-widget() {
-  batman="man {1} | col -bx | bat --language=man --plain --color always --theme=\"Monokai Extended\""
-   man -k . | sort \
-   | awk -v cyan=$(tput setaf 6) -v blue=$(tput setaf 4) -v res=$(tput sgr0) -v bld=$(tput bold) '{ $1=cyan bld $1; $2=res blue;} 1' \
-   | fzf  \
-      -q "$1" \
-      --ansi \
-      --tiebreak=begin \
-      --prompt=' Man > '  \
-      --preview-window '50%,rounded,<50(up,85%,border-bottom)' \
-      --preview "${batman}" \
-      --bind "enter:execute(man {1})" \
-      --bind "alt-c:+change-preview(cht.sh {1})+change-prompt(ﯽ Cheat > )" \
-      --bind "alt-m:+change-preview(${batman})+change-prompt( Man > )" \
-      --bind "alt-t:+change-preview(tldr --color=always {1})+change-prompt(ﳁ TLDR > )"
+    local query="$1"
+    man -k "$query" | sort | \
+        awk -v blue=$(tput setaf 4) \
+            -v pink=$(tput setaf 5) \
+            -v res=$(tput sgr0) \
+            -v bld=$(tput bold) \
+            '{ $1=blue bld $1; $2=res pink;} 1' | \
+        fzf --query="$query" \
+            --ansi \
+            --tiebreak=begin \
+            --prompt=' Man > ' \
+            --bind "enter:execute(man {1})" \
+            --preview "man {1} | col -bx | head -n 40"
   zle reset-prompt
 }
-# `Ctrl-H` keybinding to launch the widget (this widget works only on zsh, don't know how to do it on bash and fish (additionaly pressing`ctrl-backspace` will trigger the widget to be executed too because both share the same keycode)
+# `Ctrl-H` keybinding to launch the widget (
 bindkey '^h' fzf-man-widget
 zle -N fzf-man-widget
-# Icon used is nerdfont							
-
-# function FZFman()  {
-	# Beschreibung: Durchsucht die Man-Pages nach  
-	# Suchbegriff mithilfe fzf um ausgewählte Man-Page anzuzeigen
-#	man -k . \
-#	| fzf -q "$1" --prompt='man> ' --preview $'echo {} \
-#	| tr -d \'()\' | awk \'{printf "%s ", $2} {print $1}\' \
-#	| xargs -r man'	\
-#	| tr -d '()' \
-#	| awk '{printf "%s ", $2} {print $1}' \
-#	| xargs -r man  
- # }
 
 function FZFsysctl()  {
 	systemctl --no-legend --type=service --state=running \
-	| fzf | awk '{print $1}' | 	xargs sudo systemctl restart			
+	| fzf | awk '{print $1}' | xargs sudo systemctl restart			
 	}
 
 function FZFkill()  {
  # Beschreibung: fuzzy pid killer
     local pid
     # Informationen über alle Prozesse des aktuellen Benutzers abzurufen.
-    pid=$(ps aufxc --user $(id -u) \
+    pid=$(ps acfux --user $(id -u) \
         | sed 1d \
         | fzf -m \
         | awk '{print $2}')

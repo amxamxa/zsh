@@ -106,7 +106,7 @@ alias Zconf='ZRC'
 
 # alias ZENV='micro -filetype zsh $HOME/.zshenv" && source "$HOME/.zshenv" && echo -e "\n\t${PINK}source ~/.zshenv erfolgreich!${RESET}\n" || echo -e "\n\t${GELB}source ~/.zshenv ---NICHT---  erfolgreich!${RESET}\n"'
 ZEconf='ZENV'
-alias ZALI=' gnome-text-editor $ZDOTDIR/aliases.zsh \
+alias ZALI='gnome-text-editor -s $ZDOTDIR/aliases.zsh \
 		&& source $ZDOTDIR/aliases.zsh 				 \
 		&& echo -e "\n\t${PINK}source $ZDOTDIR/aliases.zsh erfolgreich!${RESET}\n" \
 		|| echo -e "\n\t${GELB}source $ZDOTDIR/aliases.zsh   ---NICHT---  erfolgreich!${RESET}\n"'
@@ -390,7 +390,7 @@ alias la='
     --human-readable \
     --group-dirs=none \
     --almost-all \
-    --classify '
+    --classify  2> /dev/null'
 
 alias ll='
   echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd)\n${PINK}(mit relativer Zeit ohne Gruppenberechtigung): ${RESET}\t" && \
@@ -404,7 +404,7 @@ alias ll='
     --blocks 'links' \
     --blocks 'name' \
     --blocks 'user' \
-    --blocks 'date' '
+    --blocks 'date' 2> /dev/null'
 
 alias lll='
   echo -e "\t${PINK} LSD ${LILA}  ... mit  alles  ${GELB}in $(pwd)\n${PINK} (mit absoluter Zeit und Gruppenberechtigung): ${RESET}\t" && \
@@ -425,7 +425,8 @@ alias lll='
     --blocks 'name' \
     --blocks 'user' \
     --blocks 'group' \
-    --blocks 'date' '
+    --blocks 'date' 2> /dev/null'
+
 
 alias lt='
   echo -e "\t${PINK} LSD ${LILA}...mit alles ${GELB}in $(pwd)${PINK} --reverse --time-sort: ${RESET} \t" && \
@@ -446,7 +447,8 @@ alias lt='
    --blocks 'links' \
    --blocks 'name' \
    --blocks 'date' \
-   --timesort '
+   --timesort 2> /dev/null'
+
 
 alias lx='
   echo -e "\t${PINK} LSD ${LILA}...mit  alles  \
@@ -468,7 +470,7 @@ alias lx='
     --blocks 'name' \
     --blocks 'user' \
     --blocks 'date' \
-    --extensionsort  '
+    --extensionsort  2> /dev/null'
 
 alias ..='cd ..'
 
@@ -615,15 +617,15 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
 alias -g REC='asciinema rec --idle-time-limit=2 --overwrite --title'
 
  alias -g ED='	 gnome-text-editor --standalone &'
- alias -g gedit='gnome-text-editor 	--ignore-session  	--standalone 	--new-window &'
+ alias -g gedit='gnome-text-editor --standalone &'
  alias -g cmd='command'
  alias -g SRC='source'
  alias -g L='  |  less'
  alias -g LL=' | less -X -j5 --tilde --save-marks \
- 				--incsearch --RAW-CONTROL-CHARS   \
- 				--LINE-NUMBERS --line-num-width=3 \
- 				--quit-if-one-screen --use-color  \
- 				--color=NWr --color=EwR  --color=PbC --color=Swb'
+ 		--incsearch --RAW-CONTROL-CHARS   \
+ 		--LINE-NUMBERS --line-num-width=3 \
+ 		--quit-if-one-screen --use-color  \
+        --color=NWr --color=EwR  --color=PbC --color=Swb'
 
  alias -g G='|grep --ignore-case --color=auto'
  alias -g HG='--help 2>&1 | grep'
@@ -647,18 +649,19 @@ alias -s mp4='vlc --fullscreen 	--no-video-title-show --no-video-menu	--no-video
 alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
 alias -s {jpg,jpeg,png,bmp,svg,gif,webp}='kitty +kitten icat'
 # alias -s md='typora' # --preview #--display
-alias -s md='bat -p && marker --preview --display=:0' # --preview #--display
+alias -s {md}='bat -p && marker --preview --display=:0 &' # --preview #--display
+alias -s {md}='marker --preview --display=:0 &' # -
 alias -s {js,json,env,html,css,toml}='bat0|bat|cat'
 alias -s {txt}='gnome-text-editor'
 
 #alias -s {sh,bash,zsh,csh,txt}='gnome-text-editor'
 
 alias -s {conf}='micro -filetype bash'
-alias -s {nix}='gnome-text-editor'
+alias -s {nix}='gnome-text-editor &'
 alias -s {txt}='micro -filetype bash'
-alias -s {pdf,otf,xls}='xreader -w'  #TODO: andere Formate ergänzen
+alias -s {pdf,otf,xls}='xreader -w &'  #TODO: andere Formate ergänzen
 
-alias -s html='firefox'  #TODO: andere Formate ergänzen
+alias -s html='firefox &'  #TODO: andere Formate ergänzen
 #alias -s py = python
 #alias -s log = less
 # "Run" ssh links to clone repos

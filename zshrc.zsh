@@ -236,8 +236,10 @@ if command -v zoxide &> /dev/null; then
     export _ZO_DATA_DIR="$ZDOTDIR/zoxide"
     eval "$(zoxide init zsh)"
     alias za='zoxide add'
-    alias zq='zoxide query'
-    alias zqi='zoxide query -i'
+    alias zq='zoxide query -l'
+    #alias zqi='cd "$(zoxide query -i)"'
+    alias zqi='cd "$(zoxide query -i)"'
+    
     alias zr='zoxide remove'
     echo "\t${PINK} zoxide ... check ${RESET}\t"
     sleep 0.1
