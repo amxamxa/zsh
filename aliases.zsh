@@ -80,9 +80,10 @@ alias Nupt=NIXupdate
 # 			xcowthink --image="$HOME/bilder/nixOS-logo.png" --time=10 --at=1200,200 --monitor=0 --left --font=unifont "UPGRADE: nixos-rebuild switch ist jetzt fertig"'
 alias Nupg=NIXupgrade
 
-alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix ${LILA}which can select by grub" && \
-	 eza  --git  --almost-all --long --group-directories-first  --colour-scale all --color-scale-mode gradient --octal-permissions'
-
+alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix w/ timestamp of creation${LILA}which can select by grub" && \
+eza -U --header --long --tree  --almost-all --group-directories-first  /nix/var/nix/profiles/ '
+	 
+	 
 # alias NIXcurrentCopy='echo -e "\t${PINK}cp  /run/current-system/configuration.nix ${LILA}to /share/nixos/current-system-bkp${RESET}" && cp -fv /run/current-system/configuration.nix /share/nixos/current-system-bkp/$(date +%F)-conf.nix'
 # alias NcurrCopy= NIXcurrentCopy
 
@@ -335,8 +336,8 @@ alias e1='echo -e "\t${GELB} eza --tree -level 1 ${RESET}\n" &&       \
 	 eza     --all 	        --long    --group-directories-first   \
 	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 1 --color-scale-mode gradient'
-
-alias e2='echo -e "\t${GELB} eza --tree -level 2${RESET}\n" &&           \					 	 eza --all 			--long    --group-directories-first      \
+alias e2='echo -e "\t${GELB} eza --tree -level 2${RESET}\n" &&           \					 	
+eza --all 			--long    --group-directories-first      \
 	 	 --color-scale 	--no-time --octal-permissions --width 76 \
 	 	 --tree 		--level 2  --color-scale-mode gradient'
 
@@ -390,7 +391,7 @@ alias la='
     --human-readable \
     --group-dirs=none \
     --almost-all \
-    --classify  2> /dev/null'
+    --classify ' #  2> /dev/null'
 
 alias ll='
   echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd)\n${PINK}(mit relativer Zeit ohne Gruppenberechtigung): ${RESET}\t" && \
@@ -404,7 +405,7 @@ alias ll='
     --blocks 'links' \
     --blocks 'name' \
     --blocks 'user' \
-    --blocks 'date' 2> /dev/null'
+    --blocks 'date' ' # 2> /dev/null'
 
 alias lll='
   echo -e "\t${PINK} LSD ${LILA}  ... mit  alles  ${GELB}in $(pwd)\n${PINK} (mit absoluter Zeit und Gruppenberechtigung): ${RESET}\t" && \
@@ -425,7 +426,7 @@ alias lll='
     --blocks 'name' \
     --blocks 'user' \
     --blocks 'group' \
-    --blocks 'date' 2> /dev/null'
+    --blocks 'date'' # 2> /dev/null'
 
 
 alias lt='
@@ -447,7 +448,7 @@ alias lt='
    --blocks 'links' \
    --blocks 'name' \
    --blocks 'date' \
-   --timesort 2> /dev/null'
+   --timesort ' #2> /dev/null'
 
 
 alias lx='
@@ -470,7 +471,7 @@ alias lx='
     --blocks 'name' \
     --blocks 'user' \
     --blocks 'date' \
-    --extensionsort  2> /dev/null'
+    --extensionsort' #  2> /dev/null'
 
 alias ..='cd ..'
 
@@ -481,7 +482,7 @@ alias ..='cd ..'
 # alias NC ="ncdu"
 
 # list our disk usage in human-readable units including filesystem type, and print a total at the bottom
-alias df='echo -e "\t${PINK}df -Tha --total${RESET}\n" && \
+alias df='echo -e "\t${PINK}df -Tha --total ${RESET}\n" && \
 		df -Tha --total'
 
 # alias du="du -ach | sort -h" # -a...allfiles/path -c...complete
