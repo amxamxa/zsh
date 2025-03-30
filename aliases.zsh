@@ -615,7 +615,11 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
  ### ---------------------------  ####
  # alias -g OK='~/zsh/testbed.zsh'
 
-alias -g REC='asciinema rec --idle-time-limit=2 --overwrite --title'
+alias -g REC='echo -e "${PINK}asciinema rec --overwrite --idle-time-limit=1 --title=\"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\")\"${RESET}" && asciinema rec --overwrite --idle-time-limit=1 --title="$(basename "$(dirname "$(pwd)")@$(date +%F)")" "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
+
+alias -g PLAY='echo -e "${PINK} asciinema play \"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\").cast\"${RESET}" && asciinema play "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
+
+
 
  alias -g ED='	 gnome-text-editor --standalone &'
  alias -g gedit='gnome-text-editor --standalone &'
