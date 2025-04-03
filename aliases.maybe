@@ -163,3 +163,4 @@ nmcli dev status
 nmcli connection edit type ethernet
 
 
+wpctl set-volume @DEFAULT_SINK@ 1.0

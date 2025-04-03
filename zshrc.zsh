@@ -363,6 +363,17 @@ fi
  
  echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 
+# Wetteransage auf Console
+ if command -v curl &> /dev/null; then
+ 	echo "\n${VIOLET}" && curl 'wttr.in/Dresden?m0&lang=de'
+  else
+    echo "\t${RED} curl ist nicht installiert. \
+    Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
+	sleep 0.2	
+ fi 	
+ 	
+
+
 echo "        	    __              __              __      
 	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
 	     (_-< / _ \/ _ \ / __// __// __// // // __/ (_-<
@@ -394,16 +405,6 @@ echo "        	    __              __              __
   CTRL+X CTRL+r history fzf widget
   CTRL+H 	fzf-man-widget
   ------------------------------------------------------  " |  clolcat -S 5 -F 0.06
-
-# Wetteransage auf Console
- if command -v curl &> /dev/null; then
- 	echo "\n${VIOLET}" && curl 'wttr.in/Dresden?m0&lang=de'
-  else
-    echo "\t${RED} curl ist nicht installiert. \
-    Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
-	sleep 0.2	
- fi 	
- 	
 # 	  Aktualisiere die Shell-Hash-Tabelle
 #	--------------------------------------
 # ...  häufig Programme installierst oder aktualisierst,
