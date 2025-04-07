@@ -42,14 +42,20 @@ alias gitloc='git config -f ~/.gitlocal user.email "max.kempter@gmail.com"  && \
 alias COLsw='color-theme-switch && echo -e "${BROWN}color-theme-switch aus my-function.zsh${RESET}"'
 
 alias COL+='theme.sh --dark -i2 >> color-theme.md  && echo -e "${BROWN}theme.sh --dark -i2 >> color-theme.md ${RESET}"'
-alias FC-list='fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort'
+alias FC-list='fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort -u'
 alias cp='xcp --verbose'
+
+
 #	______________________________
 alias NIXpkgs='lsd --oneline --classify --no-symlink /run/current-system/sw/bin/'
-alias NIXenv='nix-env --query --installed' # um eine Liste aller installierten Pakete anzuzeigen
-alias NIXinfo='nix-shell -p nix-info --run "nix-info -m"' # öffnet eine temporäre Shell-Umgebung mit einem bestimmten Paket installiert und führt dann einen Befehl aus. In diesem Fall wird das Paket nix-info installiert und der Befehl nix-info -m ausgeführt, der Informationen über die Nix-Installation gib
 
-alias -g NIXref='nix-store -q --references /nix/store/' #Zeige die direkten Abhängigkeiten eines Pakets an
+# um eine Liste aller installierten Pakete anzuzeigen
+alias NIXenv='echo -e "${PINK}nix-env --query --installed ${NIGHT}global verfügbare, mit "nix-env" installed nixOS Pakete OHNE die Versionsnummer (letzter Teil)${RESET} /n" && nix-env --query --installed | sed -E '\''s/-[0-9.]+$//'\'' | sort'
+
+
+alias NIXinfo='echo -e "${PINK} Info und BESCHREIBUNG ${RESET} && nix-shell -p nix-info --run "nix-info -m" $1' # öffnet eine temporäre Shell-Umgebung mit einem bestimmten Paket installiert und führt dann einen Befehl aus. In diesem Fall wird das Paket nix-info installiert und der Befehl nix-info -m ausgeführt, der Informationen über die Nix-Installation gib
+
+alias NIXref='nix-store -q --references /nix/store/' # Zeige die direkten Abhängigkeiten eines Pakets an
 
 # alias ='echo "Müll wird entleert!" &&  echo -e "{PINK}  lol" && sudo rm -v /nix/var/nix/gcroots/auto/* &&  sudo nix-collect-garbage -d && 	sudo nix-store --optimise -vvv'
 
