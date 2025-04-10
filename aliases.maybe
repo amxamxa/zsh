@@ -168,3 +168,5 @@ grep -rw "asciinema" --include="*.md" .
 fd -td .cache/ --exclude pages --exclude pages.de --exclude pages.en --exclude pages.uk -X rm -rfv '{}'
 nix-instantiate --eval -E 'with import <nixpkgs> {}; lsd.meta.description' --json | jq -r
 
+sudo fd --type directory --exec-batch chmod -v 755 {}
+sudo fd --type file --exec-batch chmod -v 644 {}

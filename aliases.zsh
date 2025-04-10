@@ -27,7 +27,7 @@
 #	awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
 
-
+alias fd='fd --color=auto'
 alias FARBE='source_or_error "$ZDOTDIR/functions/colors.sh" ||  source "$ZDOTDIR/functions/colors.sh"'
 alias man='man --wildcard' # dann wird die man-page auf Terminal gepagt!
 alias RM~='find . -type f -name "*~" -delete'
