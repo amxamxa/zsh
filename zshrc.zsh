@@ -371,8 +371,6 @@ fi
     Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
 	sleep 0.2	
  fi 	
- 	
-
 
 echo "        	    __              __              __      
 	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
@@ -380,11 +378,11 @@ echo "        	    __              __              __
 	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"				
-  echo "${BOLD}  ctrl+1		grid
-  ctrl+2		stack
-  ctrl+3		fat:bias=50;full_size=1;mirrored=false
-  ctrl+4		tall:bias=50;full_size=1;mirrored=false 
-  ctrl+5		vertical ${RESET} "
+  echo "${BOLD}${NIGHT}\tctrl+1	\tg'rid
+ \tctrl+2	\tstack
+ \tctrl+3	\tfat:bias=50;full_size=1;mirrored=false
+ \tctrl+4	\ttall:bias=50;full_size=1;mirrored=false 
+ \tctrl+5	\tvertical ${RESET} "
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
  echo "${BOLD}  shift+KP_MULTIPLY	next_layout
   shift+KP_DIVIDE	swap_with_window
@@ -394,8 +392,9 @@ echo "        	    __              __              __
   super+KP_ADD	launch --cwd=current --location=split
   super+enter 	launch --cwd=current --location=hsplit
   kitty_mod+t	launch --cwd=current --type=tab
-  super+i 		set_tab_title  
-  super+F9		pass_selection_to_program gnome-text-editor      			--ignore-session --standalone --new-window"
+  super+i 	set_tab_title  
+  super+F9	pass_selection_to_program gnome-text-editor 
+  		--ignore-session --standalone --new-window"
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
   echo "  ------------------------------------------------------
   CTRL+T:	preview file content using bat 

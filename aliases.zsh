@@ -28,6 +28,23 @@
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
 
 alias fd='fd --color=auto'
+
+# SIND NUN IN Zfunc
+# neue Aufnahme am naechsten Tag, landet wieder im asciinema/-Unterordner, aber unter dem neuen Namen. Die alte Datei bleibt erhalten.
+# alias REC='echo -e "${PINK}asciinema rec --overwrite --idle-time-limit=1 --title=\"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\")\"${RESET}" && asciinema rec --overwrite --idle-time-limit=1 --title="$(basename "$(dirname "$(pwd)")@$(date +%F)")" "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
+REC() {
+  local title="$(basename "$(dirname "$(pwd)")")@$(date +%F)"
+  mkdir -p asciinema
+  echo -e "${PINK}asciinema rec --overwrite --idle-time-limit=1 --title=\"$title\"${RESET}"
+  asciinema rec --overwrite --idle-time-limit=1 --title="$title" "asciinema/$title.cast"
+}
+# alias PLAY='echo -e "${PINK} asciinema play \"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\").cast\"${RESET}" && asciinema play "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
+PLAY() {
+  local title="$(basename "$(dirname "$(pwd)")")@$(date +%F)"
+  echo -e "${PINK}asciinema play \"asciinema/$title.cast\"${RESET}"
+  asciinema play "asciinema/$title.cast"
+}
+
 alias FARBE='source_or_error "$ZDOTDIR/functions/colors.sh" ||  source "$ZDOTDIR/functions/colors.sh"'
 alias man='man --wildcard' # dann wird die man-page auf Terminal gepagt!
 alias RM~='find . -type f -name "*~" -delete'
@@ -620,12 +637,6 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
  # 	  usage% file G 'pattern'
  ### ---------------------------  ####
  # alias -g OK='~/zsh/testbed.zsh'
-
-alias -g REC='echo -e "${PINK}asciinema rec --overwrite --idle-time-limit=1 --title=\"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\")\"${RESET}" && asciinema rec --overwrite --idle-time-limit=1 --title="$(basename "$(dirname "$(pwd)")@$(date +%F)")" "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
-
-alias -g PLAY='echo -e "${PINK} asciinema play \"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\").cast\"${RESET}" && asciinema play "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
-
-
 
  alias -g ED='	 gnome-text-editor --standalone &'
  alias -g gedit='gnome-text-editor --standalone &'
