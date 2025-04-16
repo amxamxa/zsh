@@ -29,7 +29,7 @@
 
 alias fd='fd --color=auto'
 
-# SIND NUN IN Zfunc
+# TODO  SIND NUN IN Zfunc
 # neue Aufnahme am naechsten Tag, landet wieder im asciinema/-Unterordner, aber unter dem neuen Namen. Die alte Datei bleibt erhalten.
 # alias REC='echo -e "${PINK}asciinema rec --overwrite --idle-time-limit=1 --title=\"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\")\"${RESET}" && asciinema rec --overwrite --idle-time-limit=1 --title="$(basename "$(dirname "$(pwd)")@$(date +%F)")" "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
 REC() {
