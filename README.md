@@ -5,5 +5,5 @@ zsh Ordner für alle Nutzer in  nixOS:
    
  ![routine](documentation/2025-04-16.gif)
 
- <video src="documentation/2025-04-16.mp4" width="320" height="640" controls></video>
+ <video src="documentation/2025-04-16.mp4" width="160" height="320" controls></video>
 
