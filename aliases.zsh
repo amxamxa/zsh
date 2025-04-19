@@ -62,13 +62,12 @@ alias COL+='theme.sh --dark -i2 >> color-theme.md  && echo -e "${BROWN}theme.sh 
 alias FC-list='fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort -u'
 alias cp='xcp --verbose'
 
-
 #	______________________________
 alias NIXpkgs='lsd --oneline --classify --no-symlink /run/current-system/sw/bin/'
 
 # um eine Liste aller installierten Pakete anzuzeigen
-alias NIXenv='echo -e "${PINK}nix-env --query --installed ${NIGHT}global verfügbare, mit "nix-env" installed nixOS Pakete OHNE die Versionsnummer (letzter Teil)${RESET} /n" && nix-env --query --installed | sed -E '\''s/-[0-9.]+$//'\'' | sort'
-
+# SIEHE ERSATZ  home/bin/NIXenv 
+# alias NIXenv='echo -e "${PINK}nix-env --query --installed ${NIGHT}global verfügbare, mit "nix-env" installed nixOS Pakete OHNE die Versionsnummer (letzter Teil)${RESET} /n" && nix-env --query --installed | sed -E '\''s/-[0-9.]+$//'\'' | sort'
 
 alias NIXinfo='echo -e "${PINK} Info und BESCHREIBUNG ${RESET} && nix-shell -p nix-info --run "nix-info -m" $1' # öffnet eine temporäre Shell-Umgebung mit einem bestimmten Paket installiert und führt dann einen Befehl aus. In diesem Fall wird das Paket nix-info installiert und der Befehl nix-info -m ausgeführt, der Informationen über die Nix-Installation gib
 
@@ -105,7 +104,6 @@ alias Nupg=NIXupgrade
 
 alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix w/ timestamp of creation${LILA}which can select by grub" && \
 eza -U --header --long --tree  --almost-all --group-directories-first  /nix/var/nix/profiles/ '
-	 
 	 
 # alias NIXcurrentCopy='echo -e "\t${PINK}cp  /run/current-system/configuration.nix ${LILA}to /share/nixos/current-system-bkp${RESET}" && cp -fv /run/current-system/configuration.nix /share/nixos/current-system-bkp/$(date +%F)-conf.nix'
 # alias NcurrCopy= NIXcurrentCopy
@@ -159,12 +157,12 @@ alias Kmap=KITTYmap
 
 
 alias COL='terminal-colors -n \
-			&& echo -e "${GREEN}\n...für Hex-Codes der Farben:${RED}%${LILA} \
-			terminal-colors -l ${RESET}\n"'
+		&& echo -e "${GREEN}\n...für Hex-Codes der Farben:${RED}%${LILA} \
+		terminal-colors -l ${RESET}\n"'
 
 alias Col='for i in {0..255};
- 				do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
- 				 ${${(M)$((i%6)):#3}:+$'\n'};
+ 			do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " \
+ 			${${(M)$((i%6)):#3}:+$'\n'};
  		   done'
 alias mangconf='micro -filetype bash $XDG_CONFIG_HOME/MangoHud/MangoHud.conf'
 alias mango='mangohud glxgears &'
@@ -185,9 +183,7 @@ alias neo0='neo'
 alias neo1='echo -e "\t  ${PINK}neofetch w/ ${LILA} \t 	$ZDOTDIR/neofetch/neofetch-short.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/neofetch-short.conf'
 alias neo2='echo -e "\t${PINK} neofetch w/ ${LILA} \t	$ZDOTDIR/neofetch/config2.conf\t${RESET}" && neofetch --config $ZDOTDIR/neofetch/config2.conf'
 alias neo3='echo -e "\t${LIME}   -  󱚡  --   --  🙼 🙼 🙼      󱢇     🙽 🙽 🙽   --    --  󱚡  --    -" && echo -e "\t${PINK}  neofetch w/ ${LILA} \t	$ZDOTDIR/neofetch/neofetch-long.conf\t${RESET}" && echo -e "\t${CYAN}   -  󱚡  --   --  🙼 🙼 🙼   󱢇     󱢇  🙽 🙽 🙽   --    --  󱚡  --    -" &&  neofetch --config $ZDOTDIR/neofetch/neofetch-long.conf'	
-alias neo4='echo -e "\t${PINK} neofetch w/ ${LILA} \t  a for loop of themes	/home/project/neofetch-themes${RESET}" && bash -c /home/project/neofetch-themes/for-loop.sh'							
-# 	 	  \
-
+alias neo4='echo -e "\t${PINK} neofetch w/ ${LILA} \t  a for loop of themes	/home/project/neofetch-themes${RESET}" && bash -c /home/project/neofetch-themes/for-loop.sh'
 #	____________________________________________________________________
 #alias sudo='sudo --preserve-env=HOME'
 
@@ -219,7 +215,6 @@ alias TREE8='echo -e "\t${GREEN}cmd tree --level 8"  && tree -L 8 -s -h -F -C -a
 #alias Tl2x='gnome-terminal --geometry 70x26+387+514; gnome-terminal --geometry 70x26+387+4'
 # Terminal rechter Screen, Nord, 2x
 #alias Tr2x='gnome-terminal --geometry 79x21+1694+768; gnome-terminal --geometry 79x17+1692+1147'
-
 #	______________________________________________________espeak-ng______________
 alias Vtime='espeak-ng -v mb-de5 -s 135 -p 15 -g 10 -k 10 -b 1 \
 				"Es ist jetzt $(date "+%R"). Heute ist $(date "+%A")."'
@@ -321,8 +316,6 @@ alias bat5='bat 	--wrap=never 	--number 	--decorations=always 	--theme=base16'
 alias bat6='bat 	--wrap=auto  	                --decorations=always 	--theme=gruvbox-dark'
 # ALT: alias batc='egrep -v "(^\s*$|^#)" $1 | bat -'
 # ____________________________________________________________
-
-
 #        du - estimate file space usage
 # alias DU='echo -e "\t${PINK}Zeige die 22 größten Verzeichnisse und Dateien${RESET}\n" && command du -cah --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc' | sort -hr | head -n 22'
 D1() {
@@ -343,13 +336,12 @@ D3() {
     echo -e "\n\t${GREEN}\t... und das Unterverzeichniss ist ${NIGHT}${current_dir}${GREEN}insgesamt:${RESET}"
     du -sh 2> /dev/null
     }
-#	____________________________________________________________________________________
+#_____________________________________________________________________________
 #gtk-update-icon-cache
-#	____________________________________________________________________________________
+#___________________________________________________________________________
 #       e x a / e z a .. ls  ll  lh  ld ...
 alias eweb='eza --no-git --total-size  --git-ignore -A -tree'
 alias e-hugo='eweb'
-
 
 alias lp='eza --octal-permissions --git -Al --git-repos --no-permissions --time-style=relative --group-directories-first --smart-group'
 alias ep=lp
@@ -373,16 +365,16 @@ alias e4='echo -e "\t${GELB} eza --tree -level 4 --git ${RESET}\n" &&    \
 	 eza --all 			--long --group-directories-first \
 	 	 --no-time --octal-permissions   --width 76              \
 	 	 --color-scale age --color-scale-mode gradient           \
-	 	 --tree 		--level 4	--git --color-scale-mode gradient'
+	 	 --tree 	--level 4	--git --color-scale-mode gradient'
 
 alias eee='echo -e "\t${GELB} eza --tree -level 99 --git ${RESET}\n" && \
 	 eza --all 			--long --group-directories-first \
 	 	 --colour-scale all --color-scale-mode gradient	--no-time \
-	 	 --octal-permissions   --tree 		--level 99	--git --width 76'
+	 	 --octal-permissions   --tree 	--level 99	--git --width 76'
 
 alias ee='echo -e "eza  ... läuft"  &&                          \
 	eza --git  --almost-all --long --group-directories-first \
-		 	 --colour-scale all --color-scale-mode gradient --octal-permissions'
+	 --colour-scale all --color-scale-mode gradient --octal-permissions'
 
 alias e='echo -e "eza  ... pure" && \
 			eza --group-directories-first --git --width 76'
@@ -400,7 +392,6 @@ alias ld='echo -e "\t${PINK} eza ${GELB}$(pwd)${PINK} only (hidden and non-hidde
  				--classify --header --only-dirs --width 76'
 
 #------------------------------------------------------------------  eza ende
-
 alias l='
   echo -e "\t${PINK} LSD ohne alles ${RESET}\n" && \
   lsd \
@@ -497,7 +488,6 @@ alias lx='
     --extensionsort' #  2> /dev/null'
 
 alias ..='cd ..'
-
 ## ---------------------------  ##
 ##  digitalocean.com/community/tutorials/an-introduction-to-useful-bash-aliases-and-functions
 ## ---------------------------  ##
@@ -549,10 +539,9 @@ alias q='echo -e "\t${PINK}Beenden${RESET}\n" && exit'
 alias lol='alias | sort -k1,1 -k1.1,1.2 -k1.3,1.4| clolcat; echo -e "\n${GREEN}... das sind die aktuellen aliase, alphabetisch sortiert ${RESET}\n"'
 
 #	________________________________________________________________________________
-alias GIT='echo -e "\t${PINK}git aliase aus Zeile 480 bis 556\t $ZDOTDIR/aliases.zsh  ${RESET}\n" && \
-		   bat  --wrap=auto			 --decorations=always \
-		   		--theme=Coldark-Dark --line-range=480:556 $ZDOTDIR/aliases.zsh'
-
+alias GIT='echo -e "\t${PINK}git aliase aus Zeile 545 bis 620\t $ZDOTDIR/aliases.zsh  ${RESET}\n" && \
+		   bat  --wrap=auto	 --decorations=always \
+		   	--theme=Coldark-Dark --line-range=545:620 $ZDOTDIR/aliases.zsh'
 #	_________________________________________font: univers_______________________
 #
 #	              88
@@ -638,8 +627,8 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
  ### ---------------------------  ####
  # alias -g OK='~/zsh/testbed.zsh'
 
- alias -g ED='	 gnome-text-editor --standalone &'
- alias -g gedit='gnome-text-editor --standalone &'
+ alias ED='	 gnome-text-editor --standalone --ignore-session &'
+ alias gedit='gnome-text-editor --standalone --ignore-session &'
  alias -g cmd='command'
  alias -g SRC='source'
  alias -g L='  |  less'

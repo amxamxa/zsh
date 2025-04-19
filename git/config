@@ -108,7 +108,7 @@
     pu = !git push origin HEAD
 
 [pull]	    # Setzt das Verhalten für `git pull` auf Rebase, um Merge-Commits zu vermeiden.
-    rebase = true
+	rebase = false
 [push]
     autoSetupRemote = true
 [init]		# Definiert den Standardbranchnamen für neue Repositories.        defaultBranch = main

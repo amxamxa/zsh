@@ -170,3 +170,4 @@ nix-instantiate --eval -E 'with import <nixpkgs> {}; lsd.meta.description' --jso
 
 sudo fd --type directory --exec-batch chmod -v 755 {}
 sudo fd --type file --exec-batch chmod -v 644 {}
+cast2more -i asciinema/amxamxa@2025-04-17.cast --only-gif -o asciinema/HOW.gif
