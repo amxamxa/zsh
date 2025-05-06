@@ -171,3 +171,5 @@ nix-instantiate --eval -E 'with import <nixpkgs> {}; lsd.meta.description' --jso
 sudo fd --type directory --exec-batch chmod -v 755 {}
 sudo fd --type file --exec-batch chmod -v 644 {}
 cast2more -i asciinema/amxamxa@2025-04-17.cast --only-gif -o asciinema/HOW.gif
+ffmpeg -i "Entourloop Summer- vinyl-Mix 2022-Fonki Cheff.mp3" -f segment -segment_time 557.67 -c copy output_%03d.mp3
+LESS_TERMCAP_md=$'[01;31m' LESS_TERMCAP_me=$'[0m' LESS_TERMCAP_se=$'[0m' LESS_TERMCAP_so=$'[01;44;33m' LESS_TERMCAP_ue=$'[0m' LESS_TERMCAP_us=$'[01;32m' man man

@@ -403,7 +403,8 @@ echo "        	    __              __              __
   ALT +C:	print tree structure in the preview window
   CTRL+X CTRL+r history fzf widget
   CTRL+H 	fzf-man-widget
-  ------------------------------------------------------  " |  clolcat -S 5 -F 0.06
+    ------------------------------------------------------
+    CTRL+ALT+.   argument of the last commands  " |  clolcat -S 5 -F 0.06
 # 	  Aktualisiere die Shell-Hash-Tabelle
 #	--------------------------------------
 # ...  häufig Programme installierst oder aktualisierst,

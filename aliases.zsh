@@ -29,6 +29,9 @@
 
 alias fd='fd --color=auto'
 
+ alias du='ncdu --color dark'
+ alias ncdu='ncdu --color dark'
+ 
 # TODO  SIND NUN IN Zfunc
 # neue Aufnahme am naechsten Tag, landet wieder im asciinema/-Unterordner, aber unter dem neuen Namen. Die alte Datei bleibt erhalten.
 # alias REC='echo -e "${PINK}asciinema rec --overwrite --idle-time-limit=1 --title=\"$(basename \"$(dirname \"$(pwd)\")@$(date +%F)\")\"${RESET}" && asciinema rec --overwrite --idle-time-limit=1 --title="$(basename "$(dirname "$(pwd)")@$(date +%F)")" "$(basename "$(dirname "$(pwd)")@$(date +%F)").cast"'
@@ -149,12 +152,11 @@ alias Zopt=setopt
 
 alias KITTYconf='micro -filetype zsh $XDG_CONFIG_HOME/kitty/kitty.conf'
 alias Kconf=KITTYconf
-alias KITTYmap='batNOcomment $KITTY_CONFIG_DIRECTORY/kitty.conf | grep "map"'
+alias KITTYmap='bap-NoComment $KITTY_CONFIG_DIRECTORY/kitty.conf | grep "map"'
 alias Kmap=KITTYmap
 #	____________________________________________________________________
 # alias mdtohtml='pandoc $1 -s --to html --css=$HOME/.templates/cyberpunk-DM.css | w3m -T text/html'
 # alias mdtopdf='pandoc $1 -o ${1%.md}.pdf --template=$HOME/.templates/MDtoPDF.tex'
-
 
 alias COL='terminal-colors -n \
 		&& echo -e "${GREEN}\n...für Hex-Codes der Farben:${RED}%${LILA} \

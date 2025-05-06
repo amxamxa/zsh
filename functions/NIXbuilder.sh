@@ -64,7 +64,7 @@ read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(E
 # Setze den Namen auf den Wert des Benutzers oder den Standardwert
 NAME=${profile_name:-$default_name}
 # Zeige den gesetzten Namen an
-echo "${SKY}Der gesetzte Name und die Wahloption in GRUB: ${PINK} $NAME ${RESET}"
+echo -e "${SKY}Der gesetzte Name und die Wahloption in GRUB: ${PINK} $NAME ${RESET}"
 
 #default_name="24.11_4xam"
 #echo -e "\t${RASPBERRY}echo "Default Name ist: \t ${RED} $default_name"
