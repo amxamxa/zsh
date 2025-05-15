@@ -53,6 +53,7 @@ setopt 		RM_STAR_WAIT		# wait 10s and ignore anything typed, avoid problem
 setopt 		sh_word_split	# split multi-word variables into individual elements
 setopt 		notify		    # notifier for big jobs
 unsetopt 	beep			# beep ausschalten
+setopt 		expand_global_aliases # globale Aliase expandieren
 #	 _________________________________________
 #   	     **ZSH DIRECTORY STACK** aka DS
 # 	 -----------------------------------------

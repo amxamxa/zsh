@@ -629,35 +629,19 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
  ### ---------------------------  ####
  # alias -g OK='~/zsh/testbed.zsh'
 
- alias ED='	 gnome-text-editor --standalone --ignore-session &'
- alias gedit='gnome-text-editor --standalone --ignore-session &'
- alias -g cmd='command'
- alias -g SRC='source'
- alias -g L='  |  less'
- alias -g LL=' | less -X -j5 --tilde --save-marks \
- 		--incsearch --RAW-CONTROL-CHARS   \
- 		--LINE-NUMBERS --line-num-width=3 \
- 		--quit-if-one-screen --use-color  \
-        --color=NWr --color=EwR  --color=PbC --color=Swb'
-
- alias -g G='|grep --ignore-case --color=auto'
- alias -g HG='--help 2>&1 | grep'
- alias -g H='--help'
-
- alias -g N0='2> /dev/null'
- alias -g D0='2> /dev/null'
-
- alias fgrep='fgrep --color=auto'
- alias  egrep='egrep --color=auto'
-
-### ---------------------------  ####
-#        ┌─┐┬ ┬┌─┐┌─┐┬─┐ ┬
-#        └─┐│ │├┤ ├┤ │┌┴┬┘
-#        └─┘└─┘└  └  ┴┴ └─
+### -----------------------------------------------------  ####
+   ######  ##     ## ######## ######## #### ##     ## 
+  ##    ## ##     ## ##       ##        ##   ##   ##  
+  ##       ##     ## ##       ##        ##    ## ##   
+   ######  ##     ## ######   ######    ##     ###    
+        ## ##     ## ##       ##        ##    ## ##   
+  ##    ## ##     ## ##       ##        ##   ##   ##  
+   ######   #######  ##       ##       #### ##     ## 
+   
 # ┌─┐┌─┐┬ ┬  ┌─┐┬  ┬┌─┐┌─┐┌─┐
 # ┌─┘└─┐├─┤  ├─┤│  │├─┤└─┐├┤
 # └─┘└─┘┴ ┴  ┴ ┴┴─┘┴┴ ┴└─┘└─┘
-### ---------------------------  ####
+### -----------------------------------------------------  ####
 alias -s mp4='vlc --fullscreen 	--no-video-title-show --no-video-menu	--no-video-border'
 alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
 alias -s {jpg,jpeg,png,bmp,svg,gif,webp}='kitty +kitten icat'
