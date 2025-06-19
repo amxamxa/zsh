@@ -167,17 +167,28 @@ bindkey "^[[B" down-line-or-beginning-search
 # wird es automatisch expandiert, sobald die Leertaste gedrückt wird.
 # Dadurch können globale Aliase wie "GIT" → "git status" verwendet werden.
 
+# Magic-Space: CMDs mit Großbuchstaben-Aliasen (auch am Anfang) automatisch expandieren
 globalias() {
-  if [[ $LBUFFER =~ ' [A-Z0-9]+$' ]]; then
+  local lastword prefix
+  prefix=${LBUFFER##* }  # Letztes Wort
+  if [[ -z $LBUFFER ]]; then
+    zle self-insert
+    return
+  fi
+
+  #  Wenn das letzte Wort oder das erste Wort Großbuchstaben enthält
+  if [[ $prefix =~ '^[A-Z0-9_]+$' || $LBUFFER =~ '^([A-Z0-9_]+)( |$)' ]]; then
     zle _expand_alias
     zle expand-word
   fi
+
   zle self-insert
 }
 zle -N globalias
 bindkey " " globalias
 
-# Auch in Suchmodus aktivieren
+# Auch in der Suche (Ctrl+R) aktivieren
 bindkey -M isearch " " magic-space
-bindkey "^ " magic-space  # Ctrl+Space als alternativer magic-space-Key
+bindkey "^ " magic-space  # Optional: Ctrl+Space
+
 

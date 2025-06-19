@@ -541,6 +541,7 @@ alias q='echo -e "\t${PINK}Beenden${RESET}\n" && exit'
 alias lol='alias | sort -k1,1 -k1.1,1.2 -k1.3,1.4| clolcat; echo -e "\n${GREEN}... das sind die aktuellen aliase, alphabetisch sortiert ${RESET}\n"'
 
 #	________________________________________________________________________________
+
 alias GIT='echo -e "\t${PINK}git aliase aus Zeile 545 bis 620\t $ZDOTDIR/aliases.zsh  ${RESET}\n" && \
 		   bat  --wrap=auto	 --decorations=always \
 		   	--theme=Coldark-Dark --line-range=545:620 $ZDOTDIR/aliases.zsh'
@@ -557,24 +558,24 @@ alias GIT='echo -e "\t${PINK}git aliase aus Zeile 545 bis 620\t $ZDOTDIR/aliases
 #	  aa,    ,88
 #	   "Y8bbdP"
 #	------------------------------------------------------------------------------
-
 # Git Status
 alias gs='echo -e "${GELB}\nZeigt den Status des Arbeitsverzeichnisses und des Staging-Bereichs an${RESET}\n" && git status'
-
 alias gsss='echo -e "${PINK}\n\t git status --short ${RESET} with abbr.:${RESET}\n
 ${GELB}?? ... Untracked files${RESET}\t${GELB}U ... Files with merge conflicts${RESET}\t ${GELB}A ... New files added to staging ${RESET}\t${GELB}M ... Modified files${RESET}\t${GELB}D ... Deleted files${RESET}\t${GELB}R ... Renamed files${RESET}\t${GELB}C ... Copied files${RESET}\n" && git status -s'
-alias gss='cowsay -W 34 \
-"${NIGHT}     git status -s crypt:       -
- 1st row: NOT- & 2nd row: -STAGED-
-${PINK} ---------------------------------
-   ...M for  modified          -
-   ...A for new and staged     -
-   ...C for copied             -
-   ...R for renamed            - ${NIGHT} " && git status -s'
 
+alias gss='_cowgit_status() {
+    # [...] (Farbdefinitionen wie oben)
+
+    cowsay -nW 34 "$(echo -e "${NIGHT}[Git Status]${RESET}\n$(git status -s)")"
+    echo -e "\n${PINK}Legende:${RASP}
+   M: Modified | A: Staged
+   D: Deleted | R: Renamed
+   C: Copied  | ?: Untracked${RESET}"
+}; _cowgit_status'
+
+   
 # Git Add
 alias ga='echo -e "${GELB}\nFügt Änderungen im Arbeitsverzeichnis zum Staging-Bereich hinzu${RESET}\n" && git add'
-
 # Git Push
 alias gp='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch${RESET}\n" && git push'
 alias gpo='echo -e "${GELBninjas2}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
@@ -621,13 +622,34 @@ alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${
 alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:red)%(refname:short)%(color:reset) - %(color:yellow)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:blue)%(committerdate:relative)%(color:reset))'"
 
 #	_______GIT - AUSGABE ENDE   li:455-530___________________________________________
-#	_____________________________________________________
+ 
+ 
+ #	_____________________________________________________
  #	 ┌─┐┬  ┌─┐┌┐ ┌─┐┬  ┌─┐  ┌─┐┌─┐┬ ┬  ┌─┐┬  ┬┌─┐┌─┐┌─┐
  #	 │ ┬│  │ │├┴┐├─┤│  ├┤   ┌─┘└─┐├─┤  ├─┤│  │├─┤└─┐├┤
  #	 └─┘┴─┘└─┘└─┘┴ ┴┴─┘└─┘  └─┘└─┘┴ ┴  ┴ ┴┴─┘┴┴ ┴└─┘└─┘
  # 	  usage% file G 'pattern'
  ### ---------------------------  ####
  # alias -g OK='~/zsh/testbed.zsh'
+alias -g YT='yt-dlp --progress --sponsorblock-remove all --audio-quality 128k  --audio-format mp3 -x --embed-metadata --embed-thumbnail --no-mtime ""'
+ alias -g ED='gnome-text-editor --standalone --ignore-session'
+ alias -g gedit='gnome-text-editor --standalone --ignore-session'
+ alias -g CMD='command'
+alias -g SRC='source'
+alias -g L='   |  less'
+ alias -g LL=' | less -X -j5 --tilde --save-marks \
+ 		--incsearch --RAW-CONTROL-CHARS   \
+ 		--LINE-NUMBERS --line-num-width=3 \
+ 		--quit-if-one-screen --use-color  \
+        --color=NWr --color=EwR  --color=PbC --color=Swb'
+        
+ alias -g G='|grep --ignore-case --color=auto'
+ alias -g HG='--help 2>&1 | grep'
+ alias -g H='--help'
+
+ alias -g N0='2> /dev/null'
+ alias -g D0='2> /dev/null'
+
 
 ### -----------------------------------------------------  ####
    ######  ##     ## ######## ######## #### ##     ## 

@@ -53,7 +53,7 @@ setopt 		RM_STAR_WAIT		# wait 10s and ignore anything typed, avoid problem
 setopt 		sh_word_split	# split multi-word variables into individual elements
 setopt 		notify		    # notifier for big jobs
 unsetopt 	beep			# beep ausschalten
-setopt 		expand_global_aliases # globale Aliase expandieren
+
 #	 _________________________________________
 #   	     **ZSH DIRECTORY STACK** aka DS
 # 	 -----------------------------------------
@@ -86,18 +86,16 @@ REPORTTIME=3 		# display cpu usage, if command taking more than 3s
 #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
 #  _______________________________________________________
 # export LS_COLORS="$(vivid generate jellybeans)"
-# LS_COLORS mit der benutzerdefinierten Farbdatei zu setzen
+
+# LS_COLORS mit benutzerdefinierter Farbdatei setzen
 if [[ -f "$ZDOTDIR/colors/color-schema.yml" ]]; then
-  LS_COLORS_OUTPUT="$(vivid generate "$ZDOTDIR/colors/color-schema.yml" 2>/dev/null)"
-  if [[ $? -eq 0 ]]; then
-    export LS_COLORS="$LS_COLORS_OUTPUT"
+  if vivid_output="$(vivid generate "$ZDOTDIR/colors/color-schema.yml" 2>/dev/null)"; then
+    export LS_COLORS="$vivid_output"
   else
-    # Falls der Befehl fehlschlägt, verwende das molokai-Schema
     export LS_COLORS="$(vivid generate molokai)"
     printf "\t${GREEN}󰞷 .... vivid mit molokai${RESET}\n"
   fi
 else
-  # Falls die Datei nicht existiert, verwende das molokai-Schema
   export LS_COLORS="$(vivid generate molokai)"
   printf "\t${GREEN}󰞷 .... vivid mit molokai${RESET}\n"
 fi
