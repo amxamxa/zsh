@@ -14,12 +14,11 @@
 ## 	set filetyte zsh
 ## COMMENTS:	nixOS-version
 #####################################################
-
-export BOLD="\033[1m" 
 export RESET="\e[0m" 
+export BOLD="\033[1m" 
 export GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
-export RED="\033[38;2;240;138;100m\033[48;2;147;18;61m" 
 export PINK="\033[38;2;255;0;53m\033[48;2;34;0;82m"
+export RED="\033[38;2;240;138;100m\033[48;2;147;18;61m" 
 
 # Füge den Pfad für Custom- u Autoload-Funktionen hinzu. When we run a 
 #command that corresponds to an autoloaded function, ZSH searches for 
@@ -28,7 +27,7 @@ fpath=($ZDOTDIR:$ZDOTDIR/functions:$ZDOTDIR/plugins:$ZDOTDIR/prompts $fpath)
 
 # History-Einstellungen
 # ----------------------
-export 	HISTIGNORE="ls:cd:pwd:exit:tldr:cheat:printf:micro:man:rm:cp:echo:z:bap:bat:git:sudo:grep"
+export 	HISTIGNORE="ls:cd:pwd:exit:tldr:cheat:printf:micro:man:eza:lsd:cp:echo:z:bap:bat:git:sudo:grep"
 export 	HISTTIMEFORMAT="%D{%Y-%m-%d %H:%M} "
 
 setopt 	EXTENDED_HISTORY    	# Zeitstempel speichern
@@ -125,8 +124,11 @@ source_or_error() {
 # echo "   󰞷 "
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 #	sleep 0.05
+	source_or_error "$ZDOTDIR/plugins/zgreeting.zsh"
 	source_or_error "$ZDOTDIR/functions/colors.zsh" # > /dev/null
-#       source_or_error "$ZDOTDIR/prompt/purify.zsh"
+#    source_or_error "$ZDOTDIR/prompt/purify.zsh"
+	source_or_error "$ZDOTDIR/aliases.zsh"
+	sleep 0.02
 	source_or_error "$ZDOTDIR/plugins/shortcuts.zsh"
 	sleep 0.03
 	source_or_error "$ZDOTDIR/plugins/fzf.zsh"
@@ -138,9 +140,7 @@ source_or_error() {
 	sleep 0.02
 # source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
 # 	sleep 0.02
-	source_or_error "$ZDOTDIR/aliases.zsh"
-	sleep 0.02
-	source_or_error "$ZDOTDIR/plugins/zgreeting.zsh"
+
 
 
 # bereits-------in conf.nix

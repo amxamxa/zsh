@@ -173,3 +173,10 @@ sudo fd --type file --exec-batch chmod -v 644 {}
 cast2more -i asciinema/amxamxa@2025-04-17.cast --only-gif -o asciinema/HOW.gif
 ffmpeg -i "Entourloop Summer- vinyl-Mix 2022-Fonki Cheff.mp3" -f segment -segment_time 557.67 -c copy output_%03d.mp3
 LESS_TERMCAP_md=$'[01;31m' LESS_TERMCAP_me=$'[0m' LESS_TERMCAP_se=$'[0m' LESS_TERMCAP_so=$'[01;44;33m' LESS_TERMCAP_ue=$'[0m' LESS_TERMCAP_us=$'[01;32m' man man
+ps -u $(id -u) -ef
+ps -u $(id -u) -o pid,user,cmd
+ps -u $(id -u) -fea
+nix show-derivation /nix/store/6dsj4fymhh2i1k4rhfaz4jafw483ify0-docker-containerd-27.5.1.drv | jq .
+ps -ef | fzf --multi | awk '{print $2}' | xargs kill -9 z z e3 bap functions/fzf-preview.sh functions/fzf-preview.sh functions/fzf-preview.sh . functions/fzf-preview.sh zsh.html e2 plugins e2 functions plugins fzf.zsh edit fzf.zsh
+uname -sn| cowsay | clolcat
+cowsay -n "$(echo -e '[38;2;252;222;90mTest[0m')"

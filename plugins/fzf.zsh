@@ -110,9 +110,13 @@ export FZF_CTRL_R_OPTS="
 #	----------
 #export FZF_ALT_C_OPTS="		--walker-skip .git,node_modules,target \
  #	 	--preview 'bat {}' --bind 'alt-t:change-preview-window(right,70%|down,40%,border-horizontal|hidden|right)'"
-
 export FZF_ALT_C_COMMAND='fd --type d --hidden -L -E .git'
-export FZF_ALT_C_OPTS="--layout=reverse --height=100 --border --preview='tree -C {} | head -50'"
+export FZF_ALT_C_OPTS="--layout=reverse \
+ --height=100 \
+ --border \
+ --preview='tree -C {}  | head -50'"
+ 
+ # \ --header 'Enter to open path'
 
 
 # ... oder (The following example uses tree command to show the entries of the directory.)
@@ -120,16 +124,23 @@ export FZF_ALT_C_OPTS="--layout=reverse --height=100 --border --preview='tree -C
 # export FZF_ALT_C_OPTS="--preview 'tree -C {} | head -200'"
 #  fzf --preview 'cat {}' --bind 'ctrl-/:change-preview-window(right,70%|down,40%,border-horizontal|hidden|right)'
 
-export FZF_COMPLETION_DIR_COMMANDS="
-	cd z pushd \ 
-	rmdir tree \ 	
-	lsd eza"
+#######################################################
+# specify the commands which should only be completed with "cd **"
+export FZF_COMPLETION_DIR_COMMANDS=" cd z pushd rmdir tree lsd eza" 
+							
+_fzf_compgen_path() {
+    rg --files --glob "!.git" . "$1" }
+_fzf_compgen_dir() {
+   fd --type d --hidden --follow --exclude ".git" . "$1" }
+							
+							
+							############################			
 # zoxide  mit fzf mit zqi
 export _ZO_FZF_OPTS="
   --height 40% \
   --layout=reverse \
   --border \
-  --preview 'exa --tree --level=2 {}' \
+  --preview 'exa --tree --level=1 {}' \
   --preview-window=right:50%:wrap \
   --color=dark"
  
@@ -141,11 +152,9 @@ fzf-history-widget-accept() {
 zle     -N     fzf-history-widget-accept
 bindkey '^X^R' fzf-history-widget-accept
 
-
 ## -------------------------- ##
 ##   f z f functions config   ##
 ## -------------------------- ##       
-
  function FZFedit() {
 	#fzf --preview 'bat --color=always {}' --preview-window '~6' | xargs -o micro	
 	local file
@@ -158,26 +167,14 @@ bindkey '^X^R' fzf-history-widget-accept
 
 bindkey '^e' FZFedit
 zle -N FZFedit
-
+# ------------------------------------------------
 fzf-man-widget() {
-    local query="$1"
-    man -k "$query" | sort | \
-        awk -v blue=$(tput setaf 4) \
-            -v pink=$(tput setaf 5) \
-            -v res=$(tput sgr0) \
-            -v bld=$(tput bold) \
-            '{ $1=blue bld $1; $2=res pink;} 1' | \
-        fzf --query="$query" \
-            --ansi \
-            --tiebreak=begin \
-            --prompt=' Man > ' \
-            --bind "enter:execute(man {1})" \
-            --preview "man {1} | col -bx | head -n 40"
-  zle reset-prompt
+
+  local manpage=$(man -k . | fzf --prompt='Man> ' | awk '{print $1}')
+  [[ -n "$manpage" ]] && man "$manpage"
 }
-# `Ctrl-H` keybinding to launch the widget (
-bindkey '^h' fzf-man-widget
-zle -N fzf-man-widget
+# -------------------------------------------------
+
 
 function FZFsysctl()  {
 	systemctl --no-legend --type=service --state=running \
