@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of /share/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 #!/usr/bin/env zsh
 ########################################################
 ## ╔═╗╦╦  ╔═╗           ________________
@@ -193,8 +200,7 @@ source_or_error() {
 #		█────█─█──████─█───█─█─────█─
 #  ______ _____________________________________ 
 # anderweitig in zsh.nix definiert:
-# p10k-fancy.zsh ... ist das config-file:
-# [[ ! -f "$ZDOTDIR/prompt/p10k-fancy.zsh" ]] || source "$ZDOTDIR/prompt/p10k-fancy.zsh"
+#[[ ! -f /share/zsh/.p10k.zsh ]] || source /share/zsh/.p10k.zsh
 
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
 #if [[ -r "$ZDOTDIR/prompt/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
@@ -209,9 +215,9 @@ source_or_error() {
 #export STARSHIP_CONFIG="$ZDOTDIR/prompt/starship.toml"  # Starship Prompt v2
 #export STARSHIP_CONFIG=$ZDOTDIR/prompt/pure.toml 		 # Alternative 1
 #export STARSHIP_CONFIG=$ZDOTDIR/prompt/jetpack.toml 	 # Alternative 2
- export STARSHIP_CONFIG=$ZDOTDIR/prompt/purify.toml 	 # Alternative 3
- eval "$(starship init zsh)"
- eval "$(starship completions zsh)"
+ # export STARSHIP_CONFIG=$ZDOTDIR/prompt/purify.toml 	 # Alternative 3
+# eval "$(starship init zsh)"
+#  eval "$(starship completions zsh)"
 #	__________________________________________
 #		  __ _  (_)__________ 
 #		 /  ' \/ / __/ __/ _ \
@@ -290,6 +296,7 @@ fi
  
  # ---Variante 1
   typeset -A ZSH_HIGHLIGHT_STYLES
+  # FFD75D gelb
  
  ZSH_HIGHLIGHT_STYLES[command]='fg=#DC8DF5'
  ZSH_HIGHLIGHT_STYLES[precommand]='fg=#DC8DF5'
@@ -318,7 +325,7 @@ fi
  ZSH_HIGHLIGHT_STYLES[numeric-fd]='fg=#FFD75D'
  ZSH_HIGHLIGHT_STYLES[comment]='fg=#3AEB94'
  ZSH_HIGHLIGHT_STYLES[redirection]='fg=#786EC9'
- ZSH_HIGHLIGHT_STYLES[arg0]='fg=#3AEB94'
+ ZSH_HIGHLIGHT_STYLES[arg0]='fg=#3AEB94' # gruen tuerkis
 # ---Variante 2 
 #  ZSH_HIGHLIGHT_STYLES=(
 #     line="bold"
@@ -409,7 +416,6 @@ echo "        	    __              __              __
 # ...  häufig Programme installierst oder aktualisierst,
 #  sicherstellt, dass deine Shell immer auf dem neuesten Stand ist
 hash -r
-### ------------------------------------------------------- ###
 
-
-
+# To customize prompt, run `p10k configure` or edit /share/zsh/.p10k.zsh.
+[[ ! -f /share/zsh/.p10k.zsh ]] || source /share/zsh/.p10k.zsh

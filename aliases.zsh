@@ -453,7 +453,8 @@ mcd () {
 
 # --- Häufige Tipfehler & Shortcuts ---
 alias cd..='echo -e "\t${PINK}Gehe ein Verzeichnis höher${RESET}\n" && cd ..'
-alias c='clear; motd || neo0'
+# alias c='clear; motd || neo0'
+alias c='clear; neo0'
 alias q='echo -e "\t${PINK}Beenden${RESET}\n" && exit'
 alias lol='alias | sort -k1,1 -k1.1,1.2 -k1.3,1.4| clolcat; echo -e "\n${GREEN}... das sind die aktuellen aliase, alphabetisch sortiert ${RESET}\n"'
 
@@ -520,7 +521,8 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
 # 	  Globale Aliase (werden überall in der Zeile expandiert)
 # 	  usage% file G 'pattern'
 # ### ---------------------------  ####
-alias -g YT='yt-dlp --progress --sponsorblock-remove all --audio-quality 128k  --audio-format mp3 -x --embed-metadata --embed-thumbnail --no-mtime ""'
+alias YT='yt-dlp --progress --sponsorblock-remove all --audio-quality 128k  --audio-format mp3 -x --embed-metadata --embed-thumbnail --no-mtime --restrict-filenames  --console-title --progress-template "download-title:%(info.id)s-%(progress.eta)s" "$1"'
+
 alias -g ED='gnome-text-editor --standalone --ignore-session'
 alias -g gedit='gnome-text-editor --standalone --ignore-session'
 alias -g CMD='command'
@@ -540,7 +542,7 @@ alias -g D0='2> /dev/null'
 #   Suffix-Aliase (werden ausgeführt, wenn ein Dateiname als Befehl eingegeben wird)
 ### -----------------------------------------------------  ####
 alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
-alias -s mp4='vlc --fullscreen --no-video-title-show --no-video-menu --no-video-border'
+# alias -s mp4='vlc --fullscreen --no-video-title-show --no-video-border'
 alias -s {jpg,jpeg,png,bmp,svg,gif,webp}='kitty +kitten icat'
 alias -s {js,json,env,html,css,toml}='bat'
 alias -s {conf}='micro -filetype bash'
