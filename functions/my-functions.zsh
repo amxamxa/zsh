@@ -215,15 +215,142 @@ color-theme-switch() {
 COPYtoZ() {
 	# 'echo $(fc -ln -1)' gibt den letzten Befehl aus.
 	# 'tee -a $ZDOTDIR/aliases.maybe' fügt den Ausgabetext an die Datei $ZDOTDIR/aliases.maybe an.
-		echo $(fc -ln -1) | tee -a $ZDOTDIR/aliases.maybe
+	echo $(fc -ln -1) | tee -a $ZDOTDIR/aliases.maybe
 	# Überprüft, ob der letzte Befehl erfolgreich ausgeführt wurde.
-		if [ $? -eq 0 ]; then
+	if [ $? -eq 0 ]; then
 	# Wenn der Befehl erfolgreich ausgeführt wurde, gibt diese Funktion eine Bestätigungsmeldung aus.
-		  echo "${GREEN}Befehl $(fc -ln -1) wurde erfolgreich an $ZDOTDIR/aliases.maybe angehängt.${RESET}"
-		else
+	  echo "${GREEN}Befehl $(fc -ln -1) wurde erfolgreich an $ZDOTDIR/aliases.maybe angehängt.${RESET}"
+	else
 	# Wenn der Befehl fehlgeschlagen ist, gibt diese Funktion eine Fehlermeldung aus.
-		echo "${ROSA}Fehler beim Anhängen des Befehls $(fc -ln -1) an $ZDOTDIR/aliases.maybe.${RESET}"
-		fi
+	echo "${ROSA}Fehler beim Anhängen des Befehls $(fc -ln -1) an $ZDOTDIR/aliases.maybe.${RESET}"
+	fi
 }
+# ------------------------
+> bap NIXempty.sh
+NIXempty() {
+    # Color definitions
+    local GREEN='\033[0;32m'
+    local RED='\033[0;31m'
+    local YELLOW='\033[1;33m'
+    local CYAN=${CYAN}
+    local BLUE=${NIGHT}
+    local PINK=${PINK}
+    local NC='\033[0m' # No Color
 
+    # ASCII header
+    echo -e "${PINK}\t____________________________________________________"
+    echo -e "${CYAN}\t______________________________________________________"
+    echo -e "\t/_____/_____/_____/_____/_____/_____/_____/_____/_____/"
+    echo -e "\t         _____/ /__  ____ _____  ___  _____     "
+    echo -e "\t        / ___/ / _ \/ __ // __ \/ _ \/ ___/     "
+    echo -e "\t      / /__/ /  __/ /_/ / / / /  __/ /    "
+    echo -e "\t      \___/_/\___/\__,_/_/ /_/\___/_/    "
+    echo -e "\t______________________________________________________"
+    echo -e "\t_/_____/_____/_____/_____/_____/_____/_____/_____/_____/"
+    echo -e "${PINK}\n\t=== Nix Store Cleaner ===${NC}"
+    echo -e "${CYAN}\t____________________________________________________\n"
+
+    # Check required tools (bypassing aliases)
+    local missing=()
+    local required_cmds=(du numfmt sudo nix-collect-garbage nix-store)
+    for cmd in "${required_cmds[@]}"; do
+        if ! command -v "$cmd" >/dev/null 2>&1; then
+            missing+=("$cmd")
+        fi
+    done
+
+    if (( ${#missing[@]} > 0 )); then
+        echo -e "${RED}❌ Missing required commands:${NC} ${missing[*]}"
+        return 1
+    fi
+
+    # Get Nix store size (safe numeric parsing)
+    echo -e "${YELLOW}🔍 Checking Nix store size before cleanup...${NC}"
+    local before_bytes
+    before_bytes=$(command sudo du -sb /nix/store 2>/dev/null |awk '{print $1}')
+
+    # Validate numeric result
+    if ! [[ "$before_bytes" =~ ^[0-9]+$ ]]; then
+        echo -e "${RED}❌ Error: Could not determine store size${NC}"
+        echo -e "${YELLOW}ℹ️ Try running manually: sudo du -sb /nix/store${NC}"
+        return 1
+    fi
+
+    local before_hr
+    before_hr=$(numfmt --to=iec --suffix=B "$before_bytes")
+    echo -e "Current Nix store size: ${BLUE}${before_hr}${NC}"
+
+    # Safety confirmation
+    echo -e "\n${RED}⚠️ WARNING: This will permanently delete unused Nix packages!${NC}"
+    if [[ -n "$ZSH_VERSION" ]]; then
+        read -q "REPLY?❓ Proceed with cleanup? (y/N) "
+        echo
+    else
+        read -r -p "❓ Proceed with cleanup? (y/N) " REPLY
+    fi
+
+    if [[ ! "$REPLY" =~ ^[Yy]$ ]]; then
+        echo -e "\n${RED}❌ Cleanup canceled. No changes were made.${NC}"
+        return 0
+    fi
+
+    echo -e "\n${GREEN}🚀 Starting cleanup...${NC}"
+
+    # 1. Remove auto GC roots (with alias bypass)
+    local auto_roots="/nix/var/nix/gcroots/auto"
+    if [[ -d "$auto_roots" ]]; then
+        echo -e "${YELLOW}⏳ Removing old GC roots from ${auto_roots}...${NC}"
+        local count
+        count=$(command sudo find "$auto_roots" -mindepth 1 -maxdepth 1 -print | wc -l)
+        if (( count > 0 )); then
+            time (command sudo find "$auto_roots" -mindepth 1 -maxdepth 1 -delete)
+            echo -e "${BLUE}Removed ${count} GC roots${NC}"
+        else
+            echo -e "${BLUE}No GC roots found to remove${NC}"
+        fi
+    else
+        echo -e "${YELLOW}⚠️ GC roots directory missing: ${auto_roots}${NC}"
+    fi
+
+    # 2. Run garbage collection (bypassing aliases)
+    echo -e "\n${YELLOW}⏳ Running nix-collect-garbage -d...${NC}"
+    time command sudo nix-collect-garbage -d
+
+    # 3. Optimize store
+    echo -e "\n${YELLOW}⏳ Optimizing Nix store...${NC}"
+    time command sudo nix-store --optimise
+
+    # Get post-cleanup size
+    local after_bytes
+    after_bytes=$(command sudo du -sb /nix/store 2>/dev/null | awk '{print $1}')
+
+    # Validate result
+    if ! [[ "$after_bytes" =~ ^[0-9]+$ ]]; then
+        echo -e "${RED}❌ Error: Could not verify new store size${NC}"
+        after_bytes="$before_bytes"
+    fi
+
+    # Calculate savings
+    local saved_bytes=$((before_bytes - after_bytes))
+    if (( saved_bytes < 0 )); then
+        saved_bytes=0
+    fi
+    local after_hr saved_hr
+    after_hr=$(numfmt --to=iec --suffix=B "$after_bytes")
+    saved_hr=$(numfmt --to=iec --suffix=B "$saved_bytes")
+
+    # Results summary
+    echo -e "\n${CYAN}📊 Results:${NC}"
+    echo -e "New Nix store size: ${BLUE}${after_hr}${NC}"
+    echo -e "\n${PINK}🎉 Cleanup complete!${NC}"
+    echo -e "${GREEN}👉 Saved space: $saved_hr  (${before_hr} →${after_hr})${NC}"
+
+    # Desktop notification
+    if command -v notify-send >/dev/null 2>&1; then
+        notify-send "Nix Cleaner" "Freed $saved_hr\nNew size: $after_hr" --icon=package
+    fi
+}
+alias Nempty=NIXempty
+alias NIXclean=NIXempty
+alias Nclean=NIXempty
 
