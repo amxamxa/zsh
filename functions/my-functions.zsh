@@ -226,7 +226,6 @@ COPYtoZ() {
 	fi
 }
 # ------------------------
-> bap NIXempty.sh
 NIXempty() {
     # Color definitions
     local GREEN='\033[0;32m'
