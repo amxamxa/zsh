@@ -180,3 +180,4 @@ nix show-derivation /nix/store/6dsj4fymhh2i1k4rhfaz4jafw483ify0-docker-container
 ps -ef | fzf --multi | awk '{print $2}' | xargs kill -9 z z e3 bap functions/fzf-preview.sh functions/fzf-preview.sh functions/fzf-preview.sh . functions/fzf-preview.sh zsh.html e2 plugins e2 functions plugins fzf.zsh edit fzf.zsh
 uname -sn| cowsay | clolcat
 cowsay -n "$(echo -e '[38;2;252;222;90mTest[0m')"
+# nix-env -iA nixos.

@@ -76,65 +76,10 @@ NIXinfo() {
   nix-shell -p nix-info --run "nix-info -m"
 }
 
-NIXinfo() {
-  printf "%s\n" "${PINK} Info und BESCHREIBUNG ${RESET}"
-  nix-shell -p nix-info --run "nix-info -m" "$@"
-}
 
 alias NIXref='echo -e "\t${PINK}Zeige die direkten Abhängigkeiten eines Nix-Store-Pfades an${RESET}" && nix-store -q --references /nix/store/'
+
 # alias NIXempty ='echo "Müll wird entleert!" &&  echo -e "{PINK}  lol" && sudo rm -v /nix/var/nix/gcroots/auto/* &&  sudo nix-collect-garbage -d && 	sudo nix-store --optimise -vvv'
-NIXempty() {
-    # Farbdefinitionen (für ZSH/Bash)
-
-    local GREEN='\033[0;32m'
-    local RED='\033[0;31m'
-    local YELLOW='\033[1;33m'
-    local CYAN='\033[0;36m'
-    local BLUE='\033[0;34m'
-    local NC='\033[0m' # No Color
-
-    echo -e "${PINK}\n\t_____________________________________________"
-    echo -e "${CYAN}\n\t=== Nix Store Cleaner Ultimate ===${NC}\n"
-    echo -e "${PINK}\n\t_____________________________________________"
-    # 1. Vorherige Größe anzeigen
-    echo -e "${YELLOW}🔍 Analysiere Nix-Store vor der Bereinigung...${NC}"
-    local before_size=$(command du -sh /nix/store 2>/dev/null | cut -f1)
-    echo -e "Aktuelle Nix-Store Größe: ${BLUE}${before_size}${NC}"
-
-    # 2. Sicherheitsabfrage mit erweiterten Optionen
-    echo -e "\n${RED}⚠️ WARNUNG: Dies wird nicht rückgängig zu machende Löschungen durchführen!${NC}"
-    read -q "REPLY?${YELLOW}❓ Wirklich fortfahren? (y/N) ${NC}"
-    echo  # Neue Zeile
-    
-    if [[ $REPLY =~ ^[Yy]$ ]]; then
-        echo -e "\n${GREEN}🚀 Starte Bereinigung...${NC}"
-
-        # 3. Löschvorgänge mit Timer
-        echo -e "${YELLOW}⏳ Lösche /nix/var/nix/gcroots/auto/* ...${NC}"
-        time (sudo rm -v /nix/var/nix/gcroots/auto/* | wc -l | xargs echo -e "${BLUE}Gelöschte Dateien:${NC}")
-        
-        echo -e "\n${YELLOW}⏳ Führe nix-collect-garbage -d aus ...${NC}"
-        time sudo nix-collect-garbage -d
-        
-        echo -e "\n${YELLOW}⏳ Optimiere den Nix-Store ...${NC}"
-        time sudo nix-store --optimise -vvv
-
-        # 4. Nachherige Größe anzeigen
-        echo -e "\n${CYAN}📊 Ergebnisse:${NC}"
-        local after_size=$(command du -sh /nix/store 2>/dev/null | cut -f1)
-        echo -e "Neue Nix-Store Größe: ${BLUE}${after_size}${NC}"
-        
-        # 5. Zusammenfassung
-        echo -e "\n${PINK}🎉 Fertig! Der Nix-Müll wurde erfolgreich entleert!${NC}"
-        echo -e "${GREEN}👉 Vorher: ${before_size} | Nachher: ${after_size}${NC}"
-        
-        # 6. System Notification (falls libnotify installiert ist)
-        which notify-send >/dev/null && notify-send "Nix Cleaner" "Bereinigung abgeschlossen!\nFreigegeben: $(( $(echo ${before_size} | sed 's/[^0-9]*//g') - $(echo ${after_size} | sed 's/[^0-9]*//g') ))MB"
-    else
-        echo -e "\n${RED}❌ Bereinigung abgebrochen. Es wurde nichts gelöscht.${NC}"
-    fi
-}
-
 NIXconf() {
   echo -e "\t${PINK}Öffne NixOS-Konfigurationsdateien in einem Editor${RESET}"
   if [ -d /etc/nixos ]; then
@@ -206,7 +151,7 @@ alias KITTYconf='echo -e "\t${PINK}Öffne kitty Konfigurationsdatei${RESET}" && 
 alias Kconf=KITTYconf
 alias KITTYmap='echo -e "\t${PINK}Zeige alle Tastaturbelegungen (map) in der kitty.conf${RESET}" && bap-NoComment "$KITTY_CONFIG_DIRECTORY/kitty.conf" | grep "map"'
 alias Kmap=KITTYmap
-
+alias Kbind=KITTYmap
 #	____________________________________________________________________
 # alias mdtohtml='pandoc $1 -s --to html --css=$HOME/.templates/cyberpunk-DM.css | w3m -T text/html'
 # alias mdtopdf='pandoc $1 -o ${1%.md}.pdf --template=$HOME/.templates/MDtoPDF.tex'
@@ -278,7 +223,7 @@ alias Find='echo -e "
 alias nano='echo -e "\t${PINK}Verwende micro anstelle von nano${RESET}" && micro'
 alias edit='echo -e "\t${PINK}Verwende micro als Standard-Editor${RESET}" && micro'
 alias DATE='echo -e "\t${PINK}Zeige das aktuelle Datum  $(date "+%A, %-d. %B %Y"):{$RESET}" && echo -e "${GELB} $(date "+%A, %-d. %B %Y")${RESET} \n "&& echo -e "${PINK} oder $ (date +%F_%H-%M)\t ${RESET}" 	&& echo -e "${GELB} $(date "+%F_%H-%M") ${RESET}"'
-alias CHmod='echo -e "\t${PINK}Mache alle .sh und .zsh Skripte im aktuellen Verzeichnis ausführbar${RESET}" && find . -maxdepth 1 -type f \( -name "*.sh" -o -name "*.zsh" \) -exec chmod --verbose u+x {} +'
+alias CHmod='echo -e "\t${PINK}Mache alle .py, .sh und .zsh Skripte im aktuellen Verzeichnis ausführbar${RESET}" && find . -maxdepth 1 -type f \( -name "*.sh" -o -name "*.zsh"  -o -name "*.py" \) -exec chmod --verbose u+x {} +'
 alias debug='echo "Debugging..."; set -x'
 
 # --- Log & History ---
@@ -415,7 +360,7 @@ alias ll='echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd
     lsd --almost-all --total-size --classify --group-dirs=first \
         --date "relative" --no-symlink --hyperlink "always" --long \
         --size short --header \
-        --blocks "size,links,name,user,date"'man-micro-settings-bindungs.md
+        --blocks "size,links,name,user,date"'
 alias lll='echo -e "\t${PINK} LSD ${LILA}  ... mit  alles  ${GELB}in $(pwd)\n${PINK} (mit absoluter Zeit und Gruppenberechtigung): ${RESET}\t" && \
     lsd --almost-all --total-size --date "+%d. %b %Y %H:%M Uhr" \
         --classify --group-dirs "first" --no-symlink --hyperlink "always" \
