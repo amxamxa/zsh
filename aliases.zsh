@@ -147,7 +147,7 @@ alias Zcopy='echo -e "\n\t${PINK}Kopiere Zsh-Konfigurationsdateien ins Backup-Ve
 alias Zopt='echo -e "\t${PINK}Wrapper für setopt${RESET}" && setopt'
 
 #	_____________________________________________kitty_______________________
-alias KITTYconf='echo -e "\t${PINK}Öffne kitty Konfigurationsdatei${RESET}" && micro -filetype zsh "$XDG_CONFIG_HOME/kitty/kitty.conf"'
+alias KITTYconf='echo -e "\t${PINK}Öffne kitty Konfigurationsdatei${RESET}" &&  gnome-text-editor --standalone --ignore-session "$XDG_CONFIG_HOME/kitty/kitty.conf" | micro -filetype zsh "$XDG_CONFIG_HOME/kitty/kitty.conf"'
 alias Kconf=KITTYconf
 alias KITTYmap='echo -e "\t${PINK}Zeige alle Tastaturbelegungen (map) in der kitty.conf${RESET}" && bap-NoComment "$KITTY_CONFIG_DIRECTORY/kitty.conf" | grep "map"'
 alias Kmap=KITTYmap
@@ -367,17 +367,19 @@ alias lll='echo -e "\t${PINK} LSD ${LILA}  ... mit  alles  ${GELB}in $(pwd)\n${P
         --long --size short --header \
         --blocks "permission,size,links,name,user,group,date"'
 alias lt='echo -e "\t${PINK} LSD ${LILA}...mit alles ${GELB}in $(pwd)${PINK} --reverse --time-sort: ${RESET} \t" && \
-    lsd --almost-all --total-size --date "+%d. %b %Y %H:%M Uhr" \
-        --classify --group-dirs "first" --no-symlink --hyperlink "always" \
+    lsd --almost-all --total-size --group-dirs "first"  \
+        --classify --no-symlink --hyperlink "always" \
         --long --size "short" --header --reverse \
-        --blocks "size,links,name,date" --timesort'
+        --blocks "size,links,name,date"          --timesort'
+        
+
 alias lx='echo -e "\t${PINK} LSD ${LILA}...mit  alles  ${GELB}in $(pwd)${PINK}--reverse --extension-sort: ${RESET}\t" && \
     lsd --almost-all --total-size --classify --group-dirs "first" \
         --date "relative" --no-symlink --hyperlink "always" \
         --long --size "short" --reverse --header \
-        --blocks "size,links,name,user,date" --extensionsort'
+        --blocks "size,links,name,user,date"    --extensionsort'
 
-# --- Klassische Werkzeuge (verbessert) ---
+# --- Klassische Werkzeuge ---
 alias ..='cd ..'
 alias df='echo -e "\t${PINK}df -Tha --total ${RESET}\n" && df -Tha --total'
 alias fhere='echo -e "\t${PINK}find . -name $1 {RESET}\n" && find . -name'
@@ -387,7 +389,7 @@ alias psg='echo -e "\t${PINK}ps aux | grep -v grep | grep -i -e VSZ -e {RESET}\n
 alias wget="wget -c"
 alias top="btop"
 alias DF='echo -e "\t${PINK} pydf -hgB{RESET}\n" && pydf -hgB'
-alias EIN="sudo shutdown -r now"
+alias EIN="shutdown -r now"
 #alias AUS="sudo nala update && sudo shutdown now"
 
 mcd () {
@@ -396,7 +398,7 @@ mcd () {
     cd "$1"
 }
 
-# --- Häufige Tipfehler & Shortcuts ---
+# --- Tipfehler & Shortcuts ---
 alias cd..='echo -e "\t${PINK}Gehe ein Verzeichnis höher${RESET}\n" && cd ..'
 # alias c='clear; motd || neo0'
 alias c='clear; neo0'
@@ -423,23 +425,23 @@ alias GIT='echo -e "\t${PINK}git aliase aus Zeile 545 bis 620\t $ZDOTDIR/aliases
 alias gs='echo -e "${GELB}\nZeigt den Status des Arbeitsverzeichnisses und des Staging-Bereichs an${RESET}\n" && git status'
 alias gsss='echo -e "${PINK}\n\t git status --short ${RESET} with abbr.:${RESET}\n${GELB}?? ... Untracked files${RESET}\t${GELB}U ... Files with merge conflicts${RESET}\t ${GELB}A ... New files added to staging ${RESET}\t${GELB}M ... Modified files${RESET}\t${GELB}D ... Deleted files${RESET}\t${GELB}R ... Renamed files${RESET}\t${GELB}C ... Copied files${RESET}\n" && git status -s'
 gss() {
-    cowsay -nW 34 "$(echo -e "${NIGHT}[Git Status]${RESET}\n$(git status -s)")"
+    cowsay -nW 60 "$(echo -e "${NIGHT}[Git Status]${RESET}\n$(git status -s)")"
     echo -e "\n${PINK}Legende:${RASP}
-   M: Modified | A: Staged
-   D: Deleted | R: Renamed
-   C: Copied  | ?: Untracked${RESET}"
+   M: Modified |  A: Staged
+   D: Deleted  |  R: Renamed
+   C: Copied   |  ?: Untracked${RESET}"
 }
 # Git Add
 alias ga='echo -e "${GELB}\nFügt Änderungen im Arbeitsverzeichnis zum Staging-Bereich hinzu${RESET}\n" && git add'
 # Git Push
 alias gp='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch${RESET}\n" && git push'
-alias gpo='echo -e "${GELBninjas2}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
-alias gpof='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check${RESET}\n" && git push origin --force-with-lease'
-alias gpofn='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check und ohne Verifizierung${RESET}\n" && git push origin --force-with-lease --no-verify'
-alias gpt='echo -e "${GELB}\nPushed alle Tags auf den Remote-Branch${RESET}\n" && git push --tag'
+# alias gpo='echo -e "${GELBninjas2}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
+# alias gpof='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check${RESET}\n" && git push origin --force-with-lease'
+# alias gpofn='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check und ohne Verifizierung${RESET}\n" && git push origin --force-with-lease --no-verify'
+# alias gpt='echo -e "${GELB}\nPushed alle Tags auf den Remote-Branch${RESET}\n" && git push --tag'
 # Git Tag
-alias gtd='echo -e "${GELB}\nLöscht einen lokalen Tag${RESET}\n" && git tag --delete'
-alias gtdr='echo -e "${GELB}\nLöscht einen Remote-Tag${RESET}\n" && git tag --delete origin'
+# alias gtd='echo -e "${GELB}\nLöscht einen lokalen Tag${RESET}\n" && git tag --delete'
+# alias gtdr='echo -e "${GELB}\nLöscht einen Remote-Tag${RESET}\n" && git tag --delete origin'
 # Git Branch
 alias grb='echo -e "${GELB}\nZeigt die Remote-Branches an${RESET}\n" && git branch -r'
 alias gb='echo -e "${GELB}\nZeigt alle Branches im aktuellen Repository an${RESET}\n" && git branch'
@@ -460,8 +462,8 @@ alias glol='echo -e "${GELB}\nZeigt die Commit-Historie in einer graphischen Dar
 alias gr='echo -e "${GELB}\nZeigt die Namen der Remote-Repositories an${RESET}\n" && git remote'
 alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${RESET}\n" && git remote show'
 alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:red)%(refname:short)%(color:reset) - %(color:yellow)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:blue)%(committerdate:relative)%(color:reset))'"
-
 #	_______GIT - AUSGABE ENDE___________________________________________
+
 
 # 	  Globale Aliase (werden überall in der Zeile expandiert)
 # 	  usage% file G 'pattern'
