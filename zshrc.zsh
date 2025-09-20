@@ -108,7 +108,7 @@ fi
 
 # eza-Einstellungen
 export COLUMNS=78
-export EZA_ICONS_AUTO="always"
+export EZA_ICONS_AUTO="auto"
 export EZA_ICON_SPACING=2
 export EZA_GRID_ROWS=3
 export EZA_GRID_COLUMNS=3
@@ -130,25 +130,26 @@ source_or_error() {
 # Sourcen von Konfigurationsdateien
 # echo "   󰞷 "
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
-#	sleep 0.05
+	# /share/zsh/plugins/term-theme.zsh #in .zshrc integriert!
+	# source_or_error "$ZDOTDIR/plugins/tetris.zsh
 	source_or_error "$ZDOTDIR/plugins/zgreeting.zsh"
-	source_or_error "$ZDOTDIR/functions/colors.zsh" # > /dev/null
-#    source_or_error "$ZDOTDIR/prompt/purify.zsh"
-	source_or_error "$ZDOTDIR/aliases.zsh"
+    #    source_or_error "$ZDOTDIR/prompt/purify.zsh"
+	 source_or_error "$ZDOTDIR/aliases.zsh"
 	sleep 0.02
 	source_or_error "$ZDOTDIR/plugins/shortcuts.zsh"
 	sleep 0.03
-	source_or_error "$ZDOTDIR/plugins/fzf.zsh"
+	# source_or_error "$ZDOTDIR/plugins/fzf.zsh"
+	#source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
 	sleep 0.02
-#	sleep 0.05
-	source_or_error "$ZDOTDIR/plugins/fzf-key-bind.zsh"
+	source_or_error "$ZDOTDIR/plugins/fff-fuck.zsh"
+	# source_or_error "$ZDOTDIR/plugins"
+	sleep 0.02
+	# source_or_error "$ZDOTDIR/plugins/fzf-key-bind.zsh"
 	sleep 0.02
 	source_or_error "$ZDOTDIR/functions/my-functions.zsh"
 	sleep 0.02
-# source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
+	source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
 # 	sleep 0.02
-
-
 
 # bereits-------in conf.nix
 # --------------------------Projektpfade
@@ -178,20 +179,20 @@ source_or_error() {
  #eval "$(rg --generate=complete-zsh)"
  
  # mcfly als CTRL + R
- # -----
- if command -v mcfly &> /dev/null; then
-	 echo "\t${PINK} Mcfly  ... check ${RESET}\t"
-	 eval "$(mcfly init zsh)"
-	 export MCFLY_FUZZY=2 # 0 is off; Values in the 2-5 range get good results so far
-	 export MCFLY_RESULTS=50
-	 export MCFLY_DELETE_WITHOUT_CONFIRM=true
-	 export MCFLY_INTERFACE_VIEW=BOTTOM
-	 export MCFLY_RESULTS_SORT=LAST_RUN
-	 export MCFLY_PROMPT="❯❯❯"
-  else
-     echo "\t${RED} Mc_Fly ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}\n"
- fi
- 
+ # ----- 
+ #  if command -v mcfly &> /dev/null; then
+	#  echo "\t${PINK} Mcfly  ... check ${RESET}\t"
+	#  eval "$(mcfly init zsh)"
+	#  export MCFLY_FUZZY=2 # 0 is off; Values in the 2-5 range get good results so far
+	#  export MCFLY_RESULTS=50
+	#  export MCFLY_DELETE_WITHOUT_CONFIRM=true
+	#  export MCFLY_INTERFACE_VIEW=BOTTOM
+	#  export MCFLY_RESULTS_SORT=LAST_RUN
+	#  export MCFLY_PROMPT="❯❯❯"
+ #  else
+ #     echo "\t${RED} Mc_Fly ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}\n"
+ # fi
+ # 
 # --------------------------------------------
 #		████─████─████─█───█─████─███
 #		█──█─█──█─█──█─██─██─█──█──█─

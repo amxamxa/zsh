@@ -190,3 +190,7 @@ fc-list --format "TYPE: %{family}		 --- STYLE: %{style}	 --- FORMAT:%{format}
  s/FORMAT:/[1;35m&[0m/;
  s/\/nix\/store\/.*}/[0;32m&[0m/
 '
+cat $(nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig)
+
+nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig
+l

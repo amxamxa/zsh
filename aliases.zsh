@@ -67,7 +67,7 @@ alias COL+='theme.sh --dark -i2 >> color-theme.md && echo -e "${BROWN}theme.sh -
 alias FC-list='echo -e "\t${PINK}Liste skalierbare Monospace-Schriftarten auf${RESET}" && fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort -u'
 
 # --- NixOS spezifische Aliase ---
-alias NIXpkgs='echo -e "\t${PINK}Liste alle installierten Pakete im current-system Profil auf${RESET}" && lsd --oneline --classify --no-symlink /run/current-system/sw/bin/'
+alias NIXpkgs='echo -e "\t${PINK}Liste alle installierten Pakete im current-system Profil auf unter  ${NIGHT}  \\'/run/current-system/sw/bin/' ${RESET}" && sleep 2 && lsd --oneline --classify --no-symlink /run/current-system/sw/bin/'
 # um eine Liste aller installierten Pakete anzuzeigen
 # SIEHE ERSATZ  home/bin/NIXenv
 # alias NIXenv='echo -e "${PINK}nix-env --query --installed ${NIGHT}global verfügbare, mit "nix-env" installed nixOS Pakete OHNE die Versionsnummer (letzter Teil)${RESET} /n" && nix-env --query --installed | sed -E '\''s/-[0-9.]+$//'\'' | sort'
@@ -139,7 +139,9 @@ alias ZALI='gnome-text-editor -s "$ZDOTDIR/aliases.zsh" && source "$ZDOTDIR/alia
     echo -e "\n\t${GELB}source $ZDOTDIR/aliases.zsh   ---NICHT---  erfolgreich!${RESET}\n"'
 alias Zali='ZALI'
 
-alias Zfunc='micro "$ZDOTDIR/functions/my-functions.zsh" && source "$ZDOTDIR/functions/my-functions.zsh"'
+alias Zfunc='micro "$ZDOTDIR/functions/my-functions.zsh" && source "$ZDOTDIR/functions/my-functions.zsh"'alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
+alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
 alias Zcopy='echo -e "\n\t${PINK}Kopiere Zsh-Konfigurationsdateien ins Backup-Verzeichnis${RESET}" && \
     cp --verbose "$ZDOTDIR/.zshrc" "/share/bkp/zsh/$(date +'%F').nix.zshrc.zsh" && \
     cp --verbose "$HOME/.zshenv" "/share/bkp/zsh/$(date +'%F').nix.zshenv.zsh" && \
@@ -153,15 +155,15 @@ alias KITTYmap='echo -e "\t${PINK}Zeige alle Tastaturbelegungen (map) in der kit
 alias Kmap=KITTYmap
 alias Kbind=KITTYmap
 #	____________________________________________________________________
-# alias mdtohtml='pandoc $1 -s --to html --css=$HOME/.templates/cyberpunk-DM.css | w3m -T text/html'
+# alias mdtohtml='pandoc $1 -s --to html --css=$HOME/.templates/cyberpunk-DM.css | w3m -T text/html'alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
+alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
+alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
 # alias mdtopdf='pandoc $1 -o ${1%.md}.pdf --template=$HOME/.templates/MDtoPDF.tex'
 
 # --- Diverse Werkzeuge & Helfer ---
 alias COL='terminal-colors -n && echo -e "${GREEN}\n...für Hex-Codes der Farben:${RED}%${LILA} terminal-colors -l ${RESET}\n"'
 alias Col='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\''\n'\'';}; done'
-alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
-alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
-alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
+
 alias untar='echo -e "\t${PINK}Entpacke .tar.bz2-Archive${RESET}" && tar -xvjf'
 alias hack='echo -e "\t${PINK}Starte Hackertyper${RESET}" && hackertyper'
 
@@ -230,6 +232,7 @@ alias debug='echo "Debugging..."; set -x'
 alias LOG='echo -e "\t${PINK}Zeige und sortiere alle error-Einträge in der Log-Datei${RESET}" && cat "$ZDOTDIR/log_error/log_error.txt" | grep "error" | sort'
 alias LOGseparate='echo -e "\t${PINK}Beobachte die Log-Datei in Echtzeit${RESET}" && tail -f "$ZDOTDIR/log_error/log_error.txt"'
 alias LOGinline='echo -e "\t${PINK}Öffne die Log-Datei in less${RESET}" && less -F "$ZDOTDIR/log_error/log_error.txt"'
+
 alias h='history'
 alias history='history -t "%H:%MUhr am %d.%b: "'
 alias g2history='cat "$HISTFILE" | grep -i --colour=always'
@@ -486,6 +489,9 @@ alias -g H='--help'
 alias -g N0='2> /dev/null'
 alias -g D0='2> /dev/null'
 
+# dahinter PKGS name, er letzte Pfad ist der vollständige Pfad zum gebauten Paket im Nix-Store. Ohne --no-out-link würde Nix einen Symlink namens result im aktuellen Verzeichnis erstellen, der auf diesen Pfad zeigt.
+alias -g NN="nix-build --no-out-link '<nixpkgs>' -A"  
+
 #   Suffix-Aliase (werden ausgeführt, wenn ein Dateiname als Befehl eingegeben wird)
 ### -----------------------------------------------------  ####
 alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
@@ -508,4 +514,7 @@ alias -s {txt}='micro -filetype bash'
 # alias -s git="git clone"
 
 ################################################################
+# alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
+# alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
+# alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
 # Ende der Alias-Definitionen
