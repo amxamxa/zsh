@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of /share/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 #!/usr/bin/env zsh
 ########################################################
 ## ╔═╗╦╦  ╔═╗           ________________
@@ -20,7 +13,13 @@ fi
 ## -----------------------------------------
 ## 	set filetyte zsh
 ## COMMENTS:	nixOS-version
-#####################################################
+#####################################################                                    # Enable Powerlevel10k instant prompt. Should stay close to the top of /share/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+ fi
+
 export RESET="\e[0m" 
 export BOLD="\033[1m" 
 export GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
@@ -139,7 +138,8 @@ source_or_error() {
 	source_or_error "$ZDOTDIR/plugins/shortcuts.zsh"
 	sleep 0.03
 	# source_or_error "$ZDOTDIR/plugins/fzf.zsh"
-	#source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
+	#
+	#	source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
 	sleep 0.02
 	source_or_error "$ZDOTDIR/plugins/fff-fuck.zsh"
 	# source_or_error "$ZDOTDIR/plugins"
@@ -337,10 +337,9 @@ fi
 #     root="bg=red"
 # )
 
-# avoid partial path lookups on a path
-#  		# ZSH_HIGHLIGHT_DIRS_BLACKLIST+=(/mnt/slow_share)
+# avoid partial path lookups on a path		# ZSH_HIGHLIGHT_DIRS_BLACKLIST+=(/mnt/slow_share)
  typeset -A ZSH_HIGHLIGHT_REGEXP
-  		ZSH_HIGHLIGHT_REGEXP+=('^rm .*' fg=red,bold)
+		ZSH_HIGHLIGHT_REGEXP+=('^rm .*' fg=red,bold)
   		ZSH_HIGHLIGHT_REGEXP+=('\<sudo\>' fg=123,bold)
   		ZSH_HIGHLIGHT_REGEXP+=('[[:<:]]sudo[[:>:]]' fg=123,bold)
 #	_________________________________________
@@ -349,7 +348,6 @@ rm -f  "$HOME/.xsession-errors "
 rm -f  "$HOME/.xsession-errors.old"
 rm -f  "$HOME/.ICEauthority"
 rm -fr "$HOME/.compose-cache"
-
 #	_________________________________________________
 #	 less
 #	------------------------------------------------
@@ -390,18 +388,20 @@ echo "        	    __              __              __
  \tctrl+3	\tfat:bias=50;full_size=1;mirrored=false
  \tctrl+4	\ttall:bias=50;full_size=1;mirrored=false 
  \tctrl+5	\tvertical ${RESET} "
-  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
- echo "${BOLD}  shift+KP_MULTIPLY	next_layout
-  shift+KP_DIVIDE	swap_with_window
-  shift+KP_SUBTRACT layout_action bias 10 25 40 55 75 85
-  shift+KP_ENTER toggle_layout stack 
-  shift+KP_ADD	launch --cwd=current --location=vsplit
-  super+KP_ADD	launch --cwd=current --location=split
-  super+enter 	launch --cwd=current --location=hsplit
-  kitty_mod+t	launch --cwd=current --type=tab
-  super+i 	set_tab_title  
-  super+F9	pass_selection_to_program gnome-text-editor 
-  		--ignore-session --standalone --new-window"
+  
+ # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+ #echo "${BOLD}  shift+KP_MULTIPLY	next_layout
+  # shift+KP_DIVIDE	swap_with_window
+  # shift+KP_SUBTRACT layout_action bias 10 25 40 55 75 85
+  # shift+KP_ENTER toggle_layout stack 
+  # shift+KP_ADD	launch --cwd=current --location=vsplit
+  # super+KP_ADD	launch --cwd=current --location=split
+  # super+enter 	launch --cwd=current --location=hsplit
+  # kitty_mod+t	launch --cwd=current --type=tab
+  # super+i 	set_tab_title  
+  # super+F9	pass_selection_to_program gnome-text-editor 
+  # 		--ignore-session --standalone --new-window"
+  # 
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
   echo "  ------------------------------------------------------
   CTRL+T:	preview file content using bat 
@@ -420,3 +420,6 @@ hash -r
 
 # To customize prompt, run `p10k configure` or edit /share/zsh/.p10k.zsh.
 [[ ! -f /share/zsh/.p10k.zsh ]] || source /share/zsh/.p10k.zsh
+
+
+
