@@ -104,7 +104,7 @@ plugins=(fzf-tools ...)
 
 To use fzf-tools without a plugin manager like oh-my-zsh follow these steps:
 
-  1) Install fzf: You need to install fzf on your system. You can find installation instructions for your operating system in the fzf GitHub repository: https://github.com/junegunn/fzf
+  1) Install fzf: You need to install fzf on your system. You can find installaithout a plugin managertion instructions for your operating system in the fzf GitHub repository: https://github.com/junegunn/fzf
   2) Next put the fzf-tools folder in a place of your choosing then source the ***fzf-tools.zsh*** file in your ***~/.zshrc*** file.
 
 ```bash
@@ -227,7 +227,7 @@ Please keep in mind that this approach will pass the entire command line through
 			--color bg:#222222,preview-bg:#333333"
 ```
  - The `zle accept-line` command accepts the modified command line and executes it.
- ---
+---
 Next we have to bind the `accept-line` widget function to the `Enter` key:
 
 ```bash
@@ -557,7 +557,7 @@ If you have any feature requests, suggestions or general questions you can reach
 **Do not submit an issue or pull request**: A general rule of thumb is to never publicly report bugs or vulnerabilities because you might inadvertently reveal it to unethical people who may use it for bad. 
 Instead, you can email me directly at: [**paulmccarthy676@gmail.com**](mailto:paulmccarthy676@gmail.com).
 I will deal with the issue privately and submit a patch as soon as possible.
- 
+
 ## [Contacts](#contacts)
 
 Author: Paul M.

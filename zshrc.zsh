@@ -20,65 +20,11 @@
    source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
  fi
 
-export RESET="\e[0m" 
-export BOLD="\033[1m" 
-export GREEN="\033[38;2;0;255;0m\033[48;2;0;25;2m"
-export PINK="\033[38;2;255;0;53m\033[48;2;34;0;82m"
-export RED="\033[38;2;240;138;100m\033[48;2;147;18;61m" 
-
-# Füge den Pfad für Custom- u Autoload-Funktionen hinzu. When we run a 
-#command that corresponds to an autoloaded function, ZSH searches for 
-#it in the “fpath” and loads it into the memory if located.
-fpath=($ZDOTDIR:$ZDOTDIR/functions:$ZDOTDIR/plugins:$ZDOTDIR/prompts $fpath)
-
-# History-Einstellungen
-# ----------------------
-export 	HISTIGNORE="ls:cd:pwd:exit:tldr:cheat:printf:micro:man:eza:lsd:cp:echo:z:bap:bat:git:sudo:grep"
-export 	HISTTIMEFORMAT="%D{%Y-%m-%d %H:%M} "
-
-setopt 	EXTENDED_HISTORY    	# Zeitstempel speichern
-setopt 	SHARE_HISTORY       	# History sofort speichern
-setopt 	HIST_SAVE_NO_DUPS       # Do not write a duplicate event to the history file.
 # unsetopt HIST_SAVE_NO_DUPS    # Write a duplicate event to the history file
-setopt 	INC_APPEND_HISTORY 		# append the command without for shell exit
 
 # To use the Meta or Alt keys, you probably need to revert to single-byte mode with a command such as:
 unsetopt MULTIBYTE 		# Multibyte-Zeichensätze die mehr als ein Byte zur Darstellung benötigen
-
-#	___________________________________________
-#	       ZSH GLOBBING
-### ------------------------------------------- 
-setopt 		EXTENDEDGLOB	# for superglob for ls **/*.txt oder ls -d *(D)
 unsetopt 	CASEGLOB
-setopt 		ALIAS_FUNC_DEF 	# if set, aliases can be used for defining functions
-setopt 		INTERACTIVE_COMMENTS 	# allow comments even in interactive shells
-setopt 		PRINT_EXIT_VALUE		# print the exit value of programs with non-zero exit status
-setopt 		RM_STAR_WAIT		# wait 10s and ignore anything typed, avoid problem
-								# of reflexively answering ‘yes’ to the query: rm *
-setopt 		sh_word_split	# split multi-word variables into individual elements
-setopt 		notify		    # notifier for big jobs
-unsetopt 	beep			# beep ausschalten
-
-#	 _________________________________________
-#   	     **ZSH DIRECTORY STACK** aka DS
-# 	 -----------------------------------------
-setopt AUTO_PUSHD           # Push the current directory visited on the stack.
-setopt PUSHD_IGNORE_DUPS    # Do not store duplicates in the stack.
-setopt PUSHD_SILENT         # Do not print the directory stack after pushd or popd.
-DIRSTACKSIZE=14
-## wichtige Aliase für ZSH DIRECTORY STACK - DS
-alias -g d='dirs -v'
-for index ({1..14}) alias "$index"="cd -${index}"; unset index
-setopt AUTO_CD   	# '..' statt 'cd ..'
-REPORTTIME=3 		# display cpu usage, if command taking more than 3s
-#	_________________________________________
-# 		Initialisiere Autocompletion
-# 	----------------------------- 
- # autoload command load a file containing shell commands
- # autoload looks in directories of the "_Zsh file search path_", defined in the 
- # variable `$fpath`, and search a file called `compinit`.
-  autoload -Uz compinit; compinit
-  _comp_options+=(globdots) 	# With hidden files
 
 #  ___________________________________________________________
 
@@ -104,22 +50,11 @@ else
   export LS_COLORS="$(vivid generate molokai)"
   printf "\t${GREEN}󰞷 .... vivid mit molokai${RESET}\n"
 fi
-
-# eza-Einstellungen
-export COLUMNS=78
-export EZA_ICONS_AUTO="auto"
-export EZA_ICON_SPACING=2
-export EZA_GRID_ROWS=3
-export EZA_GRID_COLUMNS=3
-export EZA_MIN_LUMINANCE=50
-export EZA_COLORS="$LS_COLORS:hd=38;5;226:uu=38;5;202:gu=38;5;208:da=38;5;111:uR=38;5;197:uG=38;5;198"
-# man eza_colors
-# The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
-#   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done            
+            
 
 # Funktion zum Sourcen von Dateien oder Ausgabe einer Fehlermeldung
-source_or_error() {
-    if [ -f "$1" ]; then
+source_or_error() { 
+    if [ -f "$1" ]; then   
         source "$1"
         printf "\t${GREEN}󰞷 src pass:\t${RESET}${GELB}${BOLD}$1 ${RESET}\n"
     else
@@ -139,12 +74,12 @@ source_or_error() {
 	sleep 0.03
 	# source_or_error "$ZDOTDIR/plugins/fzf.zsh"
 	#
-	#	source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
+	source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
 	sleep 0.02
 	source_or_error "$ZDOTDIR/plugins/fff-fuck.zsh"
 	# source_or_error "$ZDOTDIR/plugins"
 	sleep 0.02
-	# source_or_error "$ZDOTDIR/plugins/fzf-key-bind.zsh"
+	 # source_or_error "$ZDOTDIR/plugins/fzf-key-bind.zsh"
 	sleep 0.02
 	source_or_error "$ZDOTDIR/functions/my-functions.zsh"
 	sleep 0.02
@@ -383,11 +318,11 @@ echo "        	    __              __              __
 	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"				
-  echo "${BOLD}${NIGHT}\tctrl+1	\tg'rid
- \tctrl+2	\tstack
- \tctrl+3	\tfat:bias=50;full_size=1;mirrored=false
- \tctrl+4	\ttall:bias=50;full_size=1;mirrored=false 
- \tctrl+5	\tvertical ${RESET} "
+  echo "${BOLD}${NIGHT} ctrl+1	\tg'rid
+ ctrl+2	\tstack
+ ctrl+3	\tfat:bias=50;full_size=1;mirrored=false
+ ctrl+4	\ttall:bias=50;full_size=1;mirrored=false 
+ ctrl+5	\tvertical ${RESET} "
   
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
  #echo "${BOLD}  shift+KP_MULTIPLY	next_layout
@@ -403,15 +338,15 @@ echo "        	    __              __              __
   # 		--ignore-session --standalone --new-window"
   # 
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
-  echo "  ------------------------------------------------------
-  CTRL+T:	preview file content using bat 
+  #echo "  ------------------------------------------------------
+  echo "  CTRL+T:	preview file content using bat 
   CTRL+E:	edit selected file
-  CRTL+R:	history widget or mc fly
-  ALT +C:	print tree structure in the preview window
+  CRTL+R:	history widget
   CTRL+X CTRL+r history fzf widget
-  CTRL+H 	fzf-man-widget
-    ------------------------------------------------------
-    CTRL+ALT+.   argument of the last commands  " |  clolcat -S 5 -F 0.06
+  CTRL+H 	fzf-man-widget " |  clolcat -S 5 -F 0.06
+  echo " --------------------------------------------------
+         CTRL+ALT+.   argument of the last commands  " |  blahaj -r -i
+    
 # 	  Aktualisiere die Shell-Hash-Tabelle
 #	--------------------------------------
 # ...  häufig Programme installierst oder aktualisierst,
