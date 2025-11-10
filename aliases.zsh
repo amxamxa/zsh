@@ -64,7 +64,9 @@ alias gitloc='echo -e "\t${PINK}Setze lokale Git-Konfiguration (~/.gitlocal) und
 # --- Terminal Themes & Fonts ---
 alias COLsw='color-theme-switch && echo -e "${BROWN}color-theme-switch aus my-function.zsh${RESET}"'
 alias COL+='theme.sh --dark -i2 >> color-theme.md && echo -e "${BROWN}theme.sh --dark -i2 >> color-theme.md ${RESET}"'
-alias FC-list='echo -e "\t${PINK}Liste skalierbare Monospace-Schriftarten auf${RESET}" && fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort -u'
+# ALT: alias FC-list='echo -e "\t${PINK}Liste skalierbare Monospace-Schriftarten auf${RESET}" && fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort -u'
+ alias FC-list='FClist.sh || $HOME/bin/FClist.sh'
+ 
 
 # --- NixOS spezifische Aliase ---
 alias NIXpkgs='echo -e "\t${PINK}Liste alle installierten Pakete im current-system Profil auf unter  ${NIGHT}  \\'/run/current-system/sw/bin/' ${RESET}" && sleep 2 && lsd --oneline --classify --no-symlink /run/current-system/sw/bin/'

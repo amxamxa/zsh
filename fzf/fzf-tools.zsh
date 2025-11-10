@@ -20,10 +20,12 @@ if [[ -x "$(command -v fzf)" ]]; then
 source <(fzf --zsh) # Syntax 4  zsh
 # Molokai   'fg:252,bg:233,hl:67,fg+:252,bg+:235,hl+:81,info:144,prompt:161,spinner:135,pointer:135,marker:118'
 # oder Synthwave Cold 
-export FZF_COLORS='bg+:#1a1a1a,bg:#131313,spinner:#ff69b4,hl:#ff99cc,fg:#ffa07a,header:#ff0033,info:#ffd700,pointer:#ff69b4,marker:#ff0033,prompt:#ffd700,hl+:#ff99cc,gutter:#ff0033'
+export FZF_COLORS="bg+:#1a1a1a,bg:#131313,spinner:#ff69b4,hl:#ff99cc,fg:#ffa07a,header:#ff0033,info:#ffd700,pointer:#ff69b4,marker:#ff0033,prompt:#ffd700,hl+:#ff99cc,gutter:#ff0033"
 #export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --exclude .git'
-export FZF_DEFAULT_OPTS='--color='$FZF_COLORS' --preview-window=up:40%:wrap --height=60%	 --info=inline --margin='5%,2%,2%,2%' --border=rounded  --prompt='∷  ' --pointer='❯ '	--marker='☭  ' '
-fi
+
+export FZF_DEFAULT_OPTS="--color=${FZF_COLORS} --preview-window=up:40%:wrap --height=60% --info=inline --margin=5%,2%,2%,2% --border=rounded --prompt='∷  ' --pointer='❯ ' --marker='☭  '"
+
+
 
 
 

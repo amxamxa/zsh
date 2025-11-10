@@ -194,3 +194,14 @@ cat $(nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig)
 
 nix-build --no-out-link '<nixpkgs>' -A xorg.xkeyboardconfig
 l
+fzf --bind 'focus:transform-header:file --brief {}'
+echo -e "1. Hello
+2. Goodbye
+
+3. Exit" | fzf --reverse --header 'Select one' --bind 'enter:transform:[[ -n {} ]] && echo accept || echo "change-header:Invalid selection"'
+
+ps -ef | fzf --bind 'ctrl-r:reload(ps -ef)' --header 'Press CTRL-R to reload' --header-lines=1 --layout=reverse
+fzf --bind "enter:become(micro {})"
+fzf --bind 'ctrl-b:change-prompt(NewPrompt>---- )'
+echo $RANDOM | fzf --bind 'zero:reload(echo $RANDOM)+clear-query' --height 3
+echo $RANDOM | fzf --bind 'zero:reload(echo $RANDOM)+clear-query' --height 3
