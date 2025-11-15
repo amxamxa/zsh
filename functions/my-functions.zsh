@@ -5,7 +5,87 @@
 SKY="\033[38;2;62;36;129m\033[48;2;135;206;235m"
 RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
 RASPBERRY="\033[38;2;32;0;21m\033[48;2;221;160;221m"
+PINK="\033[38;2;32;0;21m\033[48;2;163;64;217m"
+VIO="\033[38;2;255;0;53m\033[48;2;34;0;82m"
+ORA="\033[38;2;0;17;204m\033[48;2;255;140;0m";
 RESET="\033[0m"
+
+WO() {
+    # --- Argument check
+    if [ -z "${1:-}" ]; then
+        echo "${PINK}Please provide a command name.${RESET}\n"
+        return 1
+    fi
+
+    cmd="$1"
+
+    # --- Header
+    echo "\t ${ORA}NixOS ONLY:${RESET}"
+    echo "${SKY} Showing resolved command path, Nix package, and file details.${RESET}\n"
+
+    # --- Resolve via command -v
+    cmd_path="$(command -v -- "$cmd" 2>/dev/null || true)"
+
+    if [ -z "$cmd_path" ]; then
+        echo "${PINK}Command not found: ${cmd}${RESET}/n"
+        return 2
+    fi
+
+    echo "${PINK}Resolved via 'command -v':${RESET} $cmd_path"
+
+    # Builtin/function/alias?
+    case "$cmd_path" in
+        /*) ;; 
+        *)
+            echo "${PINK}Note:${RESET} This command is a shell builtin, function, or alias."
+            return 0
+            ;;
+    esac
+
+    # --- Resolve symlinks (GNU readlink -f)
+    real_path="$(command readlink -f -- "$cmd_path" 2>/dev/null)"
+    echo "${ORA}Final resolved file path w/ readlink -f :${RESET} $real_path"
+
+    # --- Nix package derivation (NEW)
+    echo "${PINK}Nix package derivation:${RESET}"
+
+    if echo "$real_path" | command grep -q '^/nix/store/'; then
+        store_path="$(echo "$real_path" | cut -d/ -f1-4)"
+        echo "${BOLD} Store path: $store_path${RESET} "
+
+        # Bindings: derivation info
+        if command -v nix-store >/dev/null 2>&1; then
+            drv="$(nix-store -q --binding drvPath "$store_path" 2>/dev/null || true)"
+            out="$(nix-store -q --binding outPath "$store_path" 2>/dev/null || true)"
+
+            echo "  Derivation:  $drv"
+            echo "  Output path: $out"
+        else
+            echo "  nix-store not found in PATH.\n"
+        fi
+    else
+        echo "  This is NOT a Nix store binary.\n"
+    fi
+
+    # --- Size
+    echo "\n${VIO}File size (du -h):${RESET}"
+    command du -h -- "$real_path" 2>/dev/null || true
+
+#  echon' "${PINK}COMMAND TYPE W/ "type -w CMD; type -s CMD ":${RESET}"
+ #   command du -h -- "$real_path" 2>/dev/null || true
+
+
+    # --- Metadata
+    if command -v stat >/dev/null 2>&1; then
+        echo "\n${PINK}File metadata (stat):${RESET}"
+       command stat --format='Size: %s bytes | Mode: %a | File: %N' -- "$real_path" 2>/dev/null
+    fi
+
+    return 0
+}
+
+
+
 
 #________________________________________________
 
@@ -55,24 +135,7 @@ NIXcopy() {
     mkdir -p "$destination_dir"
     xcp --verbose /etc/nixos/*.nix "$destination_dir/"
 }
-#_______________________________________________________________
-WO() {
-    # Überprüfen, ob ein Argument übergeben wurde
-   if [ -z "$1" ]; then
-       echo -e "${PINK}Bitte einen Befehl angeben.${RESET}"
-        return 1
-    fi
-# Zeige die Nachricht an
-    echo -e "${PINK}nixOS ONLY:${RESET}${SKY} \
-    Zeigt den Path zu dem Befehl, auf den verwiesen wird:${RESET}\n"
-# Führen Sie die Befehle aus und zeigen Sie die Ergebnisse an
-    echo -e "${PINK}\twhich -s "$1" ${RESET}"
-    which -s "$1"
-
-    echo -e "${PINK}\treadlink -f $(which $1) ${RESET}"
-    du -ah $(readlink -f "$(which "$1")")
-}
-
+#_____________________________
 #---------------------------------
 bap-NoComment() {
     # Überprüfen, ob ein Dateiname übergeben wurde
