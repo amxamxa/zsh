@@ -24,10 +24,10 @@
 # 				ODER
 #	awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
-
+alias tuxpaint='tuxpaint --datadir $HOME/bilder/TUXPAINT/data --exportdir $HOME/bilder/TUXPAINT/export --savedir $HOME/bilder/TUXPAINT/saves'
 # --- Allgemeine Werkzeuge ---
 alias fd='echo -e "\t${PINK}Führe fd (find alternative) mit automatischer Farbgebung aus${RESET}" && fd --color=auto'
-alias du='echo -e "\t${PINK}Starte interaktiven Disk-Usage-Analyzer (ncdu)${RESET}" && ncdu --color dark'
+alias DU='echo -e "\t${PINK}Starte interaktiven Disk-Usage-Analyzer (ncdu)${RESET}" && ncdu --color dark'
 alias ncdu='echo -e "\t${PINK}Starte interaktiven Disk-Usage-Analyzer (ncdu) mit dunklem Farbschema${RESET}" && ncdu --color dark'
 alias cp='echo -e "\t${PINK}Kopiere Dateien/Verzeichnisse mit xcp (verbose)${RESET}" && xcp --verbose'
 
@@ -46,42 +46,77 @@ PLAY() {
   asciinema play "asciinema/$title.cast"
 }
 
-# --- Shell & System Konfiguration ---
-alias FARBE='echo -e "\t${PINK}Lade Farbskript${RESET}" && source_or_error "$ZDOTDIR/functions/colors.sh" || source "$ZDOTDIR/functions/colors.sh"'
-alias man='echo -e "\t${PINK}Suche Manpages mit Wildcard-Unterstützung${RESET}" && man --wildcard'
-alias RM~='echo -e "\t${PINK}Lösche alle Backup-Dateien (*~) im aktuellen Verzeichnis${RESET}" && find . -type f -name "*~" -delete'
+ Funktion zum Suchen von WORD in ALIAS
+g2ali() {
+  if [[ -z "$1" ]]; then
+    echo -e "\t${RED}Fehler: Kein Suchbegriff angegeben.${RESET}\n"
+    echo -e "\t${PINK}Verwendung: g2ali <Suchbegriff>${RESET}"
+    return 1312
+  fi
+  # Suche in Aliases mit optionaler Syntaxhervorhebung durch `bat`
+  if command -v bat &>/dev/null; then
+    alias | grep -i --color=always "$1" | command bat -l toml
+    echo -e "\t${PINK} alias | grep -i --color=always "$1" | command bat -l toml ${RESET}\n"
+  else
+    alias | grep -i --color=always "$1"
+  fi
+}
+alias ali2g='g2ali'
+alias g2lol='g2ali'
+alias lol2g='g2ali'
 
-# --- Git Konfiguration ---
-alias gitgit='echo -e "\t${PINK}Setze globale Git-Konfiguration und zeige sie an${RESET}" && \
-    git config -f $GIT_CONFIG user.email "max.kempter@gmail.com" && \
-    git config -f $GIT_CONFIG user.name "amxamxa" && \
-    git config -l | bat3 -l "sh"'
-alias gitloc='echo -e "\t${PINK}Setze lokale Git-Konfiguration (~/.gitlocal) und zeige sie an${RESET}" && \
-    git config -f ~/.gitlocal user.email "max.kempter@gmail.com" && \
-    git config -f ~/.gitlocal user.name "amxamxa" && \
-    git config -l | bat3 -l "sh"'
+# Funktion zum Suchen von WORD in ENV
+g2env() {
+  if [[ -z "$1" ]]; then
+    echo -e "\t${RED}Fehler: Kein Suchbegriff angegeben.${RESET}"
+    echo -e "\t${PINK}Verwendung: g2env <Suchbegriff>${RESET}"
+    return 1312
+  fi
+  # Suche in Umgebungsvariablen mit optionaler Syntaxhervorhebung durch `bat`
+  if command -v bat &>/dev/null; then
+    printenv | grep -i --color=always "$1" | command bat -l toml
+    echo -e "\t${PINK} printenv | grep -i --color=always "$1" | command bat -l toml ${RESET}\n"
+  else
+    printenv | grep -i --color=always "$1"
+  fi
+}
+alias env2g='g2env'
 
-# --- Terminal Themes & Fonts ---
-alias COLsw='color-theme-switch && echo -e "${BROWN}color-theme-switch aus my-function.zsh${RESET}"'
-alias COL+='theme.sh --dark -i2 >> color-theme.md && echo -e "${BROWN}theme.sh --dark -i2 >> color-theme.md ${RESET}"'
-# ALT: alias FC-list='echo -e "\t${PINK}Liste skalierbare Monospace-Schriftarten auf${RESET}" && fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort -u'
- alias FC-list='FClist.sh || $HOME/bin/FClist.sh'
- 
+
+#____________________________________________________________
+#        du - estimate file space usage
+D1() {
+    local du_options="--human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc'"
+    local current_dir
+    current_dir=$(pwd)
+    echo -e "\n\t${PINK}Zeigt 24 direkte Unterverzeichnisse, nach Größe sortiert an!"
+    echo -e "\n\t${GREEN}du ${du_options} ${current_dir} 2> /dev/null | sort -hr | head -n 24 ${PINK} \n... wir reden über Pfad ${NIGHT}${current_dir}${RESET}\n"
+    du $du_options "$current_dir" 2> /dev/null | sort -hr | head -n 24
+    echo -e "\n\t${GREEN}\t... und das Unterverzeichniss ist ${NIGHT}${current_dir}${GREEN}insgesamt:${RESET}"
+    du -sh 2> /dev/null
+}
+D3() {
+    local du_options="--human-readable --max-depth=3 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc'"
+    local current_dir
+    current_dir=$(pwd)
+    echo -e "\n\t${PINK}Zeigt 24 Unterverzeichnisse in 3ter Ebene, nach Größe sortiert an!"
+    echo -e "\t${GREEN}du ${du_options} ${current_dir} 2> /dev/null | sort -hr | head -n 24 ${PINK} \n... wir reden über Pfad${NIGHT}${current_dir}${RESET}\n"
+    du $du_options "$current_dir" 2> /dev/null | sort -hr | head -n 24
+    echo -e "\n\t${GREEN}\t... und das Unterverzeichniss ist ${NIGHT}${current_dir}${GREEN}insgesamt:${RESET}"
+    du -sh 2> /dev/null
+}
+
+
+NIXinfo() {
+  printf "%s\n" "${PINK} Info und BESCHREIBUNG ${RESET}"
+  nix-shell -p nix-info --run "nix-info -m"
+}
 
 # --- NixOS spezifische Aliase ---
 alias NIXpkgs='echo -e "\t${PINK}Liste alle installierten Pakete im current-system Profil auf unter  ${NIGHT}  \\'/run/current-system/sw/bin/' ${RESET}" && sleep 2 && lsd --oneline --classify --no-symlink /run/current-system/sw/bin/'
 # um eine Liste aller installierten Pakete anzuzeigen
 # SIEHE ERSATZ  home/bin/NIXenv
 # alias NIXenv='echo -e "${PINK}nix-env --query --installed ${NIGHT}global verfügbare, mit "nix-env" installed nixOS Pakete OHNE die Versionsnummer (letzter Teil)${RESET} /n" && nix-env --query --installed | sed -E '\''s/-[0-9.]+$//'\'' | sort'
-NIXinfo() {
-  printf "%s\n" "${PINK} Info und BESCHREIBUNG ${RESET}"
-  nix-shell -p nix-info --run "nix-info -m"
-}
-
-
-alias NIXref='echo -e "\t${PINK}Zeige die direkten Abhängigkeiten eines Nix-Store-Pfades an${RESET}" && nix-store -q --references /nix/store/'
-
-# alias NIXempty ='echo "Müll wird entleert!" &&  echo -e "{PINK}  lol" && sudo rm -v /nix/var/nix/gcroots/auto/* &&  sudo nix-collect-garbage -d && 	sudo nix-store --optimise -vvv'
 NIXconf() {
   echo -e "\t${PINK}Öffne NixOS-Konfigurationsdateien in einem Editor${RESET}"
   if [ -d /etc/nixos ]; then
@@ -121,14 +156,44 @@ alias Nboom='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name audio -
 alias Nixboom=NIXoi # Alias für NIXoi
 alias Ncopy=NIXcopy # Verweist auf ein nicht definiertes NIXcopy
 
-#	_____________________________________________________zsh_______________
-##      * * Z S H * *
-##  .zshenv .zshrc aliases.zsh
+alias NIXref='echo -e "\t${PINK}Zeige die direkten Abhängigkeiten eines Nix-Store-Pfades an${RESET}" && nix-store -q --references /nix/store/'
+
+# alias NIXempty ='echo "Müll wird entleert!" &&  echo -e "{PINK}  lol" && sudo rm -v /nix/var/nix/gcroots/auto/* &&  sudo nix-collect-garbage -d && 	sudo nix-store --optimise -vvv'
+
+# --- Shell & System Konfiguration ---
+alias FARBE='echo -e "\t${PINK}Lade Farbskript${RESET}" && source_or_error "$ZDOTDIR/functions/colors.sh" || source "$ZDOTDIR/functions/colors.sh"'
+alias MAN='echo -e "\t${PINK}Suche Manpages mit Wildcard-Unterstützung${RESET}" && man --wildcard'
+
+alias RM='echo -e "\t${PINK}Lösche alle Backup-Dateien (*~) im aktuellen Verzeichnis${RESET}" && find . -type f -name "*~" -delete'
+
+# --- Git Konfiguration ---
+alias gitgit='echo -e "\t${PINK}Setze globale Git-Konfiguration und zeige sie an${RESET}" && \
+    git config -f $GIT_CONFIG user.email "max.kempter@gmail.com" && \
+    git config -f $GIT_CONFIG user.name "amxamxa" && \
+    git config -l | bat3 -l "sh"'
+alias gitloc='echo -e "\t${PINK}Setze lokale Git-Konfiguration (~/.gitlocal) und zeige sie an${RESET}" && \
+    git config -f ~/.gitlocal user.email "max.kempter@gmail.com" && \
+    git config -f ~/.gitlocal user.name "amxamxa" && \
+    git config -l | bat3 -l "sh"'
+
+# --- Terminal Themes & Fonts ---
+alias COLsw='color-theme-switch && echo -e "${BROWN}color-theme-switch aus my-function.zsh${RESET}"'
+alias COL+='theme.sh --dark -i2 >> color-theme.md && echo -e "${BROWN}theme.sh --dark -i2 >> color-theme.md ${RESET}"'
+# ALT: alias FC-list='echo -e "\t${PINK}Liste skalierbare Monospace-Schriftarten auf${RESET}" && fc-list : family spacing outline scalable | grep -e spacing=100 -e spacing=90 | grep -e outline=True | grep -e scalable=True | sort -u'
+ alias FC-list='FClist.sh || $HOME/bin/FClist.sh'
+ 
+
+## ZOXIDE
 alias za='echo -e "\t${PINK}Füge aktuelles Verzeichnis zur zoxide-Datenbank hinzu${RESET}" && zoxide add'
 alias zq='echo -e "\t${PINK}Suche Verzeichnis in zoxide-Datenbank${RESET}" && zoxide query'
 alias zqi='echo -e "\t${PINK}Interaktive Suche in zoxide-Datenbank${RESET}" && zoxide query -i'
 alias zr='echo -e "\t${PINK}Entferne Verzeichnis aus zoxide-Datenbank${RESET}" && zoxide remove'
-alias ZRC='nano "$ZDOTDIR/.zshrc" && source "$ZDOTDIR/.zshrc" && \
+
+
+#	_____________________________________________________zsh_______________
+##      * * Z S H * *
+##  .zshenv .zshrc aliases.zsh
+alias Zcopy='nano "$ZDOTDIR/.zshrc" && source "$ZDOTDIR/.zshrc" && \
     echo -e "\n\t${PINK}source $ZDOTDIR/.zshrc erfolgreich!${RESET}\n" || \
     echo -e "\n\t${GELB}source $ZDOTDIR/.zshrc  ---NICHT---  erfolgreich!${RESET}\n"'
 alias Zconf='ZRC'
@@ -187,10 +252,7 @@ alias LSblk='echo -e "\t${GREEN}enhanced lsblk .. als Tabelle mit --merge --zone
     lsblk --width 80 --merge --zoned --ascii --topology \
           --output MODEL,MOUNTPOINTS,PATH,SIZE,TRAN,LABEL,FSTYPE,TYPE'
 
-alias LSmod='echo -e "\t${GREEN}enhanced ls mod w/ Kernel-Modul -Name and -description ${RESET}" && \
-    while IFS= read -r name; do \
-        printf "%s\t\t%s\n" "${name}" "$(sudo modinfo "$name" | grep "description" | cut -c17-)"; \
-    done <<< "$(lsmod | cut -d " " -f1 | tail -n +2)"'
+alias LSmod='echo -e "\t${GREEN}enhanced ls mod w/ Kernel-Modul -Name and -description ${RESET}" &&   while IFS= read -r name; do printf "%s\t\t%s\n" "${name}" "$(sudo modinfo "$name" | grep "description" | cut -c17-)"; done <<< "$(lsmod | cut -d " " -f1 | tail -n +2)"'
 
 #	____________________________________________________________________
 alias Mconf='echo -e "\t${PINK}Öffne micro Editor Konfiguration${RESET}" && micro "$MICRO_CONFIG_HOME/settings.json"'
@@ -218,64 +280,23 @@ alias WMverbose='echo -e "\n\t${PINK}\n 2xklicken! mittels${GELB} cmd xprop und 
 
 #	____________________________________________________________________
 alias Find='echo -e "
-	${PINK} for 	files \t\t% fd -tf
-	${LILA} for  	executable files\t \t % fd -tx
-	${PINK} for	empty files\t % fd --type empty --type file
-	${LILA} 	same as	\t\t% fd  -te 		   -tf
-	${PINK} for   empty directories:	\t	% fd --type empty --type directory  ${LILA}  same same    % fd  -te  -Td"  \n  \
+	${PINK} for   empty files\t $ fd --type empty --type file
+	${LILA}       same as	\t\t$ fd  -te -tf
+	${PINK} for   empty directories: $ fd --type empty --type directory  
+	${LILA}       same same    $ fd  -te  -Td"  \n  \
 	&& fd'
-alias nano='echo -e "\t${PINK}Verwende micro anstelle von nano${RESET}" && micro'
+alias nano='echo -e "\t${PINK}Verwende micro anstelle von nano${RESET}" && micro || nano'
 alias edit='echo -e "\t${PINK}Verwende micro als Standard-Editor${RESET}" && micro'
 alias DATE='echo -e "\t${PINK}Zeige das aktuelle Datum  $(date "+%A, %-d. %B %Y"):{$RESET}" && echo -e "${GELB} $(date "+%A, %-d. %B %Y")${RESET} \n "&& echo -e "${PINK} oder $ (date +%F_%H-%M)\t ${RESET}" 	&& echo -e "${GELB} $(date "+%F_%H-%M") ${RESET}"'
 alias CHmod='echo -e "\t${PINK}Mache alle .py, .sh und .zsh Skripte im aktuellen Verzeichnis ausführbar${RESET}" && find . -maxdepth 1 -type f \( -name "*.sh" -o -name "*.zsh"  -o -name "*.py" \) -exec chmod --verbose u+x {} +'
 alias debug='echo "Debugging..."; set -x'
 
-# --- Log & History ---
-alias LOG='echo -e "\t${PINK}Zeige und sortiere alle error-Einträge in der Log-Datei${RESET}" && cat "$ZDOTDIR/log_error/log_error.txt" | grep "error" | sort'
-alias LOGseparate='echo -e "\t${PINK}Beobachte die Log-Datei in Echtzeit${RESET}" && tail -f "$ZDOTDIR/log_error/log_error.txt"'
-alias LOGinline='echo -e "\t${PINK}Öffne die Log-Datei in less${RESET}" && less -F "$ZDOTDIR/log_error/log_error.txt"'
 
 alias h='history'
 alias history='history -t "%H:%MUhr am %d.%b: "'
 alias g2history='cat "$HISTFILE" | grep -i --colour=always'
 alias g2h=g2history
 alias h2g=g2history
-
-# Funktion zum Suchen von WORD in ALIAS
-g2ali() {
-  if [[ -z "$1" ]]; then
-    echo -e "\t${RED}Fehler: Kein Suchbegriff angegeben.${RESET}\n"
-    echo -e "\t${PINK}Verwendung: g2ali <Suchbegriff>${RESET}"
-    return 1312
-  fi
-  # Suche in Aliases mit optionaler Syntaxhervorhebung durch `bat`
-  if command -v bat &>/dev/null; then
-    alias | grep -i --color=always "$1" | command bat -l toml
-    echo -e "\t${PINK} alias | grep -i --color=always "$1" | command bat -l toml ${RESET}\n"
-  else
-    alias | grep -i --color=always "$1"
-  fi
-}
-alias ali2g='g2ali'
-alias g2lol='g2ali'
-alias lol2g='g2ali'
-
-# Funktion zum Suchen von WORD in ENV
-g2env() {
-  if [[ -z "$1" ]]; then
-    echo -e "\t${RED}Fehler: Kein Suchbegriff angegeben.${RESET}"
-    echo -e "\t${PINK}Verwendung: g2env <Suchbegriff>${RESET}"
-    return 1312
-  fi
-  # Suche in Umgebungsvariablen mit optionaler Syntaxhervorhebung durch `bat`
-  if command -v bat &>/dev/null; then
-    printenv | grep -i --color=always "$1" | command bat -l toml
-    echo -e "\t${PINK} printenv | grep -i --color=always "$1" | command bat -l toml ${RESET}\n"
-  else
-    printenv | grep -i --color=always "$1"
-  fi
-}
-alias env2g='g2env'
 
 #	________________________________________________cat / batcat____________________
 alias BATconf='echo -e "\t${PINK}Öffne bat Konfigurationsdatei${RESET}" && edit /share/bat/config.toml'
@@ -290,28 +311,8 @@ alias bat4='bat --wrap=auto --number --decorations=always --theme=OneHalfDark'
 alias bat5='bat --wrap=never --number --decorations=always --theme=base16'
 alias bat6='bat --wrap=auto --decorations=always --theme=gruvbox-dark'
 
-#____________________________________________________________
-#        du - estimate file space usage
-D1() {
-    local du_options="--human-readable --max-depth=1 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc'"
-    local current_dir
-    current_dir=$(pwd)
-    echo -e "\n\t${PINK}Zeigt 24 direkte Unterverzeichnisse, nach Größe sortiert an!"
-    echo -e "\n\t${GREEN}du ${du_options} ${current_dir} 2> /dev/null | sort -hr | head -n 24 ${PINK} \n... wir reden über Pfad ${NIGHT}${current_dir}${RESET}\n"
-    du $du_options "$current_dir" 2> /dev/null | sort -hr | head -n 24
-    echo -e "\n\t${GREEN}\t... und das Unterverzeichniss ist ${NIGHT}${current_dir}${GREEN}insgesamt:${RESET}"
-    du -sh 2> /dev/null
-}
-D3() {
-    local du_options="--human-readable --max-depth=3 --separate-dirs --threshold=16K --block-size=M --one-file-system --exclude='*cache' --exclude='*run' --exclude='*sys' --exclude='*proc'"
-    local current_dir
-    current_dir=$(pwd)
-    echo -e "\n\t${PINK}Zeigt 24 Unterverzeichnisse in 3ter Ebene, nach Größe sortiert an!"
-    echo -e "\t${GREEN}du ${du_options} ${current_dir} 2> /dev/null | sort -hr | head -n 24 ${PINK} \n... wir reden über Pfad${NIGHT}${current_dir}${RESET}\n"
-    du $du_options "$current_dir" 2> /dev/null | sort -hr | head -n 24
-    echo -e "\n\t${GREEN}\t... und das Unterverzeichniss ist ${NIGHT}${current_dir}${GREEN}insgesamt:${RESET}"
-    du -sh 2> /dev/null
-}
+
+#
 #_____________________________________________________________________________
 #       e x a / e z a .. ls  ll  lh  ld ...
 alias eweb='echo -e "\t${PINK}eza-Ansicht für Web-Projekte (z.B. Hugo)${RESET}" && eza --no-git --total-size --git-ignore -A -tree'
@@ -358,35 +359,35 @@ alias ld='echo -e "\t${PINK} eza ${GELB}$(pwd)${PINK} only (hidden and non-hidde
         --classify --header --only-dirs --width 76'
 
 #------------------------------------------------------------------  lsd
-alias l='echo -e "\t${PINK} LSD ohne alles ${RESET}\n" && lsd --classify --group-dirs=first'
+alias l='echo -e "\t${PINK} LSD ohne alles ${RESET}\n" && lsd --classify --group-dirs=first 2> /dev/null'
 alias la='echo -e "\t${PINK} Zeigt alles in ${GELB}$(pwd)\n${PINK} (hidden) Files und (hidden)directory:${RESET}\n" && \
-    lsd --size short --human-readable --group-dirs=none --almost-all --classify'
+    lsd --size short --human-readable --group-dirs=none --almost-all --classify2 > /dev/null'
 alias ll='echo -e "\t${PINK} LSD ${LILA} REVERSE ... mit  alles  ${GELB}in $(pwd)\n${PINK}(mit relativer Zeit ohne Gruppenberechtigung): ${RESET}\t" && \
     lsd --almost-all --total-size --classify --group-dirs=first \
         --date "relative" --no-symlink --hyperlink "always" --long \
         --size short --header \
-        --blocks "size,links,name,user,date"'
+        --blocks "size,links,name,user,date" 2> /dev/null'
 alias lll='echo -e "\t${PINK} LSD ${LILA}  ... mit  alles  ${GELB}in $(pwd)\n${PINK} (mit absoluter Zeit und Gruppenberechtigung): ${RESET}\t" && \
     lsd --almost-all --total-size --date "+%d. %b %Y %H:%M Uhr" \
         --classify --group-dirs "first" --no-symlink --hyperlink "always" \
         --long --size short --header \
-        --blocks "permission,size,links,name,user,group,date"'
+        --blocks "permission,size,links,name,user,group,date" 2> /dev/null'
 alias lt='echo -e "\t${PINK} LSD ${LILA}...mit alles ${GELB}in $(pwd)${PINK} --reverse --time-sort: ${RESET} \t" && \
     lsd --almost-all --total-size --group-dirs "first"  \
         --classify --no-symlink --hyperlink "always" \
         --long --size "short" --header --reverse \
-        --blocks "size,links,name,date"          --timesort'
+        --blocks "size,links,name,date" --timesort 2> /dev/null'
         
 
 alias lx='echo -e "\t${PINK} LSD ${LILA}...mit  alles  ${GELB}in $(pwd)${PINK}--reverse --extension-sort: ${RESET}\t" && \
     lsd --almost-all --total-size --classify --group-dirs "first" \
         --date "relative" --no-symlink --hyperlink "always" \
         --long --size "short" --reverse --header \
-        --blocks "size,links,name,user,date"    --extensionsort'
+        --blocks "size,links,name,user,date"    --extensionsort 2> /dev/null'
 
 # --- Klassische Werkzeuge ---
 alias ..='cd ..'
-alias df='echo -e "\t${PINK}df -Tha --total ${RESET}\n" && df -Tha --total'
+alias Df='echo -e "\t${PINK}df -Tha --total ${RESET}\n" && df -Tha --total'
 alias fhere='echo -e "\t${PINK}find . -name $1 {RESET}\n" && find . -name'
 alias free='echo -e "\t${PINK}free -gt {RESET}\n" && free -gt'
 alias PS='echo -e "\t${PINK} ps auxf{RESET}\n" && ps auxf'
@@ -473,7 +474,7 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
 # 	  Globale Aliase (werden überall in der Zeile expandiert)
 # 	  usage% file G 'pattern'
 # ### ---------------------------  ####
-alias YT='yt-dlp --progress --sponsorblock-remove all --audio-quality 128k  --audio-format mp3 -x --embed-metadata --embed-thumbnail --no-mtime --restrict-filenames  --console-title --progress-template "download-title:%(info.id)s-%(progress.eta)s" "$1"'
+alias YT='yt-dlp --progress --sponsorblock-remove all --audio-quality 192k  --audio-format mp3 -x --embed-metadata --embed-thumbnail --no-mtime --restrict-filenames  --console-title --progress-template "download-title:%(info.id)s-%(progress.eta)s" "$1"'
 
 alias -g ED='gnome-text-editor --standalone --ignore-session'
 alias -g gedit='gnome-text-editor --standalone --ignore-session'
@@ -499,7 +500,7 @@ alias -g NN="nix-build --no-out-link '<nixpkgs>' -A"
 alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
 # alias -s mp4='vlc --fullscreen --no-video-title-show --no-video-border'
 alias -s {jpg,jpeg,png,bmp,svg,gif,webp}='kitty +kitten icat'
-alias -s {js,json,env,html,css,toml}='bat'
+alias -s {js,json,env,html,css,toml}='bat -p'
 alias -s {conf}='micro -filetype bash'
 alias -s {nix}='gnome-text-editor &'
 alias -s {pdf,otf,xls}='xreader -w &'
