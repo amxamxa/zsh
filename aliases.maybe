@@ -205,3 +205,21 @@ fzf --bind "enter:become(micro {})"
 fzf --bind 'ctrl-b:change-prompt(NewPrompt>---- )'
 echo $RANDOM | fzf --bind 'zero:reload(echo $RANDOM)+clear-query' --height 3
 echo $RANDOM | fzf --bind 'zero:reload(echo $RANDOM)+clear-query' --height 3
+echo "┇┅"
+echo "
+ ┌────────────────────────────────────────┐
+ │ Shift + Left │ Block-Auswahl rechteckig 
+ │ right (press) │ Auswahl erweitern │ 
+ │ left (release)│ Copy to Clip, select+ │
+ │ Middle (rel.) │ X11-Paste Selection │ 
+ │ Shift + Middle│ Paste Clipboard │ 
+ │ Ctrl + Left │ Open Link URL │ 
+ │ Shift + right │ Show Scrollback │ 
+ │ Ctrl + Wheel │ Next / Previous Tab │
+ │ Rechts+Mitte │ Discard Event/ Ignore │
+ └────────────────────────────────────────┘
+ " | clolcat
+
+
+sudo btrfs subvolume snapshot /share /share/snapshots/$(date +%Y-%m-%d) 
+
