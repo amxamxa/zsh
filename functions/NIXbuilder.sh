@@ -14,11 +14,11 @@ SKY="\033[38;2;165;60;230m\033[48;2;60;1;85m"  # Blau für Benutzerinteraktion (
 RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"    # Rot für Fehler (fg: #F08080, bg: #8B0000)
 RASPBERRY="\033[38;2;32;0;21m\033[48;2;221;160;221m" # Lila für Akzent (fg: #200015, bg: #DDA0DD)
 RESET="\033[0m"
-
-# Sudo-Rechte überprüfen
+# Handle sudo permissions interactively
 if [ "$EUID" -ne 0 ]; then
-    echo -e "\t${RASPBERRY}Dieses Skript benötigt Administratorrechte.${RESET} 
-    	${RED}Bitte mit 'sudo ./NIXbuild.sh' ausführen.${RESET}"
+    echo -e "\t${RASPBERRY}⚠️ This script requires administrator privileges. ⚠️ ${RESET}"
+    echo -e "\t${GREEN}Requesting sudo permissions interactively...${RESET}"
+    exec sudo -k "$0" "$@"
     exit 1
 fi
 
@@ -34,13 +34,13 @@ countdown() {
 }
 
 # 1. Editor öffnen
-read -p "$(echo -e "\t${SKY}Soll der Editor für /etc/nixos/*.nix geöffnet werden? \n\t\t${RASPBERRY}(Enter für Ja, nN für Nein): ${RESET}")" editor_choice
+read -p -r "$(echo -e "\t${SKY}Soll der Editor für /etc/nixos/*.nix geöffnet werden? \n\t\t${RASPBERRY}(Enter für Ja, nN für Nein): ${RESET}")" editor_choice
 if [[ "$editor_choice" != "n" && "$editor_choice" != "N" ]]; then
     gnome-text-editor --ignore-session --standalone --new-window /etc/nixos/*.nix 2>/dev/null￼￼ || micro  /etc/nixos/*.nix 2>/dev/null
 fi
 echo
 # 2. $BUILD setzen
-read -p "$(echo -e "\t${SKY}Wie soll \$BUILD definiert werden?\n\t\t${RASPBERRY}(b für boot, s für switch, v für build-vm): ${RESET}")" build_choice
+read -p -r "$(echo -e "\t${SKY}Wie soll \$BUILD definiert werden?\n\t\t${RASPBERRY}(b für boot, s für switch, v für build-vm): ${RESET}")" build_choice
 case $build_choice in
     b) BUILD="boot" ;;
     s) BUILD="switch" ;;
@@ -49,7 +49,7 @@ case $build_choice in
 esac
 echo
 # 3. $UPGRADE Option
-read -p "$(echo -e "\t${SKY}Soll die Option --upgrade gesetzt werden? \n\t\t${RASPBERRY}(Enter für 'Nein', up für '--upgrade'): ${RESET}")" upgrade_choice
+read -p -r "$(echo -e "\t${SKY}Soll die Option --upgrade gesetzt werden? \n\t\t${RASPBERRY}(Enter für 'Nein', up für '--upgrade'): ${RESET}")" upgrade_choice
 if [[ "$upgrade_choice" == "up" ]]; then
     UPGRADE="--upgrade"
 else
@@ -60,7 +60,7 @@ echo
 # Zeile für Ausgabe von 'default_name'
 echo -e "\t${RASPBERRY}Default Name ist: \t ${RED}$default_name${RESET}"
 # Eingabeaufforderung für den Benutzernamen
-read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name
+read -p -r "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name
 # Setze den Namen auf den Wert des Benutzers oder den Standardwert
 NAME=${profile_name:-$default_name}
 # Zeige den gesetzten Namen an
@@ -68,7 +68,7 @@ echo -e "${SKY}Der gesetzte Name und die Wahloption in GRUB: ${PINK} $NAME ${RES
 
 #default_name="24.11_4xam"
 #echo -e "\t${RASPBERRY}echo "Default Name ist: \t ${RED} $default_name"
-#read -p "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name"
+#read -p -r "$(echo -e "\t${SKY}Wie soll \$NAME gesetzt werden? \n\t\t${RASPBERRY}(Enter für $default_name): ${RESET}")" profile_name"
 #NAME=${profile_name:-$default_name}
 #echo
 

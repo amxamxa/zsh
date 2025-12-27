@@ -24,6 +24,9 @@
 # 				ODER
 #	awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
+##  ZSH DIRECTORY STACK - DS
+   alias -g D='dirs -v'
+
 alias tuxpaint='tuxpaint --datadir $HOME/bilder/TUXPAINT/data --exportdir $HOME/bilder/TUXPAINT/export --savedir $HOME/bilder/TUXPAINT/saves'
 # --- Allgemeine Werkzeuge ---
 alias fd='echo -e "\t${PINK}Führe fd (find alternative) mit automatischer Farbgebung aus${RESET}" && fd --color=auto'

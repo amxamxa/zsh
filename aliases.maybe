@@ -223,3 +223,4 @@ echo "
 
 sudo btrfs subvolume snapshot /share /share/snapshots/$(date +%Y-%m-%d) 
 
+echo "⬬⬬…"

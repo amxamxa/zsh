@@ -50,61 +50,23 @@ There's nothing wrong with doing any of these, but I personally feel that fzf ma
 
 ## [Install](#install)
 
-To download and install fzf-tools choose an install method and follow the corresponding steps. Once
-fininshed jump to the [Usage](#usage) section.
+*run the following command to clone the repository to the chosen location:*
 
-### [Manual Install](#manual_install)
-
-1. Download and place the ***zsh-toggles*** folder in a location of your choosing.
-2. Next source the script as shown in the [Usage](#usage) section.
-
-### [Command Line Install](#command_line_install)
-
-#### [Using Git Clone:](#git_clone)
-
-1) Open your terminal and navigate to the directory where you want to clone the repository: 
-
-```bash
-cd where/I/want/to/install
-```
-
-2) Next run the following command to clone the repository to the chosen location:
 ```bash
 git clone https://github.com/happycod3r/fzf-tools.git
 ```
 
-#### [Using Curl:](#curl)
-
-1) Pick a directory to download it to:
-
 ```bash
-cd where/I/want/
-```
 
-2) Paste the following line into your terminal and press the `Enter (^M)` key:
-
-```bash
-curl https://github.com/happycod3r/fzf-tools.git
 ```
 
 ## [Usage](#usage)
-
-### [oh-my-zsh:](#ohmyzsh)
-
-To use fzf-tools with oh-my-zsh follow these 2 steps:
-
-1) Install fzf: You need to install fzf on your system. You can find installation instructions for your operating system in the fzf GitHub repository: https://github.com/junegunn/fzf
-2) Simply move the fzf-tools folder to the `~/.oh-my-zsh/custom/plugins` directory and then add ***fzf-tools*** to the ***plugins*** array in your ***~/.zshrc*** file.
-
-```bash
-plugins=(fzf-tools ...)
-```
 
 ### [stand-alone:](#stand_alone)
 
 To use fzf-tools without a plugin manager like oh-my-zsh follow these steps:
 
-  1) Install fzf: You need to install fzf on your system. You can find installaithout a plugin managertion instructions for your operating system in the fzf GitHub repository: https://github.com/junegunn/fzf
+  1) Install fzf: You need to install fzf on your system. You can find installation instructions for your operating system in the fzf GitHub repository: https://github.com/junegunn/fzf
   2) Next put the fzf-tools folder in a place of your choosing then source the ***fzf-tools.zsh*** file in your ***~/.zshrc*** file.
 
 ```bash
@@ -113,6 +75,13 @@ source a/dir/of/your/choosing/fzf-tools.zsh
 
 ## [Documentation](#documentation)
 
+
+
+|            | SHORTCUTS                                                    |
+| ---------- | :----------------------------------------------------------- |
+| **Ctrl+M** | `fzf-command-widget` → Kontextabhängige FZF-Erweiterung für `ls`, `man`, `grep`, `find`, `ps aux` |
+| **Ctrl+R** | Zsh-History-Suche →  mit `fzf-run-cmd-from-history`          |
+| **Ctrl+E** | Datei auswählen und direkt im `$EDITOR` öffnen               |
 
 ### [fzf-command-widget](#fzf-command-widget)
 
