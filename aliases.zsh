@@ -49,7 +49,7 @@ PLAY() {
   asciinema play "asciinema/$title.cast"
 }
 
- Funktion zum Suchen von WORD in ALIAS
+# GREP2aliases.zsh -- Funktion zum Suchen von WORD in ALIAS
 g2ali() {
   if [[ -z "$1" ]]; then
     echo -e "\t${RED}Fehler: Kein Suchbegriff angegeben.${RESET}\n"
@@ -477,7 +477,20 @@ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD)
 # 	  Globale Aliase (werden überall in der Zeile expandiert)
 # 	  usage% file G 'pattern'
 # ### ---------------------------  ####
-alias YT='yt-dlp --progress --sponsorblock-remove all --audio-quality 192k  --audio-format mp3 -x --embed-metadata --embed-thumbnail --no-mtime --restrict-filenames  --console-title --progress-template "download-title:%(info.id)s-%(progress.eta)s" "$1"'
+# Lädt Audio von YouTube als MP3 (192k), entfernt Sponsorblock-Segmente, bettet Metadaten/Thumbnail ein, begrenzt Dateinamen auf 48 Zeichen, zeigt benutzerdefinierten Download-Fortschritt.
+alias -g YTA='yt-dlp --audio-quality 192k  --audio-format mp3 \ 
+                 --progress --sponsorblock-remove all \
+                 -x --embed-metadata --embed-thumbnail --no-mtime --console-title  \ 
+                 --restrict-filenames --output "%(title).48s.%(ext)s" \
+                 --progress-template "%(progress._percent_str)s of 100% | with %(progress._speed_str)s | %(progress._eta_str)s remaining" "$1"'
+
+# Lädt Video von YouTube als MP4, entfernt Sponsorblock-Segmente, bettet Metadaten/Thumbnail ein, begrenzt Dateinamen auf 48 Zeichen, zeigt benutzerdefinierten Download-Fortschritt.
+alias -g YTV='yt-dlp --audio-quality 192k --remux-video mp4 \ 
+                 --progress --sponsorblock-remove all \
+                 -x --embed-metadata --embed-thumbnail --no-mtime --console-title  \ 
+                 --restrict-filenames --output "%(title).48s.%(ext)s" \
+                 --progress-template "%(progress._percent_str)s of 100% | with %(progress._speed_str)s | %(progress._eta_str)s remaining" "$1"'
+
 
 alias -g ED='gnome-text-editor --standalone --ignore-session'
 alias -g gedit='gnome-text-editor --standalone --ignore-session'
@@ -490,10 +503,11 @@ alias -g LL='| less -X -j5 --tilde --save-marks \
     --quit-if-one-screen --use-color \
     --color=NWr --color=EwR --color=PbC --color=Swb'
 alias -g G='| grep --ignore-case --color=auto'
-alias -g HG='--help 2>&1 | grep'
+alias -g HH='--help 2>&1 | grep'
 alias -g H='--help'
 alias -g N0='2> /dev/null'
 alias -g D0='2> /dev/null'
+alias -g MM='&& echo "Success" || echo "Failed"'
 
 # dahinter PKGS name, er letzte Pfad ist der vollständige Pfad zum gebauten Paket im Nix-Store. Ohne --no-out-link würde Nix einen Symlink namens result im aktuellen Verzeichnis erstellen, der auf diesen Pfad zeigt.
 alias -g NN="nix-build --no-out-link '<nixpkgs>' -A"  
