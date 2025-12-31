@@ -2,6 +2,9 @@
 # auth:______max__kempter_______
 # filename:______NIXbuilder.sh
 
+# todo: Option Editor:     #    gnome-text-editor --ignore-session --standalone --new-window "$NixFiles" 2>/dev/null ||
+
+
 # Define colors for better readability
 SKY=" \033[38;2;255;0;53m\033[48;2;34;0;82m"  # pink for instructions
 RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"    # Red for warnings
@@ -10,14 +13,26 @@ GREEN="\033[38;2;252;222;90m\033[48;2;0;0;139m" # BLUE for confirmation
 RESET="\033[0m"  # Reset to normal colors
 
 # Configuration files location
-NixFiles="/etc/nixos/*.nix"
+EZA_COLORS="*.nix=38;5;213"; # pink
+DIR="/etc/nixos"
 
-# Check for administrator rights
 if [ "$EUID" -ne 0 ]; then
     echo -e "\t${RAS}⚠️ This script requires administrator privileges. ⚠️ ${RESET}"
     echo -e "\t${SKY}   ...Requesting sudo permissions interactively...   ${RESET}"
     exec sudo -k "$0" "$@"
     exit 1
+fi
+
+# find-Befehls und Speicherung in Array # Store output as array for iteration
+mapfile -t NixFiles < <(find "$DIR" -name "*.nix" -not -path "$DIR/bkp/*")
+# NixFiles=($(find . -name "*.nix" -not -path "./bkp/*"))
+echo -e "\t${RAS}This Script found nix-files: \t ${#NixFiles[@]}${RESET}"
+echo -e "\t\t${SKY}their names are:${RESET}\n"
+
+if command -v eza &>/dev/null; then
+    find "$DIR" -name "*.nix" -not -path "$DIR/bkp/*" -exec eza --grid --long --no-permissions --no-user --time-style=relative {} +
+else
+    find "$DIR" -name "*.nix" -not -path "$DIR/bkp/*" -exec ls -la {} +
 fi
 
 # Countdown function with cancellation option
@@ -53,7 +68,7 @@ while true; do
 done
 
 if [[ "$DO_EDIT" == "yes" ]]; then
-    gnome-text-editor --ignore-session --standalone --new-window "$NixFiles" 2>/dev/null || "$EDITOR" "$NixFiles" || nano "$NixFiles"
+ 	"$EDITOR" "${NixFiles[@]}" || nano "${NixFiles[@]}"
 fi
 echo
 

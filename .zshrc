@@ -61,23 +61,6 @@ source_or_error() {
     fi
 }
 
-# Sourcen von Konfigurationsdateien
-# echo "   󰞷 "
-echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
-# Source configuration files
-#    source_or_error "$ZDOTDIR/prompt/purify.zsh"
-source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
-source_or_error "$ZDOTDIR/aliases.zsh"
-sleep 0.02
-source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
-sleep 0.03
-source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
-sleep 0.02
-source_or_error "$ZDOTDIR/functions/my-functions.zsh"
-sleep 0.02
-source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
-source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
-sleep 0.02
 
 # /share/zsh/plugins/term-theme.zsh #in .zshrc integriert!
 # source_or_error "$ZDOTDIR/plugins/tetris.zsh
@@ -257,13 +240,32 @@ else
     sleep 0.2	
 fi
 
+# Sourcen von Konfigurationsdateien
+# echo "   󰞷 "
+echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+# Source configuration files
+#    source_or_error "$ZDOTDIR/prompt/purify.zsh"
+source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
+source_or_error "$ZDOTDIR/aliases.zsh"
+sleep 0.02
+source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
+source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
+sleep 0.02
+source_or_error "$ZDOTDIR/functions/my-functions.zsh"
+sleep 0.02
+source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
+source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
+source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"
+sleep 0.02
+
+
 echo "        	    __              __              __      
 	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
 	     (_-< / _ \/ _ \ / __// __// __// // // __/ (_-<
 	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"				
- table.sh ./kitty-keys.txt 
+
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
  #echo "${BOLD}  shift+KP_MULTIPLY	next_layout
   # shift+KP_DIVIDE	swap_with_window
@@ -280,7 +282,7 @@ echo "        	    __              __              __
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
   
 # Display kitty keybindings table
-if [[ -f "$ZDOTDIR/functions/table.sh" && -f "./kitty-keys.txt" ]]; then
+if [[ -f "$ZDOTDIR/functions/table.sh" ]]; then
     "$ZDOTDIR/functions/table.sh" ./kitty-keys.txt
 fi
 

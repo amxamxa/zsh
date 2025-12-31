@@ -9,23 +9,6 @@
 #//////                                                          ///////#       
 #///////////////////////////////////////////////////////////////////////#       
 
-# ────────────────────────────────────────────────
-# Function: fzf-file-edit
-# Keybinding: Ctrl+E
-# Purpose: Select file with fzf and open in $EDITOR
-# Options:
-#   --preview: shows syntax-highlighted file with line numbers
-#   --preview-window: places preview at bottom (40% height)
-# Output: Opens selected file in $EDITOR
-# ────────────────────────────────────────────────
-bindkey '^E' fzf-file-edit
-function fzf-file-edit() {
-    local file
-    file=$(fzf \
-        --preview 'bat --style=numbers --color=always {}' \
-        --preview-window=down:40%)
-    [[ -n "$file" ]] && $EDITOR "$file"
-}
 
 #########################################################################
 
@@ -254,8 +237,4 @@ alias fzfind='fzf-find'
 
 autoload -Uz fzf-command-widget fzf-man fzf-run-cmd-from-history fzf-exec-scripts fzf-search-files-on-path fzf-git-log fzf-ag fzf-docker-ps fzf-ssh fzf-grep fzf-find
 
-# Initialize fzf
-if [[ -x "$(command -v fzf)" ]]; then
-    #export FZF_DEFAULT_COMMAND='ag -g ""'
-    #export FZF_DEFAULT_OPTS='-m --preview-window=up:40%:wrap'
-fi
+

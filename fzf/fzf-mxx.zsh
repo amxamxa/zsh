@@ -7,23 +7,28 @@
 # Output: Opens selected file in $EDITOR
 
 function fzf-file-edit() {
-    local files
+    local file
 
-    files=$(
-        fzf --multi \
-            --preview 'bat --style=numbers --color=always --line-range :300 {}' \
+    file=$(
+        fzf --preview 'bat --style=numbers --color=always --line-range :300 {}' \
             --preview-window=down:40% \
             --height=80% \
             --border \
-            --prompt='Edit ❯ ' \
-            --bind='ctrl-a:select-all,ctrl-d:deselect-all'
+            --prompt='Edit ❯ '
     )
 
-    [[ -z "$files" ]] && return 0
-
-    ${EDITOR:-nano} ${(f)files}
+    [[ -n "$file" ]] && ${EDITOR:-nano} "$file"
+    
+    # Redraw the prompt
+    zle reset-prompt
 }
 
+# Create a zle widget from the function
+zle -N fzf-file-edit
+
+# Bind Ctrl+E to the widget
 bindkey '^E' fzf-file-edit
 
+# Remove the autoload line since we're defining the function directly
+# autoload -Uz fzf-file-edit
 # ────────────────────────────────────────────────
