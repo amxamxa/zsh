@@ -1,291 +1,604 @@
-
 #!/usr/bin/env bash
-# auth:        Max Kempter
-# filename:    NIXempty.sh
-# version:     v0.3
-# description: Advanced Nix store cleanup utility with safety checks and comprehensive logging
-# changelog:   v0.3.0 - Added interactive phase confirmation, detailed error messages, and dry-run improvements
-#              v0.2.0 - Added comprehensive help system and safety checks
-#              v0.1.0 - Performance optimizations, conditional df checks
+#!/usr/bin/env bash
+#===============================================================================
+# TITLE:        NIXempty.sh - Advanced Nix Store Cleanup Utility
+# AUTHOR:       max_kempter
+# VERSION:      v0.2.1
+# DESCRIPTION:  Comprehensive Nix store cleanup with safety checks and logging
+# CHANGELOG:    v0.2.1 - Added command prefix to avoid alias conflicts
+#               v0.2.0 - Added comprehensive help system
+#               v0.1.0 - Performance optimizations, conditional df checks
+#===============================================================================
+
+#-------------------------------------------------------------------------------
+# SECTION 1: STRICT MODE AND GLOBAL CONFIGURATION
+#-------------------------------------------------------------------------------
 
 # Enable strict error handling for better reliability
 set -euo pipefail
 IFS=$'\n\t'
 
-# --- Color Palette ---
-readonly RED='\033[0;31m'
+#-------------------------------------------------------------------------------
+# SECTION 2: COLOR PALETTE (ANSI ESCAPE CODES)
+#-------------------------------------------------------------------------------
+
+readonly SKY="\033[38;2;62;36;129m\033[48;2;135;206;235m"
+readonly RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
+readonly RASPBERRY="\033[38;2;32;0;21m\033[48;2;221;160;221m"
 readonly GREEN='\033[0;32m'
 readonly YELLOW='\033[1;33m'
 readonly CYAN='\033[0;36m'
 readonly BLUE='\033[0;34m'
 readonly PINK='\033[0;35m'
 readonly NC='\033[0m'  # No Color / Reset
-readonly BOLD='\033[1m'
 
-# --- Script Configuration ---
+#-------------------------------------------------------------------------------
+# SECTION 3: SCRIPT CONFIGURATION
+#-------------------------------------------------------------------------------
+
 readonly SCRIPT_NAME="$(basename "$0")"
-readonly VERSION="v0.3"
+readonly VERSION="v0.2.1"
 readonly LOG_FILE="/tmp/nix-cleanup-$(date +%Y%m%d-%H%M%S).log"
 readonly MIN_FREE_SPACE_GB=5  # Minimum free space required in GB
-DRY_RUN="${DRY_RUN:-false}"  # Can be overridden via environment
-CHECK_DISK="${CHECK_DISK:-true}"  # Control df checks
-DEBUG="${DEBUG:-false}"  # Debug output control
 
-# --- Exit Codes ---
+# Custom exit codes (avoiding Nix and system reserved codes)
 readonly EXIT_SUCCESS=0
-readonly EXIT_ERROR_DEPENDENCIES=1
-readonly EXIT_ERROR_DISK_SPACE=2
-readonly EXIT_ERROR_NIX_DAEMON=3
+readonly EXIT_GENERAL_ERROR=1
+readonly EXIT_INVALID_ARG=10
+readonly EXIT_DEPENDENCY_MISSING=11
+readonly EXIT_INSUFFICIENT_PRIVILEGES=12
+readonly EXIT_INSUFFICIENT_SPACE=13
+readonly EXIT_NIX_OPERATION_ACTIVE=14
+readonly EXIT_USER_CANCELLED=15
+readonly EXIT_DRY_RUN=16
 
-# --- Logging Function ---
+#-------------------------------------------------------------------------------
+# SECTION 4: UTILITY FUNCTIONS
+#-------------------------------------------------------------------------------
+
+# FUNCTION: log_message
+# DESCRIPTION: Log messages with timestamp and level support
+# RETURNS: Nothing (outputs to stderr and log file)
 log_message() {
     local level="$1"
     local message="$2"
     local timestamp
-    timestamp=$(date +"%Y-%m-%d %H:%M:%S")
-    echo -e "[${timestamp}] [${level}] ${message}" >> "$LOG_FILE"
+    timestamp=$(command date '+%Y-%m-%d %H:%M:%S')
+    
+    # Define color based on level
+    local color=""
+    local symbol=""
     case "$level" in
-        "ERROR")   echo -e "${RED}[${timestamp}] [${level}] ${message}${NC}" ;;
-        "WARNING") echo -e "${YELLOW}[${timestamp}] [${level}] ${message}${NC}" ;;
-        "INFO")    echo -e "${CYAN}[${timestamp}] [${level}] ${message}${NC}" ;;
-        "SUCCESS") echo -e "${GREEN}[${timestamp}] [${level}] ${message}${NC}" ;;
-        "DRY RUN") echo -e "${BLUE}[${timestamp}] [${level}] ${message}${NC}" ;;
-        *)         echo -e "[${timestamp}] [${level}] ${message}" ;;
+        ERROR)     color="$RED"     symbol="✗";;
+        WARNING)   color="$YELLOW"  symbol="⚠";;
+        INFO)      color="$CYAN"    symbol="ℹ";;
+        SUCCESS)   color="$GREEN"   symbol="✓";;
+        DEBUG)     color="$PINK"    symbol="🐛";;
+        *)         color="$NC"      symbol="•";;
     esac
+    
+    # Format output
+    local output="[$timestamp] [$level] $message"
+    
+    # Print to stderr with colors
+    if [[ -t 2 ]]; then
+        >&2 echo -e "${color}${symbol} ${message}${NC}"
+    else
+        >&2 echo "$output"
+    fi
+    
+    # Always write to log file without colors
+    echo "$output" >> "$LOG_FILE"
 }
 
-# --- Error Handler ---
+# FUNCTION: cleanup_on_exit
+# DESCRIPTION: Cleanup handler for script exit
+# RETURNS: Nothing
 cleanup_on_exit() {
     local exit_code=$?
-    log_message "INFO" "Script finished with exit code: $exit_code"
-    if [[ $exit_code -ne 0 ]]; then
-        log_message "ERROR" "Script failed. Check $LOG_FILE for details."
-        echo -e "${RED}Error: Script failed. Check $LOG_FILE for details.${NC}"
+    
+    if [[ $exit_code -eq $EXIT_SUCCESS ]]; then
+        log_message "SUCCESS" "Script completed successfully"
+    else
+        log_message "ERROR" "Script exited with code $exit_code"
     fi
+    
+    log_message "INFO" "Log file saved to: $LOG_FILE"
+    
+    # Remove trap to prevent infinite recursion
+    trap - EXIT INT TERM
     exit $exit_code
 }
-trap cleanup_on_exit EXIT SIGINT SIGTERM
 
-# --- Check Dependencies ---
+# Register cleanup handler
+trap cleanup_on_exit EXIT INT TERM
+
+# FUNCTION: check_privileges
+# DESCRIPTION: Check if running with proper privileges
+# RETURNS: 0 if privileges are sufficient, non-zero otherwise
+check_privileges() {
+    if [[ $EUID -eq 0 ]]; then
+        log_message "WARNING" "Running as root is not recommended for Nix operations"
+        log_message "INFO" "Please run as regular user with sudo privileges"
+        return $EXIT_INSUFFICIENT_PRIVILEGES
+    fi
+    
+    # Check for sudo access
+    if ! command sudo -n true 2>/dev/null; then
+        log_message "INFO" "Need sudo privileges for some operations"
+        command echo "Please enter your password if prompted:"
+        if ! command sudo -v; then
+            log_message "ERROR" "Failed to acquire sudo privileges"
+            return $EXIT_INSUFFICIENT_PRIVILEGES
+        fi
+    fi
+    
+    return $EXIT_SUCCESS
+}
+
+# FUNCTION: check_dependencies
+# DESCRIPTION: Verify all required commands are available
+# RETURNS: 0 if all dependencies are met, non-zero otherwise
 check_dependencies() {
     local missing_deps=()
-    local deps=("nix-env" "nix-collect-garbage" "nix-store" "find" "rm" "awk" "grep" "numfmt")
-    if [[ "$CHECK_DISK" == "true" ]]; then
-        deps+=("df")
-    fi
+    local deps=("du" "df" "find" "xargs" "awk" "grep" "sed" "numfmt" "pgrep" "timeout")
+    
+    # Add Nix-specific dependencies
+    deps+=("nix-env" "nix-collect-garbage" "nix-store")
+    
     for dep in "${deps[@]}"; do
-        if ! command -v "$dep" >/dev/null; then
+        if ! command -v "$dep" &>/dev/null; then
             missing_deps+=("$dep")
         fi
     done
+    
     if [[ ${#missing_deps[@]} -gt 0 ]]; then
         log_message "ERROR" "Missing dependencies: ${missing_deps[*]}"
-        return 1
+        return $EXIT_DEPENDENCY_MISSING
     fi
-    return 0
+    
+    log_message "SUCCESS" "All dependencies are available"
+    return $EXIT_SUCCESS
 }
 
-# --- Check Disk Space ---
+# FUNCTION: check_disk_space
+# DESCRIPTION: Check available disk space before cleanup
+# PARAMETERS: $1 - Skip check flag (true/false)
+# RETURNS: 0 if sufficient space, non-zero otherwise
 check_disk_space() {
-    if [[ "$CHECK_DISK" != "true" ]]; then
-        return 0
+    local skip_check="${1:-false}"
+    
+    if [[ "$skip_check" == "true" ]]; then
+        log_message "INFO" "Disk space check skipped"
+        return $EXIT_SUCCESS
     fi
-    local free_space
-    free_space=$(df -BG /nix/store | awk 'NR==2 {print $4}' | tr -d 'G')
-    if [[ "$free_space" -lt "$MIN_FREE_SPACE_GB" ]]; then
-        log_message "WARNING" "Low disk space: ${free_space}GB free (minimum ${MIN_FISK_SPACE_GB}GB required)."
-        return 1
+    
+    local available_bytes
+    available_bytes=$(command df -B1 /nix 2>/dev/null | command awk 'NR==2 {print $4}')
+    
+    if [[ -z "$available_bytes" ]]; then
+        log_message "WARNING" "Could not determine available disk space"
+        return $EXIT_SUCCESS  # Continue anyway
     fi
-    return 0
+    
+    local available_gb=$((available_bytes / 1024 / 1024 / 1024))
+    
+    if [[ $available_gb -lt $MIN_FREE_SPACE_GB ]]; then
+        log_message "WARNING" "Low disk space: ${available_gb}GB available (minimum: ${MIN_FREE_SPACE_GB}GB)"
+        log_message "INFO" "Consider freeing up space before proceeding"
+        return $EXIT_INSUFFICIENT_SPACE
+    fi
+    
+    log_message "SUCCESS" "Disk space check passed: ${available_gb}GB available"
+    return $EXIT_SUCCESS
 }
 
-# --- Get Store Size ---
+# FUNCTION: get_store_size
+# DESCRIPTION: Get store size with error handling and fallback
+# RETURNS: Size in bytes (output to stdout), 0 on success
 get_store_size() {
-    if ! timeout 30 command du -sb /nix/store 2>/dev/null | awk '{print $1}'; then
-        log_message "WARNING" "Failed to get store size with 'du'. Falling back to 'df'..."
-        df -B1 /nix/store | awk 'NR==2 {print $3}'
-    fi
-}
-
-# --- Check for Running Nix Daemon ---
-check_nix_daemon() {
-    # Check if the daemon process is running (not just the socket)
-    if systemctl is-active --quiet nix-daemon.service 2>/dev/null; then
-        log_message "ERROR" "Nix daemon is running. Please stop it before cleanup."
-        return 1
-    fi
-    # Fallback: Check for any remaining nix-daemon processes
-    if pgrep -x nix-daemon >/dev/null; then
-        log_message "ERROR" "Nix daemon process detected. Please stop it before cleanup."
-        return 1
-    fi
-    return 0
-}
-
-# --- Print Header ---
-print_header() {
-    cat <<EOF
-
-${BOLD}${BLUE}
-
- _, _ _ _  ,
- |\ | | '\/ 
- | \| |  /\ 
- ~  ~ ~ ~  ~
-            
- __, _, _ __, ___ , _
- |_  |\/| |_)  |  \ |
- |   |  | |    |   \|
- ~~~ ~  ~ ~    ~    )
-                   ~'
-                  +
-                  
- ${NC}
-
-${CYAN}NIXempty.sh ${VERSION}${NC}
-Log file: ${LOG_FILE}
-Options: DRY_RUN=$DRY_RUN, CHECK_DISK=$CHECK_DISK, DEBUG=$DEBUG
----
-EOF
-}
-
-# --- Help Function ---
-show_help() {
-    cat <<EOF
-${BOLD}${SCRIPT_NAME}${NC} - Advanced Nix Store Cleanup Utility
-
-${BOLD}Description:${NC}
-  This script cleans up the Nix store by removing old generations, garbage collecting,
-  and optimizing the store. It includes safety checks and comprehensive logging.
-
-${BOLD}Usage:${NC}
-  $SCRIPT_NAME [OPTIONS]
-
-${BOLD}Options:${NC}
-  --dry-run          Perform a dry run (no changes made)
-  --no-check-disk    Skip disk space check
-  --debug            Enable debug output
-  --help             Show this help message
-  --version          Show version information
-
-${BOLD}Examples:${NC}
-  $SCRIPT_NAME --dry-run
-  $SCRIPT_NAME --no-check-disk
-  $SCRIPT_NAME --debug
-
-${BOLD}Notes:${NC}
-  - Ensure you have write permissions for the Nix store.
-  - The script logs all actions to $LOG_FILE.
-EOF
-}
-
-# --- Main Cleanup Function ---
-NIXempty() {
-    # Parse arguments
-    while [[ $# -gt 0 ]]; do
-        case "$1" in
-            --dry-run)      DRY_RUN=true ;;
-            --no-check-disk) CHECK_DISK=false ;;
-            --debug)        DEBUG=true ;;
-            --help)         show_help; exit 0 ;;
-            --version)      echo "$VERSION"; exit 0 ;;
-            *)              log_message "ERROR" "Unknown argument: $1"; show_help; exit 1 ;;
-        esac
-        shift
-    done
-
-    # Initialization
-    print_header
-    log_message "INFO" "Starting Nix store cleanup..."
-
-    # Pre-checks
-    if ! check_dependencies; then
-        exit $EXIT_ERROR_DEPENDENCIES
-    fi
-    if ! check_disk_space; then
-        log_message "WARNING" "Continuing despite low disk space..."
-    fi
-    if ! check_nix_daemon; then
-        exit $EXIT_ERROR_NIX_DAEMON
-    fi
-
-    # Get initial store size
-    local initial_size
-    initial_size=$(get_store_size)
-    log_message "INFO" "Initial store size: $(numfmt --to=iec --suffix=B "$initial_size")"
-
-    # Safety confirmation
-    echo -e "${YELLOW}WARNING: This script will permanently delete data from the Nix store.${NC}"
-    read -rp "Do you want to continue? (y/N) " answer
-    if [[ "$answer" != "y" ]]; then
-        log_message "INFO" "User aborted."
-        exit 0
-    fi
-
-    # --- Phase 1: Clean GC Roots ---
-    echo -e "\n${BOLD}${CYAN}Phase 1: Cleaning GC Roots...${NC}"
-    if [[ "$DRY_RUN" == "true" ]]; then
-        log_message "DRY RUN" "Would clean GC roots in /nix/var/nix/gcroots/auto."
-    else
-        log_message "INFO" "Removing broken symlinks in /nix/var/nix/gcroots/auto..."
-        command find /nix/var/nix/gcroots/auto -type l -xtype l -print -delete 2>&1 | tee -a "$LOG_FILE"
-        log_message "INFO" "Removing old GC roots in /nix/var/nix/gcroots/auto..."
-        command find /nix/var/nix/gcroots/auto -type l -delete 2>&1 | tee -a "$LOG_FILE"
-        log_message "SUCCESS" "GC roots cleaned."
-    fi
-
-    # --- Phase 2: Delete Old Generations ---
-    echo -e "\n${BOLD}${CYAN}Phase 2: Deleting old generations...${NC}"
-    if [[ "$DRY_RUN" == "true" ]]; then
-        log_message "DRY RUN" "Would delete old user and system generations."
-    else
-        log_message "INFO" "Deleting old user generations..."
-        command nix-env --delete-generations old 2>&1 | tee -a "$LOG_FILE"
-        if [[ -f /etc/nixos/configuration.nix ]]; then
-            log_message "INFO" "NixOS detected. Deleting old system generations..."
-            command nix-env --delete-generations old --profile /nix/var/nix/profiles/system 2>&1 | tee -a "$LOG_FILE"
+    local size_bytes
+    
+    # Try du with timeout (most accurate)
+    if size_bytes=$(command timeout 30s command du -sb /nix/store 2>/dev/null | command awk '{print $1}'); then
+        if [[ -n "$size_bytes" ]]; then
+            echo "$size_bytes"
+            return $EXIT_SUCCESS
         fi
-        log_message "SUCCESS" "Old generations deleted."
     fi
-
-    # --- Phase 3: Garbage Collection ---
-    echo -e "\n${BOLD}${CYAN}Phase 3: Running garbage collection...${NC}"
-    if [[ "$DRY_RUN" == "true" ]]; then
-        log_message "DRY RUN" "Would run garbage collection."
-    else
-        log_message "INFO" "Running garbage collection..."
-        timeout 3600 nix-collect-garbage -d 2>&1 | tee -a "$LOG_FILE"
-        log_message "SUCCESS" "Garbage collection completed."
+    
+    # Fallback: Use df estimation
+    log_message "WARNING" "Using fallback method for store size calculation"
+    if size_bytes=$(command df -B1 /nix/store 2>/dev/null | command awk 'NR==2 {print $3}'); then
+        echo "$size_bytes"
+        return $EXIT_SUCCESS
     fi
-
-    # --- Phase 4: Store Optimization ---
-    echo -e "\n${BOLD}${CYAN}Phase 4: Optimizing store...${NC}"
-    if [[ "$DRY_RUN" == "true" ]]; then
-        log_message "DRY RUN" "Would optimize store (deduplication)."
-    else
-        log_message "INFO" "Optimizing store..."
-        command nix-store --optimise 2>&1 | tee -a "$LOG_FILE"
-        log_message "SUCCESS" "Store optimization completed."
-    fi
-
-    # --- Results ---
-    local final_size
-    final_size=$(get_store_size)
-    local saved_space=$((initial_size - final_size))
-    echo -e "\n${BOLD}${GREEN}--- Results ---${NC}"
-    echo "Initial store size: $(numfmt --to=iec --suffix=B "$initial_size")"
-    echo "Final store size:   $(numfmt --to=iec --suffix=B "$final_size")"
-    echo "Space saved:        ${GREEN}$(numfmt --to=iec --suffix=B "$saved_space")${NC}"
-    log_message "SUCCESS" "Cleanup completed. Space saved: $(numfmt --to=iec --suffix=B "$saved_space")"
-
-    # --- Notification ---
-    if command -v notify-send >/dev/null; then
-        notify-send "Nix Store Cleanup" "Cleanup completed. Space saved: $(numfmt --to=iec --suffix=B "$saved_space")"
-    fi
+    
+    # Last resort: return 0
+    log_message "ERROR" "Could not determine store size"
+    echo "0"
+    return $EXIT_GENERAL_ERROR
 }
 
-# --- Main Execution ---
-NIXempty "$@"
+# FUNCTION: print_header
+# DESCRIPTION: Display formatted header with version info
+# RETURNS: Nothing
+print_header() {
+    local dry_run="$1"
+    local check_disk="$2"
+    local debug="$3"
+    
+    clear
+    echo -e "${SKY}╔══════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${SKY}║                                                          ║${NC}"
+    echo -e "${SKY}║           NIX STORE CLEANUP UTILITY $VERSION             ║${NC}"
+    echo -e "${SKY}║                                                          ║${NC}"
+    echo -e "${SKY}╚══════════════════════════════════════════════════════════╝${NC}"
+    echo -e "${CYAN}Log file:${NC} $LOG_FILE"
+    echo -e "${CYAN}Options:${NC}"
+    echo -e "  ${YELLOW}•${NC} Dry-run mode: ${dry_run:-false}"
+    echo -e "  ${YELLOW}•${NC} Disk check: ${check_disk:-true}"
+    echo -e "  ${YELLOW}•${NC} Debug mode: ${debug:-false}"
+    echo
+}
 
+#-------------------------------------------------------------------------------
+# SECTION 5: HELP SYSTEM
+#-------------------------------------------------------------------------------
 
+show_help() {
+    cat << EOF
+${CYAN}NIXempty.sh - Advanced Nix Store Cleanup Utility${NC}
 
+${GREEN}DESCRIPTION:${NC}
+    Comprehensive Nix store cleanup tool with safety checks, logging,
+    and multiple cleanup phases. Designed to safely recover disk space
+    from Nix store while maintaining system stability.
+
+${GREEN}USAGE:${NC}
+    $SCRIPT_NAME [OPTIONS]
+
+${GREEN}EXAMPLES:${NC}
+    # Standard cleanup with all checks
+    $SCRIPT_NAME
+    
+    # Dry-run to see what would be cleaned
+    $SCRIPT_NAME --dry-run
+    
+    # Skip disk space check
+    $SCRIPT_NAME --no-disk-check
+    
+    # Enable debug output
+    $SCRIPT_NAME --debug
+
+${GREEN}OPTIONS:${NC}
+    -h, --help          Show this help message
+    -v, --version       Show version information
+    -d, --dry-run       Simulate cleanup without making changes
+    -n, --no-disk-check Skip disk space verification
+    --debug             Enable debug output
+    --force             Skip confirmation prompts (use with caution!)
+
+${GREEN}CLEANUP PHASES:${NC}
+    1. Remove old GC roots from /nix/var/nix/gcroots/auto
+    2. Delete old user and system generations
+    3. Run nix-collect-garbage
+    4. Optimize store (deduplicate with hardlinks)
+
+${GREEN}EXIT CODES:${NC}
+    0   Success
+    1   General error
+    10  Invalid argument
+    11  Missing dependency
+    12  Insufficient privileges
+    13  Insufficient disk space
+    14  Nix operation active
+    15  User cancelled
+    16  Dry run completed
+
+${GREEN}AUTHOR:${NC}
+    Max Kempter <max.kempter@example.com>
+EOF
+    exit $EXIT_SUCCESS
+}
+
+show_version() {
+    echo "NIXempty.sh version $VERSION"
+    exit $EXIT_SUCCESS
+}
+
+#-------------------------------------------------------------------------------
+# SECTION 6: MAIN CLEANUP FUNCTION
+#-------------------------------------------------------------------------------
+
+NIXempty() {
+    # Parse command line arguments
+    local dry_run=false
+    local check_disk=true
+    local debug=false
+    local force=false
+    
+    while [[ $# -gt 0 ]]; do
+        case $1 in
+            -h|--help)
+                show_help
+                ;;
+            -v|--version)
+                show_version
+                ;;
+            -d|--dry-run)
+                dry_run=true
+                log_message "INFO" "Dry-run mode enabled"
+                shift
+                ;;
+            -n|--no-disk-check)
+                check_disk=false
+                log_message "INFO" "Disk check disabled"
+                shift
+                ;;
+            --debug)
+                debug=true
+                log_message "DEBUG" "Debug mode enabled"
+                shift
+                ;;
+            --force)
+                force=true
+                log_message "WARNING" "Force mode enabled - skipping confirmations"
+                shift
+                ;;
+            *)
+                log_message "ERROR" "Unknown option: $1"
+                show_help
+                ;;
+        esac
+    done
+    
+    # Initialize logging
+    log_message "INFO" "Starting Nix store cleanup"
+    log_message "INFO" "Script version: $VERSION"
+    log_message "INFO" "Log file: $LOG_FILE"
+    
+    # Show header
+    print_header "$dry_run" "$check_disk" "$debug"
+    
+    #---------------------------------------------------------------------------
+    # PHASE 0: PRE-CHECKS
+    #---------------------------------------------------------------------------
+    
+    log_message "INFO" "Phase 0: Running pre-checks"
+    
+    # Check dependencies
+    if ! check_dependencies; then
+        return $EXIT_DEPENDENCY_MISSING
+    fi
+    
+    # Check privileges
+    if ! check_privileges; then
+        return $EXIT_INSUFFICIENT_PRIVILEGES
+    fi
+    
+    # Check disk space
+    if ! check_disk_space "$check_disk"; then
+        return $EXIT_INSUFFICIENT_SPACE
+    fi
+    
+    # Check for active Nix operations
+    if command pgrep -f "nix-daemon|nix-build|nix-shell" >/dev/null 2>&1; then
+        log_message "ERROR" "Active Nix operations detected. Please wait for them to complete."
+        return $EXIT_NIX_OPERATION_ACTIVE
+    fi
+    
+    # Get initial store size
+    log_message "INFO" "Calculating initial store size..."
+    local initial_size_bytes
+    initial_size_bytes=$(get_store_size)
+    local initial_size_human
+    initial_size_human=$(command numfmt --to=iec --suffix=B "$initial_size_bytes")
+    
+    log_message "SUCCESS" "Initial store size: $initial_size_human"
+    
+    #---------------------------------------------------------------------------
+    # PHASE 1: SAFETY CONFIRMATION
+    #---------------------------------------------------------------------------
+    
+    if [[ "$force" != "true" ]]; then
+        echo -e "${YELLOW}⚠  WARNING: This will perform the following actions:${NC}"
+        echo -e "   • Remove old GC roots from /nix/var/nix/gcroots/auto"
+        echo -e "   • Delete old user and system generations"
+        echo -e "   • Run nix-collect-garbage (may remove unused packages)"
+        echo -e "   • Optimize store with deduplication"
+        echo
+        echo -e "${RED}⚠  This action cannot be undone!${NC}"
+        echo
+        
+        # Handle different shells
+        if [[ -n "$ZSH_VERSION" ]]; then
+            read -q "REPLY?Continue? (y/N): "
+            echo
+        else
+            read -rp "Continue? (y/N): " -t 30 -n 1 REPLY
+            echo
+        fi
+        
+        if [[ ! "$REPLY" =~ ^[Yy]$ ]]; then
+            log_message "INFO" "Cleanup cancelled by user"
+            return $EXIT_USER_CANCELLED
+        fi
+    fi
+    
+    #---------------------------------------------------------------------------
+    # PHASE 2: REMOVE OLD GC ROOTS
+    #---------------------------------------------------------------------------
+    
+    log_message "INFO" "Phase 1: Removing old GC roots"
+    
+    local gcroots_dir="/nix/var/nix/gcroots/auto"
+    if [[ -d "$gcroots_dir" ]]; then
+        # Find broken symlinks
+        local broken_links=()
+        while IFS= read -r -d $'\0' link; do
+            broken_links+=("$link")
+        done < <(command find "$gcroots_dir" -type l ! -exec test -e {} \; -print0 2>/dev/null)
+        
+        # Find all symlinks
+        local all_links=()
+        while IFS= read -r -d $'\0' link; do
+            all_links+=("$link")
+        done < <(command find "$gcroots_dir" -type l -print0 2>/dev/null)
+        
+        log_message "INFO" "Found ${#broken_links[@]} broken links and ${#all_links[@]} total links"
+        
+        if [[ ${#all_links[@]} -gt 0 ]]; then
+            if [[ "$dry_run" == "true" ]]; then
+                log_message "INFO" "[DRY-RUN] Would remove ${#all_links[@]} GC roots"
+            else
+                # Remove broken links first
+                for link in "${broken_links[@]}"; do
+                    command rm -f "$link" 2>/dev/null && \
+                    log_message "SUCCESS" "Removed broken link: $(basename "$link")"
+                done
+                
+                # Remove remaining links
+                for link in "${all_links[@]}"; do
+                    if [[ -e "$link" ]]; then
+                        command rm -f "$link" 2>/dev/null && \
+                        log_message "SUCCESS" "Removed GC root: $(basename "$link")"
+                    fi
+                done
+            fi
+        else
+            log_message "INFO" "No GC roots found to remove"
+        fi
+    else
+        log_message "WARNING" "GC roots directory not found: $gcroots_dir"
+    fi
+    
+    #---------------------------------------------------------------------------
+    # PHASE 3: DELETE OLD GENERATIONS
+    #---------------------------------------------------------------------------
+    
+    log_message "INFO" "Phase 2: Deleting old generations"
+    
+    if [[ "$dry_run" == "true" ]]; then
+        log_message "INFO" "[DRY-RUN] Would delete old user generations"
+        log_message "INFO" "[DRY-RUN] Would delete old system generations (if on NixOS)"
+    else
+        # Delete old user generations
+        if command nix-env --delete-generations old 2>> "$LOG_FILE"; then
+            log_message "SUCCESS" "Deleted old user generations"
+        else
+            log_message "WARNING" "Failed to delete user generations"
+        fi
+        
+        # Delete system generations (NixOS only)
+        if [[ -f /run/current-system/nixos-version ]]; then
+            if command sudo nix-env -p /nix/var/nix/profiles/system --delete-generations old 2>> "$LOG_FILE"; then
+                log_message "SUCCESS" "Deleted old system generations"
+            else
+                log_message "WARNING" "Failed to delete system generations"
+            fi
+        fi
+    fi
+    
+    #---------------------------------------------------------------------------
+    # PHASE 4: RUN GARBAGE COLLECTION
+    #---------------------------------------------------------------------------
+    
+    log_message "INFO" "Phase 3: Running garbage collection"
+    
+    if [[ "$dry_run" == "true" ]]; then
+        log_message "INFO" "[DRY-RUN] Would run: nix-collect-garbage -d"
+    else
+        log_message "INFO" "Running nix-collect-garbage..."
+        if command nix-collect-garbage -d 2>&1 | tee -a "$LOG_FILE"; then
+            log_message "SUCCESS" "Garbage collection completed"
+        else
+            log_message "ERROR" "Garbage collection failed"
+        fi
+    fi
+    
+    #---------------------------------------------------------------------------
+    # PHASE 5: OPTIMIZE STORE
+    #---------------------------------------------------------------------------
+    
+    log_message "INFO" "Phase 4: Optimizing store (deduplication)"
+    
+    if [[ "$dry_run" == "true" ]]; then
+        log_message "INFO" "[DRY-RUN] Would run: nix-store --optimise"
+    else
+        log_message "INFO" "Running nix-store --optimise..."
+        if command nix-store --optimise 2>&1 | tee -a "$LOG_FILE"; then
+            log_message "SUCCESS" "Store optimization completed"
+        else
+            log_message "WARNING" "Store optimization may have encountered warnings"
+        fi
+    fi
+    
+    #---------------------------------------------------------------------------
+    # PHASE 6: CALCULATE RESULTS
+    #---------------------------------------------------------------------------
+    
+    log_message "INFO" "Calculating results..."
+    
+    local final_size_bytes
+    final_size_bytes=$(get_store_size)
+    local final_size_human
+    final_size_human=$(command numfmt --to=iec --suffix=B "$final_size_bytes")
+    
+    local saved_bytes=$((initial_size_bytes - final_size_bytes))
+    local saved_human
+    saved_human=$(command numfmt --to=iec --suffix=B "$saved_bytes")
+    
+    local percentage_saved=0
+    if [[ $initial_size_bytes -gt 0 ]]; then
+        percentage_saved=$((saved_bytes * 100 / initial_size_bytes))
+    fi
+    
+    #---------------------------------------------------------------------------
+    # PHASE 7: DISPLAY SUMMARY
+    #---------------------------------------------------------------------------
+    
+    echo
+    echo -e "${GREEN}╔══════════════════════════════════════════════════════════╗${NC}"
+    echo -e "${GREEN}║                    CLEANUP COMPLETE                      ║${NC}"
+    echo -e "${GREEN}╚══════════════════════════════════════════════════════════╝${NC}"
+    echo
+    echo -e "${CYAN}Initial store size:${NC}  $initial_size_human"
+    echo -e "${CYAN}Final store size:${NC}    $final_size_human"
+    echo -e "${CYAN}Space reclaimed:${NC}     $saved_human (${percentage_saved}%)"
+    echo
+    echo -e "${YELLOW}📊 Summary:${NC}"
+    echo -e "  ${GREEN}✓${NC} GC roots cleaned"
+    echo -e "  ${GREEN}✓${NC} Old generations deleted"
+    echo -e "  ${GREEN}✓${NC} Garbage collection performed"
+    echo -e "  ${GREEN}✓${NC} Store optimized (deduplicated)"
+    echo
+    echo -e "${YELLOW}💡 Tips for further optimization:${NC}"
+    echo -e "  • Run 'nix-store --verify --check-contents' to check store integrity"
+    echo -e "  • Consider 'nix-collect-garbage --delete-older-than 30d' for auto-cleanup"
+    echo -e "  • Review /nix/var/nix/profiles for unused profiles"
+    echo
+    
+    # Send desktop notification if available
+    if command -v notify-send >/dev/null 2>&1; then
+        notify-send "Nix Cleanup Complete" "Reclaimed $saved_human (${percentage_saved}%)" -t 5000
+    fi
+    
+    log_message "SUCCESS" "Cleanup completed. Reclaimed $saved_human (${percentage_saved}%)"
+    
+    if [[ "$dry_run" == "true" ]]; then
+        return $EXIT_DRY_RUN
+    fi
+    
+    return $EXIT_SUCCESS
+}
+
+#-------------------------------------------------------------------------------
+# SECTION 7: MAIN EXECUTION
+#-------------------------------------------------------------------------------
+
+# Only run if script is executed directly
+if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
+    NIXempty "$@"
+    exit $?
+fi
