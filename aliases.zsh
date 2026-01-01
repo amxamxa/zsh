@@ -199,19 +199,20 @@ alias zr='echo -e "\t${PINK}Entferne Verzeichnis aus zoxide-Datenbank${RESET}" &
 alias Zcopy='nano "$ZDOTDIR/.zshrc" && source "$ZDOTDIR/.zshrc" && \
     echo -e "\n\t${PINK}source $ZDOTDIR/.zshrc erfolgreich!${RESET}\n" || \
     echo -e "\n\t${GELB}source $ZDOTDIR/.zshrc  ---NICHT---  erfolgreich!${RESET}\n"'
-alias Zconf='ZRC'
 
+alias Zconf='gnome-text-editor -s "$ZDOTDIR/.zshrc" && source "$ZDOTDIR/.zshrc" && \
+    echo -e "\n\t${PINK}source $ZDOTDIR/.zshrc ${RED}s erfolgreich!${RESET}\n" || \
+    echo -e "\n\t${RED}source $ZDOTDIR/.zshrc   ---NICHT---  erfolgreich!${RESET}\n"'
+alias ZRC='Zconf'
 # alias ZENV='micro -filetype zsh $HOME/.zshenv" && source "$HOME/.zshenv" && echo -e "\n\t${PINK}source ~/.zshenv erfolgreich!${RESET}\n" || echo -e "\n\t${GELB}source ~/.zshenv ---NICHT---  erfolgreich!${RESET}\n"'
-alias ZEconf='ZENV'
+#alias ZEconf='ZENV'
 
 alias ZALI='gnome-text-editor -s "$ZDOTDIR/aliases.zsh" && source "$ZDOTDIR/aliases.zsh" && \
     echo -e "\n\t${PINK}source $ZDOTDIR/aliases.zsh erfolgreich!${RESET}\n" || \
     echo -e "\n\t${GELB}source $ZDOTDIR/aliases.zsh   ---NICHT---  erfolgreich!${RESET}\n"'
 alias Zali='ZALI'
 
-alias Zfunc='micro "$ZDOTDIR/functions/my-functions.zsh" && source "$ZDOTDIR/functions/my-functions.zsh"'alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
-alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
-alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
+alias Zfunc='micro "$ZDOTDIR/functions/my-functions.zsh" && source "$ZDOTDIR/functions/my-functions.zsh"'
 alias Zcopy='echo -e "\n\t${PINK}Kopiere Zsh-Konfigurationsdateien ins Backup-Verzeichnis${RESET}" && \
     cp --verbose "$ZDOTDIR/.zshrc" "/share/bkp/zsh/$(date +'%F').nix.zshrc.zsh" && \
     cp --verbose "$HOME/.zshenv" "/share/bkp/zsh/$(date +'%F').nix.zshenv.zsh" && \
@@ -229,12 +230,11 @@ alias Kbind=KITTYmap
 alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
 alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
 # alias mdtopdf='pandoc $1 -o ${1%.md}.pdf --template=$HOME/.templates/MDtoPDF.tex'
+alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
 
 # --- Diverse Werkzeuge & Helfer ---
 alias COL='terminal-colors -n && echo -e "${GREEN}\n...für Hex-Codes der Farben:${RED}%${LILA} terminal-colors -l ${RESET}\n"'
 alias Col='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\''\n'\'';}; done'
-
-alias untar='echo -e "\t${PINK}Entpacke .tar.bz2-Archive${RESET}" && tar -xvjf'
 alias hack='echo -e "\t${PINK}Starte Hackertyper${RESET}" && hackertyper'
 
 #	_______________________________neofetch_______________________________
@@ -282,12 +282,7 @@ alias WMverbose='echo -e "\n\t${PINK}\n 2xklicken! mittels${GELB} cmd xprop und 
     xwininfo | grep --color=auto geometry'
 
 #	____________________________________________________________________
-alias Find='echo -e "
-	${PINK} for   empty files\t $ fd --type empty --type file
-	${LILA}       same as	\t\t$ fd  -te -tf
-	${PINK} for   empty directories: $ fd --type empty --type directory  
-	${LILA}       same same    $ fd  -te  -Td"  \n  \
-	&& fd'
+
 alias nano='echo -e "\t${PINK}Verwende micro anstelle von nano${RESET}" && micro || nano'
 alias edit='echo -e "\t${PINK}Verwende micro als Standard-Editor${RESET}" && micro'
 alias DATE='echo -e "\t${PINK}Zeige das aktuelle Datum  $(date "+%A, %-d. %B %Y"):{$RESET}" && echo -e "${GELB} $(date "+%A, %-d. %B %Y")${RESET} \n "&& echo -e "${PINK} oder $ (date +%F_%H-%M)\t ${RESET}" 	&& echo -e "${GELB} $(date "+%F_%H-%M") ${RESET}"'
@@ -301,7 +296,7 @@ alias g2history='cat "$HISTFILE" | grep -i --colour=always'
 alias g2h=g2history
 alias h2g=g2history
 
-#	________________________________________________cat / batcat____________________
+# _________cat / batcat____________________
 alias BATconf='echo -e "\t${PINK}Öffne bat Konfigurationsdatei${RESET}" && edit /share/bat/config.toml'
 alias Bconf='BATconf'
 alias bap='bat -p'

@@ -13,22 +13,15 @@
 ## 	set filetyte zsh
 ## COMMENTS:	nixOS-version
 #####################################################          
-# unsetopt HIST_SAVE_NO_DUPS    # Write a duplicate event to the history file
+# man eza_colors
+# The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
+#   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done
 
 # To use the Meta or Alt keys, you probably need to revert to single-byte mode with a command such as:
 unsetopt MULTIBYTE 		# Multibyte-Zeichensätze die mehr als ein Byte zur Darstellung benötigen
 unsetopt CASEGLOB
+# unsetopt HIST_SAVE_NO_DUPS    # Write a duplicate event to the history file
 
-#  ___________________________________________________________
-
-#	__________________________________________________________
-#   ███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗
-#   ██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝
-#   ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗
-#   ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝
-#   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
-#   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
-#  _______________________________________________________
 # Vivid color configuration: LS_COLORS mit benutzerdefinierter Farbdatei setzen
 # export LS_COLORS="$(vivid generate alabaster_dark)" #jellybeans)" #  ayu rose-pine-moon snazzy
 if [[ -f "$ZDOTDIR/colors/color-schema.yml" ]]; then
@@ -43,6 +36,16 @@ else
   printf "\t${GREEN}󰞷 .... vivid mit alabaster_dark ${RESET}\n"
 fi
 
+#  ___________________________________________________________
+
+#	__________________________________________________________
+#   ███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗
+#   ██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝
+#   ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗
+#   ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝
+#   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
+#   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
+#  _______________________________________________________
 # Function to source files with error handling
 source_or_error() {
     local file="$1"
@@ -267,24 +270,6 @@ echo "        	    __              __              __
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"				
 
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
- #echo "${BOLD}  shift+KP_MULTIPLY	next_layout
-  # shift+KP_DIVIDE	swap_with_window
-  # shift+KP_SUBTRACT layout_action bias 10 25 40 55 75 85
-  # shift+KP_ENTER toggle_layout stack 
-  # shift+KP_ADD	launch --cwd=current --location=vsplit
-  # super+KP_ADD	launch --cwd=current --location=split
-  # super+enter 	launch --cwd=current --location=hsplit
-  # kitty_mod+t	launch --cwd=current --type=tab
-  # super+i 	set_tab_title  
-  # super+F9	pass_selection_to_program gnome-text-editor 
-  # 		--ignore-session --standalone --new-window"
-  # 
-  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
-  
-# Display kitty keybindings table
-if [[ -f "$ZDOTDIR/functions/table.sh" ]]; then
-    "$ZDOTDIR/functions/table.sh" ./kitty-keys.txt
-fi
 
 echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 
@@ -308,4 +293,13 @@ rm -f  "$HOME/.xsession-errors "
 rm -f  "$HOME/.xsession-errors.old"
 rm -f  "$HOME/.ICEauthority"
 rm -fr "$HOME/.compose-cache"
+
+
+  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
+  
+  
+# Display kitty keybindings table
+if [[ -f "$ZDOTDIR/functions/table.sh" ]]; then
+    $ZFUNCDIR/table.sh $ZFUNCDIR/kitty-keys.txt
+fi
 

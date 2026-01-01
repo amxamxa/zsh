@@ -224,3 +224,5 @@ echo "
 sudo btrfs subvolume snapshot /share /share/snapshots/$(date +%Y-%m-%d) 
 
 echo "⬬⬬…"
+SRC functions/my-functions.zsh
+eza -Al --sort Extension
