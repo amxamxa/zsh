@@ -1,0 +1,812 @@
+[2026-01-04 23:56:38] INFO               Accepted extension
+[2026-01-04 23:56:38] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-04 23:56:38] INFO               Accepted extension
+[2026-01-04 23:56:38] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-04 23:56:38] INFO               Accepted extension
+[2026-01-04 23:56:38] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-04 23:56:38] INFO               Accepted extension
+[2026-01-04 23:56:38] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-04 23:56:38] INFO               Accepted extension
+[2026-01-04 23:56:38] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-04 23:56:38] INFO               Accepted extension
+[2026-01-04 23:56:39] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-04 23:56:39] INFO               Accepted extension
+[2026-01-04 23:56:39] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:00:51] INFO               Accepted extension
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Accepted extension
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Sourcing file: /share/zsh/aliases.zsh
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Accepted extension
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Accepted extension
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Accepted extension
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Accepted extension
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Accepted extension
+[/dev/null]                    
+[2026-01-05 00:00:51] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[/dev/null]                    
+[2026-01-05 00:05:23] INFO               Accepted extension
+[2026-01-05 00:05:23] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:05:23] INFO               Accepted extension
+[2026-01-05 00:05:23] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:05:23] INFO               Accepted extension
+[2026-01-05 00:05:23] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:05:23] INFO               Accepted extension
+[2026-01-05 00:05:23] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:05:23] INFO               Accepted extension
+[2026-01-05 00:05:23] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:05:23] INFO               Accepted extension
+[2026-01-05 00:05:23] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:05:23] INFO               Accepted extension
+[2026-01-05 00:05:23] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:06:29] INFO               Accepted extension
+[2026-01-05 00:06:29] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:06:29] INFO               Accepted extension
+[2026-01-05 00:06:29] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:06:29] INFO               Accepted extension
+[2026-01-05 00:06:29] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:06:29] INFO               Accepted extension
+[2026-01-05 00:06:29] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:06:29] INFO               Accepted extension
+[2026-01-05 00:06:29] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:06:29] INFO               Accepted extension
+[2026-01-05 00:06:29] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:06:29] INFO               Accepted extension
+[2026-01-05 00:06:29] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:07:12] INFO               Accepted extension
+[2026-01-05 00:07:12] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:07:12] INFO               Accepted extension
+[2026-01-05 00:07:12] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:07:12] INFO               Accepted extension
+[2026-01-05 00:07:12] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:07:12] INFO               Accepted extension
+[2026-01-05 00:07:12] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:07:12] INFO               Accepted extension
+[2026-01-05 00:07:12] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:07:12] INFO               Accepted extension
+[2026-01-05 00:07:12] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:07:12] INFO               Accepted extension
+[2026-01-05 00:07:12] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:09:09] INFO               Accepted extension
+[2026-01-05 00:09:09] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:09:09] INFO               Accepted extension
+[2026-01-05 00:09:09] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:09:09] INFO               Accepted extension
+[2026-01-05 00:09:09] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:09:09] INFO               Accepted extension
+[2026-01-05 00:09:09] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:09:09] INFO               Accepted extension
+[2026-01-05 00:09:09] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:09:09] INFO               Accepted extension
+[2026-01-05 00:09:09] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:09:09] INFO               Accepted extension
+[2026-01-05 00:09:09] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:10:02] INFO               Accepted extension
+[2026-01-05 00:10:02] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:10:02] INFO               Accepted extension
+[2026-01-05 00:10:02] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:10:02] INFO               Accepted extension
+[2026-01-05 00:10:02] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:10:02] INFO               Accepted extension
+[2026-01-05 00:10:02] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:10:02] INFO               Accepted extension
+[2026-01-05 00:10:02] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:10:02] INFO               Accepted extension
+[2026-01-05 00:10:02] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:10:02] INFO               Accepted extension
+[2026-01-05 00:10:02] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:13:09] INFO               Accepted extension
+[2026-01-05 00:13:09] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:13:09] INFO               Accepted extension
+[2026-01-05 00:13:09] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:13:09] INFO               Accepted extension
+[2026-01-05 00:13:09] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:13:09] INFO               Accepted extension
+[2026-01-05 00:13:09] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:13:09] INFO               Accepted extension
+[2026-01-05 00:13:09] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:13:09] INFO               Accepted extension
+[2026-01-05 00:13:09] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:13:09] INFO               Accepted extension
+[2026-01-05 00:13:09] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:13:39] INFO               Accepted extension
+[2026-01-05 00:13:39] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:13:39] INFO               Accepted extension
+[2026-01-05 00:13:39] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:13:39] INFO               Accepted extension
+[2026-01-05 00:13:39] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:13:39] INFO               Accepted extension
+[2026-01-05 00:13:39] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:13:39] INFO               Accepted extension
+[2026-01-05 00:13:39] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:13:39] INFO               Accepted extension
+[2026-01-05 00:13:39] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:13:39] INFO               Accepted extension
+[2026-01-05 00:13:39] INFO               Sourcing file: /share/zsh/fzf/fzf-mxx.zsh
+[2026-01-05 00:37:47] INFO               Accepted extension
+[2026-01-05 00:37:47] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:37:47] INFO               Accepted extension
+[2026-01-05 00:37:47] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:37:47] INFO               Accepted extension
+[2026-01-05 00:37:47] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:37:47] INFO               Accepted extension
+[2026-01-05 00:37:47] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:37:47] INFO               Accepted extension
+[2026-01-05 00:37:47] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:37:47] INFO               Accepted extension
+[2026-01-05 00:37:47] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 00:38:56] INFO               Accepted extension
+[2026-01-05 00:38:56] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 01:35:56] INFO               Accepted extension
+[2026-01-05 01:35:56] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 01:35:56] INFO               Accepted extension
+[2026-01-05 01:35:56] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 01:35:56] INFO               Accepted extension
+[2026-01-05 01:35:56] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 01:35:56] INFO               Accepted extension
+[2026-01-05 01:35:56] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 01:35:56] INFO               Accepted extension
+[2026-01-05 01:35:56] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 01:35:56] INFO               Accepted extension
+[2026-01-05 01:35:56] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 01:36:07] INFO               Accepted extension
+[2026-01-05 01:36:07] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 01:36:07] INFO               Accepted extension
+[2026-01-05 01:36:07] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 01:36:08] INFO               Accepted extension
+[2026-01-05 01:36:08] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 01:36:08] INFO               Accepted extension
+[2026-01-05 01:36:08] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 01:36:08] INFO               Accepted extension
+[2026-01-05 01:36:08] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 01:36:08] INFO               Accepted extension
+[2026-01-05 01:36:08] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 01:36:08] INFO               Accepted extension
+[2026-01-05 01:36:08] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 01:36:08] INFO               Accepted extension
+[2026-01-05 01:36:08] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 01:36:09] INFO               Accepted extension
+[2026-01-05 01:36:09] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 01:36:09] INFO               Accepted extension
+[2026-01-05 01:36:09] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 01:36:09] INFO               Accepted extension
+[2026-01-05 01:36:09] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 01:36:09] INFO               Accepted extension
+[2026-01-05 01:36:09] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 01:36:13] INFO               Accepted extension
+[2026-01-05 01:36:13] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 01:36:13] INFO               Accepted extension
+[2026-01-05 01:36:13] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 01:36:13] INFO               Accepted extension
+[2026-01-05 01:36:13] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 01:36:13] INFO               Accepted extension
+[2026-01-05 01:36:13] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 01:36:13] INFO               Accepted extension
+[2026-01-05 01:36:13] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[2026-01-05 01:36:13] INFO               Accepted extension
+[2026-01-05 01:36:13] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 01:45:42] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 01:45:42] INFO               Accepted extension
+[2026-01-05 01:45:42] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 01:45:42] ERROR              File does not exist: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 01:45:42] ERROR              File does not exist: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 01:45:42] ERROR              File does not exist: /share/zsh/functions/my-functions.zsh
+[2026-01-05 01:45:42] ERROR              File does not exist: /share/zsh/functions/zfunctions.zsh
+[2026-01-05 01:58:49] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[2026-01-05 01:58:49] INFO               Accepted extension
+[2026-01-05 01:58:49] INFO               Sourcing file: /share/zsh/aliases.zsh
+[2026-01-05 01:58:49] ERROR              File does not exist: /share/zsh/functions/shortcuts.zsh
+[2026-01-05 01:58:49] ERROR              File does not exist: /share/zsh/functions/fff-fuck.zsh
+[2026-01-05 01:58:49] ERROR              File does not exist: /share/zsh/functions/my-functions.zsh
+[2026-01-05 01:58:49] ERROR              File does not exist: /share/zsh/functions/zfunctions.zsh
+[] INFO               Accepted extension
+[] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[] INFO               Accepted extension
+[] INFO               Sourcing file: /share/zsh/aliases.zsh
+[] INFO               Accepted extension
+[] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[] INFO               Accepted extension
+[] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[] INFO               Accepted extension
+[] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[] INFO               Accepted extension
+[] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:06:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:06:14 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:06:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:06:14 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:06:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:06:14 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:06:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:06:14 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:06:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:06:14 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:06:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:06:14 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:07:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:07:31 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:07:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:07:31 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:07:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:07:31 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:07:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:07:31 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:07:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:07:31 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:07:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:07:31 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:08:58 2026] INFO               Accepted extension
+[Mon Jan  5 02:08:58 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:08:58 2026] INFO               Accepted extension
+[Mon Jan  5 02:08:58 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:08:58 2026] INFO               Accepted extension
+[Mon Jan  5 02:08:58 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:08:58 2026] INFO               Accepted extension
+[Mon Jan  5 02:08:58 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:08:58 2026] INFO               Accepted extension
+[Mon Jan  5 02:08:58 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:08:58 2026] INFO               Accepted extension
+[Mon Jan  5 02:08:58 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:10:15 2026] INFO               Accepted extension
+[Mon Jan  5 02:10:15 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:10:15 2026] INFO               Accepted extension
+[Mon Jan  5 02:10:15 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:10:15 2026] INFO               Accepted extension
+[Mon Jan  5 02:10:15 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:10:15 2026] INFO               Accepted extension
+[Mon Jan  5 02:10:15 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:10:15 2026] INFO               Accepted extension
+[Mon Jan  5 02:10:15 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:10:15 2026] INFO               Accepted extension
+[Mon Jan  5 02:10:15 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:11:43 2026] INFO               Accepted extension
+[Mon Jan  5 02:11:43 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:11:43 2026] INFO               Accepted extension
+[Mon Jan  5 02:11:43 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:11:43 2026] INFO               Accepted extension
+[Mon Jan  5 02:11:43 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:11:43 2026] INFO               Accepted extension
+[Mon Jan  5 02:11:43 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:11:43 2026] INFO               Accepted extension
+[Mon Jan  5 02:11:43 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:11:43 2026] INFO               Accepted extension
+[Mon Jan  5 02:11:43 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:12:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:14 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:12:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:14 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:12:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:14 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:12:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:14 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:12:14 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:14 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:12:57 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:57 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:12:57 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:57 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:12:57 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:57 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:12:57 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:57 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:12:57 2026] INFO               Accepted extension
+[Mon Jan  5 02:12:57 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:13:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:13:31 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:13:31 2026] INFO               Accepted extension
+[Mon Jan  5 02:13:31 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:13:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:13:32 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:13:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:13:32 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:13:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:13:32 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:15:27 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:27 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:15:27 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:27 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:15:27 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:27 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:15:27 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:27 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:15:27 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:27 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:15:27 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:27 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:15:55 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:55 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:15:55 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:55 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:15:55 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:55 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:15:55 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:55 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:15:55 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:55 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:15:55 2026] INFO               Accepted extension
+[Mon Jan  5 02:15:55 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:16:16 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:16 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:16:16 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:16 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:16:16 2026] ERROR              File does not exist: /share/zsh/functions/fff-fuck.zsh  
+[Mon Jan  5 02:16:16 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:16 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:16:16 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:16 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:16:16 2026] ERROR              File does not exist: /share/zsh/aliases.zsh         
+[Mon Jan  5 02:16:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:32 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:16:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:32 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:16:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:32 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:16:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:32 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:16:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:32 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:16:32 2026] INFO               Accepted extension
+[Mon Jan  5 02:16:32 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:17:28 2026] INFO               Accepted extension
+[Mon Jan  5 02:17:28 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:17:28 2026] INFO               Accepted extension
+[Mon Jan  5 02:17:28 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:17:28 2026] INFO               Accepted extension
+[Mon Jan  5 02:17:28 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:17:28 2026] INFO               Accepted extension
+[Mon Jan  5 02:17:28 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:17:28 2026] INFO               Accepted extension
+[Mon Jan  5 02:17:28 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:17:28 2026] INFO               Accepted extension
+[Mon Jan  5 02:17:28 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:18:08 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:08 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:18:08 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:08 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:18:08 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:08 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:18:08 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:08 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:18:08 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:08 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:18:08 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:08 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:18:47 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:47 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:18:47 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:47 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:18:47 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:47 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:18:47 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:47 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:18:47 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:47 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:18:47 2026] INFO               Accepted extension
+[Mon Jan  5 02:18:47 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 02:19:04 2026] INFO               Accepted extension
+[Mon Jan  5 02:19:04 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 02:19:04 2026] INFO               Accepted extension
+[Mon Jan  5 02:19:04 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 02:19:04 2026] INFO               Accepted extension
+[Mon Jan  5 02:19:04 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 02:19:04 2026] INFO               Accepted extension
+[Mon Jan  5 02:19:04 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 02:19:04 2026] INFO               Accepted extension
+[Mon Jan  5 02:19:04 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 02:19:04 2026] INFO               Accepted extension
+[Mon Jan  5 02:19:04 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 08:33:42 2026] INFO               Accepted extension
+[Mon Jan  5 08:33:42 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 08:33:42 2026] INFO               Accepted extension
+[Mon Jan  5 08:33:42 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 08:33:43 2026] INFO               Accepted extension
+[Mon Jan  5 08:33:43 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 08:33:43 2026] INFO               Accepted extension
+[Mon Jan  5 08:33:43 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 08:33:43 2026] INFO               Accepted extension
+[Mon Jan  5 08:33:43 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 08:33:43 2026] INFO               Accepted extension
+[Mon Jan  5 08:33:43 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 05 Jan 2026 08:52:09 CET] INFO               Accepted extension
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Accepted extension
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Accepted extension
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Accepted extension
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Accepted extension
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Accepted extension
+[Mo 05 Jan 2026 08:52:10 CET] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 11:56:22 2026] INFO               Accepted extension
+[Mon Jan  5 11:56:22 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 11:56:22 2026] INFO               Accepted extension
+[Mon Jan  5 11:56:22 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 11:56:22 2026] INFO               Accepted extension
+[Mon Jan  5 11:56:22 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 11:56:22 2026] INFO               Accepted extension
+[Mon Jan  5 11:56:22 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 11:56:22 2026] INFO               Accepted extension
+[Mon Jan  5 11:56:22 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 11:56:22 2026] INFO               Accepted extension
+[Mon Jan  5 11:56:22 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan  5 21:53:10 2026] INFO               Accepted extension
+[Mon Jan  5 21:53:10 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan  5 21:53:10 2026] INFO               Accepted extension
+[Mon Jan  5 21:53:10 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan  5 21:53:10 2026] INFO               Accepted extension
+[Mon Jan  5 21:53:10 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan  5 21:53:10 2026] INFO               Accepted extension
+[Mon Jan  5 21:53:10 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan  5 21:53:10 2026] INFO               Accepted extension
+[Mon Jan  5 21:53:10 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan  5 21:53:10 2026] INFO               Accepted extension
+[Mon Jan  5 21:53:10 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:12:49 2026] INFO               Accepted extension
+[Tue Jan  6 02:12:49 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:12:49 2026] INFO               Accepted extension
+[Tue Jan  6 02:12:49 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:12:49 2026] INFO               Accepted extension
+[Tue Jan  6 02:12:49 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:12:49 2026] INFO               Accepted extension
+[Tue Jan  6 02:12:50 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:12:50 2026] INFO               Accepted extension
+[Tue Jan  6 02:12:50 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:12:50 2026] INFO               Accepted extension
+[Tue Jan  6 02:12:50 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:24:15 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:15 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:24:15 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:15 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:24:15 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:15 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:24:15 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:15 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:24:15 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:15 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:24:15 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:15 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:24:17 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:17 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:24:17 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:17 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:24:17 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:17 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:24:17 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:17 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:24:17 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:17 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:24:17 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:17 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:24:18 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:18 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:24:18 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:18 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:24:18 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:18 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:24:18 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:18 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:24:18 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:18 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:24:18 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:18 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:24:19 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:19 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:24:19 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:19 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:24:19 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:19 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:24:19 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:19 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:24:19 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:19 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:24:19 2026] INFO               Accepted extension
+[Tue Jan  6 02:24:19 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:28:52 2026] INFO               Accepted extension
+[Tue Jan  6 02:28:52 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:28:52 2026] INFO               Accepted extension
+[Tue Jan  6 02:28:52 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:28:52 2026] INFO               Accepted extension
+[Tue Jan  6 02:28:52 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:28:52 2026] INFO               Accepted extension
+[Tue Jan  6 02:28:52 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:28:52 2026] INFO               Accepted extension
+[Tue Jan  6 02:28:52 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:28:52 2026] INFO               Accepted extension
+[Tue Jan  6 02:28:52 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:41:27 2026] INFO               Accepted extension
+[Tue Jan  6 02:41:27 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 02:43:39 2026] INFO               Accepted extension
+[Tue Jan  6 02:43:39 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 02:43:39 2026] INFO               Accepted extension
+[Tue Jan  6 02:43:39 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 02:43:39 2026] INFO               Accepted extension
+[Tue Jan  6 02:43:39 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 02:43:39 2026] INFO               Accepted extension
+[Tue Jan  6 02:43:39 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 02:43:39 2026] INFO               Accepted extension
+[Tue Jan  6 02:43:39 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 02:43:39 2026] INFO               Accepted extension
+[Tue Jan  6 02:43:39 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 03:30:40 2026] INFO               Accepted extension
+[Tue Jan  6 03:30:40 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 03:30:40 2026] INFO               Accepted extension
+[Tue Jan  6 03:30:40 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 03:30:40 2026] INFO               Accepted extension
+[Tue Jan  6 03:30:40 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 03:30:40 2026] INFO               Accepted extension
+[Tue Jan  6 03:30:40 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 03:30:40 2026] INFO               Accepted extension
+[Tue Jan  6 03:30:40 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 03:30:40 2026] INFO               Accepted extension
+[Tue Jan  6 03:30:40 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 03:41:53 2026] INFO               Accepted extension
+[Tue Jan  6 03:41:53 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Tue Jan  6 03:47:32 2026] INFO               Accepted extension
+[Tue Jan  6 03:47:32 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Tue Jan  6 06:19:18 2026] INFO               Accepted extension
+[Tue Jan  6 06:19:18 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 06:19:18 2026] INFO               Accepted extension
+[Tue Jan  6 06:19:18 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 06:19:18 2026] INFO               Accepted extension
+[Tue Jan  6 06:19:18 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 06:19:18 2026] INFO               Accepted extension
+[Tue Jan  6 06:19:18 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 06:19:18 2026] INFO               Accepted extension
+[Tue Jan  6 06:19:18 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 06:19:18 2026] INFO               Accepted extension
+[Tue Jan  6 06:19:18 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 06:21:15 2026] INFO               Accepted extension
+[Tue Jan  6 06:21:15 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 06:21:15 2026] INFO               Accepted extension
+[Tue Jan  6 06:21:15 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 06:21:15 2026] INFO               Accepted extension
+[Tue Jan  6 06:21:15 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 06:21:15 2026] INFO               Accepted extension
+[Tue Jan  6 06:21:15 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 06:21:15 2026] INFO               Accepted extension
+[Tue Jan  6 06:21:15 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 06:21:15 2026] INFO               Accepted extension
+[Tue Jan  6 06:21:15 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 06:37:32 2026] INFO               Accepted extension
+[Tue Jan  6 06:37:32 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Tue Jan  6 06:57:36 2026] INFO               Accepted extension
+[Tue Jan  6 06:57:36 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 06:57:36 2026] INFO               Accepted extension
+[Tue Jan  6 06:57:36 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 06:57:36 2026] INFO               Accepted extension
+[Tue Jan  6 06:57:36 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 06:57:36 2026] INFO               Accepted extension
+[Tue Jan  6 06:57:36 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 06:57:36 2026] INFO               Accepted extension
+[Tue Jan  6 06:57:36 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 06:57:36 2026] INFO               Accepted extension
+[Tue Jan  6 06:57:36 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 07:09:54 2026] INFO               Accepted extension
+[Tue Jan  6 07:09:54 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 07:09:54 2026] INFO               Accepted extension
+[Tue Jan  6 07:09:54 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 07:09:54 2026] INFO               Accepted extension
+[Tue Jan  6 07:09:54 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 07:09:54 2026] INFO               Accepted extension
+[Tue Jan  6 07:09:54 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 07:09:54 2026] INFO               Accepted extension
+[Tue Jan  6 07:09:54 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 07:09:54 2026] INFO               Accepted extension
+[Tue Jan  6 07:09:54 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 07:10:37 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:37 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 07:10:37 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:37 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 07:10:37 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:37 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 07:10:37 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:37 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 07:10:37 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:37 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 07:10:37 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:37 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 07:10:44 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:44 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 07:10:44 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:44 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 07:10:44 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:44 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 07:10:44 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:44 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 07:10:44 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:44 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 07:10:44 2026] INFO               Accepted extension
+[Tue Jan  6 07:10:44 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 07:11:04 2026] INFO               Accepted extension
+[Tue Jan  6 07:11:04 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 07:11:04 2026] INFO               Accepted extension
+[Tue Jan  6 07:11:04 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 07:11:04 2026] INFO               Accepted extension
+[Tue Jan  6 07:11:04 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 07:11:04 2026] INFO               Accepted extension
+[Tue Jan  6 07:11:04 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 07:11:04 2026] INFO               Accepted extension
+[Tue Jan  6 07:11:04 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 07:11:04 2026] INFO               Accepted extension
+[Tue Jan  6 07:11:04 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 07:12:03 2026] INFO               Accepted extension
+[Tue Jan  6 07:12:03 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 07:12:03 2026] INFO               Accepted extension
+[Tue Jan  6 07:12:03 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 07:12:03 2026] INFO               Accepted extension
+[Tue Jan  6 07:12:03 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 07:12:03 2026] INFO               Accepted extension
+[Tue Jan  6 07:12:03 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 07:12:03 2026] INFO               Accepted extension
+[Tue Jan  6 07:12:03 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 07:12:03 2026] INFO               Accepted extension
+[Tue Jan  6 07:12:03 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 16:34:50 2026] INFO               Accepted extension
+[Tue Jan  6 16:34:50 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 16:34:50 2026] INFO               Accepted extension
+[Tue Jan  6 16:34:50 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 16:34:50 2026] INFO               Accepted extension
+[Tue Jan  6 16:34:51 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 16:34:51 2026] INFO               Accepted extension
+[Tue Jan  6 16:34:51 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 16:34:51 2026] INFO               Accepted extension
+[Tue Jan  6 16:34:51 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 16:34:51 2026] INFO               Accepted extension
+[Tue Jan  6 16:34:51 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 18:00:54 2026] INFO               Accepted extension
+[Tue Jan  6 18:00:54 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 18:00:54 2026] INFO               Accepted extension
+[Tue Jan  6 18:00:54 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 18:00:54 2026] INFO               Accepted extension
+[Tue Jan  6 18:00:54 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 18:00:54 2026] INFO               Accepted extension
+[Tue Jan  6 18:00:54 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 18:00:54 2026] INFO               Accepted extension
+[Tue Jan  6 18:00:54 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 18:00:54 2026] INFO               Accepted extension
+[Tue Jan  6 18:00:54 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 20:49:10 2026] INFO               Accepted extension
+[Tue Jan  6 20:49:10 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 20:49:10 2026] INFO               Accepted extension
+[Tue Jan  6 20:49:10 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 20:49:10 2026] INFO               Accepted extension
+[Tue Jan  6 20:49:10 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 20:49:10 2026] INFO               Accepted extension
+[Tue Jan  6 20:49:10 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 20:49:10 2026] INFO               Accepted extension
+[Tue Jan  6 20:49:10 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 20:49:10 2026] INFO               Accepted extension
+[Tue Jan  6 20:49:10 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 21:44:20 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:20 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 21:44:20 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:20 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 21:44:20 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:20 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 21:44:20 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:20 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 21:44:20 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:20 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 21:44:20 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:20 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 21:44:22 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:22 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 21:44:22 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:22 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 21:44:22 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:22 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 21:44:22 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:22 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 21:44:22 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:22 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 21:44:22 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:22 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 21:44:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:23 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 21:44:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:23 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 21:44:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:23 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 21:44:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:23 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 21:44:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:23 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 21:44:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:44:23 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 21:56:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:56:23 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 21:56:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:56:23 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 21:56:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:56:23 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 21:56:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:56:23 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 21:56:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:56:23 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 21:56:23 2026] INFO               Accepted extension
+[Tue Jan  6 21:56:23 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 22:06:34 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:34 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 22:06:34 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:34 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 22:06:34 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:34 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 22:06:34 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:34 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 22:06:34 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:34 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 22:06:34 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:34 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan  6 22:06:57 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:57 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan  6 22:06:57 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:57 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan  6 22:06:57 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:57 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan  6 22:06:57 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:57 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan  6 22:06:57 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:57 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan  6 22:06:57 2026] INFO               Accepted extension
+[Tue Jan  6 22:06:57 2026] INFO               Sourcing file: /share/zsh/aliases.zsh

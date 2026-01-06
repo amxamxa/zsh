@@ -18,8 +18,8 @@
 #   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done
 
 # To use the Meta or Alt keys, you probably need to revert to single-byte mode with a command such as:
-#unsetopt MULTIBYTE 		# Multibyte-Zeichensätze die mehr als ein Byte zur Darstellung benötigen
-#unsetopt CASEGLOB
+unsetopt MULTIBYTE 		# Multibyte-Zeichensätze die mehr als ein Byte zur Darstellung benötigen
+unsetopt CASEGLOB
 # unsetopt HIST_SAVE_NO_DUPS    # Write a duplicate event to the history file
 
 # Vivid color configuration: LS_COLORS mit benutzerdefinierter Farbdatei setzen
@@ -47,102 +47,25 @@ fi
 #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
 #  _______________________________________________________
 # Function to source files with error handling
-# source_or_error() {
-#    local file="$1"
-#    local error_output
-#    if [[ ! -f "$file" ]]; then
-#        printf "\t${RED} 󰅙 nicht gefunden!${RESET}${NIGHT}${BOLD} $file ${RESET}\n" >&2
-#        return 1
-#    fi
-#    if error_output=$(source "$file" 2>&1); then
-#        source "$file"
-#        printf "\t${GREEN}󰞷 src pass:\t${RESET}${NIGHT}${BOLD} $file ${RESET}\n"
-#        return 0
-#    else
-#        printf "\t${RED} 󰅙 Fehler beim Laden!${RESET}${NIGHT} $file ${RESET}\n" >&2
-#        printf "\t${RED}Details: $error_output${RESET}\n" >&2
-#        return 1
-#    fi
-#}
-
-
-# ────────────────────────────────────────────────────────────────
-# Function: source_or_error
-# Purpose : Safely source .sh / .zsh files with extensive validation
-# Usage   : source_or_error file.sh|file.zsh
-# Shell   : zsh
-# ────────────────────────────────────────────────────────────────
-
 source_or_error() {
-  # --- UI colors (ANSI) ---
-  local RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
-  local GELB="\e[33m"
-  local GREEN="\033[38;2;0;255;0m\033[48;2;0;100;0m"
-  local RESET="\e[0m"
-
-  # --- logging helper ---
-  _log() {
-    # $1 = level, , $2 = filename $3 = message
-   printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3"  >> "$ZDOTDIR/zsh.log" 1> /dev/null
-    }
-
-  local file="$1"
-
-  # Validation checks
-    # --- argument sanity ---
-  [[ -z "$file" ]] && { _log ERROR "" "No file argument provided"; return 2; }
-    # --- existence (any type) ---
-  [[ ! -e "$file" ]] && { _log ERROR "" "File does not exist: $file"; return 3; }
-    # --- empty file check ---
-  [[ ! -s "$file" ]] && { _log ERROR "" "File is empty: $file"; return 4; }
-    # is file?
-  [[ ! -f "$file" ]] && { _log ERROR "" "Not a regular file: $file"; return 5; }
-    # is readable?
-  [[ ! -r "$file" ]] && { _log ERROR "" "File not readable: $file"; return 6; }
-
-  # --- symlink handling ---
-  if [[ -L "$file" ]]; then
-    local real_file="${file:A}"
-    _log INFO "" "Symlink resolved: $file -> $real_file"
-    printf "\t${GELB}→ Symlink resolved: $real_file${RESET}\n"
-    file="$real_file"
-  fi
-
-
-  # --- extension whitelist ---
-  case "$file" in
-    (*.sh|*.zsh)
-      _log INFO "" "Accepted extension"
-      ;;
-    (*)
-      _log ERROR "" "Unsupported extension: $file"
-      printf "\t${RED}✖ Unsupported file type (only .sh/.zsh allowed): $file${RESET}\n"
-      return 7
-      ;;
-  esac
-
-  # --- basic plausibility (optional syntax probe) ---
-  # Note: zsh has no true "lint"; this catches gross parser errors
-  if ! zsh -n "$file" 2>/dev/null; then
-    _log ERROR "" "Syntax check failed: $file"
-    printf "\t${RED}✖ Syntax check failed: $file${RESET}\n"
-    return 8
-  fi
-
-  # --- source ---
-  _log INFO "" "Sourcing file: $file"
-  source "$file"
-
-  local rc=$?
-  if (( rc != 0 )); then
-    _log ERROR "" "Sourcing returned non-zero exit code ($rc): $file"
-    printf "\t${RED}✖ Error while sourcing: $file${RESET}\n"
-    return $rc
-  fi
-
-  printf "${GREEN}󰞷 src pass: ${NIGHT} $file :${GREEN} ✔ ${RESET}\n"
-  return 0
+    local file="$1"
+    local error_output
+    if [[ ! -f "$file" ]]; then
+        printf "\t${RED} 󰅙 nicht gefunden!${RESET}${NIGHT}${BOLD} $file ${RESET}\n" >&2
+        return 1
+    fi
+    if error_output=$(source "$file" 2>&1); then
+        source "$file"
+        printf "\t${GREEN}󰞷 src pass:\t${RESET}${NIGHT}${BOLD} $file ${RESET}\n"
+        return 0
+    else
+        printf "\t${RED} 󰅙 Fehler beim Laden!${RESET}${NIGHT} $file ${RESET}\n" >&2
+        printf "\t${RED}Details: $error_output${RESET}\n" >&2
+        return 1
+    fi
 }
+
+
 
 
 
@@ -171,11 +94,22 @@ source_or_error() {
 #	 $$$$$$$/     $/    $$$$$$$/ $$/
 #_____________________________________________
 
-# Initialize completion systems with error handling -  Tool-specific completions
-command -v navi &>/dev/null && eval "$(navi widget zsh)"
-command -v hugo &>/dev/null && eval "$(hugo completion zsh)"
-command -v npm &>/dev/null && eval "$(npm completion)"
-command -v rg &>/dev/null && eval "$(rg --generate=complete-zsh)"
+# Initialize completion systems with error handling
+if command -v navi &> /dev/null; then
+    eval "$(navi widget zsh)"
+fi
+
+if command -v hugo &> /dev/null; then
+    eval "$(hugo completion zsh)"
+fi
+
+if command -v npm &> /dev/null; then
+    eval "$(npm completion zsh)"
+fi
+
+if command -v navi &> /dev/null; then
+    eval "$(rg --generate=complete-zsh)"
+fi
 
 #	__________________________________________
 #		  __ _  (_)__________ 
@@ -199,12 +133,15 @@ if command -v zoxide &> /dev/null; then
     export _ZO_ECHO=1
     export _ZO_DATA_DIR="$ZDOTDIR/zoxide"
     eval "$(zoxide init zsh)"
+    alias za='zoxide add'
     alias zq='zoxide query -l'
     alias zqi='cd "$(zoxide query -i)"'
+    alias zr='zoxide remove'
     echo "\t${PINK} zoxide ... check ${RESET}\t"
-  else
+    sleep 0.1
+else
     echo "\t${RED} zoxide ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
-    sleep 1
+    sleep 0.2
 fi
 #	----------__------------_----------------
 #		 ____/ /  ___ ___ _/ /_
@@ -219,7 +156,7 @@ if command -v cheat &> /dev/null; then
     sleep 0.1
 else
     echo "\t${RED} cheat ist nicht installiert. Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
-    sleep 2.1
+    sleep 0.1
 fi
 
 # Navi configuration  # mit "^g" fürs widget
@@ -234,7 +171,7 @@ if command -v navi &> /dev/null; then
     fi
 else
     echo "\t${RED} navi ist nicht installiert. Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
-    sleep 2.1
+    sleep 0.1
 fi
 
  
@@ -261,36 +198,34 @@ fi
 #		█────█─█──████─█───█─█─────█─
 #  ______ _____________________________________ 
 # anderweitig in zsh.nix definiert:
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.config/zsh/.zshrc.
+#if [[ -r "$ZDOTDIR/prompt/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "$ZDOTDIR/prompt/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
-
-########### Variantze 1: PROMPT Powerlevel10k 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of /share/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-[[ ! -f /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ]] || source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit /share/zsh/.p10k.zsh.
-# [[ ! -f file.zsh ]] || source file.zsh
- [[ ! -f $ZDOTDIR/prompt/p10k.zsh ]] || source $ZDOTDIR/prompt/p10k.zsh
 # -f: (Readable): Bedingung evaluiert True, wenn Datei existiert und Nutzer Leseberechtigung hat
-# POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+#[[ ! -f /share/zsh/prompt/p10k.zsh ]] || source /share/zsh/prompt/p10k.zsh && echo -e "sucess\n"
 
-########### Variante 2: PROMPT mit STARSHIP
+
+#POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+
 # ggf. SPACESHIP PROMPT --> starship preset
 # OK: bracketed-segments, nerd-font-symbols,  no-runtime-versions, no-empty-icons, no-nerd-font   ,   plain-text-symbols 2  
 # BAD: tokyo-night 3 pastel-powerline    catppuccin-powerline 5
 # GUT: gruvbox-rainbow    jetpack    pure-preset         
-#starship preset tokyo-night > $ZDOTDIR/prompt/starship.toml
-#export STARSHIP_CONFIG=$ZDOTDIR/prompt/starship.toml
+starship preset tokyo-night > $ZDOTDIR/prompt/starship.toml
+export STARSHIP_CONFIG=$ZDOTDIR/prompt/starship.toml
 #export STARSHIP_CONFIG=$ZDOTDIR/prompt/cram.toml
-#eval "$(starship init zsh)"
-#eval "$(starship completions zsh)"
+eval "$(starship init zsh)"
+eval "$(starship completions zsh)"
 
-############: Variante 3: zsh-Hausmittel
+# ALTERNATIV: source /share/zsh/prompt/zprompt.zsh
+
+#_______________________________________________________
 
 
-#__________________________________________________
 #	 less
-#	------------------------------------------
+#	------------------------------------------------
 # --RAW-CONTROL-CHARS: 	Steuerzeichen (wie Farbcodes) im Terminal korrekt anzuzeigen
 # --chop-long-lines: 	Zeilen nicht umbrechen
 # --no-init: 			verhindert, dass Bildschirm nach dem Verlassen löscht	
@@ -309,33 +244,30 @@ fi
 echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 
 # Weather display-------------------------------------------------
-#if command -v curl &> /dev/null; then
-#    echo "\n${VIOLET}" && curl 'wttr.in/Dresden?m0&lang=de'
-#else
-#    echo "\t${RED} curl ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
-#    sleep 0.2	
-# fi
+if command -v curl &> /dev/null; then
+    echo "\n${VIOLET}" && curl 'wttr.in/Dresden?m0&lang=de'
+else
+    echo "\t${RED} curl ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
+    sleep 0.2	
+fi
 #---------------------------------------------------------------
 
 # Sourcen von Konfigurationsdateien
 # echo "   󰞷 "
 echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 # Source configuration files
-
-
+#    source_or_error "$ZDOTDIR/prompt/purify.zsh"
 source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
+source_or_error "$ZDOTDIR/aliases.zsh"
 sleep 0.02
 source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
-sleep 0.02
 source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
-source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
-source_or_error "$ZDOTDIR/functions/my-functions.zsh"
-
 sleep 0.02
-
-source_or_error "$ZDOTDIR/aliases.zsh"
+source_or_error "$ZDOTDIR/functions/my-functions.zsh"
+sleep 0.02
+source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
 # source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
-# source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"
+source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"
 sleep 0.02
 
 
@@ -354,7 +286,7 @@ fi
 echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
 
 # FZF documentation info
-#echo "${PINK} fzf documentation: $ZDOTDIR/fzf/README.md${RESET}"
+echo "${PINK} fzf documentation: $ZDOTDIR/fzf/README.md${RESET}"
 # echo " Ctrl+M	fzf-command-widget → Kontextabhängig fzf für ls, man, grep, find, ps aux
 # Ctrl+R	Zsh-History-Suche → mit fzf-run-cmd-from-history
 # Ctrl+E	Select File and edit w/ \$EDITOR " | clolcat -S 5 -F 0.06
@@ -378,5 +310,12 @@ rm -fr "$HOME/.compose-cache"
   echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj -i --colors="aroace"
   
   
+# Enable Powerlevel10k instant prompt. Should stay close to the top of /share/zsh/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+#if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+#fi
 
- 
+# To customize prompt, run `p10k configure` or edit /share/zsh/.p10k.zsh.
+# [[ ! -f /share/zsh/.p10k.zsh ]] || source /share/zsh/.p10k.zsh

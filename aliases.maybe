@@ -155,6 +155,7 @@ eza --git -lA
 pw-cli info all
 
 print -l **/*(e:'[[ -d $REPLY/.git ]]':)
+
 # yt-dlp -x --audio-format mp3 --split-chapters --paths "%(section_title)s.%(ext)s" "https://youtu.be/sCJPHeli-sc?si=U5wEaa02ZN5dxLY_"
 grep -r -i "vivid" .
 fd wallpaper --type file --extension svg /nix --exec-batch kitty +kitten icat {}
@@ -171,8 +172,11 @@ nix-instantiate --eval -E 'with import <nixpkgs> {}; lsd.meta.description' --jso
 sudo fd --type directory --exec-batch chmod -v 755 {}
 sudo fd --type file --exec-batch chmod -v 644 {}
 cast2more -i asciinema/amxamxa@2025-04-17.cast --only-gif -o asciinema/HOW.gif
+
 ffmpeg -i "Entourloop Summer- vinyl-Mix 2022-Fonki Cheff.mp3" -f segment -segment_time 557.67 -c copy output_%03d.mp3
+
 LESS_TERMCAP_md=$'[01;31m' LESS_TERMCAP_me=$'[0m' LESS_TERMCAP_se=$'[0m' LESS_TERMCAP_so=$'[01;44;33m' LESS_TERMCAP_ue=$'[0m' LESS_TERMCAP_us=$'[01;32m' man man
+
 ps -u $(id -u) -ef
 ps -u $(id -u) -o pid,user,cmd
 ps -u $(id -u) -fea
@@ -197,7 +201,6 @@ l
 fzf --bind 'focus:transform-header:file --brief {}'
 echo -e "1. Hello
 2. Goodbye
-
 3. Exit" | fzf --reverse --header 'Select one' --bind 'enter:transform:[[ -n {} ]] && echo accept || echo "change-header:Invalid selection"'
 
 ps -ef | fzf --bind 'ctrl-r:reload(ps -ef)' --header 'Press CTRL-R to reload' --header-lines=1 --layout=reverse
@@ -224,5 +227,13 @@ echo "
 sudo btrfs subvolume snapshot /share /share/snapshots/$(date +%Y-%m-%d) 
 
 echo "⬬⬬…"
-SRC functions/my-functions.zsh
-eza -Al --sort Extension
+
+RPROMPT="|%F{#FFCA5B}ERR:%?||%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k||%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|"
+PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}%~%f%k%F{063}%K{045} --> %k%f'
+
+find /etc/nixos -name "*.nix" -not -path "*/bkp/*" -not -path "*/out-of-use/*" -not -path "*/read-only/*" -not -name "hardware-configuration.nix"
+
+sudo nixos-rebuild switch --profile-name xam4boom -I nixpkgs=/nix/var/nix/profiles/per-user/root/channels/nixos -I nixos-config=/etc/nixos/configuration.nix
+
+echo "source /share/zsh/prompt/p10k.zsh" >> $ZDOTDIR/.zshrc zsh
+echo "source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" >> $ZDOTDIR/.zshrc

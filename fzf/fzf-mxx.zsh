@@ -1,34 +1,67 @@
-# Function: fzf-file-edit
-# Keybinding: Ctrl+E
-# Purpose: Select file with fzf and open in $EDITOR
-# Options:
-#   --preview: shows syntax-highlighted file with line numbers
-#   --preview-window: places preview at bottom (40% height)
-# Output: Opens selected file in $EDITOR
+#!/usr/bin/env zsh
+
+# FZF configuration
+FZF_PROMPT="Edit ❯ "
+FZF_HEADER="TAB: select • SHIFT-TAB: multi-select • ENTER: open • CTRL-C: cancel"
+
+# =================
+# FZF File Editor Widget
+# ==================
 
 function fzf-file-edit() {
     local file
-
     file=$(
         fzf --preview 'bat --style=numbers --color=always --line-range :300 {}' \
-            --preview-window=down:40% \
-            --height=80% \
-            --border \
-            --prompt='Edit ❯ '
+            --header="$FZF_HEADER" \
+            --prompt="$FZF_PROMPT"
     )
-
-    [[ -n "$file" ]] && ${EDITOR:-nano} "$file"
     
-    # Redraw the prompt
+    if [[ -n "$file" ]]; then
+        ${EDITOR:-nano} "$file"
+    fi
+    
     zle reset-prompt
 }
 
-# Create a zle widget from the function
 zle -N fzf-file-edit
-
-# Bind Ctrl+E to the widget
 bindkey '^E' fzf-file-edit
 
-# Remove the autoload line since we're defining the function directly
-# autoload -Uz fzf-file-edit
-# ────────────────────────────────────────────────
+# =================
+# FZF Man Page Viewer Widget
+# ==================
+
+function fzf-man-page() {
+    local MAN_PAGE SECTIONS
+    SECTIONS=${1:-1 2 3 4 5 6 7 8 9}
+    
+    # Section selection with -s flag
+    if [[ "$1" == "-s" ]]; then
+        SECTIONS=$(
+            echo {1..9} | tr ' ' '\n' \
+                | fzf --prompt="Select man section ❯ " --height=40%
+        )
+        [[ -z "$SECTIONS" ]] && return
+    fi
+    
+    # Find and preview man pages
+    MAN_PAGE=$(
+        command man -k -s "$SECTIONS" . 2>/dev/null \
+            | awk -F': ' '{print $1}' \
+            | fzf --preview 'man -P "col -b" {} 2>/dev/null \
+                | command bat --style=numbers,changes --language=man --color=always --paging=never --theme=base16' \
+            --header="$FZF_HEADER" \
+            --prompt="Man ($SECTIONS) ❯ "
+    )
+    
+    if [[ -n "$MAN_PAGE" ]]; then
+        man "$MAN_PAGE"
+    fi
+    
+    zle reset-prompt
+}
+
+zle -N fzf-man-page
+
+# CRITICAL FIX: ^M is ENTER key - don't override it!
+# Use different keybinding
+bindkey '^[m' fzf-man-page  # Alt+M instead of Ctrl+M

@@ -7,32 +7,23 @@
 ##  file creation: 	23 oct
 ##  file status:	work in progress
 ##  comments: 	    - ^e edit
-###########################################
- 
+##  ---------------------------------------
 #   n i x   o s :
-#			 -        zsh aliase
-#			 - global zsh aliase
-#			 - suffix zsh aliase
-#	______________________________________________________nix_OS___
-# 		HOWTO :
-# alle Abhängigkeiten eines Pakets rekursiv an:
-# 		nix-store -q --references --recursive
+#   -        zsh aliase
+#   - global zsh aliase
+#   - suffix zsh aliase	
+#   HOWTO :
+# Abhängigkeiten v Pakets rekursiv an:
+# 	nix-store -q --references --recursive
 # Finde heraus, welche anderen Pakete von einem bestimmten Paket abhängen:
-#	nix-store -q --referrers /nix/store/ .
-# Finde doppelte pkgs.?
-# 	sort /etc/nixos/packages.nix | uniq -d
-# 				ODER
-#	awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
+# nix-store -q --referrers /nix/store/ .
+#
+# doppelte pkgs> sort packages.nix | uniq -d
+# ODER> awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
-##  ZSH DIRECTORY STACK - DS
-   alias -g D='dirs -v'
 
 alias tuxpaint='tuxpaint --datadir $HOME/bilder/TUXPAINT/data --exportdir $HOME/bilder/TUXPAINT/export --savedir $HOME/bilder/TUXPAINT/saves'
-# --- Allgemeine Werkzeuge ---
-alias fd='echo -e "\t${PINK}Führe fd (find alternative) mit automatischer Farbgebung aus${RESET}" && fd --color=auto'
-alias DU='echo -e "\t${PINK}Starte interaktiven Disk-Usage-Analyzer (ncdu)${RESET}" && ncdu --color dark'
-alias ncdu='echo -e "\t${PINK}Starte interaktiven Disk-Usage-Analyzer (ncdu) mit dunklem Farbschema${RESET}" && ncdu --color dark'
-alias cp='echo -e "\t${PINK}Kopiere Dateien/Verzeichnisse mit xcp (verbose)${RESET}" && xcp --verbose'
+
 
 # --- Asciinema Aufnahmen ---
 # TODO  SIND NUN IN Zfunc
@@ -153,6 +144,8 @@ alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix w/ timestamp of cr
     eza -U --header --long --tree --almost-all --group-directories-first /nix/var/nix/profiles/'
 # alias NIXcurrentCopy='echo -e "\t${PINK}cp  /run/current-system/configuration.nix ${LILA}to /share/nixos/current-system-bkp${RESET}" && cp -fv /run/current-system/configuration.nix /share/nixos/current-system-bkp/$(date +%F)-conf.nix'
 # alias NcurrCopy= NIXcurrentCopy
+
+alias NIXrun='eza --tree --only-dirs /run/current-system/sw/share'
 
 alias NIXoi='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name xam4boom --upgrade${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "xam4boom" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
 alias Nboom='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name audio --upgrade${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "audio" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
@@ -394,6 +387,9 @@ alias wget="wget -c"
 alias top="btop"
 alias DF='echo -e "\t${PINK} pydf -hgB{RESET}\n" && pydf -hgB'
 alias EIN="shutdown -r now"
+alias Reboot="shutdown -r now"
+alias AUS="shutdown< now"
+
 #alias AUS="sudo nala update && sudo shutdown now"
 
 mcd () {
@@ -502,7 +498,7 @@ alias -g HH='--help 2>&1 | grep'
 alias -g H='--help'
 alias -g N0='2> /dev/null'
 alias -g D0='2> /dev/null'
-alias -g MM='&& echo "Success" || echo "Failed"'
+alias -g 00='&& echo "Success" || echo "Failed"'
 
 # dahinter PKGS name, er letzte Pfad ist der vollständige Pfad zum gebauten Paket im Nix-Store. Ohne --no-out-link würde Nix einen Symlink namens result im aktuellen Verzeichnis erstellen, der auf diesen Pfad zeigt.
 alias -g NN="nix-build --no-out-link '<nixpkgs>' -A"  
@@ -522,7 +518,6 @@ alias -s log=less
 # Die folgende Definition überschreibt die vorherige für .md-Dateien.
 alias -s {md}='marker --preview --display=:0 &'
 alias -s {txt}='micro -filetype bash'
-
 # "Run" ssh links to clone repos
 # % git@github.com:stefanjudis/dotfiles.git # wird zu
 # % git clone git@github.com:stefanjudis/dotfiles.git
