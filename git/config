@@ -31,7 +31,7 @@
     formatCommit = %s %C(auto)%d by %an <%a> %C(auto)%cr
 
     # Pfad zur globalen .gitignore-Datei für das Ausschließen von Dateien
-    excludesfile = "/share/git/.gitignore_global"
+    excludesfile = "$GIT_CONFIG:l /.gitignore_global"
 
     # Steuert die Behandlung von Zeilenumbrüchen zwischen verschiedenen Betriebssystemen.
     # "input" bedeutet, dass Git CRLF-Zeilenumbrüche (Windows) in LF (Unix) umwandelt, wenn Dateien gepusht werden.
@@ -119,3 +119,5 @@
     
 [advice]
 	statusHints = on
+
+

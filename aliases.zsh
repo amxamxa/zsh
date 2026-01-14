@@ -3,8 +3,6 @@
 ##  filename:    	aliases.zsh
 ##  filepath:     	/share/zsh
 ##  author:       	mxx
-##  file save date: 04.12.23
-##  file creation: 	23 oct
 ##  file status:	work in progress
 ##  comments: 	    - ^e edit
 ##  ---------------------------------------
@@ -13,16 +11,12 @@
 #   - global zsh aliase
 #   - suffix zsh aliase	
 #   HOWTO :
-# Abhängigkeiten v Pakets rekursiv an:
-# 	nix-store -q --references --recursive
-# Finde heraus, welche anderen Pakete von einem bestimmten Paket abhängen:
-# nix-store -q --referrers /nix/store/ .
+# -  Abhängigkeiten Pakets rekursiv an:  	nix-store -q --references --recursive
+# - welche anderen Pakete von einem bestimmten Paket abhängen:  nix-store -q --referrers /nix/store/ .
 #
 # doppelte pkgs> sort packages.nix | uniq -d
 # ODER> awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
-
-alias tuxpaint='tuxpaint --datadir $HOME/bilder/TUXPAINT/data --exportdir $HOME/bilder/TUXPAINT/export --savedir $HOME/bilder/TUXPAINT/saves'
 
 
 # --- Asciinema Aufnahmen ---
@@ -142,23 +136,17 @@ alias Nupg=NIXupgrade
 
 alias NIXboot='echo -e "\t${PINK} shows boota-able config.nix w/ timestamp of creation${LILA}which can select by grub" && \
     eza -U --header --long --tree --almost-all --group-directories-first /nix/var/nix/profiles/'
-# alias NIXcurrentCopy='echo -e "\t${PINK}cp  /run/current-system/configuration.nix ${LILA}to /share/nixos/current-system-bkp${RESET}" && cp -fv /run/current-system/configuration.nix /share/nixos/current-system-bkp/$(date +%F)-conf.nix'
-# alias NcurrCopy= NIXcurrentCopy
 
 alias NIXrun='eza --tree --only-dirs /run/current-system/sw/share'
 
-alias NIXoi='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name xam4boom --upgrade${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "xam4boom" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
-alias Nboom='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name audio --upgrade${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "audio" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
-alias Nixboom=NIXoi # Alias für NIXoi
-alias Ncopy=NIXcopy # Verweist auf ein nicht definiertes NIXcopy
+alias NIXoi='echo -e "\t${NIGHT}sudo nixos-rebuild switch --profile-name xam4boom --upgrade-I nixos-config=/etc/nixos/configuration.nix ${PINK}" && sudo nixos-rebuild switch --show-trace --upgrade --profile-name "xam4boom" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
+alias NIXboom='echo -e "\t${NIGHT}sudo nixos-rebuild boot --profile-name "xam4boot" --upgrade -I nixos-config=/etc/nixos/configuration.nix ${PINK}" && sudo nixos-rebuild boot --show-trace --upgrade --profile-name "xam4boot" -I nixos-config=/etc/nixos/configuration.nix && echo -e "__________end ${RESET}"'
 
 alias NIXref='echo -e "\t${PINK}Zeige die direkten Abhängigkeiten eines Nix-Store-Pfades an${RESET}" && nix-store -q --references /nix/store/'
 
-# alias NIXempty ='echo "Müll wird entleert!" &&  echo -e "{PINK}  lol" && sudo rm -v /nix/var/nix/gcroots/auto/* &&  sudo nix-collect-garbage -d && 	sudo nix-store --optimise -vvv'
-
 # --- Shell & System Konfiguration ---
 alias FARBE='echo -e "\t${PINK}Lade Farbskript${RESET}" && source_or_error "$ZDOTDIR/functions/colors.sh" || source "$ZDOTDIR/functions/colors.sh"'
-alias MAN='echo -e "\t${PINK}Suche Manpages mit Wildcard-Unterstützung${RESET}" && man --wildcard'
+# alias MAN='echo -e "\t${PINK}Suche Manpages mit Wildcard-Unterstützung${RESET}" && man --wildcard'
 
 alias RM='echo -e "\t${PINK}Lösche alle Backup-Dateien (*~) im aktuellen Verzeichnis${RESET}" && find . -type f -name "*~" -delete'
 
@@ -279,7 +267,12 @@ alias WMverbose='echo -e "\n\t${PINK}\n 2xklicken! mittels${GELB} cmd xprop und 
 alias nano='echo -e "\t${PINK}Verwende micro anstelle von nano${RESET}" && micro || nano'
 alias edit='echo -e "\t${PINK}Verwende micro als Standard-Editor${RESET}" && micro'
 alias DATE='echo -e "\t${PINK}Zeige das aktuelle Datum  $(date "+%A, %-d. %B %Y"):{$RESET}" && echo -e "${GELB} $(date "+%A, %-d. %B %Y")${RESET} \n "&& echo -e "${PINK} oder $ (date +%F_%H-%M)\t ${RESET}" 	&& echo -e "${GELB} $(date "+%F_%H-%M") ${RESET}"'
-alias CHmod='echo -e "\t${PINK}Mache alle .py, .sh und .zsh Skripte im aktuellen Verzeichnis ausführbar${RESET}" && find . -maxdepth 1 -type f \( -name "*.sh" -o -name "*.zsh"  -o -name "*.py" \) -exec chmod --verbose u+x {} +'
+alias CHmod='f() {
+    local dir="${1:-.}"
+    echo -e "\t${PINK}Mache alle .py, .sh und .zsh Skripte in ${dir} ausführbar${RESET}"
+    find "$dir" -maxdepth 1 -type f \( -name "*.sh" -o -name "*.zsh" -o -name "*.py" \) -exec chmod -v u+x {} +
+}; f'
+
 alias debug='echo "Debugging..."; set -x'
 
 
@@ -381,14 +374,12 @@ alias ..='cd ..'
 alias Df='echo -e "\t${PINK}df -Tha --total ${RESET}\n" && df -Tha --total'
 alias fhere='echo -e "\t${PINK}find . -name $1 {RESET}\n" && find . -name'
 alias free='echo -e "\t${PINK}free -gt {RESET}\n" && free -gt'
-alias PS='echo -e "\t${PINK} ps auxf{RESET}\n" && ps auxf'
-alias psg='echo -e "\t${PINK}ps aux | grep -v grep | grep -i -e VSZ -e {RESET}\n" && ps aux | grep -v grep | grep -i -e VSZ -e'
 alias wget="wget -c"
 alias top="btop"
-alias DF='echo -e "\t${PINK} pydf -hgB{RESET}\n" && pydf -hgB'
+alias df='echo -e "\t${PINK} duf{RESET}\n" && duf'
 alias EIN="shutdown -r now"
 alias Reboot="shutdown -r now"
-alias AUS="shutdown< now"
+alias AUS="shutdown now"
 
 #alias AUS="sudo nala update && sudo shutdown now"
 
