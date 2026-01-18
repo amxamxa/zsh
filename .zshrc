@@ -240,89 +240,80 @@ alias tetris=tetriscurses
 # Enable Powerlevel10k instant prompt. Should stay close to the top of /share/zsh/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-     [[ ! -f /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ]] || source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+#     [[ ! -f /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ]] || source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit /share/zsh/.p10k.zsh.
 # [[ ! -f file.zsh ]] || source file.zsh
-       [[ ! -f $ZDOTDIR/prompt/p10k.zsh ]] || source $ZDOTDIR/prompt/p10k.zsh
+ #      [[ ! -f $ZDOTDIR/prompt/p10k.zsh ]] || source $ZDOTDIR/prompt/p10k.zsh
 # -f: (Readable): Bedingung evaluiert True, wenn Datei existiert und Nutzer Leseberechtigung hat
- POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
+# POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
 # unload prompt $powerlevel10k_plugin_unload
+# Logging helper (append-only)
+  # $1 = level, , $2 = filename $3 = message
+    _log() {
+        printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3" >> "${ZDOTDIR}/zsh.log" 2>/dev/null
+      }
+      p10k_loaded=0
+#-----------------------POWERLEVEL PROMPT------------------------------
+ if [[ -f /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ]]; then
+ source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
+       if [[ $? -ne 0 ]]; then
+          _log ERROR "Failed to load system powerlevel10k; falling back"
+        else
+          p10k_loaded=1
+        fi
+      fi
+  # Try user-provided powerlevel10k in ZDOTDIR/prompt
+      if [[ $p10k_loaded -eq 0 && -f $ZDOTDIR/prompt/p10k.zsh ]]; then
+        source ${ZDOTDIR}/prompt/p10k.zsh 2>/dev/null
+        if [[ $? -ne 0 ]]; then
+          _log ERROR "Failed to load user powerlevel10k; falling back"
+        else
+          p10k_loaded=1
+        fi
+      fi
 
+#----FALLBACK 1:---------------STARSHIP PROMPT----------------------------------
+      # Fallback: use starship if p10k not loaded
+      if [[ $p10k_loaded -eq 0 ]]; then
+        # Ensure prompt directory exists and is writable before writing config
+        mkdir -p $ZDOTDIR/prompt 2>/dev/null || true
+      # Generate a starship config only if starship is available
+        if command -v starship >/dev/null 2>&1; then
+          # Create a minimal starship config (do not overwrite if user provided one)
+          if [[ ! -f $ZDOTDIR/prompt/starship.toml ]]; then
+          starship preset tokyo-night > $ZDOTDIR/prompt/starship.toml
+          fi
+          export STARSHIP_CONFIG=$ZDOTDIR/prompt/starship.toml
+          eval "$(starship init zsh)"
+          eval "$(starship completions zsh)"
+          _log INFO "Using starship prompt"
+        else
+     # Fallback-Prompt
 
+#----FALLBACK 2:------------------ZSH NATIVE PROMPT-----------------------------
+    powerlevel10k_plugin_unload
+    prompt off
+    setopt prompt_subst
+    autoload -Uz colors && colors
+    PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}%~%f%k%F{063}%K{045} --> %k%f'
+    RPROMPT='|%F{#FFCA5B}ERR:%?|%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k|%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|'
+    _log WARNING "Using minimal fallback prompt; install starship or powerlevel10k for richer prompt"
+   fi
+  fi
 
-############: Variante 3: zsh-Hausmittel
-# source $ZDOTDIR/zprompt.zsh
-
-############: Variante 4: zsh-Hausmittel
-##powerlevel10k_plugin_unload
-##prompt off
-##PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}-->%f%k%K{063}%F{045} € %k%f'
-##RPROMPT="|%F{#FFCA5B}ERR:%?|%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k|%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|"
-  # --- logging helper ---
-#  _log() {
-    # $1 = level, , $2 = filename $3 = message
-#   printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3"  >> "$ZDOTDIR/zsh.log" 1> /dev/null
-#    }
-
-
- #p10k_loaded=0
-# Powerlevel10k laden
-#if [[ -f /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ]]; then
-#      source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
- #     if [[ $? -ne 0 ]]; then
-  #    _log ERROR "" "Failed to load powerlevel10k from system \n       path. Falling back to default prompt.";
-   #   else
-    #      p10k_loaded=1
-    #  fi
- # fi
-
-#  if [[ $p10k_loaded -eq 0 && -f /p10k.zsh ]]; then
- #     source $ZDOTDIR/prompt/p10k.zsh 2>/dev/null
-  #    if [[ $? -ne 0 ]]; then
-   #   _log ERROR "Failed to load powerlevel10k user specific.\n Falling back to default prompt.";
-    #  else
-   #       p10k_loaded=1
-   #   fi
- # fi
-
-  # Fallback-Prompt
-# if [[ $p10k_loaded -eq 0 ]]; then
-  #  powerlevel10k_plugin_unload
- #   prompt off
-   # setopt prompt_subst
-    #autoload -Uz colors && colors
- #   PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}%~%f%k%F{063}%K{045} --> %k%f'
- #   RPROMPT='|%F{#FFCA5B}ERR:%?|%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k|%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|'
-  #   _log WARNING "Using fallback prompt. Check powerlevel10k installation.";
-   #else  
-   ########### Variante 2: PROMPT mit STARSHIP
-# ggf. SPACESHIP PROMPT --> starship preset
-# OK: bracketed-segments, nerd-font-symbols,  no-runtime-versions, no-empty-icons, no-nerd-font   ,   plain-text-symbols 2  
-# BAD: tokyo-night 3 pastel-powerline    catppuccin-powerline 5
-# GUT: gruvbox-rainbow    jetpack    pure-preset         
-#starship preset tokyo-night > $ZDOTDIR/prompt/starship.toml
-#export STARSHIP_CONFIG=$ZDOTDIR/prompt/starship.toml
-#export STARSHIP_CONFIG=$ZDOTDIR/prompt/cram.toml
-#eval "$(starship init zsh)"
-#eval "$(starship completions zsh)"
-#    _log WARNING "starship insteadt!";
-#  fi
-#'';
-
-# ------------------------------------------------
-
-#__________________________________________________
-#	 less
-# --RAW-CONTROL-CHARS: 	Steuerzeichen (wie Farbcodes) im Terminal korrekt anzuzeigen
+# --- Pager Configuration ---
+export PAGER="less -R"
+# --RAW-CONTROL-CHARS: Steuerzeichen (wie Farbcodes) korrekt anzeigen
 # --chop-long-lines: 	Zeilen nicht umbrechen
-# --no-init: 		verhindert, dass Bildschirm nach dem Verlassen löscht	
-# --long-prompt:  	zeigt in der Statuszeile ausführliche Informationen 
-export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --hilite-unread"
+# --no-init: 		Bildschirm nicht löschen	
+# --long-prompt:  	Statuszeile verbose
+export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --use-color -Dd+r -Du+b"
 
-# Manpager configuration------------------------------------
+# Manpager configuration------------------------
 if command -v bat &> /dev/null; then
-    export MANPAGER="bat --paging=always --style=changes -l man -p"
-    echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
+ #   export MANPAGER="bat --paging=always --style=changes -l man -p"
+   export  MANPAGER="sh -c "col -bx | bat --paging=always --style=changes -l man""
+   echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
 else
     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
     echo "less -FRX als man-pager  ... check ${RESET}"
@@ -347,9 +338,7 @@ source_or_error "$ZDOTDIR/aliases.zsh"
 source_or_error "$ZDOTDIR/aliases.sh"
 source_or_error "$ZDOTDIR/zsh-highlight-styles.zsh"
 source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
-
 source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
-
 source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
 source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
 source_or_error "$ZDOTDIR/functions/my-functions.zsh"

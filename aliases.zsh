@@ -21,6 +21,38 @@
 
 # --- Asciinema Aufnahmen ---
 # TODO  SIND NUN IN Zfunc
+# Alternative: Robuster mit Fehlerbehandlung
+CHmod() {
+    local dir="${1:-.}"
+        # Check if directory exists
+    if [[ ! -d "$dir" ]]; then
+        echo -e "\t${RED}Error: Directory '$dir' not found${RESET}"
+        return 1
+    fi
+    echo -e "\t${PINK}Setting u+x for *.py, *.sh, *.zsh scripts in ${dir}${RESET}"
+    find "$dir" -maxdepth 1 -type f \
+        \( -name "*.sh" -o -name "*.zsh" -o -name "*.py" \) \
+        -exec chmod -v u+x {} + 2>/dev/null
+    local exit_code=$?
+    [[ $exit_code -eq 0 ]] && echo -e "\t${GREEN}Done!${RESET}" \
+    || echo -e "\t${RED}No matching files found${RESET}"
+}
+# Remove execute permission from script files in directory
+CHmod-() {
+    local dir="${1:-.}"  # Use current dir if no argument provided
+    # Check if directory exists
+    if [[ ! -d "$dir" ]]; then
+        echo -e "\t${RED}Error: Directory '$dir' not found${RESET}"
+        return 1
+    fi
+    echo -e "\t${PINK}u-x   *.py, *.sh, *.zsh scripts in ${dir} now NOT executable! ${RESET}"
+    find "$dir" -maxdepth 1 -type f \
+        \( -name "*.sh" -o -name "*.zsh" -o -name "*.py" \) \
+        -exec chmod -v u-x {} + 2>/dev/null
+    local exit_code=$?
+    [[ $exit_code -eq 0 ]] && echo -e "\t${GREEN}Done\!${RESET}" \
+    || echo -e "\t${YELLOW}No matching files found${RESET}"
+}
 # neue Aufnahme am naechsten Tag, landet wieder im asciinema/-Unterordner, aber unter dem neuen Namen. Die alte Datei bleibt erhalten.
 REC() {
   local title="$(basename "$(dirname "$(pwd)")")@$(date +%F)"
@@ -267,11 +299,6 @@ alias WMverbose='echo -e "\n\t${PINK}\n 2xklicken! mittels${GELB} cmd xprop und 
 alias nano='echo -e "\t${PINK}Verwende micro anstelle von nano${RESET}" && micro || nano'
 alias edit='echo -e "\t${PINK}Verwende micro als Standard-Editor${RESET}" && micro'
 alias DATE='echo -e "\t${PINK}Zeige das aktuelle Datum  $(date "+%A, %-d. %B %Y"):{$RESET}" && echo -e "${GELB} $(date "+%A, %-d. %B %Y")${RESET} \n "&& echo -e "${PINK} oder $ (date +%F_%H-%M)\t ${RESET}" 	&& echo -e "${GELB} $(date "+%F_%H-%M") ${RESET}"'
-alias CHmod='f() {
-    local dir="${1:-.}"
-    echo -e "\t${PINK}Mache alle .py, .sh und .zsh Skripte in ${dir} ausführbar${RESET}"
-    find "$dir" -maxdepth 1 -type f \( -name "*.sh" -o -name "*.zsh" -o -name "*.py" \) -exec chmod -v u+x {} +
-}; f'
 
 alias debug='echo "Debugging..."; set -x'
 
