@@ -358,8 +358,8 @@ echo "        	    __              __              __
  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"				
 # Display kitty keybindings table
-if [[ -f "$ZDOTDIR/functions/table.sh" ]]; then
-    $ZFUNCDIR/table.sh $ZFUNCDIR/kitty-keys.txt
+if [[ -f "$HOME/bin/table.sh" ]]; then
+    $HOME/bin/table.sh $HOME/bin/kitty-keys.txt
 fi
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
 

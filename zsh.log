@@ -2789,3 +2789,513 @@
 [Sun Jan 18 18:19:02 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
 [Sun Jan 18 18:19:02 2026] INFO               Accepted extension
 [Sun Jan 18 18:19:02 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:02:18 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:02:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:02:18 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:02:18 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:02:18 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:02:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:02:18 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:02:19 2026] INFO               Accepted extension
+[Sun Jan 18 19:02:19 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:02:19 2026] INFO               Accepted extension
+[Sun Jan 18 19:02:19 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:02:19 2026] INFO               Accepted extension
+[Sun Jan 18 19:02:19 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:02:19 2026] INFO               Accepted extension
+[Sun Jan 18 19:02:19 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:03:05 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:03:05 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:05 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:03:05 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:03:05 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:03:05 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:05 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:03:05 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:05 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:03:05 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:05 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:03:05 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:05 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:03:05 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:05 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:03:21 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:03:21 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:21 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:03:21 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:03:21 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:03:21 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:21 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:03:21 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:21 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:03:21 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:21 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:03:21 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:21 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:03:21 2026] INFO               Accepted extension
+[Sun Jan 18 19:03:21 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:05:43 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:05:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:05:43 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:05:43 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:05:43 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:05:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:05:43 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:05:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:05:43 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:05:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:05:43 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:05:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:05:43 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:05:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:05:43 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:08:56 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:08:56 2026] INFO               Accepted extension
+[Sun Jan 18 19:08:57 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:08:57 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:08:57 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:08:57 2026] INFO               Accepted extension
+[Sun Jan 18 19:08:57 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:08:57 2026] INFO               Accepted extension
+[Sun Jan 18 19:08:57 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:08:57 2026] INFO               Accepted extension
+[Sun Jan 18 19:08:57 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:08:57 2026] INFO               Accepted extension
+[Sun Jan 18 19:08:57 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:08:57 2026] INFO               Accepted extension
+[Sun Jan 18 19:08:57 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:14:26 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:14:26 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:26 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:14:26 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:14:26 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:14:26 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:26 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:14:26 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:26 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:14:26 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:26 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:14:26 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:26 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:14:26 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:26 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:14:43 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:14:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:43 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:14:43 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:14:43 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:14:43 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:44 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:14:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:44 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:14:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:44 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:14:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:44 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:14:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:44 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:14:52 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:14:52 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:52 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:14:52 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:14:52 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:14:52 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:52 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:14:52 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:52 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:14:52 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:52 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:14:52 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:52 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:14:52 2026] INFO               Accepted extension
+[Sun Jan 18 19:14:52 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:15:18 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:15:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:15:18 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:15:18 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:15:18 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:15:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:15:18 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:15:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:15:18 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:15:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:15:18 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:15:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:15:18 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:15:18 2026] INFO               Accepted extension
+[Sun Jan 18 19:15:18 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:17:44 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:17:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:17:44 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:17:44 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:17:44 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:17:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:17:44 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:17:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:17:44 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:17:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:17:44 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:17:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:17:44 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:17:44 2026] INFO               Accepted extension
+[Sun Jan 18 19:17:44 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:03 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:03 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:03 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:03 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:03 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:03 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:03 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:03 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:03 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:33 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:33 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:33 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:33 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:33 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:33 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:33 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:33 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:33 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:33 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:33 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:33 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:33 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:33 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:33 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:36 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:36 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:36 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:36 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:36 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:36 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:36 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:36 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:37 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:37 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:37 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:37 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:37 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:37 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:37 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:37 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:38 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:38 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:38 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:38 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:38 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:38 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:38 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:39 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:39 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:39 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:39 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:39 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:39 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:39 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:39 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:40 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:40 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:40 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:40 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:40 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:40 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:40 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:40 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:40 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:40 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:40 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:40 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:40 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:40 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:40 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:19:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:19:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:28:03 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:28:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:28:03 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:28:03 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:28:03 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:28:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:28:03 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:28:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:28:03 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:28:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:28:03 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:28:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:28:03 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:28:03 2026] INFO               Accepted extension
+[Sun Jan 18 19:28:03 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:30:56 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:30:56 2026] INFO               Accepted extension
+[Sun Jan 18 19:30:56 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:30:56 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:30:56 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:30:56 2026] INFO               Accepted extension
+[Sun Jan 18 19:30:56 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:30:56 2026] INFO               Accepted extension
+[Sun Jan 18 19:30:56 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:30:56 2026] INFO               Accepted extension
+[Sun Jan 18 19:30:56 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:30:56 2026] INFO               Accepted extension
+[Sun Jan 18 19:30:56 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:30:56 2026] INFO               Accepted extension
+[Sun Jan 18 19:30:56 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:31:32 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:31:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:32 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:31:32 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:31:32 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:31:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:32 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:31:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:32 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:31:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:32 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:31:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:32 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:31:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:32 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:31:49 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:31:49 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:49 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:31:49 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:31:49 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:31:49 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:49 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:31:49 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:49 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:31:49 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:49 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:31:49 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:49 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:31:49 2026] INFO               Accepted extension
+[Sun Jan 18 19:31:49 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:32:41 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:32:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:32:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:32:41 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:32:41 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:32:41 2026] INFO               Accepted extension
+[Sun Jan 18 19:32:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:32:42 2026] INFO               Accepted extension
+[Sun Jan 18 19:32:42 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:32:42 2026] INFO               Accepted extension
+[Sun Jan 18 19:32:42 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:32:42 2026] INFO               Accepted extension
+[Sun Jan 18 19:32:42 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:32:42 2026] INFO               Accepted extension
+[Sun Jan 18 19:32:42 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:33:01 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:33:01 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:01 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:33:01 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:33:01 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:33:01 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:01 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:33:01 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:01 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:33:01 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:01 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:33:01 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:01 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:33:01 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:01 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:33:32 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:33:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:32 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:33:32 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:33:32 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:33:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:32 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:33:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:32 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:33:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:32 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:33:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:32 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:33:32 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:32 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:33:34 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:33:34 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:34 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:33:34 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:33:34 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:33:34 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:34 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:33:34 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:34 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:33:34 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:34 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:33:34 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:34 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:33:34 2026] INFO               Accepted extension
+[Sun Jan 18 19:33:34 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:34:23 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:34:23 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:23 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:34:23 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:34:23 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:34:23 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:23 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:34:23 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:23 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:34:23 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:23 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:34:23 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:23 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:34:23 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:24 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:34:27 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:34:27 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:27 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:34:27 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:34:27 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:34:27 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:27 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:34:27 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:27 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:34:27 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:27 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:34:27 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:27 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:34:27 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:27 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 18 19:34:59 2026] ERROR              File does not exist: /share/zsh/truecolor.sh
+[Sun Jan 18 19:34:59 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:59 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 18 19:34:59 2026] ERROR              File does not exist: /share/zsh/aliases.sh
+[Sun Jan 18 19:34:59 2026] ERROR              File does not exist: /share/zsh/zsh-highlight-styles.zsh
+[Sun Jan 18 19:34:59 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:59 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 18 19:34:59 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:59 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 18 19:34:59 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:59 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Sun Jan 18 19:34:59 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:59 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 18 19:34:59 2026] INFO               Accepted extension
+[Sun Jan 18 19:34:59 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh

@@ -1,6 +1,5 @@
 # .gitignore
 
-# Neue Einträge
 history/zhistory
 zoxide/db.zo
 presenterm/
@@ -13,6 +12,7 @@ powerlevel10k/
 term-theme.zsh
 zsh-colored-man-pages/
 zsh-syntax-highlighting/
+*.log
 *.bkp
 *bkp
 spaceship/
