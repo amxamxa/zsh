@@ -312,7 +312,7 @@ export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-scree
 # Manpager configuration------------------------
 if command -v bat &> /dev/null; then
  #   export MANPAGER="bat --paging=always --style=changes -l man -p"
-   export  MANPAGER="sh -c "col -bx | bat --paging=always --style=changes -l man""
+   export  MANPAGER='sh -c "col -bx | bat --paging=always --style=changes -l man"'
    echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
 else
     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
@@ -333,15 +333,24 @@ echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | b
 # echo "   󰞷 "
 echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
 # Source configuration files
-source_or_error "$ZDOTDIR/truecolor.sh"
 source_or_error "$ZDOTDIR/aliases.zsh"
-source_or_error "$ZDOTDIR/aliases.sh"
-source_or_error "$ZDOTDIR/zsh-highlight-styles.zsh"
-source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
-source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
-source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
-source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
-source_or_error "$ZDOTDIR/functions/my-functions.zsh"
+source_or_error "/etc/zsh/aliases.sh"
+source_or_error "/etc/zsh/logging-aliases.sh"
+source_or_error "/etc/zsh/zsh-highlight-styles.zsh"
+source_or_error "/etc/zsh/fzf-config.sh"
+#source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
+#source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
+#source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
+#source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
+#source_or_error "$ZDOTDIR/functions/my-functions.zsh"
+
+# Source alle Skripte aus /share/zsh/functions
+for script in "$ZDOTDIR/functions/*.{sh,zsh}"; do
+  if [[ -f "$script" && -r "$script" ]]; then
+    source_or_error "$script"
+  fi
+done
+
 
 # source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
 # source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"

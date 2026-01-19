@@ -21,13 +21,13 @@ case "$XDG_SESSION_TYPE" in
         # X11 session detected
         export x11_set="true"
         echo -e "\t${BOLD}\t${BLINK}\t$RANDOM_COW" | sed -e 's/^/\t/'
-        printf "${BOLD}${GREEN}\tX11 wird verwendet,\t\t  ${RESET} \n${UNDER}${GREEN} xrandr für x11 sowie und 2 Bilds\n"
+        printf "${BOLD}${GREEN}\tX11 wird verwendet,\t\t  ${RESET} \n${UNDER}${GREEN} xrandr für x11 sowie und 2 Bilds\n" | cowsay -n -W 40 -f $RANDOM_COW
         ;;
     wayland)
         # Wayland session detected
         export wayland_set="true"
         echo -e "\t${BOLD}\t${BLINK}\t$RANDOM_COW" | sed -e 's/^/\t/'
-        printf "${BOLD}${CYAN}\tWayland wird verwendet  ${RESET}\n"
+        printf "${BOLD}${CYAN}\tWayland wird verwendet  ${RESET}\n"| cowsay -n -W 40 -f $RANDOM_COW
         ;;
     tty)
         # TTY console session (no display server)
