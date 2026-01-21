@@ -8,11 +8,11 @@ echo -e "${LIME}   LIME :..... Success message   ${RESET}"
 echo -e "${RED}    RED :..... Warning message   ${RESET}"
 echo "# Extended color palette examples:"
 cat <<-EOF
-	${GOLD}╔═════════════════════════════════════════════════════════════════════════════╗${RESET}
-	${GOLD}║                    COLOR SCRIPT USAGE GUIDE                                 ║${RESET}
-	${GOLD}╚═════════════════════════════════════════════════════════════════════════════╝${RESET}
+	${GOLD}╔════════════════════════════════════╗${RESET}
+	${GOLD}║     COLOR SCRIPT USAGE GUIDE       ║${RESET}
+    ${GOLD}╚════════════════════════════════════╝${RESET}
 	${SKY}▶ IMPORTANT NOTES:${RESET}
-	  ${ORANG}• Always end colored text with \${RESET}${RESET}
+	  ${ORANG}• Always end colored text with ${RESET}
 	  ${ORANG}• All colors are exported as environment variables${RESET}
 	  ${ORANG}• Automatic fallback for terminals without true color support${RESET}
 	  ${ORANG}• Colors are readonly to prevent accidental modification${RESET}

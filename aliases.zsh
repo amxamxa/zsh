@@ -232,10 +232,12 @@ alias Zcopy='echo -e "\n\t${PINK}Kopiere Zsh-Konfigurationsdateien ins Backup-Ve
     cp --verbose "$ZDOTDIR/aliases.zsh" "/share/bkp/zsh/$(date +'%F')nix.aliases.zsh"'
 alias Zopt='echo -e "\t${PINK}Wrapper für setopt${RESET}" && setopt'
 
-#	_____________________________________________kitty_______________________
-alias KITTYconf='echo -e "\t${PINK}Öffne kitty Konfigurationsdatei${RESET}" &&  gnome-text-editor --standalone --ignore-session "$XDG_CONFIG_HOME/kitty/kitty.conf" | micro -filetype zsh "$KITTY_CONFIG_DIRECTORY/kitty.conf"'
+#	_____________________________________________kitty______________
+alias KITTYconf='echo -e "\t${PINK}Öffne kitty  Konfigurationsdatei${RESET}" && \
+        gnome-text-editor --standalone --ignore-session  "$XDG_CONFIG_HOME/kitty/kitty.conf" || \
+        micro -filetype zsh "$KITTY_CONFIG_DIRECTORY/kitty.conf"'
 alias Kconf=KITTYconf
-alias KITTYmap='echo -e "\t${PINK}Zeige alle Tastaturbelegungen (map) in der kitty.conf${RESET}" && bap-NoComment "$KITTY_CONFIG_DIRECTORY/kitty.conf" | grep "map"'
+alias KITTYmap='echo -e "\t${PINK}Zeige alle Tastaturbelegungen (map) in der kitty.conf${RESET}" && bapNoComment "$KITTY_CONFIG_DIRECTORY/kitty.conf" || grep "map"'
 alias Kmap=KITTYmap
 alias Kbind=KITTYmap
 #	____________________________________________________________________

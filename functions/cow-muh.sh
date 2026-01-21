@@ -10,16 +10,13 @@
 set -euo pipefail
 
 # Farben und Formatierung
-BOLD="\033[1m"
-BLINK="\033[5m"
-UNDER="\033[4m"
 GREEN="\033[32m"
 RED="\033[31m"
 RESET="\033[0m"
 
 # Standardtext
 DEFAULT_TEXT=${1:-"I would rather be a serf in a poor man's house and be above ground than reign among the dead.
-		-- Achilles, "The Odyssey", XI, 489-91"}
+		-- Achilles, The Odyssey, XI, 489-91"}
 
 # Prüfe Abhängigkeiten
 check_dependencies() {
@@ -36,7 +33,7 @@ get_cow_list() {
 
 # Zeige eine zufällige Cow
 COW_RANDOM() {
-  local text=${1:-"$DEFAULT_TEXT"}
+  local text=$DEFAULT_TEXT
   local COW_FILES
   local SELECTED_COW
 
@@ -75,3 +72,4 @@ COW_ALL() {
 
 # Hauptprogramm
 check_dependencies
+

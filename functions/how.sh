@@ -27,7 +27,7 @@
 ## ---------------------------------------
 ## COMMENTS: Advanced formatting and color support included.
 ##########################################
-#!/usr/bin/env bash
+
 
 # Define color codes for terminal output to enhance readability
 COL_USER="\033[38;2;0;17;204m\033[48;2;147;112;219m"       # fg: Dark Blue (0,17,204) | bg: Light Purple (147,112,219)

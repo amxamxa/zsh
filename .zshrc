@@ -98,11 +98,11 @@ source_or_error() {
   esac
   # --- basic plausibility (optional syntax probe) ---
   # Note: zsh has no true "lint"; this catches gross parser errors
-  if ! zsh -n "$file" 2>/dev/null; then
-    _log ERROR "" "Syntax check failed: $file"
-    printf "\t${RED}✖ Syntax check failed: $file${RESET}\n"
-    return 8
-  fi
+ # if ! zsh -n "$file" 2>/dev/null; then
+ #   _log ERROR "" "Syntax check failed: $file"
+ #   printf "\t${RED}✖ Syntax check failed: $file${RESET}\n"
+ #   return 8
+  # fi
   # --- source ---
   _log INFO "" "Sourcing file: $file"
   source "$file"
@@ -228,78 +228,16 @@ alias tetris=tetriscurses
  #  else
  #     echo "\t${RED} Mc_Fly ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}\n"
  # fi
-# --------------------------------------------
-#		████─████─████─█───█─████─███
-#		█──█─█──█─█──█─██─██─█──█──█─
-#		████─████─█──█─█─█─█─████──█─
-#		█────█─█──█──█─█───█─█─────█─
-#		█────█─█──████─█───█─█─────█─
-# anderweitig in zsh.nix definiert:
-
-########### Variantze 1: PROMPT Powerlevel10k 
-# Enable Powerlevel10k instant prompt. Should stay close to the top of /share/zsh/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-#     [[ ! -f /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ]] || source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit /share/zsh/.p10k.zsh.
-# [[ ! -f file.zsh ]] || source file.zsh
- #      [[ ! -f $ZDOTDIR/prompt/p10k.zsh ]] || source $ZDOTDIR/prompt/p10k.zsh
-# -f: (Readable): Bedingung evaluiert True, wenn Datei existiert und Nutzer Leseberechtigung hat
-# POWERLEVEL9K_DISABLE_CONFIGURATION_WIZARD=true
-# unload prompt $powerlevel10k_plugin_unload
-# Logging helper (append-only)
-  # $1 = level, , $2 = filename $3 = message
-    _log() {
-        printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3" >> "${ZDOTDIR}/zsh.log" 2>/dev/null
-      }
-      p10k_loaded=0
-#-----------------------POWERLEVEL PROMPT------------------------------
- if [[ -f /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme ]]; then
- source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
-       if [[ $? -ne 0 ]]; then
-          _log ERROR "Failed to load system powerlevel10k; falling back"
-        else
-          p10k_loaded=1
-        fi
-      fi
-  # Try user-provided powerlevel10k in ZDOTDIR/prompt
-      if [[ $p10k_loaded -eq 0 && -f $ZDOTDIR/prompt/p10k.zsh ]]; then
-        source ${ZDOTDIR}/prompt/p10k.zsh 2>/dev/null
-        if [[ $? -ne 0 ]]; then
-          _log ERROR "Failed to load user powerlevel10k; falling back"
-        else
-          p10k_loaded=1
-        fi
-      fi
-
-#----FALLBACK 1:---------------STARSHIP PROMPT----------------------------------
-      # Fallback: use starship if p10k not loaded
-      if [[ $p10k_loaded -eq 0 ]]; then
-        # Ensure prompt directory exists and is writable before writing config
-        mkdir -p $ZDOTDIR/prompt 2>/dev/null || true
-      # Generate a starship config only if starship is available
-        if command -v starship >/dev/null 2>&1; then
-          # Create a minimal starship config (do not overwrite if user provided one)
-          if [[ ! -f $ZDOTDIR/prompt/starship.toml ]]; then
-          starship preset tokyo-night > $ZDOTDIR/prompt/starship.toml
-          fi
-          export STARSHIP_CONFIG=$ZDOTDIR/prompt/starship.toml
-          eval "$(starship init zsh)"
-          eval "$(starship completions zsh)"
-          _log INFO "Using starship prompt"
-        else
-     # Fallback-Prompt
-
+# PROMPT: siehe ZFUNC
 #----FALLBACK 2:------------------ZSH NATIVE PROMPT-----------------------------
-    powerlevel10k_plugin_unload
-    prompt off
-    setopt prompt_subst
-    autoload -Uz colors && colors
-    PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}%~%f%k%F{063}%K{045} --> %k%f'
-    RPROMPT='|%F{#FFCA5B}ERR:%?|%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k|%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|'
-    _log WARNING "Using minimal fallback prompt; install starship or powerlevel10k for richer prompt"
-   fi
-  fi
+#    powerlevel10k_plugin_unload
+#    prompt off
+#    setopt prompt_subst
+#    autoload -Uz colors && colors
+#    PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}%~%f%k%F{063}%K{045} --> %k%f'
+#    RPROMPT='|%F{#FFCA5B}ERR:%?|%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k|%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|'
+#    _log WARNING "Using minimal fallback prompt; install starship or powerlevel10k for richer prompt"
+
 
 # --- Pager Configuration ---
 export PAGER="less -R"
@@ -310,13 +248,24 @@ export PAGER="less -R"
 export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --use-color -Dd+r -Du+b"
 
 # Manpager configuration------------------------
+export  MANROFFOPT="-c"
+export MANWIDTH="60"
 if command -v bat &> /dev/null; then
  #   export MANPAGER="bat --paging=always --style=changes -l man -p"
    export  MANPAGER='sh -c "col -bx | bat --paging=always --style=changes -l man"'
    echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
 else
     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
-    echo "less -FRX als man-pager  ... check ${RESET}"
+    echo "${GELB} less -FRX als man-pager  ... check ${RESET}"
+      # Enable color support for less via Termcap sequences
+  export LESS_TERMCAP_mb="\e[1;31m"; # Start blinking
+  export LESS_TERMCAP_md="\e[1;36m"; # Start bold (Cyan)
+  export LESS_TERMCAP_me="\e[0m";    # End bold/blink
+export   LESS_TERMCAP_so="\e[01;44;33m"; # Start standout (Yellow on Blue)
+  export LESS_TERMCAP_se="\e[0m";    # End standout
+  export LESS_TERMCAP_us="\e[1;32m"; # Start underline (Green)
+  export LESS_TERMCAP_ue="\e[0m";    # End underline
+
 fi
 # --------------------------------------------
 echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
@@ -334,23 +283,48 @@ echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | b
 echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
 # Source configuration files
 source_or_error "$ZDOTDIR/aliases.zsh"
-source_or_error "/etc/zsh/aliases.sh"
-source_or_error "/etc/zsh/logging-aliases.sh"
-source_or_error "/etc/zsh/zsh-highlight-styles.zsh"
-source_or_error "/etc/zsh/fzf-config.sh"
-#source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
-#source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
-#source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
-#source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
-#source_or_error "$ZDOTDIR/functions/my-functions.zsh"
-
+#source_or_error "/etc/zsh/aliases.sh"
+#source_or_error "/etc/zsh/logging-aliases.sh"
+#source_or_error "/etc/zsh/zsh-highlight-styles.zsh"
+#source_or_error "/etc/zsh/fzf-config.sh"
+source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
+source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
+source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
+source_or_error "$ZDOTDIR/functions/my-functions.zsh"
+source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
+# source_or_error "$ZDOTDIR/functions/batNoComment.sh"
+ # colors.sh ->bin
+ #ource_or_error "$ZDOTDIR/functions/cow-muh.sh"
+ #fff-fuck.zsh
+ #genPlaylist.sh
+ #how.sh
+ #kitty-keys.txt
+ #mopen.sh
+ #my-functions.sh
+ #my-functions.zsh
+ #NIXwo.sh
+ #prompt-selector
+ #shortcuts.zsh
+ #table.sh
+ #term-theme.zsh
+ #tetris.zsh
+ #Trash.sh
+ #window.sh
+ #zfunctions.zsh
+ #zgreeting.zsh
+ #zshColorThemeSwitcher.sh
+ source_or_error "$ZDOTDIR/functions/zshCopyCmdToNote.sh"
+ source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
 # Source alle Skripte aus /share/zsh/functions
-for script in "$ZDOTDIR/functions/*.{sh,zsh}"; do
-  if [[ -f "$script" && -r "$script" ]]; then
-    source_or_error "$script"
-  fi
-done
+#for script in $ZDOTDIR/functions/*.{sh,zsh} 
 
+#for script in $ZDOTDIR/functions/"*.zsh" 
+#  if [[ -f "$script" && -r "$script" ]]; then
+ #    source_or_error "$script"
+# fi
+#done
+   
+#  source_or_error "$script"
 
 # source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
 # source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"
@@ -360,10 +334,9 @@ done
 # =================================
 
 
-echo "        	    __              __              __      
-	      ___  / /  ___   ____ / /_ ____ __ __ / /_  ___
-	     (_-< / _ \/ _ \ / __// __// __// // // __/ (_-<
-	    /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
+#echo "      /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
+	    
+	   /etc/nixos/assets/bb.png
  echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
  # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"				
 # Display kitty keybindings table

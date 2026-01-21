@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 # --------------------------------------------
 #		████─████─████─█───█─████─███
 #		█──█─█──█─█──█─██─██─█──█──█─
@@ -22,8 +22,19 @@
     _log() {
         printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3" >> "${ZDOTDIR}/zsh.log" 2>/dev/null
       }
-      p10k_loaded=0
+      p10k_loaded=1
 #-----------------------POWERLEVEL PROMPT------------------------------
+ # Powerlevel10k laden the ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
+
+if [[ -f /run/current-system/sw/share/zsh/themes/zsh-powerlevel10k/powerlevel10k.zsh-theme ]]; then
+        echo "yo"
+	source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
+	          _log ok "load user powerlevel10k frame work"
+ else
+    p10k_loaded=1
+    _log error "NOT load user powerlevel10k frame work"
+ 
+fi
 
   # Try user-provided powerlevel10k in ZDOTDIR/prompt
       if [[ $p10k_loaded -eq 0 && -f $ZDOTDIR/prompt/p10k.zsh ]]; then

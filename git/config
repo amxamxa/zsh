@@ -112,6 +112,7 @@
 
 [pull]	    # Setzt das Verhalten für `git pull` auf Rebase, um Merge-Commits zu vermeiden.
 	rebase = false
+	ff = only
 [push]
     autoSetupRemote = true
 [init]		# Definiert den Standardbranchnamen für neue Repositories.        

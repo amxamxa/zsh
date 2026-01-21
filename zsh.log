@@ -97,3 +97,1032 @@
 [Mon Jan 19 00:46:32 2026] ERROR        Failed to load user powerlevel10k; falling back 
 [Mon Jan 19 00:46:51 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
 [Mon Jan 19 01:01:54 2026] INFO         p10k  Loaded Powerlevel10k
+[Mon Jan 19 01:08:58 2026] INFO               Accepted extension
+[Mon Jan 19 01:08:58 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:08:58 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:08:58 2026] INFO               Accepted extension
+[Mon Jan 19 01:08:58 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:08:58 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:08:58 2026] INFO               Accepted extension
+[Mon Jan 19 01:08:58 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:08:58 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:08:58 2026] INFO               Accepted extension
+[Mon Jan 19 01:08:58 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:08:58 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:08:58 2026] INFO               Accepted extension
+[Mon Jan 19 01:08:58 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:11:57 2026] INFO               Accepted extension
+[Mon Jan 19 01:11:57 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:11:57 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:11:57 2026] INFO               Accepted extension
+[Mon Jan 19 01:11:57 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:11:57 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:11:57 2026] INFO               Accepted extension
+[Mon Jan 19 01:11:57 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:11:57 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:11:57 2026] INFO               Accepted extension
+[Mon Jan 19 01:11:57 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:11:57 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:11:57 2026] INFO               Accepted extension
+[Mon Jan 19 01:11:57 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:20:11 2026] INFO               Accepted extension
+[Mon Jan 19 01:20:11 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:20:11 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:20:11 2026] INFO               Accepted extension
+[Mon Jan 19 01:20:11 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:20:11 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:20:11 2026] INFO               Accepted extension
+[Mon Jan 19 01:20:11 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:20:11 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:20:11 2026] INFO               Accepted extension
+[Mon Jan 19 01:20:11 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:20:11 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:20:11 2026] INFO               Accepted extension
+[Mon Jan 19 01:20:11 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:24:00 2026] INFO               Accepted extension
+[Mon Jan 19 01:24:00 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:24:00 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:24:00 2026] INFO               Accepted extension
+[Mon Jan 19 01:24:00 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:24:00 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:24:00 2026] INFO               Accepted extension
+[Mon Jan 19 01:24:00 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:24:00 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:24:00 2026] INFO               Accepted extension
+[Mon Jan 19 01:24:00 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:24:00 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:24:00 2026] INFO               Accepted extension
+[Mon Jan 19 01:24:00 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:33:07 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:33:07 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:07 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:33:08 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:08 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:33:08 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:33:08 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:08 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:33:08 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:33:08 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:08 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:33:08 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:33:08 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:08 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:33:08 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:33:08 2026] INFO               Accepted extension
+[Mon Jan 19 01:33:08 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:35:10 2026] INFO               Accepted extension
+[Mon Jan 19 01:35:10 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:35:10 2026] INFO               Symlink resolved: /etc/zsh/aliases.sh -> /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:35:10 2026] INFO               Accepted extension
+[Mon Jan 19 01:35:10 2026] INFO               Sourcing file: /etc/nixos/assets/shell/aliases.sh
+[Mon Jan 19 01:35:10 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:35:10 2026] INFO               Accepted extension
+[Mon Jan 19 01:35:10 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:35:10 2026] INFO               Symlink resolved: /etc/zsh/zsh-highlight-styles.zsh -> /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:35:10 2026] INFO               Accepted extension
+[Mon Jan 19 01:35:10 2026] INFO               Sourcing file: /etc/nixos/assets/shell/zsh-highlight-styles.zsh
+[Mon Jan 19 01:35:10 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:35:10 2026] INFO               Accepted extension
+[Mon Jan 19 01:35:10 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:45:39 2026] INFO               Accepted extension
+[Mon Jan 19 01:45:39 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:45:39 2026] ERROR              File does not exist: /etc/zsh/aliases.sh
+[Mon Jan 19 01:45:39 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:45:39 2026] INFO               Accepted extension
+[Mon Jan 19 01:45:39 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:45:39 2026] ERROR              File does not exist: /etc/zsh/zsh-highlight-styles.zsh
+[Mon Jan 19 01:45:39 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:45:39 2026] INFO               Accepted extension
+[Mon Jan 19 01:45:39 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:52:01 2026] INFO               Accepted extension
+[Mon Jan 19 01:52:01 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 01:52:01 2026] ERROR              File does not exist: /etc/zsh/aliases.sh
+[Mon Jan 19 01:52:01 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:52:01 2026] INFO               Accepted extension
+[Mon Jan 19 01:52:01 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 01:52:01 2026] ERROR              File does not exist: /etc/zsh/zsh-highlight-styles.zsh
+[Mon Jan 19 01:52:01 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 01:52:01 2026] INFO               Accepted extension
+[Mon Jan 19 01:52:01 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 02:40:06 2026] INFO               Accepted extension
+[Mon Jan 19 02:40:06 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 02:40:06 2026] ERROR              File does not exist: /etc/zsh/aliases.sh
+[Mon Jan 19 02:40:06 2026] INFO               Symlink resolved: /etc/zsh/logging-aliases.sh -> /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 02:40:07 2026] INFO               Accepted extension
+[Mon Jan 19 02:40:07 2026] INFO               Sourcing file: /nix/store/7b083n81953g766vgmp3gvdmxbrkqjai-etc-zsh-logging-aliases.sh
+[Mon Jan 19 02:40:07 2026] ERROR              File does not exist: /etc/zsh/zsh-highlight-styles.zsh
+[Mon Jan 19 02:40:07 2026] INFO               Symlink resolved: /etc/zsh/fzf-config.sh -> /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 02:40:07 2026] INFO               Accepted extension
+[Mon Jan 19 02:40:07 2026] INFO               Sourcing file: /nix/store/pqkhxsqjpvcqcc9i77634v0iip1znclz-etc-zsh-fzf-config.sh
+[Mon Jan 19 02:41:04 2026] ERROR              File does not exist: /share/zsh/functions/*.{sh,zsh}
+[Mon Jan 19 02:50:36 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Mon Jan 19 02:50:54 2026] ERROR        Failed to load user powerlevel10k; falling back 
+[Mon Jan 19 03:02:43 2026] INFO               Accepted extension
+[Mon Jan 19 03:02:43 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:02:43 2026] INFO               Accepted extension
+[Mon Jan 19 03:02:43 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:02:43 2026] INFO               Accepted extension
+[Mon Jan 19 03:02:43 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:02:43 2026] INFO               Accepted extension
+[Mon Jan 19 03:02:43 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:04:14 2026] INFO               Accepted extension
+[Mon Jan 19 03:04:14 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:04:14 2026] INFO               Accepted extension
+[Mon Jan 19 03:04:14 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:04:14 2026] INFO               Accepted extension
+[Mon Jan 19 03:04:14 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:04:14 2026] INFO               Accepted extension
+[Mon Jan 19 03:04:14 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:20:46 2026] INFO               Accepted extension
+[Mon Jan 19 03:20:46 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:20:46 2026] INFO               Accepted extension
+[Mon Jan 19 03:20:46 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:20:46 2026] INFO               Accepted extension
+[Mon Jan 19 03:20:46 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:20:46 2026] INFO               Accepted extension
+[Mon Jan 19 03:20:46 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:23:23 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:23 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:23:23 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:23 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:23:23 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:23 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:23:23 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:23 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:23:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:24 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:23:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:24 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:23:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:24 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:23:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:24 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:23:25 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:25 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:23:26 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:26 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:23:26 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:26 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:23:26 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:26 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:23:26 2026] INFO               Accepted extension
+[Mon Jan 19 03:23:26 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:43:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:43:24 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:43:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:43:24 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:43:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:43:24 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:43:24 2026] INFO               Accepted extension
+[Mon Jan 19 03:43:24 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:51:07 2026] INFO               Accepted extension
+[Mon Jan 19 03:51:07 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:52:39 2026] INFO               Accepted extension
+[Mon Jan 19 03:52:39 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:52:49 2026] INFO               Accepted extension
+[Mon Jan 19 03:52:49 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:53:47 2026] INFO               Accepted extension
+[Mon Jan 19 03:53:47 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:53:47 2026] INFO               Accepted extension
+[Mon Jan 19 03:53:47 2026] ERROR              Syntax check failed: /share/zsh/functions/batNoComment.sh
+[Mon Jan 19 03:53:47 2026] INFO               Accepted extension
+[Mon Jan 19 03:53:47 2026] INFO               Sourcing file: /share/zsh/functions/colors.sh
+[Mon Jan 19 03:53:47 2026] INFO               Accepted extension
+[Mon Jan 19 03:53:47 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 03:55:11 2026] INFO               Accepted extension
+[Mon Jan 19 03:55:11 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 03:55:11 2026] INFO               Accepted extension
+[Mon Jan 19 03:55:11 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan 19 03:55:11 2026] INFO               Accepted extension
+[Mon Jan 19 03:55:11 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan 19 03:55:11 2026] INFO               Accepted extension
+[Mon Jan 19 03:55:11 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan 19 03:55:11 2026] INFO               Accepted extension
+[Mon Jan 19 03:55:11 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan 19 03:55:11 2026] INFO               Accepted extension
+[Mon Jan 19 03:55:11 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan 19 03:55:11 2026] INFO               Accepted extension
+[Mon Jan 19 03:55:11 2026] INFO               Sourcing file: /share/zsh/functions/cow-muh.sh
+[Mon Jan 19 12:05:10 2026] INFO               Accepted extension
+[Mon Jan 19 12:05:10 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mon Jan 19 12:05:10 2026] INFO               Accepted extension
+[Mon Jan 19 12:05:11 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mon Jan 19 12:05:11 2026] INFO               Accepted extension
+[Mon Jan 19 12:05:11 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Mon Jan 19 12:05:11 2026] INFO               Accepted extension
+[Mon Jan 19 12:05:11 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mon Jan 19 12:05:11 2026] INFO               Accepted extension
+[Mon Jan 19 12:05:11 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mon Jan 19 12:05:11 2026] INFO               Accepted extension
+[Mon Jan 19 12:05:11 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Mon Jan 19 12:05:11 2026] INFO               Accepted extension
+[Mon Jan 19 12:05:11 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Mon Jan 19 12:05:16 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Mon Jan 19 12:05:16 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 14:02:54 2026] INFO               Accepted extension
+[Tue Jan 20 14:02:54 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 14:02:54 2026] INFO               Accepted extension
+[Tue Jan 20 14:02:54 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 14:02:54 2026] INFO               Accepted extension
+[Tue Jan 20 14:02:54 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 14:02:54 2026] INFO               Accepted extension
+[Tue Jan 20 14:02:54 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 14:02:54 2026] INFO               Accepted extension
+[Tue Jan 20 14:02:54 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 14:02:54 2026] INFO               Accepted extension
+[Tue Jan 20 14:02:54 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 14:02:54 2026] INFO               Accepted extension
+[Tue Jan 20 14:02:54 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 14:02:59 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 14:02:59 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 15:23:38 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:38 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 15:23:38 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:38 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 15:23:38 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:38 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 15:23:38 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:38 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 15:23:38 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:38 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 15:23:38 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:38 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 15:23:38 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:39 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 15:23:42 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 15:23:42 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 15:23:57 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:57 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 15:23:57 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:57 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 15:23:57 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:57 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 15:23:57 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:57 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 15:23:57 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:57 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 15:23:57 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:57 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 15:23:57 2026] INFO               Accepted extension
+[Tue Jan 20 15:23:57 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 15:24:01 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 15:24:01 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 15:27:32 2026] INFO               Accepted extension
+[Tue Jan 20 15:27:32 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 15:27:32 2026] INFO               Accepted extension
+[Tue Jan 20 15:27:32 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 15:27:32 2026] INFO               Accepted extension
+[Tue Jan 20 15:27:32 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 15:27:32 2026] INFO               Accepted extension
+[Tue Jan 20 15:27:32 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 15:27:32 2026] INFO               Accepted extension
+[Tue Jan 20 15:27:32 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 15:27:32 2026] INFO               Accepted extension
+[Tue Jan 20 15:27:32 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 15:27:33 2026] INFO               Accepted extension
+[Tue Jan 20 15:27:33 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 15:27:36 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 15:27:36 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Di 20 Jan 2026 15:27:56 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:27:56 CET] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Di 20 Jan 2026 15:27:56 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:27:56 CET] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Di 20 Jan 2026 15:27:56 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:27:56 CET] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Di 20 Jan 2026 15:27:56 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:27:56 CET] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Di 20 Jan 2026 15:27:56 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:27:56 CET] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Di 20 Jan 2026 15:27:56 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:27:56 CET] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Di 20 Jan 2026 15:27:56 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:27:56 CET] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Di 20 Jan 2026 15:27:59 CET] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Di 20 Jan 2026 15:27:59 CET] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Di 20 Jan 2026 15:33:40 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:33:40 CET] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Di 20 Jan 2026 15:33:40 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:33:40 CET] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Di 20 Jan 2026 15:33:40 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:33:40 CET] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Di 20 Jan 2026 15:33:40 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:33:40 CET] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Di 20 Jan 2026 15:33:40 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:33:40 CET] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Di 20 Jan 2026 15:33:40 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:33:40 CET] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Di 20 Jan 2026 15:33:40 CET] INFO               Accepted extension
+[Di 20 Jan 2026 15:33:40 CET] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Di 20 Jan 2026 15:33:44 CET] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Di 20 Jan 2026 15:33:44 CET] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:03 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 15:37:03 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:04 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 15:37:04 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:04 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 15:37:07 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 15:37:07 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 15:37:07 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 15:37:07 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 15:37:14 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:14 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 15:37:14 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:14 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 15:37:14 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:14 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 15:37:14 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:14 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 15:37:14 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:14 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 15:37:14 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:14 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 15:37:14 2026] INFO               Accepted extension
+[Tue Jan 20 15:37:14 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 15:37:18 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 15:37:18 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 16:27:05 2026] INFO               Accepted extension
+[Tue Jan 20 16:27:05 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 16:27:05 2026] INFO               Accepted extension
+[Tue Jan 20 16:27:05 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 16:27:05 2026] INFO               Accepted extension
+[Tue Jan 20 16:27:05 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 16:27:05 2026] INFO               Accepted extension
+[Tue Jan 20 16:27:05 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 16:27:05 2026] INFO               Accepted extension
+[Tue Jan 20 16:27:05 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 16:27:05 2026] INFO               Accepted extension
+[Tue Jan 20 16:27:05 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 16:27:05 2026] INFO               Accepted extension
+[Tue Jan 20 16:27:05 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 16:27:09 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:27:09 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 16:29:24 2026] INFO               Accepted extension
+[Tue Jan 20 16:29:24 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 16:29:29 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:29:29 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 16:30:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:30:29 2026] INFO               Sourcing file: /share/zsh/functions/zshColorThemeSwitcher.sh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 16:31:35 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:35 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 16:31:39 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:31:39 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 16:31:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:39 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 16:31:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:39 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 16:31:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:39 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 16:31:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:39 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 16:31:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:39 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 16:31:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:39 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 16:31:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:40 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 16:31:40 2026] INFO               Accepted extension
+[Tue Jan 20 16:31:40 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 16:31:43 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:31:43 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 16:33:39 2026] INFO               Accepted extension
+[Tue Jan 20 16:33:39 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 16:33:43 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:33:43 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 16:34:20 2026] INFO               Accepted extension
+[Tue Jan 20 16:34:20 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 16:34:23 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:34:35 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 16:35:29 2026] INFO               Accepted extension
+[Tue Jan 20 16:35:29 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 16:35:33 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 16:35:33 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 16:43:52 2026] ERROR              Unsupported extension: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:10:26 2026] INFO               Accepted extension
+[Tue Jan 20 17:10:26 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:10:30 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 17:10:30 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:32:02 2026] INFO               Accepted extension
+[Tue Jan 20 17:32:02 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:32:06 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 17:32:06 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:36:47 2026] INFO               Accepted extension
+[Tue Jan 20 17:36:47 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:36:50 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 17:36:50 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 17:40:58 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 17:42:53 2026] WARNING      Using minimal fallback prompt; install starship or powerlevel10k for richer prompt 
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:45:48 2026] INFO               Accepted extension
+[Tue Jan 20 17:45:48 2026] ERROR              Syntax check failed: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:45:48 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:46:54 2026] INFO               Accepted extension
+[Tue Jan 20 17:46:54 2026] ERROR              Syntax check failed: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:46:54 2026] ERROR              File does not exist: /share/zsh/functions/*.zsh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:47:25 2026] INFO               Accepted extension
+[Tue Jan 20 17:47:25 2026] ERROR              Syntax check failed: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:48:30 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:30 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:48:30 2026] ERROR              Sourcing returned non-zero exit code (126): /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:48:41 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:41 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:48:41 2026] ERROR              Sourcing returned non-zero exit code (126): /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:48:53 2026] INFO               Accepted extension
+[Tue Jan 20 17:48:53 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:48:53 2026] ERROR              Sourcing returned non-zero exit code (126): /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 17:52:56 2026] INFO               Accepted extension
+[Tue Jan 20 17:52:56 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 20:35:25 2026] INFO               Accepted extension
+[Tue Jan 20 20:35:25 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 20:43:22 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:22 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 20:43:49 2026] INFO               Accepted extension
+[Tue Jan 20 20:43:49 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 20:48:18 2026] INFO               Accepted extension
+[Tue Jan 20 20:48:18 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 20:54:45 2026] INFO               Accepted extension
+[Tue Jan 20 20:54:45 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 20:58:16 2026] INFO               Accepted extension
+[Tue Jan 20 20:58:16 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 20 21:03:16 2026] INFO               Accepted extension
+[Tue Jan 20 21:03:16 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 00:33:19 2026] INFO               Accepted extension
+[Wed Jan 21 00:33:19 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 00:38:04 2026] INFO               Accepted extension
+[Wed Jan 21 00:38:04 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:19:33 2026] INFO               Accepted extension
+[Wed Jan 21 01:19:33 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:20:07 2026] INFO               Accepted extension
+[Wed Jan 21 01:20:07 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:22:18 2026] INFO               Accepted extension
+[Wed Jan 21 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:25:36 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:36 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:25:57 2026] INFO               Accepted extension
+[Wed Jan 21 01:25:57 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:27:38 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:38 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:27:40 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:40 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:27:42 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:42 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:27:43 2026] INFO               Accepted extension
+[Wed Jan 21 01:27:43 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 01:53:13 2026] INFO               Accepted extension
+[Wed Jan 21 01:53:13 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:08 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:08 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:08 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:08 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:08 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:08 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:08 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 02:53:08 2026] INFO               Accepted extension
+[Wed Jan 21 02:53:09 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 03:11:02 2026] error        NOT load user powerlevel10k frame work 
+[Wed Jan 21 03:11:26 2026] error        NOT load user powerlevel10k frame work 
