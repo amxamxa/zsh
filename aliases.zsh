@@ -10,18 +10,15 @@
 #   -        zsh aliase
 #   - global zsh aliase
 #   - suffix zsh aliase	
-#   HOWTO :
-# -  Abhängigkeiten Pakets rekursiv an:  	nix-store -q --references --recursive
+#   
+#	HOWTO :
+# - Abhängigkeiten Pakets rekursiv an:  	nix-store -q --references --recursive
 # - welche anderen Pakete von einem bestimmten Paket abhängen:  nix-store -q --referrers /nix/store/ .
 #
 # doppelte pkgs> sort packages.nix | uniq -d
 # ODER> awk '{lines[$0] = lines[$0] ? lines[$0] "," NR : NR; count[$0]++}  \
 #	END {for (line in count) if (count[line] > 1) print line " (" lines[line] ")"}' packages.nix
 
-
-# --- Asciinema Aufnahmen ---
-# TODO  SIND NUN IN Zfunc
-# Alternative: Robuster mit Fehlerbehandlung
 CHmod() {
     local dir="${1:-.}"
         # Check if directory exists
@@ -53,6 +50,11 @@ CHmod-() {
     [[ $exit_code -eq 0 ]] && echo -e "\t${GREEN}Done\!${RESET}" \
     || echo -e "\t${YELLOW}No matching files found${RESET}"
 }
+#---------------------------------------
+
+# --- Asciinema Aufnahmen ---
+# TODO: richtige Funktionen bauen: Robuster mit Fehlerbehandlung
+
 # neue Aufnahme am naechsten Tag, landet wieder im asciinema/-Unterordner, aber unter dem neuen Namen. Die alte Datei bleibt erhalten.
 REC() {
   local title="$(basename "$(dirname "$(pwd)")")@$(date +%F)"
@@ -522,7 +524,8 @@ alias -g N0='2> /dev/null'
 alias -g D0='2> /dev/null'
 alias -g 00='&& echo "Success" || echo "Failed"'
 
-# dahinter PKGS name, er letzte Pfad ist der vollständige Pfad zum gebauten Paket im Nix-Store. Ohne --no-out-link würde Nix einen Symlink namens result im aktuellen Verzeichnis erstellen, der auf diesen Pfad zeigt.
+# dahinter "pkgs.name" 
+# das Paket aus dem Nixpkgs‑Repository wiurd gebaut, erstellt aber keinen result‑Symlink im aktuellen Verzeichnis.
 alias -g NN="nix-build --no-out-link '<nixpkgs>' -A"  
 
 #   Suffix-Aliase (werden ausgeführt, wenn ein Dateiname als Befehl eingegeben wird)
@@ -537,7 +540,6 @@ alias -s {pdf,otf,xls}='xreader -w &'
 alias -s html='firefox &'
 alias -s py=python
 alias -s log=less
-# Die folgende Definition überschreibt die vorherige für .md-Dateien.
 alias -s {md}='marker --preview --display=:0 &'
 alias -s {txt}='micro -filetype bash'
 # "Run" ssh links to clone repos
@@ -549,4 +551,5 @@ alias -s {txt}='micro -filetype bash'
 # alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
 # alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
 # alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
+
 # Ende der Alias-Definitionen
