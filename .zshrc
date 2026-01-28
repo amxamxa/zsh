@@ -10,6 +10,13 @@
 ## 	set filetyte zsh
 ## COMMENTS:	nixOS-version
 #####################################################          
+
+ echo -e "\t  _ _ _ _   _ _ _                              
+         / / / /   / /\ \ \     \t
+        / / / /   / /  \ \ \    \t
+        \ \ \ \  / /   / / /    \t
+         \_\_\_\/_/   /_/_/     \n
+" | lolcat -a
 # man eza_colors
 # The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
 #   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done
@@ -288,7 +295,7 @@ source_or_error "$ZDOTDIR/aliases.zsh"
 #source_or_error "/etc/zsh/zsh-highlight-styles.zsh"
 #source_or_error "/etc/zsh/fzf-config.sh"
 source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
-source_or_error "$ZDOTDIR/functions/fff-fuck.zsh"
+source_or_error "$ZDOTDIR/functions/fff.zsh"
 source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
 source_or_error "$ZDOTDIR/functions/my-functions.zsh"
 source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
@@ -314,16 +321,18 @@ source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
  #zgreeting.zsh
  #zshColorThemeSwitcher.sh
  source_or_error "$ZDOTDIR/functions/zshCopyCmdToNote.sh"
- source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
+ source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+  source_or_error  $ZDOTDIR/prompt/p10k.zsh
+# source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
 # Source alle Skripte aus /share/zsh/functions
 #for script in $ZDOTDIR/functions/*.{sh,zsh} 
-
 #for script in $ZDOTDIR/functions/"*.zsh" 
 #  if [[ -f "$script" && -r "$script" ]]; then
  #    source_or_error "$script"
 # fi
 #done
    
+#   source $ZDOTDIR/prompt/p10k.zsh 2>/dev/null
 #  source_or_error "$script"
 
 # source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"

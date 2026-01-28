@@ -241,13 +241,15 @@ alias KITTYmap='echo -e "\t${PINK}Zeige alle Tastaturbelegungen (map) in der kit
 alias Kmap=KITTYmap
 alias Kbind=KITTYmap
 #	____________________________________________________________________
-# alias mdtohtml='pandoc $1 -s --to html --css=$HOME/.templates/cyberpunk-DM.css | w3m -T text/html'alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
-alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
-alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
-# alias mdtopdf='pandoc $1 -o ${1%.md}.pdf --template=$HOME/.templates/MDtoPDF.tex'
-alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
+# alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
+# alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
+# alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
 
 # --- Diverse Werkzeuge & Helfer ---
+# alias MD2html='pandoc $1 -s --to html --css=$HOME/.templates/cyberpunk-DM.css | w3m -T text/html'alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
+alias MD2pdf='pandoc $1 -o ${1%.md}.pdf --template=$HOME/dokumente/vorlagen/MDtoPDF.tex'
+
+
 alias COL='terminal-colors -n && echo -e "${GREEN}\n...für Hex-Codes der Farben:${RED}%${LILA} terminal-colors -l ${RESET}\n"'
 alias Col='for i in {0..255}; do print -Pn "%K{$i}  %k%F{$i}${(l:3::0:)i}%f " ${${(M)$((i%6)):#3}:+$'\''\n'\'';}; done'
 alias hack='echo -e "\t${PINK}Starte Hackertyper${RESET}" && hackertyper'

@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+
 # --------------------------------------------
 #		████─████─████─█───█─████─███
 #		█──█─█──█─█──█─██─██─█──█──█─
@@ -19,40 +20,28 @@
 # unload prompt $powerlevel10k_plugin_unload
 # Logging helper (append-only)
   # $1 = level, , $2 = filename $3 = message
-    _log() {
-        printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3" >> "${ZDOTDIR}/zsh.log" 2>/dev/null
-      }
-      p10k_loaded=1
+      _log() {
+        printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3" > "${ZDOTDIR}/log/"$(date +%F)"-zsh-prompt.log"
+        }
+        
 #-----------------------POWERLEVEL PROMPT------------------------------
  # Powerlevel10k laden the ${pkgs.zsh-powerlevel10k}/share/zsh-powerlevel10k/powerlevel10k.zsh-theme
 
-if [[ -f /run/current-system/sw/share/zsh/themes/zsh-powerlevel10k/powerlevel10k.zsh-theme ]]; then
-        echo "yo"
-	source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme 2>/dev/null
-	          _log ok "load user powerlevel10k frame work"
- else
-    p10k_loaded=1
-    _log error "NOT load user powerlevel10k frame work"
- 
-fi
+[[ -f /run/current-system/sw/share/zsh/themes/zsh-powerlevel10k/powerlevel10k.zsh-theme ]] && source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 
   # Try user-provided powerlevel10k in ZDOTDIR/prompt
-      if [[ $p10k_loaded -eq 0 && -f $ZDOTDIR/prompt/p10k.zsh ]]; then
-        source $ZDOTDIR/prompt/p10k.zsh 2>/dev/null
-        if [[ $? -ne 0 ]]; then
-          _log ERROR "Failed to load user powerlevel10k; falling back"
-        else
-
+      [[ -f $ZDOTDIR/prompt/p10k.zsh ]] && source $ZDOTDIR/prompt/p10k.zsh
+        
 #----FALLBACK 2:------------------ZSH NATIVE PROMPT-----------------------------
-    powerlevel10k_plugin_unload
-    prompt off
-    setopt prompt_subst
-    autoload -Uz colors && colors
-	export PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}%~%f%k%F{063}%K{045} --> %k%f'
-    export RPROMPT='|%F{#FFCA5B}ERR:%?|%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k|%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|'
-    _log WARNING "Using minimal fallback prompt; install starship or powerlevel10k for richer prompt"
-   fi
-fi
+    # powerlevel10k_plugin_unload
+   # prompt off
+   # setopt prompt_subst
+   # autoload -Uz colors && colors
+#	export PROMPT='%F{184}%n%f@%F{013}%m%f%F{025}%K{118} in %k%f%F{225}%K{055}%~%f%k%F{063}%K{045} --> %k%f'
+#    export RPROMPT='|%F{#FFCA5B}ERR:%?|%F{#CF36E8}%K{#39257D}%f%k%K{#3B0045}%F{#518EA9}%D{%e.%b.}%f%k%F{#FFEAA0}%K{#1E202C}%f%k|%F{#FFEAA0}%K{#95235F}%D{%R}%f%k%F{#FFCA5B}|'
+  #  _log WARNING "Using minimal fallback prompt; install starship or powerlevel10k for richer prompt"
+#   fi
+# fi
      
 #----FALLBACK 1:---------------STARSHIP PROMPT----------------------------------
       # Fallback: use starship if p10k not loaded
@@ -70,4 +59,6 @@ fi
       #    eval "$(starship completions zsh)"
       #    _log INFO "Using starship prompt"
 #      else
-     # Fallback-Prompt
+     # Fallback-Promptzsh.log" 2>/dev/null
+      
+      

@@ -1126,3 +1126,892 @@
 [Wed Jan 21 02:53:09 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
 [Wed Jan 21 03:11:02 2026] error        NOT load user powerlevel10k frame work 
 [Wed Jan 21 03:11:26 2026] error        NOT load user powerlevel10k frame work 
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 03:46:31 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:31 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 03:46:32 2026] INFO               Accepted extension
+[Wed Jan 21 03:46:32 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:24:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:24:13 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:26:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:26:50 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:27:05 2026] INFO               Accepted extension
+[Wed Jan 21 04:27:05 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:38:37 2026] INFO               Accepted extension
+[Wed Jan 21 04:38:37 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:41:12 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:12 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:41:58 2026] INFO               Accepted extension
+[Wed Jan 21 04:41:58 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:42:13 2026] INFO               Accepted extension
+[Wed Jan 21 04:42:13 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:42:38 2026] INFO               Accepted extension
+[Wed Jan 21 04:42:38 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:44:56 2026] INFO               Accepted extension
+[Wed Jan 21 04:44:56 2026] INFO               Sourcing file: /share/zsh/functions/prompt-selector.zsh
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:46:50 2026] ERROR              Unsupported extension: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Wed Jan 21 04:46:50 2026] INFO               Accepted extension
+[Wed Jan 21 04:46:50 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:47:21 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:21 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:47:52 2026] INFO               Accepted extension
+[Wed Jan 21 04:47:52 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 04:53:39 2026] INFO               Accepted extension
+[Wed Jan 21 04:53:39 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Wed Jan 21 10:14:58 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:58 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Wed Jan 21 10:14:58 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:58 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Wed Jan 21 10:14:58 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:58 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Wed Jan 21 10:14:58 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:58 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Wed Jan 21 10:14:59 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:59 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Wed Jan 21 10:14:59 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:59 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Wed Jan 21 10:14:59 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:59 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Wed Jan 21 10:14:59 2026] INFO               Accepted extension
+[Wed Jan 21 10:14:59 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 15:46:12 2026] INFO               Accepted extension
+[Thu Jan 22 15:46:12 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 19:46:48 2026] INFO               Accepted extension
+[Thu Jan 22 19:46:48 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 20:54:46 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:46 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 20:54:55 2026] INFO               Accepted extension
+[Thu Jan 22 20:54:55 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 21:04:10 2026] INFO               Accepted extension
+[Thu Jan 22 21:04:10 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 21:42:30 2026] INFO               Accepted extension
+[Thu Jan 22 21:42:30 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 21:44:31 2026] INFO               Accepted extension
+[Thu Jan 22 21:44:31 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Thu Jan 22 22:52:22 2026] INFO               Accepted extension
+[Thu Jan 22 22:52:22 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fri Jan 23 01:19:30 2026] INFO               Accepted extension
+[Fri Jan 23 01:19:30 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fri Jan 23 01:21:31 2026] INFO               Accepted extension
+[Fri Jan 23 01:21:31 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fri Jan 23 01:22:18 2026] INFO               Accepted extension
+[Fri Jan 23 01:22:18 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fri Jan 23 02:54:04 2026] INFO               Accepted extension
+[Fri Jan 23 02:54:04 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Accepted extension
+[Fr 23 Jan 2026 02:54:15 CET] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/functions/fff-fuck.zsh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fri Jan 23 03:12:31 2026] INFO               Accepted extension
+[Fri Jan 23 03:12:31 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sun Jan 25 07:26:30 2026] INFO               Accepted extension
+[Sun Jan 25 07:26:30 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:02:30 2026] INFO               Accepted extension
+[Tue Jan 27 04:02:30 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:13:20 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:20 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:13:20 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:20 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:13:20 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:20 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:13:20 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:20 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:13:20 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:20 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:13:20 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:20 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:13:21 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:21 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:13:21 2026] INFO               Accepted extension
+[Tue Jan 27 04:13:21 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:18:36 2026] INFO               Accepted extension
+[Tue Jan 27 04:18:36 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:19:05 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:05 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:19:05 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:05 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:19:05 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:05 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:19:06 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:06 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:19:06 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:06 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:19:06 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:06 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:19:06 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:06 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:19:06 2026] INFO               Accepted extension
+[Tue Jan 27 04:19:06 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:24:12 2026] INFO               Accepted extension
+[Tue Jan 27 04:24:12 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:37:50 2026] INFO               Accepted extension
+[Tue Jan 27 04:37:50 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:38:11 2026] INFO               Accepted extension
+[Tue Jan 27 04:38:11 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:43:34 2026] INFO               Accepted extension
+[Tue Jan 27 04:43:34 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:55:10 2026] INFO               Accepted extension
+[Tue Jan 27 04:55:10 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:56:37 2026] INFO               Accepted extension
+[Tue Jan 27 04:56:37 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 04:57:53 2026] INFO               Accepted extension
+[Tue Jan 27 04:57:53 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 08:50:06 2026] INFO               Accepted extension
+[Tue Jan 27 08:50:06 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 13:20:50 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:50 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 13:20:50 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:50 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 13:20:50 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:50 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 13:20:50 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:50 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 13:20:50 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:50 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 13:20:50 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:50 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 13:20:50 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:50 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 13:20:51 2026] INFO               Accepted extension
+[Tue Jan 27 13:20:51 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:37:48 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:48 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:37:48 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:48 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:37:48 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:48 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:37:48 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:48 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:37:48 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:48 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:37:48 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:48 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:37:49 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:49 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:37:49 2026] INFO               Accepted extension
+[Tue Jan 27 15:37:49 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:40:46 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:46 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:40:46 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:46 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:40:46 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:46 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:40:46 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:46 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:40:46 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:46 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:40:46 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:46 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:40:46 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:46 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:40:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:40:47 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:42:28 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:28 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:42:47 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:47 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:42:56 2026] INFO               Accepted extension
+[Tue Jan 27 15:42:56 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:50:34 2026] INFO               Accepted extension
+[Tue Jan 27 15:50:34 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 15:58:15 2026] INFO               Accepted extension
+[Tue Jan 27 15:58:15 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 16:01:51 2026] INFO               Accepted extension
+[Tue Jan 27 16:01:51 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 16:02:50 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:50 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 16:02:59 2026] INFO               Accepted extension
+[Tue Jan 27 16:02:59 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 16:03:00 2026] INFO               Accepted extension
+[Tue Jan 27 16:03:00 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 16:04:42 2026] INFO               Accepted extension
+[Tue Jan 27 16:04:42 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 16:07:54 2026] INFO               Accepted extension
+[Tue Jan 27 16:07:54 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/functions/zgreeting.zsh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Tue Jan 27 19:46:17 2026] INFO               Accepted extension
+[Tue Jan 27 19:46:17 2026] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
