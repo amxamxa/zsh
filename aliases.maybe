@@ -238,3 +238,5 @@ sudo nixos-rebuild switch --profile-name xam4boom -I nixpkgs=/nix/var/nix/profil
 echo "source /share/zsh/prompt/p10k.zsh" >> $ZDOTDIR/.zshrc zsh
 echo "source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme" >> $ZDOTDIR/.zshrc
 source /share/zsh/functions/zshCopyCmdToNote.sh && echo "Success" || echo "Failed"
+nix-store --query --requisites /run/current-system | cut -d '-' -f 2- | sort | uniq
+
