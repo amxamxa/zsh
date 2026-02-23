@@ -10,8 +10,9 @@
 #   -        zsh aliase
 #   - global zsh aliase
 #   - suffix zsh aliase	
-#   HOWTO :
-# -  Abhängigkeiten Pakets rekursiv an:  	nix-store -q --references --recursive
+#   
+#	HOWTO :
+# - Abhängigkeiten Pakets rekursiv an:  	nix-store -q --references --recursive
 # - welche anderen Pakete von einem bestimmten Paket abhängen:  nix-store -q --referrers /nix/store/ .
 #
 # doppelte pkgs> sort packages.nix | uniq -d
@@ -65,6 +66,7 @@ alias -s {txt}='micro -filetype bash'
 
 alias -s {pdf,PDF}='open_pdf'
 
+<<<<<<< HEAD
 
 # --- Asciinema Aufnahmen ---
 # !! IN aliases.nix: environment.interactiveShellInit → CHmod()
@@ -99,6 +101,44 @@ alias -s {pdf,PDF}='open_pdf'
 #     [[ $exit_code -eq 0 ]] && echo -e "\t${GREEN}Done\!${RESET}" \
 #     || echo -e "\t${YELLOW}No matching files found${RESET}"
 # }
+=======
+CHmod() {
+    local dir="${1:-.}"
+        # Check if directory exists
+    if [[ ! -d "$dir" ]]; then
+        echo -e "\t${RED}Error: Directory '$dir' not found${RESET}"
+        return 1
+    fi
+    echo -e "\t${PINK}Setting u+x for *.py, *.sh, *.zsh scripts in ${dir}${RESET}"
+    find "$dir" -maxdepth 1 -type f \
+        \( -name "*.sh" -o -name "*.zsh" -o -name "*.py" \) \
+        -exec chmod -v u+x {} + 2>/dev/null
+    local exit_code=$?
+    [[ $exit_code -eq 0 ]] && echo -e "\t${GREEN}Done!${RESET}" \
+    || echo -e "\t${RED}No matching files found${RESET}"
+}
+# Remove execute permission from script files in directory
+CHmod-() {
+    local dir="${1:-.}"  # Use current dir if no argument provided
+    # Check if directory exists
+    if [[ ! -d "$dir" ]]; then
+        echo -e "\t${RED}Error: Directory '$dir' not found${RESET}"
+        return 1
+    fi
+    echo -e "\t${PINK}u-x   *.py, *.sh, *.zsh scripts in ${dir} now NOT executable! ${RESET}"
+    find "$dir" -maxdepth 1 -type f \
+        \( -name "*.sh" -o -name "*.zsh" -o -name "*.py" \) \
+        -exec chmod -v u-x {} + 2>/dev/null
+    local exit_code=$?
+    [[ $exit_code -eq 0 ]] && echo -e "\t${GREEN}Done\!${RESET}" \
+    || echo -e "\t${YELLOW}No matching files found${RESET}"
+}
+#---------------------------------------
+
+# --- Asciinema Aufnahmen ---
+# TODO: richtige Funktionen bauen: Robuster mit Fehlerbehandlung
+
+>>>>>>> origin/main
 # neue Aufnahme am naechsten Tag, landet wieder im asciinema/-Unterordner, aber unter dem neuen Namen. Die alte Datei bleibt erhalten.
 # !! IN aliases.nix: environment.interactiveShellInit → REC()
 # REC() {
@@ -465,3 +505,70 @@ alias GIT='echo -e "\t${PINK}git aliase aus Zeile 444 bis 500\t $ZDOTDIR/aliases
 #	_______GIT - AUSGABE ENDE___________________________________________
 
 
+<<<<<<< HEAD
+=======
+# 	  Globale Aliase (werden überall in der Zeile expandiert)
+# 	  usage% file G 'pattern'
+# ### ---------------------------  ####
+# Lädt Audio von YouTube als MP3 (192k), entfernt Sponsorblock-Segmente, bettet Metadaten/Thumbnail ein, begrenzt Dateinamen auf 48 Zeichen, zeigt benutzerdefinierten Download-Fortschritt.
+alias -g YTA='yt-dlp --audio-quality 192k  --audio-format mp3 \ 
+                 --progress --sponsorblock-remove all \
+                 -x --embed-metadata --embed-thumbnail --no-mtime --console-title  \ 
+                 --restrict-filenames --output "%(title).48s.%(ext)s" \
+                 --progress-template "%(progress._percent_str)s of 100% | with %(progress._speed_str)s | %(progress._eta_str)s remaining" "$1"'
+
+# Lädt Video von YouTube als MP4, entfernt Sponsorblock-Segmente, bettet Metadaten/Thumbnail ein, begrenzt Dateinamen auf 48 Zeichen, zeigt benutzerdefinierten Download-Fortschritt.
+alias -g YTV='yt-dlp --audio-quality 192k --remux-video mp4 \ 
+                 --progress --sponsorblock-remove all \
+                 -x --embed-metadata --embed-thumbnail --no-mtime --console-title  \ 
+                 --restrict-filenames --output "%(title).48s.%(ext)s" \
+                 --progress-template "%(progress._percent_str)s of 100% | with %(progress._speed_str)s | %(progress._eta_str)s remaining" "$1"'
+
+
+alias -g ED='gnome-text-editor --standalone --ignore-session'
+alias -g gedit='gnome-text-editor --standalone --ignore-session'
+alias -g CMD='command'
+alias -g SRC='source'
+alias -g L='| less'
+alias -g LL='| less -X -j5 --tilde --save-marks \
+    --incsearch --RAW-CONTROL-CHARS \
+    --LINE-NUMBERS --line-num-width=3 \
+    --quit-if-one-screen --use-color \
+    --color=NWr --color=EwR --color=PbC --color=Swb'
+alias -g G='| grep --ignore-case --color=auto'
+alias -g HH='--help 2>&1 | grep'
+alias -g H='--help'
+alias -g N0='2> /dev/null'
+alias -g D0='2> /dev/null'
+alias -g 00='&& echo "Success" || echo "Failed"'
+
+# dahinter "pkgs.name" 
+# das Paket aus dem Nixpkgs‑Repository wiurd gebaut, erstellt aber keinen result‑Symlink im aktuellen Verzeichnis.
+alias -g NN="nix-build --no-out-link '<nixpkgs>' -A"  
+
+#   Suffix-Aliase (werden ausgeführt, wenn ein Dateiname als Befehl eingegeben wird)
+### -----------------------------------------------------  ####
+alias -s {ape,avi,flv,m4a,mkv,mov,mp3,mp4,mpeg,mpg,ogg,ogm,wav,webm,opus,flac}='vlc'
+# alias -s mp4='vlc --fullscreen --no-video-title-show --no-video-border'
+alias -s {jpg,jpeg,png,bmp,svg,gif,webp}='kitty +kitten icat'
+alias -s {js,json,env,html,css,toml}='bat -p'
+alias -s {conf}='micro -filetype bash'
+alias -s {nix}='gnome-text-editor &'
+alias -s {pdf,otf,xls}='xreader -w &'
+alias -s html='firefox &'
+alias -s py=python
+alias -s log=less
+alias -s {md}='marker --preview --display=:0 &'
+alias -s {txt}='micro -filetype bash'
+# "Run" ssh links to clone repos
+# % git@github.com:stefanjudis/dotfiles.git # wird zu
+# % git clone git@github.com:stefanjudis/dotfiles.git
+# alias -s git="git clone"
+
+################################################################
+# alias mangconf='echo -e "\t${PINK}Öffne MangoHud Konfigurationsdatei${RESET}" && micro -filetype bash "$XDG_CONFIG_HOME/MangoHud/MangoHud.conf"'
+# alias mango='echo -e "\t${PINK}Starte glxgears mit MangoHud Overlay${RESET}" && mangohud glxgears &'
+# alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME/nvidia-settings-rc"'
+
+# Ende der Alias-Definitionen
+>>>>>>> origin/main
