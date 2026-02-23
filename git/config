@@ -122,3 +122,6 @@
 	statusHints = on
 
 
+[gui]
+	wmstate = normal
+	geometry = 1704x1416+12+84 207 190

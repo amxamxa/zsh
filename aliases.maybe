@@ -240,3 +240,8 @@ echo "source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k
 source /share/zsh/functions/zshCopyCmdToNote.sh && echo "Success" || echo "Failed"
 nix-store --query --requisites /run/current-system | cut -d '-' -f 2- | sort | uniq
 
+for i in {0..255}; do; printf "[38;5;${i}mcolor%-5i[0m" "$i"; if (( ($i + 1) % 8 == 0 )); then echo; fi; done
+for i in {0..255}; do; printf "[38;5;${i}mcolor%-5i[0m" "$i"; if (( ($i + 1) % 8 == 0 )); then echo; fi; done; echo -e "
+	SYNTAX: 38;5;<colorXYZ>:
+	z.B.: 38;5;125 für Farbe aus obiger 256-Farben-Palette"
+eza -l --no-permissions --no-user --no-time --no-filesize --icons /run/current-system/sw/bin

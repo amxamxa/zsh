@@ -1,19 +1,42 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # auth:        _______max_kempter_________
 # filename:    _______my-function.zsh_____
 
 SKY="\033[38;2;62;36;129m\033[48;2;135;206;235m"
 RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
 RASPBERRY="\033[38;2;32;0;21m\033[48;2;221;160;221m"
-PINK="\033[38;2;32;0;21m\033[48;2;163;64;217m"
+RASP="\033[38;2;32;0;21m\033[48;2;163;64;217m"
 VIO="\033[38;2;255;0;53m\033[48;2;34;0;82m"
 ORA="\033[38;2;0;17;204m\033[48;2;255;140;0m";
 RESET="\033[0m"
 
+
+   batNoComment() {
+       local file="$1"
+       if [[ ! -f "$file" ]]; then
+           echo "Fehler: Datei '$file' existiert nicht." >&2
+           return 1
+       fi
+   
+       # Filtere Kommentare und leite an bat weiter
+       if sed -e 's/\/\/.*$//' \
+              -e 's/#.*$//' \
+              -e '/\/\*/,/\*\// s/\/\*.*\*\///' \
+              -e '/^\s*$/d' \
+              "$file" | bat --language=$(basename "$file" | sed 's/.*\.//'); then
+           echo "${RASP}Die Datei '$file' wurde erfolgreich mit 'bat' angezeigt und dabei Kommentare (//, #, /* ... */) gefiltert.${RESET}"
+       else
+           echo "${RED} Fehler beim Verarbeiten der Datei '$file'. ${RESET}" >&2
+           return 1
+       fi
+   }
+   
+
+
 WO() {
     # --- Argument check
     if [ -z "${1:-}" ]; then
-        echo "${PINK}Please provide a command name.${RESET}\n"
+        echo "${RASP}Please provide a command name.${RESET}\n"
         return 1
     fi
 
@@ -27,17 +50,17 @@ WO() {
     cmd_path="$(command -v -- "$cmd" 2>/dev/null || true)"
 
     if [ -z "$cmd_path" ]; then
-        echo "${PINK}Command not found: ${cmd}${RESET}/n"
+        echo "${RASP}Command not found: ${cmd}${RESET}/n"
         return 2
     fi
 
-    echo "${PINK}Resolved via 'command -v':${RESET} $cmd_path"
+    echo "${RASP}Resolved via 'command -v':${RESET} $cmd_path"
 
     # Builtin/function/alias?
     case "$cmd_path" in
         /*) ;; 
         *)
-            echo "${PINK}Note:${RESET} This command is a shell builtin, function, or alias."
+            echo "${RASP}Note:${RESET} This command is a shell builtin, function, or alias."
             return 0
             ;;
     esac
@@ -47,7 +70,7 @@ WO() {
     echo "${ORA}Final resolved file path w/ readlink -f :${RESET} $real_path"
 
     # --- Nix package derivation (NEW)
-    echo "${PINK}Nix package derivation:${RESET}"
+    echo "${RASP}Nix package derivation:${RESET}"
 
     if echo "$real_path" | command grep -q '^/nix/store/'; then
         store_path="$(echo "$real_path" | cut -d/ -f1-4)"
@@ -71,13 +94,13 @@ WO() {
     echo "\n${VIO}File size (du -h):${RESET}"
     command du -h -- "$real_path" 2>/dev/null || true
 
-#  echon' "${PINK}COMMAND TYPE W/ "type -w CMD; type -s CMD ":${RESET}"
+#  echon' "${RASP}COMMAND TYPE W/ "type -w CMD; type -s CMD ":${RESET}"
  #   command du -h -- "$real_path" 2>/dev/null || true
 
 
     # --- Metadata
     if command -v stat >/dev/null 2>&1; then
-        echo "\n${PINK}File metadata (stat):${RESET}"
+        echo "\n${RASP}File metadata (stat):${RESET}"
        command stat --format='Size: %s bytes | Mode: %a | File: %N' -- "$real_path" 2>/dev/null
     fi
 
@@ -179,20 +202,7 @@ bap-NoComment() {
         NF { print } # Nur nicht-leere Zeilen ausgeben
     '
 }
-	#_____________________________________
-Htop() {
-    local max_lines=${1:-25}
-    
-    history 0 | 
-    awk '{print $2}' | 
-    sort | 
-    uniq -c | 
-    sort -k1,1rn -k2 | 
-    head -n "$max_lines" | 
-    while read count cmd; do
-        printf "${SKY}%s${RASPBERRY} %s${RESET}\n" "$count" "$cmd"
-    done
-}
+
 	#_________________________
 
 PROspeed() {
@@ -265,26 +275,8 @@ color-theme-switch() {
   	# Hole das Theme an der zufälligen Zeilennummer
     selected_theme=$(sed -n "${random_num}p" < "$ZDOTDIR/color-theme.md")
   	# Setze das ausgewählte Theme
-    echo -e "${PINK} Setting terminal theme to: $selected_theme ${RESET}"
+    echo -e "${RASP} Setting terminal theme to: $selected_theme ${RESET}"
     command theme.sh $selected_theme
 }
 
-### ------------------------------------------------- ###
-#  	Funktion COPYto .... aliases.maybe  
-#    Speichert den letzten Befehl in die Datei 
-# $ZDOTDIR/aliases.maybe und gibt eine Bestätigungsmeldung aus.
-### ------------------------------------------------- ###
-COPYtoZ() {
-	# 'echo $(fc -ln -1)' gibt den letzten Befehl aus.
-	# 'tee -a $ZDOTDIR/aliases.maybe' fügt den Ausgabetext an die Datei $ZDOTDIR/aliases.maybe an.
-	echo $(fc -ln -1) | tee -a $ZDOTDIR/aliases.maybe
-	# Überprüft, ob der letzte Befehl erfolgreich ausgeführt wurde.
-	if [ $? -eq 0 ]; then
-	# Wenn der Befehl erfolgreich ausgeführt wurde, gibt diese Funktion eine Bestätigungsmeldung aus.
-	  echo "${GREEN}Befehl $(fc -ln -1) wurde erfolgreich an $ZDOTDIR/aliases.maybe angehängt.${RESET}"
-	else
-	# Wenn der Befehl fehlgeschlagen ist, gibt diese Funktion eine Fehlermeldung aus.
-	echo "${ROSA}Fehler beim Anhängen des Befehls $(fc -ln -1) an $ZDOTDIR/aliases.maybe.${RESET}"
-	fi
-}
-# ------------------------
+

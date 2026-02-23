@@ -10,13 +10,9 @@
 ## 	set filetyte zsh
 ## COMMENTS:	nixOS-version
 #####################################################          
-
- echo -e "\t  _ _ _ _   _ _ _                              
-         / / / /   / /\ \ \     \t
-        / / / /   / /  \ \ \    \t
-        \ \ \ \  / /   / / /    \t
-         \_\_\_\/_/   /_/_/     \n
+echo -e " \t ______    ______ \t\t\n         / / / /   / /\ \ \ \t\t\n        / / / /   / /  \ \ \ \t\t\n        \ \ \\  / /   / / / \t\t\n         \_\_\_\/_/   /_/_/ \t\t\n
 " | lolcat -a
+ 
 # man eza_colors
 # The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
 #   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done
@@ -38,8 +34,10 @@ if [[ -f "$ZDOTDIR/colors/color-schema.yml" ]]; then
   if vivid_output="$(vivid generate "$ZDOTDIR/colors/color-schema.yml" 2>/dev/null)"; then
     export LS_COLORS="$vivid_output"
   else
-    export LS_COLORS="$(vivid generate snazzy)"
-    printf "\t${GREEN}󰞷 .... vivid mit snazzy${RESET}\n"
+    #export LS_COLORS="$(vivid generate snazzy)"
+    #printf "\t${GREEN}󰞷 .... vivid mit snazzy${RESET}\n"
+    export LS_COLORS="$(vivid generate rose-pine-moon)"
+    printf "\t${GREEN}󰞷 .... vivid mit rose-pine-moon ${RESET}\n"
   fi
 else
   export LS_COLORS="$(vivid generate alabaster_dark)"
@@ -94,7 +92,7 @@ source_or_error() {
   fi
  # --- extension whitelist ---
   case "$file" in
-    (*.sh|*.zsh)
+    (*.sh|*.zsh|*.zsh-theme)
       _log INFO "" "Accepted extension"
       ;;
     (*)
@@ -298,6 +296,7 @@ source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
 source_or_error "$ZDOTDIR/functions/fff.zsh"
 source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
 source_or_error "$ZDOTDIR/functions/my-functions.zsh"
+source_or_error "$ZDOTDIR/functions/my-functions.sh"
 source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
 # source_or_error "$ZDOTDIR/functions/batNoComment.sh"
  # colors.sh ->bin
@@ -321,7 +320,7 @@ source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
  #zgreeting.zsh
  #zshColorThemeSwitcher.sh
  source_or_error "$ZDOTDIR/functions/zshCopyCmdToNote.sh"
- source /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+source_or_error /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
   source_or_error  $ZDOTDIR/prompt/p10k.zsh
 # source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
 # Source alle Skripte aus /share/zsh/functions
@@ -342,12 +341,10 @@ source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
 # 	sleep 0.02
 # =================================
 
+echo "󰞷 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>󰞷" | blahaj --individual --colors="gay"		   
+showImg "/etc/nixos/assets/shortcuts.png" || chafa "/etc/nixos/assets/shortcuts.png"
 
-#echo "      /___//_//_/\___//_/   \__/ \__/ \_,_/ \__/ /___/" |blahaj --colors=gay
-	    
-	   /etc/nixos/assets/bb.png
- echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
- # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"				
+echo "󰞷 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="gay"			
 # Display kitty keybindings table
 if [[ -f "$HOME/bin/table.sh" ]]; then
     $HOME/bin/table.sh $HOME/bin/kitty-keys.txt
