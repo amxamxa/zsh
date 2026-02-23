@@ -11,7 +11,7 @@
 ## COMMENTS:	nixOS-version
 #####################################################          
 echo -e " \t ______    ______ \t\t\n         / / / /   / /\ \ \ \t\t\n        / / / /   / /  \ \ \ \t\t\n        \ \ \\  / /   / / / \t\t\n         \_\_\_\/_/   /_/_/ \t\t\n
-" | lolcat -a
+" | lolcat --animate --duration 2
  
 # man eza_colors
 # The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
@@ -118,8 +118,8 @@ source_or_error() {
     printf "\t${RED}✖ Error while sourcing: $file${RESET}\n"
     return $rc
   fi
-
-  printf "${GREEN}󰞷 src pass: ${NIGHT} $file :${GREEN} ✔ ${RESET}\n"
+  printf "${MINT}󰞷 src pass: ${CYAN} $file :${SLATE} ✔ ${RESET}\n"
+#  printf "${GREEN}󰞷 src pass: ${NIGHT} $file :${GREEN} ✔ ${RESET}\n"
   return 0
 }
 #----------------------------------------------------------------------
@@ -149,6 +149,7 @@ command -v navi &>/dev/null && eval "$(navi widget zsh)"
 command -v hugo &>/dev/null && eval "$(hugo completion zsh)"
 command -v npm &>/dev/null && eval "$(npm completion)"
 command -v rg &>/dev/null && eval "$(rg --generate=complete-zsh)"
+command -v glow  &>/dev/null && eval "$(glow completion zsh)"
 command -v pay-respects &>/dev/null && eval "$(pay-respects zsh)"
 #	__________________________________________
 #		  __ _  (_)__________ 
@@ -158,6 +159,7 @@ command -v pay-respects &>/dev/null && eval "$(pay-respects zsh)"
 if command -v micro &> /dev/null; then
     export MICRO_CONFIG_HOME="/share/micro"
     echo "\t${GREEN} micro  ... check ${RESET}\t"
+	alias edit="micro"
 else
     echo "\t${RED} micro ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
 fi
@@ -203,7 +205,7 @@ if command -v navi &> /dev/null; then
     fi
 else
     echo "\t${RED} navi ist nicht installiert. Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
-    sleep 2.1
+    sleep 1
 fi
 
 #------------------------------------------                                 
@@ -253,7 +255,7 @@ export PAGER="less -R"
 export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --use-color -Dd+r -Du+b"
 
 # Manpager configuration------------------------
-export  MANROFFOPT="-c"
+export MANROFFOPT="-c"
 export MANWIDTH="60"
 if command -v bat &> /dev/null; then
  #   export MANPAGER="bat --paging=always --style=changes -l man -p"
@@ -266,7 +268,7 @@ else
   export LESS_TERMCAP_mb="\e[1;31m"; # Start blinking
   export LESS_TERMCAP_md="\e[1;36m"; # Start bold (Cyan)
   export LESS_TERMCAP_me="\e[0m";    # End bold/blink
-export   LESS_TERMCAP_so="\e[01;44;33m"; # Start standout (Yellow on Blue)
+  export LESS_TERMCAP_so="\e[01;44;33m"; # Start standout (Yellow on Blue)
   export LESS_TERMCAP_se="\e[0m";    # End standout
   export LESS_TERMCAP_us="\e[1;32m"; # Start underline (Green)
   export LESS_TERMCAP_ue="\e[0m";    # End underline
@@ -300,7 +302,7 @@ source_or_error "$ZDOTDIR/functions/my-functions.sh"
 source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
 # source_or_error "$ZDOTDIR/functions/batNoComment.sh"
  # colors.sh ->bin
- #ource_or_error "$ZDOTDIR/functions/cow-muh.sh"
+ source_or_error "$ZDOTDIR/functions/cowmuh.sh"
  #fff-fuck.zsh
  #genPlaylist.sh
  #how.sh
@@ -320,8 +322,8 @@ source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
  #zgreeting.zsh
  #zshColorThemeSwitcher.sh
  source_or_error "$ZDOTDIR/functions/zshCopyCmdToNote.sh"
-source_or_error /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
-  source_or_error  $ZDOTDIR/prompt/p10k.zsh
+ source_or_error /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+ source_or_error  $ZDOTDIR/prompt/p10k.zsh
 # source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
 # Source alle Skripte aus /share/zsh/functions
 #for script in $ZDOTDIR/functions/*.{sh,zsh} 
@@ -338,12 +340,16 @@ source_or_error /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel
 # source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"
 # /share/zsh/plugins/term-theme.zsh #in .zshrc integriert!
 # source_or_error "$ZDOTDIR/plugins/tetris.zsh
-# 	sleep 0.02
+ 	sleep 1
+ 	clear
 # =================================
 
 echo "󰞷 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>󰞷" | blahaj --individual --colors="gay"		   
 showImg "/etc/nixos/assets/shortcuts.png" || chafa "/etc/nixos/assets/shortcuts.png"
-
+echo
+echo
+echo
+echo
 echo "󰞷 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="gay"			
 # Display kitty keybindings table
 if [[ -f "$HOME/bin/table.sh" ]]; then
