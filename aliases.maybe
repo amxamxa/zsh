@@ -245,3 +245,4 @@ for i in {0..255}; do; printf "[38;5;${i}mcolor%-5i[0m" "$i"; if (( ($i + 1) %
 	SYNTAX: 38;5;<colorXYZ>:
 	z.B.: 38;5;125 für Farbe aus obiger 256-Farben-Palette"
 eza -l --no-permissions --no-user --no-time --no-filesize --icons /run/current-system/sw/bin
+fd -t f --changed-within="12h" --exclude "/dev" --exclude "/nix/var" --exclude "/proc" --exclude "/sys" --exclude "/run" --exclude "/var/lib"

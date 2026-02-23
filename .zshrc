@@ -47,82 +47,82 @@ fi
 # _____________________________________________________
 
 
-#______________________________________________________
-#   ███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗
-#   ██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝
-#   ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗
-#   ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝
-#   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
-#   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
-# Function: source_or_error
-# Purpose : Safely source .sh / .zsh files with extensive validation
-# Usage   : source_or_error file.sh|file.zsh
-source_or_error() {
-  # --- UI colors (ANSI) ---
-  local RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
-  local GELB="\e[33m"
-  local GREEN="\033[38;2;0;255;0m\033[48;2;0;100;0m"
-  local RESET="\e[0m"
-
-  # --- logging helper ---
-  _log() {
-    # $1 = level, , $2 = filename $3 = message
-   printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3"  >> "$ZDOTDIR/zsh.log" 1> /dev/null
-    }
-
-  local file="$1"
-  # Validation checks
-    # --- argument sanity ---
-  [[ -z "$file" ]] && { _log ERROR "" "No file argument provided"; return 2; }
-    # --- existence (any type) ---
-  [[ ! -e "$file" ]] && { _log ERROR "" "File does not exist: $file"; return 3; }
-    # --- empty file check ---
-  [[ ! -s "$file" ]] && { _log ERROR "" "File is empty: $file"; return 4; }
-    # is file?
-  [[ ! -f "$file" ]] && { _log ERROR "" "Not a regular file: $file"; return 5; }
-    # is readable?
-  [[ ! -r "$file" ]] && { _log ERROR "" "File not readable: $file"; return 6; }
-
-  # --- symlink handling ---
-  if [[ -L "$file" ]]; then
-    local real_file="${file:A}"
-    _log INFO "" "Symlink resolved: $file -> $real_file"
-    printf "\t${GELB}→ Symlink resolved: $real_file${RESET}\n"
-    file="$real_file"
-  fi
- # --- extension whitelist ---
-  case "$file" in
-    (*.sh|*.zsh|*.zsh-theme)
-      _log INFO "" "Accepted extension"
-      ;;
-    (*)
-      _log ERROR "" "Unsupported extension: $file"
-      printf "\t${RED}✖ Unsupported file type (only .sh/.zsh allowed): $file${RESET}\n"
-      return 7
-      ;;
-  esac
-  # --- basic plausibility (optional syntax probe) ---
-  # Note: zsh has no true "lint"; this catches gross parser errors
- # if ! zsh -n "$file" 2>/dev/null; then
- #   _log ERROR "" "Syntax check failed: $file"
- #   printf "\t${RED}✖ Syntax check failed: $file${RESET}\n"
- #   return 8
-  # fi
-  # --- source ---
-  _log INFO "" "Sourcing file: $file"
-  source "$file"
-
-  local rc=$?
-  if (( rc != 0 )); then
-    _log ERROR "" "Sourcing returned non-zero exit code ($rc): $file"
-    printf "\t${RED}✖ Error while sourcing: $file${RESET}\n"
-    return $rc
-  fi
-  printf "${MINT}󰞷 src pass: ${CYAN} $file :${SLATE} ✔ ${RESET}\n"
-#  printf "${GREEN}󰞷 src pass: ${NIGHT} $file :${GREEN} ✔ ${RESET}\n"
-  return 0
-}
-#----------------------------------------------------------------------
+# #______________________________________________________
+# #   ███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗
+# #   ██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝
+# #   ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗
+# #   ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝
+# #   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
+# #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
+# # Function: source_or_error
+# # Purpose : Safely source .sh / .zsh files with extensive validation
+# # Usage   : source_or_error file.sh|file.zsh
+# source_or_error() {
+#   # --- UI colors (ANSI) ---
+#   local RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
+#   local GELB="\e[33m"
+#   local GREEN="\033[38;2;0;255;0m\033[48;2;0;100;0m"
+#   local RESET="\e[0m"
+# 
+#   # --- logging helper ---
+#   _log() {
+#     # $1 = level, , $2 = filename $3 = message
+#    printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3"  >> "$ZDOTDIR/zsh.log" 1> /dev/null
+#     }
+# 
+#   local file="$1"
+#   # Validation checks
+#     # --- argument sanity ---
+#   [[ -z "$file" ]] && { _log ERROR "" "No file argument provided"; return 2; }
+#     # --- existence (any type) ---
+#   [[ ! -e "$file" ]] && { _log ERROR "" "File does not exist: $file"; return 3; }
+#     # --- empty file check ---
+#   [[ ! -s "$file" ]] && { _log ERROR "" "File is empty: $file"; return 4; }
+#     # is file?
+#   [[ ! -f "$file" ]] && { _log ERROR "" "Not a regular file: $file"; return 5; }
+#     # is readable?
+#   [[ ! -r "$file" ]] && { _log ERROR "" "File not readable: $file"; return 6; }
+# 
+#   # --- symlink handling ---
+#   if [[ -L "$file" ]]; then
+#     local real_file="${file:A}"
+#     _log INFO "" "Symlink resolved: $file -> $real_file"
+#     printf "\t${GELB}→ Symlink resolved: $real_file${RESET}\n"
+#     file="$real_file"
+#   fi
+#  # --- extension whitelist ---
+#   case "$file" in
+#     (*.sh|*.zsh|*.zsh-theme)
+#       _log INFO "" "Accepted extension"
+#       ;;
+#     (*)
+#       _log ERROR "" "Unsupported extension: $file"
+#       printf "\t${RED}✖ Unsupported file type (only .sh/.zsh allowed): $file${RESET}\n"
+#       return 7
+#       ;;
+#   esac
+#   # --- basic plausibility (optional syntax probe) ---
+#   # Note: zsh has no true "lint"; this catches gross parser errors
+#  # if ! zsh -n "$file" 2>/dev/null; then
+#  #   _log ERROR "" "Syntax check failed: $file"
+#  #   printf "\t${RED}✖ Syntax check failed: $file${RESET}\n"
+#  #   return 8
+#   # fi
+#   # --- source ---
+#   _log INFO "" "Sourcing file: $file"
+#   source "$file"
+# 
+#   local rc=$?
+#   if (( rc != 0 )); then
+#     _log ERROR "" "Sourcing returned non-zero exit code ($rc): $file"
+#     printf "\t${RED}✖ Error while sourcing: $file${RESET}\n"
+#     return $rc
+#   fi
+#   printf "${MINT}󰞷 src pass: ${CYAN} $file :${SLATE} ✔ ${RESET}\n"
+# #  printf "${GREEN}󰞷 src pass: ${NIGHT} $file :${GREEN} ✔ ${RESET}\n"
+#   return 0
+# }
+# #----------------------------------------------------------------------
 
 # bereits-------in enviroment.nix----------Projektpfade
 #export PRO="/home/project"
@@ -132,25 +132,6 @@ source_or_error() {
 #export GIT_CONFIG="/share/git/config"
 #export EMACSDIR="/share/emacs"
 #export BAT_CONFIG_FILE="/share/bat/config.toml"
-
-#-------------------------------- __-----------
-#	                             /  |
-#	  ______   __     __ ______  $$ |
-#	 /      \ /  \   /  /      \ $$ |
-#	/$$$$$$  |$$  \ /$$/$$$$$$  |$$ |
-#	$$    $$ | $$  /$$/ /    $$ |$$ |
-#	$$$$$$$$/   $$ $$/ /$$$$$$$ |$$ |
-#	$$      |/   $$$/  $$    $$ |$$ |
-#	 $$$$$$$/     $/    $$$$$$$/ $$/
-#_____________________________________________
-
-# Initialize completion systems with error handling -  Tool-specific completions
-command -v navi &>/dev/null && eval "$(navi widget zsh)"
-command -v hugo &>/dev/null && eval "$(hugo completion zsh)"
-command -v npm &>/dev/null && eval "$(npm completion)"
-command -v rg &>/dev/null && eval "$(rg --generate=complete-zsh)"
-command -v glow  &>/dev/null && eval "$(glow completion zsh)"
-command -v pay-respects &>/dev/null && eval "$(pay-respects zsh)"
 #	__________________________________________
 #		  __ _  (_)__________ 
 #		 /  ' \/ / __/ __/ _ \
@@ -247,34 +228,34 @@ alias tetris=tetriscurses
 
 
 # --- Pager Configuration ---
-export PAGER="less -R"
+#export PAGER="less -R"
 # --RAW-CONTROL-CHARS: Steuerzeichen (wie Farbcodes) korrekt anzeigen
 # --chop-long-lines: 	Zeilen nicht umbrechen
 # --no-init: 		Bildschirm nicht löschen	
 # --long-prompt:  	Statuszeile verbose
-export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --use-color -Dd+r -Du+b"
-
-# Manpager configuration------------------------
-export MANROFFOPT="-c"
-export MANWIDTH="60"
-if command -v bat &> /dev/null; then
- #   export MANPAGER="bat --paging=always --style=changes -l man -p"
-   export  MANPAGER='sh -c "col -bx | bat --paging=always --style=changes -l man"'
-   echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
-else
-    export MANPAGER="less -FRX --quit-if-one-screen --no-init"
-    echo "${GELB} less -FRX als man-pager  ... check ${RESET}"
-      # Enable color support for less via Termcap sequences
-  export LESS_TERMCAP_mb="\e[1;31m"; # Start blinking
-  export LESS_TERMCAP_md="\e[1;36m"; # Start bold (Cyan)
-  export LESS_TERMCAP_me="\e[0m";    # End bold/blink
-  export LESS_TERMCAP_so="\e[01;44;33m"; # Start standout (Yellow on Blue)
-  export LESS_TERMCAP_se="\e[0m";    # End standout
-  export LESS_TERMCAP_us="\e[1;32m"; # Start underline (Green)
-  export LESS_TERMCAP_ue="\e[0m";    # End underline
-
-fi
-# --------------------------------------------
+#export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --use-color -Dd+r -Du+b"
+# 
+# # Manpager configuration------------------------
+# export MANROFFOPT="-c"
+# export MANWIDTH="60"
+# if command -v bat &> /dev/null; then
+#  #   export MANPAGER="bat --paging=always --style=changes -l man -p"
+#    export  MANPAGER='sh -c "col -bx | bat --paging=always --style=changes -l man"'
+#    echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
+# else
+#     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
+#     echo "${GELB} less -FRX als man-pager  ... check ${RESET}"
+#       # Enable color support for less via Termcap sequences
+#   export LESS_TERMCAP_mb="\e[1;31m"; # Start blinking
+#   export LESS_TERMCAP_md="\e[1;36m"; # Start bold (Cyan)
+#   export LESS_TERMCAP_me="\e[0m";    # End bold/blink
+#   export LESS_TERMCAP_so="\e[01;44;33m"; # Start standout (Yellow on Blue)
+#   export LESS_TERMCAP_se="\e[0m";    # End standout
+#   export LESS_TERMCAP_us="\e[1;32m"; # Start underline (Green)
+#   export LESS_TERMCAP_ue="\e[0m";    # End underline
+# 
+# fi
+# # --------------------------------------------
 echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
 
 # Weather display------------------------------------------
@@ -286,6 +267,14 @@ echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | b
 # fi
 #--------------------------------------------------
 # Sourcen von Konfigurationsdateien
+# Source alle Skripte aus /share/zsh/functions
+
+# for script in $ZDOTDIR/functions/*.{sh,zsh} 
+#   if [[ -f "$script" && -r "$script" ]]; then
+#     source_or_error "$script"
+#  fi
+# done
+
 # echo "   󰞷 "
 echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
 # Source configuration files
@@ -303,14 +292,8 @@ source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
 # source_or_error "$ZDOTDIR/functions/batNoComment.sh"
  # colors.sh ->bin
  source_or_error "$ZDOTDIR/functions/cowmuh.sh"
- #fff-fuck.zsh
  #genPlaylist.sh
- #how.sh
  #kitty-keys.txt
- #mopen.sh
- #my-functions.sh
- #my-functions.zsh
- #NIXwo.sh
  #prompt-selector
  #shortcuts.zsh
  #table.sh
@@ -325,13 +308,6 @@ source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
  source_or_error /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
  source_or_error  $ZDOTDIR/prompt/p10k.zsh
 # source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
-# Source alle Skripte aus /share/zsh/functions
-#for script in $ZDOTDIR/functions/*.{sh,zsh} 
-#for script in $ZDOTDIR/functions/"*.zsh" 
-#  if [[ -f "$script" && -r "$script" ]]; then
- #    source_or_error "$script"
-# fi
-#done
    
 #   source $ZDOTDIR/prompt/p10k.zsh 2>/dev/null
 #  source_or_error "$script"
