@@ -6,35 +6,37 @@
 #echo -e "${LILA}   LILA :..... Choice options           ${RESET}"
 #echo -e "${GREEN} GREEN :..... Success message           ${RESET}"
 #echo -e "${RED}    RED  :..... Warning message           ${RESET}"
-echo -e "\t ${BLINK} Extended color palette examples:${RESET}
-\t${GOLD}╔════════════════════════════════════╗${RESET}
-\t${GOLD}║     COLOR SCRIPT USAGE GUIDE       ║${RESET}
-\t${GOLD}╚════════════════════════════════════╝${RESET}
-\t${SLATE}  -▶ ${BOLD} ## BOLD NOTES:                 ${RESET}"
+#\t'======================================='
+
+echo -e "\t${BLINK} Extended color palette examples:${RESET}
+  ${PINK2}╔════════════════════════════════════╗${RESET}
+  ${PINK2}║    ${BOLD}COLOR SCRIPT USAGE GUIDE        ║${RESET}
+  ${PINK2}╚════════════════════════════════════╝${RESET}"
+
 cat <<-EOF
-	  ${ORANG}• All colors are exported as environment variables${RESET}
-	  ${GOLD}• Colors are readonly to prevent accidental modification${RESET}
-	  ${PETRO}▶ AVAILABLE COLORS  = 28 total):${RESET}
-		
-	${YELLO}1. ==▶ BASIC USAGE:${RESET}
-	  ${GREY}Source this script to load colors into your shell session:${RESET} ${BLUE}source colors.sh${RESET}
-	
-	${YELLO} 2. ==▶ IN YOUR SCRIPTS:${RESET}
-	  ${GREY}Add at the beginning of your bash script:${RESET}
-	  ${IVORY}source "\$(dirname "\$0")/colors.sh"${RESET}
-		${SKY}▶ EXAMPLE OUTPUT:${RESET}
-     	${LAVEN}echo "\${RED}Error: File not found\${RESET}"${RESET}
-	  	${RASP}echo "\${LIME}Success: Operation completed\${RESET}"${RESET}
-	  	${PLUM}echo "\${YELLO}Warning: Low disk space\${RESET}"${RESET}
-	
-  ${YELLO} 3, ==▶ UI/COLOR CATEGORIES:${RESET}
-	${PINK}PINK, LILA, LIL2, VIO${RESET}   ${GREY}→ Instructions & Highlights${RESET}
+${ORANG} ▶ Colors are exported as environment variables ${RESET}
+${GOLD} ▶ Colors are readonly to prevent modification  ${RESET}
+${YELLO} ▶     AVAILABLE COLORS    =    28 total)       ${RESET}
+
+${BOLD}${RASPB}  == IN YOUR SHELL|| SCRIPTS: ==${RESET}
+ ${GREY}Add too your script:${RESET}  ${BLUE}source "\$ZDOTDIR/functions/colors.sh"${RESET}
+EOF
+echo -e "
+${BOLD}${RASPB} ▶ USAGE:${RESET}
+   \t${RED} echo -e \"\${RED}Error: File not found\${RESET}\" ${RESET}
+   \t${GREEN} echo -e \"\${GREEN}Success: Operation completed\${RESET}\" ${RESET}
+    \t${IVORY} echo -e \"\${IVORYYELLO}Warning: Low disk space\${RESET}\" ${RESET}
+  	 "
+  echo -e "
+  ${BOLD}${RASPB} 3, ==▶ UI/COLOR CATEGORIES:${RESET}
+	${PINK}PINK,${LILA} LILA, ${LIL2}LIL2,${VIO} VIO${RESET}   ${GREY}→ Instructions & Highlights${RESET}
 	${BLUE}BLUE, SKY, CYAN${RESET}         ${GREY}→ Confirmations & Info     ${RESET}
 	${GREEN}LIME, MINT, TEAL${RESET}        ${GREY}→ Success Messages         ${RESET}
 	${RED}RED,${BLINK}${EMBER}EMBER${RESET}            ${GREY}→ Warnings & Errors        ${RESET}
 	${YELLO}YELLO, GOLD, ORANG${RESET}      ${GREY}→ Attention & Caution     ${RESET}
-	${LAVEN}VIOLE,PLUM,INDIG${RESET}        ${GREY}→ Special Emphasis        ${RESET}	
-EOF
+	${LAVEN}VIOLE,PLUM,INDIG${RESET}        ${GREY}→ Special Emphasis        ${RESET}
+"
+sleep 1
 #  ${BLINK}
 # Extended color examples
 #echo -e "${BOLD}🙽  🙽  🙽  🙽  🙽  🙽  🙽  🙽  -  󱢇 - 󰧼 - 󱚡 -  󱢇 - 🙽  🙽  🙽  🙽  🙽  🙽  🙽  🙽   ${RESET}" | lolcat
@@ -42,9 +44,14 @@ EOF
 #echo -e "        🙼 🙼 🙼 🙼 .  󱢇  .    🙽 🙽 🙽 🙽 ${RESET}" | lolcat -f --seed=4 --spread=0.5 --freq=0.3
 #echo -e "    🙼 🙼 🙼 🙼 🙼 🙼 .   󱢇   .🙽 🙽 🙽 🙽 🙽 ${RESET}" | lolcat -f --seed=5 --spread=1.43 --freq=0.5
 #echo -e "  🙼 🙼 🙼 🙼 🙼 🙼 🙼 .         󱢇     .🙽 🙽 🙽 🙽 🙽 🙽 🙽 ${RESET}" | lolcat -f --seed=6 --spread=0.9 --freq=0.2
-
-echo -e "\n\n${BOLD}🙽  🙽  🙽  🙽  🙽  🙽  🙽  🙽  -  󱢇 - 󰧼 - 󱚡 - 󱢇 - 🙽  🙽  🙽  🙽  🙽  🙽  🙽  🙽   ${RESET}" | lolcat -f --seed=5 --spread=0.5 --freq=0.2 -a
-
+#echo -e "\n\n${BOLD}🙽  🙽  🙽  🙽  🙽  🙽  🙽  🙽  -  󱢇 - 󰧼 - 󱚡 - 󱢇 - 🙽  🙽  🙽  🙽  🙽  🙽  🙽  🙽   ${RESET}" | lolcat -f --seed=5 --spread=0.5 --freq=0.2 -a
+echo -e "
+${PINK}${BOLD}
+\t==== __ =======  _ ================== |
+\t|   / _|___ __ _| |_ _  _ _ _ ___ ___ |
+\t|  |  _/ -_) _  |  _| || | '_/ -_|_-< |
+\t|  |_| \___\__,_|\__|\_,_|_| \___/__/ |
+\t =====================================${RESET}\n"
 # ───────────────────────────
 #   GELB / GOLD
 echo -e "    ${YELLO}  🙼    YELLO - Bright yellow TXT on gold bg 🙼    ${RESET}"

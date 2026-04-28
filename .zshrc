@@ -149,12 +149,14 @@ fi
 #		 //  \\_/||  \|__
 #		/_\__// \||__/|___
 # Prüfen, ob 'zoxide' installiert ist, Zoxide configuration
-if command -v zoxide &> /dev/null; then
+if command -v zoxide &>/dev/null; then
     export _ZO_ECHO=1
     export _ZO_DATA_DIR="$ZDOTDIR/zoxide"
     eval "$(zoxide init zsh)"
+    alias za='zoxide add'
     alias zq='zoxide query -l'
     alias zqi='cd "$(zoxide query -i)"'
+    alias zr='zoxide remove'
     echo "\t${PINK} zoxide ... check ${RESET}\t"
   else
     echo "\t${RED} zoxide ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
