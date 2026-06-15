@@ -18,9 +18,9 @@
 # Erstellt einen Alias für `git push origin HEAD`:
 # git config --global alias.pu "git push origin HEAD" && git pu
 #	__tshoot_________________________________________
-#	GIT_CONFIG=/share/git/config git config --list
+#	GIT_CONFIG=/share/zsh/git/config git config --list
 # 			und
-#  	export GIT_CONFIG=/share/git/config
+#  	export GIT_CONFIG=/share/zsh/git/config
 #	_________________________________________________
 [user] 	# Name & E-Mail-Adresse des Git-Benutzer
 	name = amxamxa
@@ -51,10 +51,10 @@
     pager = less -FRSX
     # Definiert den Pfad für benutzerdefinierte Git-Hooks (auskommentiert).
     # hookspath = ~/.git-hooks
-   
+
    # Aktiviert die Nutzung von symbolischen Links.
     symlinks = true
-   
+
    # Pfad zur globalen .gitignore-Datei
     # excludesfile = ~/.gitignore_global
 
@@ -67,7 +67,7 @@
  # "colordiff" wird verwendet, um farbige Unterschiede anzuzeigen. Die verschiedenen Optionen ignorieren bestimmte Arten von Unterschieden.
  # tool = colordiff --ignore-case --ignore-tab-expansion --ignore-trailing-space --ignore-space-change --ignore-all-space --ignore-blank-lines
 
- # Als Alternative kann auch das Tool "meld" verwendet werden 
+ # Als Alternative kann auch das Tool "meld" verwendet werden
   tool = meld
 
 # Farbeinstellungen für verschiedene Git-Kommandos
@@ -78,14 +78,14 @@
     current = yellow reverse  # Aktuelle Branch 	GELB & INVERT
     local = yellow            # Lokale Branches 	GELB
     remote = green            # Remote-Branches 	GRÜN
-   
+
 
 [color "diff"]  	 # Farbeinstellungen für Diffs.
     meta = yellow bold         # Meta-Informationen in 	GELB 	FETT
     frag = magenta bold        # Fragmentinformationen 	MAGENTA FETT
     old = red bold             # Alte Zeilen 			ROT 	FETT
-    new = green bold           # Neue Zeilen 			GRÜN 	FETT 
-    
+    new = green bold           # Neue Zeilen 			GRÜN 	FETT
+
 
 [color "status"]     # Farbeinstellungen für Git-Status
     added = yellow             # Hinzugefügte Dateien 	GELB
@@ -100,7 +100,7 @@
     br = branch                # Alias für `git branch`.
     ci = commit                # Alias für `git commit`.
     st = status                # Alias für `git status`.
-    
+
     # Benutzerdefiniertes Log-Format, das einen grafischen Verlauf, Commit-Informationen und Farben anzeigt.
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 
@@ -115,9 +115,9 @@
 	ff = only
 [push]
     autoSetupRemote = true
-[init]		# Definiert den Standardbranchnamen für neue Repositories.        
+[init]		# Definiert den Standardbranchnamen für neue Repositories.
 	defaultBranch = main
-    
+
 [advice]
 	statusHints = on
 

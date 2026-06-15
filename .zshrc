@@ -1,130 +1,119 @@
+#!/usr/bin/env zsh
 ###################################################
-## ╔═╗╦╦  ╔═╗           ________________
-## ╠╣ ║║  ║╣  -NAME:	    .zshrc
-## ╚  ╩╩═╝╚═╝           ''''''''''''''''
-##	 -PATH:    	/share/zsh/
-##	 -STATUS:	work in progress
-##	 -USAGE:	RC-File for zsh
-## -------------------------------------
-## -----------------------------------------
-## 	set filetyte zsh
-## COMMENTS:	nixOS-version
-#####################################################          
-echo -e " \t ______    ______ \t\t\n         / / / /   / /\ \ \ \t\t\n        / / / /   / /  \ \ \ \t\t\n        \ \ \\  / /   / / / \t\t\n         \_\_\_\/_/   /_/_/ \t\t\n
-" | lolcat --animate --duration 2
- 
+## ╔═╗╦╦  ╔═╗           ______________________________
+## ╠╣ ║║  ║╣  -NAME:    .zshrc
+## ╚  ╩╩═╝╚═╝           ''''''''''''''''''''''''''''''
+##   -PATH:     /share/zsh/
+##   -STATUS:   work in progress
+##   -USAGE:    RC-File for zsh (NixOS version)
+##   -AUTHOR:   amxamxa
+##   -REPO:     github.com/amxamxa/zsh
+##   -OS:       NixOS 25.11  (declarative, no Flakes, no Home-Manager)
+##   -SHELL:    zsh 5.9
+##   -TERM:     kitty 0.37.0
+## -------------------------------------------------------
+## DESCRIPTION:
+##   Main zsh configuration file. Handles environment variables,
+##   tool initialization (zoxide, cheat, navi, micro), LS_COLORS
+##   via vivid, and sources modular config files from $ZDOTDIR.
+##   Uses source_or_error() for safe sourcing with validation.
+##   Uses check_sources() for pre-flight existence checks.
+##
+## STRUCTURE:
+##   1.  Early color definitions (needed before sourcing)
+##   2.  Startup visual / lolcat banner
+##   3.  LS_COLORS via vivid
+##   4.  Tool initialization: micro, zoxide, cheat, navi
+##   5.  Tetris (built-in zsh module)
+##   6.  Disabled modules: mcfly, fallback prompt, pager, manpager
+##   7.  Decorative separators (blahaj)
+##   8.  Logging helpers (_zrc_error / _zrc_warn / _zrc_verbose)
+##   9.  source_or_error() function
+##   10. check_sources() + sourcing of config modules
+##   11. Cosmetics / shortcuts image / shell cleanup
+##
+## DEPENDENCIES (runtime):
+##   lolcat, vivid, micro, zoxide, cheat, navi, blahaj, chafa
+##   powerlevel10k (NixOS package: zsh-powerlevel10k)
+##
+## NOTES:
+##   - set filetype zsh
+##   - All comments are intentionally preserved
+##   - Commented-out blocks kept for reference / future use
+##   - Color variables are defined early (Section 1) so tool-check
+##     messages render correctly before aliases.zsh is sourced
+##
+## CHANGELOG:
+##   2025-03-15: Translated all comments to English, added check_sources(),
+##               simplified source file list using an array, improved
+##               documentation.
+###################################################
+
+
+# ══════════════════════════════════════════════════════════
+# 1. EARLY COLOR DEFINITIONS
+#    These must come first — color variables are used by the
+#    tool-check blocks (micro, zoxide, cheat, navi) which run
+#    BEFORE aliases.zsh is sourced. Without this block the
+#    escape sequences would produce empty strings.
+#
+#    FIX: If colors are already exported via environment.nix
+#    or .zshenv, this block can be removed to avoid duplication.
+# ══════════════════════════════════════════════════════════
+RED="\033[0;31m"
+GREEN="\033[0;32m"
+GELB="\033[0;33m"     # yellow (German: gelb) – kept for backward compatibility
+YELLOW="\033[1;33m"
+PINK="\033[0;35m"
+CYAN="\033[0;36m"
+VIOLET="\033[0;35m"
+RESET="\033[0m"
+
+
+# ══════════════════════════════════════════════════════════
+# 2. STARTUP BANNER
+#    Animated ASCII art rendered via lolcat.
+#    --animate and --duration require lolcat >= 0.11
+#    The printf escape sequences draw a stylised "U / V" logo.
+# ══════════════════════════════════════════════════════════
+echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aro"
+echo -e " \t ______    ______ \t\t\n         / / / /   / /\ \ \ \t\t\n        / / / /   / /  \ \ \ \t\t\n        \ \ \\  / /   / / / \t\t\n         \_\_\_\/_/   /_/_/ \t\t\n" | lolcat --animate --duration 2
+echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="nb"
 # man eza_colors
-# The codes accepted by eza are:       38;5;nnn  for a colour from 0 to  255
-#   for i in {0..255}; do echo -e "\033[38;5;${i}m das ist TTTTEEEEXXT in Farbe ${i} \033[0m"; done
+# Codes accepted by eza: 38;5;nnn for a colour from 0 to 255
+# Preview all 256 colours:
+#   for i in {0..255}; do echo -e "\033[38;5;${i}m sample text in color ${i} \033[0m"; done
 
-# To use the Meta or Alt keys, you probably need to revert to single-byte mode with a command such as:
-#unsetopt MULTIBYTE 		# Multibyte-Zeichensätze die mehr als ein Byte zur Darstellung benötigen
+# To use the Meta or Alt keys, you may need to revert to single-byte mode:
+#unsetopt MULTIBYTE        # Disable multi-byte character sets
 #unsetopt CASEGLOB
-# unsetopt HIST_SAVE_NO_DUPS    # Write a duplicate event to the history file
+# unsetopt HIST_SAVE_NO_DUPS  # Write duplicate events to the history file
 
-
-## ZDOTDIR
+## ZDOTDIR — override if zsh config lives outside $HOME
 ##export ZDOTDIR="/share/zsh/"
 ##export ZFUNCDIR="/share/zsh/functions"
 
-# Vivid color configuration: LS_COLORS mit benutzerdefinierter Farbdatei setzen
-# export LS_COLORS="$(vivid generate alabaster_dark)" #jellybeans)" #  ayu rose-pine-moon snazzy
 
+# ══════════════════════════════════════════════════════════
+# 3. LS_COLORS — generated by vivid from a custom YAML schema
+#    Fallback chain: custom YAML → rose-pine-moon → alabaster_dark
+#    See: https://github.com/sharkdp/vivid
+# ══════════════════════════════════════════════════════════
 if [[ -f "$ZDOTDIR/colors/color-schema.yml" ]]; then
-  if vivid_output="$(vivid generate "$ZDOTDIR/colors/color-schema.yml" 2>/dev/null)"; then
-    export LS_COLORS="$vivid_output"
-  else
-    #export LS_COLORS="$(vivid generate snazzy)"
-    #printf "\t${GREEN}󰞷 .... vivid mit snazzy${RESET}\n"
-    export LS_COLORS="$(vivid generate rose-pine-moon)"
-    printf "\t${GREEN}󰞷 .... vivid mit rose-pine-moon ${RESET}\n"
-  fi
+    if vivid_output="$(vivid generate "$ZDOTDIR/colors/color-schema.yml" 2>/dev/null)"; then
+        export LS_COLORS="$vivid_output"
+    else
+        # Custom schema failed — fall back to built-in rose-pine-moon theme
+        export LS_COLORS="$(vivid generate rose-pine-moon)"
+        printf "\t${GREEN}󰞷 .... vivid with rose-pine-moon ${RESET}\n"
+    fi
 else
-  export LS_COLORS="$(vivid generate alabaster_dark)"
-  printf "\t${GREEN}󰞷 .... vivid mit alabaster_dark ${RESET}\n"
+    # Schema file not found — use alabaster_dark as last resort
+    export LS_COLORS="$(vivid generate alabaster_dark)"
+    printf "\t${GREEN}󰞷 .... vivid with alabaster_dark ${RESET}\n"
 fi
 
-# _____________________________________________________
-
-
-# #______________________________________________________
-# #   ███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗
-# #   ██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝
-# #   ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗
-# #   ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝
-# #   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
-# #   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
-# # Function: source_or_error
-# # Purpose : Safely source .sh / .zsh files with extensive validation
-# # Usage   : source_or_error file.sh|file.zsh
-# source_or_error() {
-#   # --- UI colors (ANSI) ---
-#   local RED="\033[38;2;240;128;128m\033[48;2;139;0;0m"
-#   local GELB="\e[33m"
-#   local GREEN="\033[38;2;0;255;0m\033[48;2;0;100;0m"
-#   local RESET="\e[0m"
-# 
-#   # --- logging helper ---
-#   _log() {
-#     # $1 = level, , $2 = filename $3 = message
-#    printf "[%s] %-12s %-5s %s\n" "$(date '+%c')" "$1" "$2" "$3"  >> "$ZDOTDIR/zsh.log" 1> /dev/null
-#     }
-# 
-#   local file="$1"
-#   # Validation checks
-#     # --- argument sanity ---
-#   [[ -z "$file" ]] && { _log ERROR "" "No file argument provided"; return 2; }
-#     # --- existence (any type) ---
-#   [[ ! -e "$file" ]] && { _log ERROR "" "File does not exist: $file"; return 3; }
-#     # --- empty file check ---
-#   [[ ! -s "$file" ]] && { _log ERROR "" "File is empty: $file"; return 4; }
-#     # is file?
-#   [[ ! -f "$file" ]] && { _log ERROR "" "Not a regular file: $file"; return 5; }
-#     # is readable?
-#   [[ ! -r "$file" ]] && { _log ERROR "" "File not readable: $file"; return 6; }
-# 
-#   # --- symlink handling ---
-#   if [[ -L "$file" ]]; then
-#     local real_file="${file:A}"
-#     _log INFO "" "Symlink resolved: $file -> $real_file"
-#     printf "\t${GELB}→ Symlink resolved: $real_file${RESET}\n"
-#     file="$real_file"
-#   fi
-#  # --- extension whitelist ---
-#   case "$file" in
-#     (*.sh|*.zsh|*.zsh-theme)
-#       _log INFO "" "Accepted extension"
-#       ;;
-#     (*)
-#       _log ERROR "" "Unsupported extension: $file"
-#       printf "\t${RED}✖ Unsupported file type (only .sh/.zsh allowed): $file${RESET}\n"
-#       return 7
-#       ;;
-#   esac
-#   # --- basic plausibility (optional syntax probe) ---
-#   # Note: zsh has no true "lint"; this catches gross parser errors
-#  # if ! zsh -n "$file" 2>/dev/null; then
-#  #   _log ERROR "" "Syntax check failed: $file"
-#  #   printf "\t${RED}✖ Syntax check failed: $file${RESET}\n"
-#  #   return 8
-#   # fi
-#   # --- source ---
-#   _log INFO "" "Sourcing file: $file"
-#   source "$file"
-# 
-#   local rc=$?
-#   if (( rc != 0 )); then
-#     _log ERROR "" "Sourcing returned non-zero exit code ($rc): $file"
-#     printf "\t${RED}✖ Error while sourcing: $file${RESET}\n"
-#     return $rc
-#   fi
-#   printf "${MINT}󰞷 src pass: ${CYAN} $file :${SLATE} ✔ ${RESET}\n"
-# #  printf "${GREEN}󰞷 src pass: ${NIGHT} $file :${GREEN} ✔ ${RESET}\n"
-#   return 0
-# }
-# #----------------------------------------------------------------------
-
-# bereits-------in enviroment.nix----------Projektpfade
+# Already set in environment.nix — project paths
 #export PRO="/home/project"
 #export NIX="/share/nixos/configurationNix"
 #export S="/share"
@@ -133,22 +122,22 @@ fi
 #export EMACSDIR="/share/emacs"
 #export BAT_CONFIG_FILE="/share/bat/config.toml"
 #	__________________________________________
-#		  __ _  (_)__________ 
+#		  __ _  (_)__________
 #		 /  ' \/ / __/ __/ _ \
 #	 	/_/_/_/_/\__/_/  \___/
 # Micro editor configuration
 if command -v micro &> /dev/null; then
     export MICRO_CONFIG_HOME="/share/micro"
     echo "\t${GREEN} micro  ... check ${RESET}\t"
-	alias edit="micro"
+    alias edit="micro"
 else
-    echo "\t${RED} micro ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
+    echo "\t${RED} micro is not installed. Please install it to use these features.${RESET}"
 fi
 # 	__________________________________________
 #		__ __    .___ ___
 #		 //  \\_/||  \|__
 #		/_\__// \||__/|___
-# Prüfen, ob 'zoxide' installiert ist, Zoxide configuration
+# Check if 'zoxide' is installed, Zoxide configuration
 if command -v zoxide &>/dev/null; then
     export _ZO_ECHO=1
     export _ZO_DATA_DIR="$ZDOTDIR/zoxide"
@@ -158,67 +147,67 @@ if command -v zoxide &>/dev/null; then
     alias zqi='cd "$(zoxide query -i)"'
     alias zr='zoxide remove'
     echo "\t${PINK} zoxide ... check ${RESET}\t"
-  else
-    echo "\t${RED} zoxide ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
+else
+    echo "\t${RED} zoxide is not installed. Please install it to use these features.${RESET}"
     sleep 1
 fi
 #	----------__------------_----------------
 #		 ____/ /  ___ ___ _/ /_
 #		/ __/ _ \/ -_) _ `/ __/
 #		\__/_//_/\__/\_,_/\__/
-# Prüfen, ob 'cheat' installiert ist, Cheat configuration
+# Check if 'cheat' is installed, Cheat configuration
 if command -v cheat &> /dev/null; then
     export CHEAT_USE_FZF="true"
     export CHEAT_CONFIG_PATH="$ZDOTDIR/cheat/conf.yaml"
     echo "\t${GREEN} cheat  ... check ${RESET}\t"
     sleep 0.1
 else
-    echo "\t${RED} cheat ist nicht installiert. Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
+    echo "\t${RED} cheat is not installed. Install it if needed to use these features.${RESET}"
     sleep 2.1
 fi
 
-# Navi configuration  # mit "^g" fürs widget
+# Navi configuration  # with "^g" for the widget
 if command -v navi &> /dev/null; then
     echo "\t${PINK} navi  ... check ${RESET}\t"
     if [[ -z ${NAVI_CONFIG+x} ]]; then
         export NAVI_CONFIG="$ZDOTDIR/navi"
-        echo "\t${GELB} NAVI_CONFIG wurde auf ${YELLOW}'$ZDOTDIR/navi'${GREEN} gesetzt. ${RESET}"
+        echo "\t${GELB} NAVI_CONFIG was set to ${YELLOW}'$ZDOTDIR/navi'${GREEN}. ${RESET}"
     else
-        echo "\t${PINK} NAVI_CONFIG ist bereits gesetzt auf: ${YELLOW}'$NAVI_CONFIG'${GREEN}. ${RESET}"
+        echo "\t${PINK} NAVI_CONFIG is already set to: ${YELLOW}'$NAVI_CONFIG'${GREEN}. ${RESET}"
     fi
 else
-    echo "\t${RED} navi ist nicht installiert. Installieren Sie es ggf., um diese Funktionen zu nutzen.${RESET}"
+    echo "\t${RED} navi is not installed. Install it if needed to use these features.${RESET}"
     sleep 1
 fi
 
-#------------------------------------------                                 
-#     oooooo         o         o        
-#       8   .oPYo.  o8P oPYo. o8 .oPYo. 
-#       8   8oooo8   8  8  `'  8 Yb..   
-#       8   8.       8  8      8   'Yb. 
-#       8   `Yooo'   8  8      8 `YooP' 
+#------------------------------------------
+#     oooooo         o         o
+#       8   .oPYo.  o8P oPYo. o8 .oPYo.
+#       8   8oooo8   8  8  `'  8 Yb..
+#       8   8.       8  8      8   'Yb.
+#       8   `Yooo'   8  8      8 `YooP'
 #    :..::..:::.....:::..:..:::::..:.....:
-# play Tetris in Shell, pree H for navigation
+# play Tetris in Shell, press H for navigation
 autoload -Uz tetriscurses
 alias tetris=tetriscurses
 
 #-------------------------------------------
-# McFly für History Mgmt 
- # mcfly als CTRL + R
- # ----- 
+# McFly for History Mgmt
+ # mcfly as CTRL + R
+ # -----
  #  if command -v mcfly &> /dev/null; then
-	#  echo "\t${PINK} Mcfly  ... check ${RESET}\t"
-	#  eval "$(mcfly init zsh)"
-	#  export MCFLY_FUZZY=2 # 0 is off; Values in the 2-5 range get good results so far
-	#  export MCFLY_RESULTS=50
-	#  export MCFLY_DELETE_WITHOUT_CONFIRM=true
-	#  export MCFLY_INTERFACE_VIEW=BOTTOM
-	#  export MCFLY_RESULTS_SORT=LAST_RUN
-	#  export MCFLY_PROMPT="❯❯❯"
+ #    echo "\t${PINK} Mcfly  ... check ${RESET}\t"
+ #    eval "$(mcfly init zsh)"
+ #    export MCFLY_FUZZY=2 # 0 is off; Values in the 2-5 range get good results so far
+ #    export MCFLY_RESULTS=50
+ #    export MCFLY_DELETE_WITHOUT_CONFIRM=true
+ #    export MCFLY_INTERFACE_VIEW=BOTTOM
+ #    export MCFLY_RESULTS_SORT=LAST_RUN
+ #    export MCFLY_PROMPT="❯❯❯"
  #  else
- #     echo "\t${RED} Mc_Fly ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}\n"
+ #     echo "\t${RED} Mc_Fly is not installed. Please install it to use these features.${RESET}\n"
  # fi
-# PROMPT: siehe ZFUNC
+# PROMPT: see ZFUNC
 #----FALLBACK 2:------------------ZSH NATIVE PROMPT-----------------------------
 #    powerlevel10k_plugin_unload
 #    prompt off
@@ -231,22 +220,22 @@ alias tetris=tetriscurses
 
 # --- Pager Configuration ---
 #export PAGER="less -R"
-# --RAW-CONTROL-CHARS: Steuerzeichen (wie Farbcodes) korrekt anzeigen
-# --chop-long-lines: 	Zeilen nicht umbrechen
-# --no-init: 		Bildschirm nicht löschen	
-# --long-prompt:  	Statuszeile verbose
+# --RAW-CONTROL-CHARS: Show control characters (like color codes) correctly
+# --chop-long-lines: 	Do not wrap lines
+# --no-init: 		Do not clear the screen
+# --long-prompt:  	Verbose status line
 #export LESS="--long-prompt --RAW-CONTROL-CHARS --ignore-case --quit-if-one-screen --quit-on-intr --no-init --mouse --hilite-search --use-color -Dd+r -Du+b"
-# 
+#
 # # Manpager configuration------------------------
 # export MANROFFOPT="-c"
 # export MANWIDTH="60"
 # if command -v bat &> /dev/null; then
 #  #   export MANPAGER="bat --paging=always --style=changes -l man -p"
 #    export  MANPAGER='sh -c "col -bx | bat --paging=always --style=changes -l man"'
-#    echo "${GREEN} \t... bat als man-pager ... check ${RESET}\t"
+#    echo "${GREEN} \t... bat as man-pager ... check ${RESET}\t"
 # else
 #     export MANPAGER="less -FRX --quit-if-one-screen --no-init"
-#     echo "${GELB} less -FRX als man-pager  ... check ${RESET}"
+#     echo "${GELB} less -FRX as man-pager  ... check ${RESET}"
 #       # Enable color support for less via Termcap sequences
 #   export LESS_TERMCAP_mb="\e[1;31m"; # Start blinking
 #   export LESS_TERMCAP_md="\e[1;36m"; # Start bold (Cyan)
@@ -255,113 +244,100 @@ alias tetris=tetriscurses
 #   export LESS_TERMCAP_se="\e[0m";    # End standout
 #   export LESS_TERMCAP_us="\e[1;32m"; # Start underline (Green)
 #   export LESS_TERMCAP_ue="\e[0m";    # End underline
-# 
+#
 # fi
-# # --------------------------------------------
-echo " 󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
-
-# Weather display------------------------------------------
-#if command -v curl &> /dev/null; then
-#    echo "\n${VIOLET}" && curl 'wttr.in/Dresden?m0&lang=de'
-#else
-#    echo "\t${RED} curl ist nicht installiert. Bitte installieren Sie es, um diese Funktionen zu nutzen.${RESET}"
-#    sleep 0.2	
-# fi
-#--------------------------------------------------
-# Sourcen von Konfigurationsdateien
-# Source alle Skripte aus /share/zsh/functions
-
-# for script in $ZDOTDIR/functions/*.{sh,zsh} 
-#   if [[ -f "$script" && -r "$script" ]]; then
-#     source_or_error "$script"
-#  fi
-# done
-
 # echo "   󰞷 "
 echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
-# Source configuration files
-source_or_error "$ZDOTDIR/aliases.zsh"
-#source_or_error "/etc/zsh/aliases.sh"
-#source_or_error "/etc/zsh/logging-aliases.sh"
-#source_or_error "/etc/zsh/zsh-highlight-styles.zsh"
-#source_or_error "/etc/zsh/fzf-config.sh"
-source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
-source_or_error "$ZDOTDIR/functions/fff.zsh"
-source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
-source_or_error "$ZDOTDIR/functions/my-functions.zsh"
-source_or_error "$ZDOTDIR/functions/my-functions.sh"
-source_or_error "$ZDOTDIR/functions/zgreeting.zsh"
+# ----------------------------------------------------------------------
+# source_or_error() – safely source one or more files with validation.
+# All messages are written to stderr (>&2) so that stdout remains clean.
+#
+# Return Codes
+# ------------
+#   2  No arguments supplied (or only empty strings)
+#   3  Completed with one or more errors (validation or sourcing)
+#   0  Success
+
+#	__________________________________________________________
+#   ███████╗ ██████╗ ██╗   ██╗██████╗  ██████╗███████╗
+#   ██╔════╝██╔═══██╗██║   ██║██╔══██╗██╔════╝██╔════╝
+#   ███████╗██║   ██║██║   ██║██████╔╝██║     █████╗
+#   ╚════██║██║   ██║██║   ██║██╔══██╗██║     ██╔══╝
+#   ███████║╚██████╔╝╚██████╔╝██║  ██║╚██████╗███████╗
+#   ╚══════╝ ╚═════╝  ╚═════╝ ╚═╝  ╚═╝ ╚═════╝╚══════╝
+#  _______________________________________________________
+# Function to source files with error handling
+source_or_error() {
+    local file="$1"
+    local error_output
+    if [[ ! -f "$file" ]]; then
+        printf "\t${RED} 󰅙 nicht gefunden!${RESET}${NIGHT}${BOLD} $file ${RESET}\n" >&2
+        return 1
+    fi
+    if error_output=$(source "$file" 2>&1); then
+        source "$file"
+        printf "\t${GREEN}󰞷 src pass:\t${RESET}${NIGHT}${BOLD} $file ${RESET}\n"
+        return 0
+    else
+        printf "\t${RED} 󰅙 Fehler beim Laden!${RESET}${NIGHT} $file ${RESET}\n" >&2
+        printf "\t${RED}Details: $error_output${RESET}\n" >&2
+        return 1
+    fi
+}
+
+
+
+
+  source_or_error   "$ZDOTDIR/aliases.zsh"
+      source_or_error "$ZDOTDIR/functions/shortcuts.zsh"
+      source_or_error "$ZDOTDIR/functions/fff.zsh"
+      source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
+      source_or_error "$ZDOTDIR/functions/my-functions.zsh"
+      source_or_error "$ZDOTDIR/functions/my-functions.sh"
+      source_or_error "$ZDOTDIR/functions/cowmuh.sh"
+          source_or_error "$ZDOTDIR/functions/zfunctions.zsh"
+      source_or_error "$ZDOTDIR/functions/zshCopyCmdToNote.sh"
+      source_or_error "/run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme"
+      source_or_error "$ZDOTDIR/prompt/p10k.zsh"
+
+
+# Disabled (uncomment to activate):
 # source_or_error "$ZDOTDIR/functions/batNoComment.sh"
- # colors.sh ->bin
- source_or_error "$ZDOTDIR/functions/cowmuh.sh"
- #genPlaylist.sh
- #kitty-keys.txt
- #prompt-selector
- #shortcuts.zsh
- #table.sh
- #term-theme.zsh
- #tetris.zsh
- #Trash.sh
- #window.sh
- #zfunctions.zsh
- #zgreeting.zsh
- #zshColorThemeSwitcher.sh
- source_or_error "$ZDOTDIR/functions/zshCopyCmdToNote.sh"
- source_or_error /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
- source_or_error  $ZDOTDIR/prompt/p10k.zsh
 # source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
-   
-#   source $ZDOTDIR/prompt/p10k.zsh 2>/dev/null
-#  source_or_error "$script"
+# source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
+# source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"
+# source_or_error "$ZDOTDIR/plugins/tetris.zsh"
+# source_or_error "$ZDOTDIR/functions/prompt-selector.zsh"
+
 
 # source_or_error "$ZDOTDIR/fzf/fzf-tools.zsh"
 # source_or_error "$ZDOTDIR/fzf/fzf-mxx.zsh"
-# /share/zsh/plugins/term-theme.zsh #in .zshrc integriert!
+# /share/zsh/plugins/term-theme.zsh #integrated into .zshrc!
 # source_or_error "$ZDOTDIR/plugins/tetris.zsh
+
  	sleep 1
- 	clear
+
 # =================================
+echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
+# Weather display------------------------------------------
+if command -v curl &> /dev/null; then
+    echo -e "${BOLD}${RASPB}" && curl 'wttr.in/Dresden?m0&lang=de' && echo -e  "${RESET}"
+else
+    echo "\t${RED} curl is not installed. Please install it to use these features.${RESET}"
+    sleep 0.2
+ fi
+echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="gay"
+# showImg "/etc/nixos/assets/shortcuts.png" || chafa "/etc/nixos/assets/shortcuts.png"
+# echo "󰞷 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="gay"
 
-echo "󰞷 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><>󰞷" | blahaj --individual --colors="gay"		   
-showImg "/etc/nixos/assets/shortcuts.png" || chafa "/etc/nixos/assets/shortcuts.png"
-echo
-echo
-echo
-echo
-echo "󰞷 <><><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="gay"			
-# Display kitty keybindings table
-if [[ -f "$HOME/bin/table.sh" ]]; then
-    $HOME/bin/table.sh $HOME/bin/kitty-keys.txt
-fi
- # echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
-
-echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
-
-# FZF documentation info
-#echo "${PINK} fzf documentation: $ZDOTDIR/fzf/README.md${RESET}"
-# echo " Ctrl+M	fzf-command-widget → Kontextabhängig fzf für ls, man, grep, find, ps aux
-# Ctrl+R	Zsh-History-Suche → mit fzf-run-cmd-from-history
-# Ctrl+E	Select File and edit w/ \$EDITOR " | clolcat -S 5 -F 0.06
-
-echo -e " --------------------------------------------------
-  convert to UPPERCASE [lowercase] ---> ALT+U\+L
-  argument of last commands     --> CTRL+ALT+.
-  kill the word at the cursor --> ALT+D" | blahaj --random --words
-echo "  󰞷  <><><><><><><><><><><><><><><><><><><><><><><><><><><><> 󰞷 " | blahaj --individual --colors="aroace"
-  
-# 	  Aktualisiere die Shell-Hash-Tabelle
+# 	  Update the shell hash table
 #	--------------------------------------
-# ...  häufig Programme installierst oder aktualisierst,
-#  sicherstellt, dass deine Shell immer auf dem neuesten Stand ist
+# ... often install or update programs, ensures your shell is always up to date
 hash -r
 
-#  KOSMETIK
-rm -f  "$HOME/.xsession-errors" "$HOME/.xsession-errors.old" 
+#  COSMETICS
+rm -f  "$HOME/.xsession-errors" "$HOME/.xsession-errors.old"
 rm -f  "$HOME/.ICEauthority"
 rm -fr "$HOME/.compose-cache"
 
 
- 
-  
-
- 

@@ -416,14 +416,14 @@ alias Zopt='echo -e "\t${PINK}Wrapper für setopt${RESET}" && setopt'
 #	--------------------------------------
 
 # --- Git Konfiguration ---
-#alias gitgit='echo -e "\t${PINK}Setze globale Git-Konfiguration und zeige sie an${RESET}" && \
-#    git config -f $GIT_CONFIG user.email "max.kempter@gmail.com" && \
-#    git config -f $GIT_CONFIG user.name "amxamxa" && \
-#    git config -l | bat3 -l "sh"'
-#alias gitloc='echo -e "\t${PINK}Setze lokale Git-Konfiguration (~/.gitlocal) und zeige sie an${RESET}" && \
-#    git config -f ~/.gitlocal user.email "max.kempter@gmail.com" && \
-#    git config -f ~/.gitlocal user.name "amxamxa" && \
-#    git config -l | bat3 -l "sh"'
+alias gitgit='echo -e "\t${PINK}Setze globale Git-Konfiguration und zeige sie an${RESET}" && \
+    git config -f $GIT_CONFIG user.email "max.kempter@gmail.com" && \
+    git config -f $GIT_CONFIG user.name "amxamxa" && \
+    git config -l | bat3 -l "sh"'
+alias gitloc='echo -e "\t${PINK}Setze lokale Git-Konfiguration (~/.gitlocal) und zeige sie an${RESET}" && \
+    git config -f ~/.gitlocal user.email "max.kempter@gmail.com" && \
+    git config -f ~/.gitlocal user.name "amxamxa" && \
+    git config -l | bat3 -l "sh"'
 # Git Status
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → gsss
 # alias gsss='echo -e "${PINK}\n\t git status --short ${RESET} with abbr.:${RESET}\n${GELB}?? ... Untracked files${RESET}\t${GELB}U ... Files with merge conflicts${RESET}\t ${GELB}A ... New files added to staging ${RESET}\t${GELB}M ... Modified files${RESET}\t${GELB}D ... Deleted files${RESET}\t${GELB}R ... Renamed files${RESET}\t${GELB}C ... Copied files${RESET}\n" && git status -s'
@@ -437,12 +437,12 @@ alias Zopt='echo -e "\t${PINK}Wrapper für setopt${RESET}" && setopt'
 # }
 # Git Add
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → ga
-# alias ga='echo -e "${GELB}\nFügt Änderungen im Arbeitsverzeichnis zum Staging-Bereich hinzu${RESET}\n" && git add'
+ alias ga='echo -e "${GELB}\nFügt Änderungen im Arbeitsverzeichnis zum Staging-Bereich hinzu${RESET}\n" && git add'
 # Git Push
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → gp
-# alias gp='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch${RESET}\n" && git push'
-# alias gpo='echo -e "${GELBninjas2}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
-# alias gpof='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check${RESET}\n" && git push origin --force-with-lease'
+ alias gp='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch${RESET}\n" && git push'
+ alias gpo='echo -e "${GELB}\nPushed lokale Änderungen auf den Remote-Branch \"origin\"${RESET}\n" && git push origin'
+ alias gpof='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check${RESET}\n" && git push origin --force-with-lease'
 # alias gpofn='echo -e "${GELB}\nForce-Pushed lokale Änderungen auf den Remote-Branch \"origin\" mit Lease-Check und ohne Verifizierung${RESET}\n" && git push origin --force-with-lease --no-verify'
 # alias gpt='echo -e "${GELB}\nPushed alle Tags auf den Remote-Branch${RESET}\n" && git push --tag'
 # Git Tag
@@ -452,18 +452,18 @@ alias Zopt='echo -e "\t${PINK}Wrapper für setopt${RESET}" && setopt'
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → grb
 # alias grb='echo -e "${GELB}\nZeigt die Remote-Branches an${RESET}\n" && git branch -r'
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → gb
-# alias gb='echo -e "${GELB}\nZeigt alle Branches im aktuellen Repository an${RESET}\n" && git branch'
+ alias gb='echo -e "${GELB}\nZeigt alle Branches im aktuellen Repository an${RESET}\n" && git branch'
 # Git Pull
 # Git Commit
 
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → glol
-# alias glol='echo -e "${GELB}\nZeigt die Commit-Historie in einer graphischen Darstellung an${RESET}\n" && git log --graph --abbrev-commit --oneline --decorate'
+ alias glol='echo -e "${GELB}\nZeigt die Commit-Historie in einer graphischen Darstellung an${RESET}\n" && git log --graph --abbrev-commit --oneline --decorate'
 # Git Remote
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → gr
-# alias gr='echo -e "${GELB}\nZeigt die Namen der Remote-Repositories an${RESET}\n" && git remote'
+ alias gr='echo -e "${GELB}\nZeigt die Namen der Remote-Repositories an${RESET}\n" && git remote'
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → grs
-# alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${RESET}\n" && git remote show'
+ alias grs='echo -e "${GELB}\nZeigt Informationen zu den Remote-Repositories an${RESET}\n" && git remote show'
 # !! IN aliases.nix: environment.shellAliases (mkIf git) → gblog
-# alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='%(HEAD) %(color:red)%(refname:short)%(color:reset) - %(color:yellow)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:blue)%(committerdate:relative)%(color:reset))'"
+ alias gblog="git for-each-ref --sort=committerdate refs/heads/ --format='(HEAD) %(color:red)%(refname:short)%(color:reset) - %(color:yellow)%(objectname:short)%(color:reset) - %(contents:subject) - %(authorname) (%(color:blue)%(committerdate:relative)%(color:reset))'"
 #	_______GIT - AUSGABE ENDE___________________________________________
 

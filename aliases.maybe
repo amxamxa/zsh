@@ -244,6 +244,19 @@ for i in {0..255}; do; printf "[38;5;${i}mcolor%-5i[0m" "$i"; if (( ($i + 1) %
 for i in {0..255}; do; printf "[38;5;${i}mcolor%-5i[0m" "$i"; if (( ($i + 1) % 8 == 0 )); then echo; fi; done; echo -e "
 	SYNTAX: 38;5;<colorXYZ>:
 	z.B.: 38;5;125 für Farbe aus obiger 256-Farben-Palette"
+
 eza -l --no-permissions --no-user --no-time --no-filesize --icons /run/current-system/sw/bin
-fd -t f --changed-within="12h" --exclude "/dev" --exclude "/nix/var" --exclude "/proc" --exclude "/sys" --exclude "/run" --exclude "/var/lib"
+
+fd -t f --changed-within="12h" --exclude "/dev" --exclude "/nix/var" --exclude "/proc" --exclude "/sys" 
+
+--exclude "/run" --exclude "/var/lib"
 nix store diff-closures /nix/var/nix/profiles/system-profiles/xam4boom-49-link /nix/var/nix/profiles/system-profiles/xam4boom-50-link
+ps -e -o %cpu,pid,ppid,user,cmd | sort -nr | head -n 20
+
+sudo btrfs subvolume snapshot /share /share/snapshots/$(date +%Y-%m-%d)
+
+testparm
+lsblk -f --topology --ascii --all --list
+#
+yt-dlp -f bestvideo+bestaudio --write-info-json --write-thumbnail "https://kinoger.to/stream/20423-good-luck-have-fun-dont-die-stream.html"
+nmap -T4 192.168.0.0/24

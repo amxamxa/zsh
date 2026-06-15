@@ -15325,3 +15325,1431 @@
 [Di 28 Apr 2026 13:35:16 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
 [Di 28 Apr 2026 13:35:16 CEST] INFO               Accepted extension
 [Di 28 Apr 2026 13:35:16 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Di 28 Apr 2026 23:15:53 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Accepted extension
+[Di 28 Apr 2026 23:15:53 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 13:38:03 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 13:38:03 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 14:47:14 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 14:47:14 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 17:18:26 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 17:18:26 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 18:04:29 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 18:04:29 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 22:30:19 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:30:19 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 22:50:01 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:01 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 22:50:02 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:02 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 22:50:02 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:50:02 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 22:52:43 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:52:43 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 22:59:30 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 22:59:30 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 23:03:41 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:03:41 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 29 Apr 2026 23:06:25 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Accepted extension
+[Mi 29 Apr 2026 23:06:25 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 30 Apr 2026 03:41:34 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 03:41:34 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 30 Apr 2026 04:18:08 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:18:08 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 30 Apr 2026 04:48:59 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 04:48:59 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 30 Apr 2026 05:18:04 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:18:04 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 30 Apr 2026 05:51:14 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 05:51:14 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 30 Apr 2026 10:56:52 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:52 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 30 Apr 2026 10:56:53 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 10:56:53 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 30 Apr 2026 12:10:47 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:47 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 30 Apr 2026 12:10:48 CEST] INFO               Accepted extension
+[Do 30 Apr 2026 12:10:48 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Fr 01 Mai 2026 12:41:13 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:13 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Fr 01 Mai 2026 12:41:16 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:16 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Fr 01 Mai 2026 12:41:21 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Accepted extension
+[Fr 01 Mai 2026 12:41:21 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 00:57:02 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 00:57:02 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 01:17:59 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:17:59 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 01:18:09 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:18:09 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 01:45:36 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 01:45:36 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 02:08:29 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 02:08:29 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 04:53:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:46 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 04:53:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:46 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 04:53:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:46 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 04:53:47 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 04:53:47 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 05:07:14 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:07:14 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 05:14:02 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 05:14:02 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 10:51:32 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 10:51:32 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 14:18:10 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:10 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 14:18:13 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:18:13 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 14:20:40 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:40 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 14:20:45 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:45 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Sa 02 Mai 2026 14:20:46 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Accepted extension
+[Sa 02 Mai 2026 14:20:46 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[So 03 Mai 2026 22:05:21 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[So 03 Mai 2026 22:05:21 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:05:21 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[So 03 Mai 2026 22:10:51 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[So 03 Mai 2026 22:10:51 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:10:51 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[So 03 Mai 2026 22:37:58 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[So 03 Mai 2026 22:37:58 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:58 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[So 03 Mai 2026 22:37:59 CEST] INFO               Accepted extension
+[So 03 Mai 2026 22:37:59 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[So 03 Mai 2026 23:08:03 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[So 03 Mai 2026 23:08:03 CEST] INFO               Accepted extension
+[So 03 Mai 2026 23:08:03 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 00:18:47 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:18:47 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 00:51:34 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 00:51:34 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 01:41:32 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:32 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 01:41:50 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:41:50 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 01:43:05 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 01:43:05 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 02:00:33 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:00:33 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 02:15:54 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:15:54 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 02:17:33 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:33 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 02:17:34 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:17:34 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 02:26:39 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 02:26:39 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mo 04 Mai 2026 12:50:17 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Accepted extension
+[Mo 04 Mai 2026 12:50:17 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Di 05 Mai 2026 12:48:03 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:48:03 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Di 05 Mai 2026 12:49:07 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 12:49:07 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Di 05 Mai 2026 16:37:27 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:27 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Di 05 Mai 2026 16:37:28 CEST] INFO               Accepted extension
+[Di 05 Mai 2026 16:37:28 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 06 Mai 2026 00:52:17 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 06 Mai 2026 00:52:17 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 06 Mai 2026 00:53:32 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:53:32 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 06 Mai 2026 00:56:16 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 00:56:16 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 06 Mai 2026 02:43:47 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 02:43:47 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 06 Mai 2026 04:03:49 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 04:03:49 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Mi 06 Mai 2026 11:16:30 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Accepted extension
+[Mi 06 Mai 2026 11:16:30 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 07 Mai 2026 12:40:36 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:36 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 07 Mai 2026 12:40:45 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:40:45 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 07 Mai 2026 12:43:17 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:17 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 07 Mai 2026 12:43:18 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 12:43:18 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 07 Mai 2026 14:10:02 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 14:10:02 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Do 07 Mai 2026 23:37:53 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Accepted extension
+[Do 07 Mai 2026 23:37:53 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Fr 08 Mai 2026 00:34:13 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:13 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Fr 08 Mai 2026 00:34:14 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 00:34:14 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Fr 08 Mai 2026 04:48:05 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 04:48:05 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/aliases.zsh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/functions/shortcuts.zsh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/functions/fff.zsh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/functions/zfunctions.zsh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.zsh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/functions/my-functions.sh
+[Fr 08 Mai 2026 05:03:54 CEST] ERROR              File does not exist: /share/zsh/functions/zgreeting.zsh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/functions/cowmuh.sh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/functions/zshCopyCmdToNote.sh
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /run/current-system/sw/share/zsh/themes/powerlevel10k/powerlevel10k.zsh-theme
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Accepted extension
+[Fr 08 Mai 2026 05:03:54 CEST] INFO               Sourcing file: /share/zsh/prompt/p10k.zsh
