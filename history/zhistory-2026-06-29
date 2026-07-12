@@ -1,0 +1,92 @@
+: 1782735196:0;tldr ln
+: 1782735212:0;cd project
+: 1782735290:0;..
+: 1782735298:0;ln -s /home/project .
+: 1782735413:0;eza --long --group --header --smart-group --all --group-directories-first --classify --icons --hyperlink
+: 1782735429:0;lll
+: 1782737950:0;lotti --help
+: 1782737956:0;man lotti
+: 1782745404:0;ef
+: 1782745487:0;eee
+: 1782745511:0;ll
+: 1782745526:0;es
+: 1782745528:0;ls
+: 1782745568:0;eza $EZA_FLAGS --no-time --no-permissions --no-user --tree --level=2
+: 1782745701:0;pkill 29325
+: 1782745725:0;pkill 29456
+: 1782745734:0;pkill
+: 1782745751:0;lkkl
+: 1782745770:0;sudo pkill 29325
+: 1782745786:0;btop
+: 1782745923:0;ee
+: 1782745933:0;echo $EZA_FLAGS
+: 1782745940:0;eza $EZA_FLAGS
+: 1782747254:0;cheat --help
+: 1782747263:0;cheat -d
+: 1782747282:0;cheat --conf
+: 1782747325:0;bap /share/zsh/cheat/conf.yaml
+: 1782747348:0;cheat eza
+: 1782747352:0;cheat ls
+: 1782747359:0;egit
+: 1782747364:0;zsh
+: 1782747371:0;eg
+: 1782747376:0;lf
+: 1782747383:0;lf -r
+: 1782747388:0;ld -r
+: 1782747411:0;ld -r --octal-permission
+: 1782747413:0;ld -r --octal-permissions
+: 1782747445:0;lgit
+: 1782747450:0;lg
+: 1782747454:0;lsize
+: 1782747483:0;lx
+: 1782747529:0;lx -f
+: 1782747574:0;lx -f --time-style relative
+: 1782747588:0;lx -f --time-style relative --no-user
+: 1782747601:0;lx -f --time-style relative --no-user --no-groups
+: 1782747603:0;lx -f --time-style relative --no-user --no-group
+: 1782747611:0;eza --help
+: 1782747685:0;lx -f --time-style relative --no-user --smart-group
+: 1782747702:0;eza -f --time-style relative --no-user --smart-group
+: 1782747709:0;eza -f --time-style relative --no-user --group
+: 1782747736:0;eza -f --time-style relative --no-user --group -n
+: 1782747741:0;eza -f --time-style relative --no-user --group -nl
+: 1782748240:0;eza -f --time-style relative --no-user --group -l
+: 1782748253:0;eza -d --time-style relative --no-user --group -l
+: 1782748260:0;ld
+: 1782748271:0;lx -f --time-style relative --no-user --no-groups -D
+: 1782748283:0;lx -time-style relative --no-user -D
+: 1782748298:0;lx --time-style relative --no-user -D
+: 1782748335:0;lx --time-style relative --no-user -D --octal-permissions
+: 1782748412:0;ed
+: 1782748449:0;ed --total-size -B
+: 1782748477:0;ed --total-size
+: 1782748488:0;ed --total-size -b
+: 1782748588:0;NIXoi
+: 1782750744:0;EIN
+: 1782751587:0;amidi --help n
+: 1782751589:0;amidi --help
+: 1782751597:0;amidi -l
+: 1782751601:0;amidi -L
+: 1782778442:0;NIXenv
+: 1782778468:0;binwalk
+: 1782778473:0;binwalk --help
+: 1782778477:0;binwalk -l
+: 1782778483:0;binwalk -L
+: 1782778515:0;binwalk --help
+: 1782778534:0;binwalk -e
+: 1782778541:0;binwalk -ev
+: 1782778543:0;binwalk -e
+: 1782778544:0;binwalk -v
+: 1782778546:0;binwalk -a
+: 1782778553:0;binwalk tldr
+: 1782778560:0;tldr binwalk
+: 1782778569:0;lf
+: 1782778574:0;ld
+: 1782778611:0;lg
+: 1782778625:0;ll
+: 1782778631:0;ee
+: 1782778639:0;eee
+: 1782778665:0;e1
+: 1782778670:0;e2
+: 1782778675:0;e4
+: 1782779737:0;NIXoi

@@ -1,0 +1,44 @@
+: 1782577278:0;tldr whipper
+: 1782577286:0;tldr --update
+: 1782577292:0;tldr whipper
+: 1782577301:0;whipper --help
+: 1782577322:0;whipper
+: 1782577331:0;man whipper
+: 1782577475:0;grouüs
+: 1782577477:0;groups
+: 1782577516:0;bap ~/.config/whipper/whipper.conf
+: 1782577544:0;micro ~/.config/whipper/whipper.conf
+: 1782577570:0;ld
+: 1782577572:0;ll
+: 1782577581:0;cd music
+: 1782577582:0;ll
+: 1782577594:0;mkcd whipper-rip
+: 1782577781:0;whipper cd info
+: 1782578079:0;whipper cd rip
+: 1782578149:0;nix-shell -p pycdio
+: 1782578160:0;whipper offset find
+: 1782578186:0;micro ~/.config/whipper/whipper.conf
+: 1782578410:0;whipper cd rip --unkown
+: 1782578433:0;whipper cd rip --help
+: 1782578451:0;whipper cd rip -U --cdr
+: 1782578527:0;bap ~/.config/whipper/whipper.conf
+: 1782578598:0;whipper cd rip -U --cdr --offset 6
+: 1782578635:0;micro ~/.config/whipper/whipper.conf
+: 1782587600:0;ping 8.8.8.8
+: 1782588708:0;btop
+: 1782597406:0;nix-shell -p heimdall
+: 1782597601:0;z downl
+: 1782597603:0;ll
+: 1782597607:0;ll -t
+: 1782597609:0;ll -tr
+: 1782597811:0;z project
+: 1782597822:0;mkcd s5mini
+: 1782597849:0;mv twrp-3.6.0_9-0-kminilte.img root-anleitung-s5-mini.md ~/project/s5mini
+: 1782598373:0;nix-shell -p heimdall
+: 1782600516:0;lsusb
+: 1782600526:0;lsusb -d
+: 1782600528:0;lsusb -
+: 1782600533:0;lsusb -v
+: 1782600543:0;lsusb
+: 1782600548:0;tldr lsusb
+: 1782600555:0;lsusb -t

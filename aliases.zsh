@@ -270,6 +270,7 @@ alias Zcopy='nano "$ZDOTDIR/.zshrc" && source "$ZDOTDIR/.zshrc" && \
     echo -e "\n\t${GELB}source $ZDOTDIR/.zshrc  ---NICHT---  erfolgreich!${RESET}\n"'
 
 #alias Zconf='gnome-text-editor -s "$ZDOTDIR/.zshrc" && source "$ZDOTDIR/.zshrc" &&     echo -e "\n\t${PINK}source $ZDOTDIR/.zshrc ${RED}s erfolgreich!${RESET}\n" || \ echo -e "\n\t${RED}source $ZDOTDIR/.zshrc   ---NICHT---  erfolgreich!${RESET}\n"'
+
 # alias ZRC='Zconf'
 # alias ZENV='micro -filetype zsh $HOME/.zshenv" && source "$HOME/.zshenv" && echo -e "\n\t${PINK}source ~/.zshenv erfolgreich!${RESET}\n" || echo -e "\n\t${GELB}source ~/.zshenv ---NICHT---  erfolgreich!${RESET}\n"'
 #alias ZEconf='ZENV'

@@ -260,3 +260,4 @@ lsblk -f --topology --ascii --all --list
 #
 yt-dlp -f bestvideo+bestaudio --write-info-json --write-thumbnail "https://kinoger.to/stream/20423-good-luck-have-fun-dont-die-stream.html"
 nmap -T4 192.168.0.0/24
+source ./CopyToNote.sh

@@ -1,0 +1,12 @@
+: 1783734664:0;cd tmp
+: 1783734673:0;mcd kelly
+: 1783734680:0;nix-shell -p gpu-screen-recorder
+: 1783735021:0;nix-shell -p gpu-screen-recorder gpu-screen-recorder-gtk
+: 1783735332:0;nix-shell -p gnome-themes-extra
+: 1783735970:0;nix-shell -p wayfarer
+: 1783736308:0;nix-build --no-out-link '<nixpkgs>' -A simplescreenrecorder
+: 1783736330:0;NIXenv
+: 1783736345:0;nix-shell -p simplescreenrecorder
+: 1783736443:0;nix-shell -p obs-studio
+: 1783742371:0;ll
+: 1783742376:0;exit

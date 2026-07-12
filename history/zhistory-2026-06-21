@@ -1,0 +1,32 @@
+: 1782007586:0;z magick
+: 1782007589:0;ll
+: 1782007595:0;e21
+: 1782007599:0;e2
+: 1782008605:0;lol
+: 1782008615:0;ee
+: 1782008618:0;eee
+: 1782008625:0;lf
+: 1782008628:0;ef
+: 1782008631:0;ed
+: 1782008642:0;eza --long --group --header --smart-group --all --group-directories-first --classify --icons --hyperlink
+: 1782008660:0;rclone-ui
+: 1782008736:0;rclone-ui --help
+: 1782008967:0;z .config/rclone
+: 1782008968:0;ll
+: 1782008981:0;bap rclone.conf
+: 1782008997:0;bap rclone-gdrive.conf
+: 1782009047:0;rclone listremotes
+: 1782009064:0;rclone check
+: 1782009086:0;rclone lsd
+: 1782009097:0;rclone gdrive: lsd
+: 1782009111:0;rclone config
+: 1782009208:0;rclone gui
+: 1782065454:0;nix-env -iA nixos.mtpfs
+: 1782065726:0;NIXoi
+: 1782066468:0;mtp-detect | grep -A3 "Storage ID"
+: 1782066493:0;simple-mtpfs --list-devices
+: 1782066518:0;mtp-detect
+: 1782066526:0;mtp-detect --help
+: 1782066531:0;mtp-detect -h
+: 1782074915:0;fd "Hiking with Hotties.mp4"
+: 1782074923:0;fd -E "Hiking with Hotties.mp4"

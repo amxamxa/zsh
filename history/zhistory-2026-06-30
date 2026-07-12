@@ -1,0 +1,55 @@
+: 1782779350:0;firefox &
+: 1782779397:0;firefox --help
+: 1782779466:0;firefox --new-instance
+: 1782779501:0;tldr firefox
+: 1782780367:0;NIXoi
+: 1782784737:0;z .cache/
+: 1782784738:0;ll
+: 1782784748:0;bap less_history
+: 1782785036:0;update-desktop-database ~/.local/share/applications
+: 1782785060:0;tldr updatectl
+: 1782785077:0;\
+ updatectl check
+: 1782785092:0;sudo updatectl check
+: 1782785115:0;\
+ updatectl --help
+: 1782785144:0;update-mime-database --help
+: 1782785156:0;tldr update-mime-database
+: 1782785182:0;~/.local/share/cosmic
+: 1782785184:0;~/.local/share
+: 1782785208:0;..
+: 1782785209:0;ll
+: 1782785212:0;ee
+: 1782785216:0;e2
+: 1782785238:0;z state
+: 1782785239:0;ll
+: 1782785248:0;e2
+: 1782785274:0;z .cache
+: 1782785275:0;e2
+: 1782785618:0;2~NIXoi
+: 1782785621:0;NIXoi
+: 1782785840:0;cal
+: 1782785880:0;cosmic-ext-calculator
+: 1782785895:0;cosmic-ext-calculator --help
+: 1782785913:0;man cosmic-ext-calculator
+: 1782786230:0;NIXoi
+: 1782786263:0;systemctl --user list-unit-files | grep cosmic
+: 1782786318:0;systemctl --user restart cosmic-app-library
+: 1782786327:0;systemctl --user restart cosmic-app-library.scope
+: 1782786410:0;systemctl --user show
+: 1782787214:0;systemctl --user stop cosmic-app-library.scope
+: 1782787234:0;rm -rf ~/.local/share/cosmic/com.system76.CosmicAppLibrary/
+: 1782787250:0;nix-collect-garbage -d
+: 1782787387:0;sudo nix-collect-garbage -d
+: 1782787638:0;EIN
+: 1782864721:0;fastboot
+: 1782864729:0;neo0
+: 1782864741:0;hyfetch
+: 1782864782:0;tldr hyfetch --
+: 1782864784:0;tldr hyfetc
+: 1782864786:0;tldr hyfetch
+: 1782864792:0;tldr --update
+: 1782864797:0;tldr hyfetch
+: 1782864802:0;man hyfetch
+: 1782864824:0;inxi
+: 1782864850:0;inxi --machine

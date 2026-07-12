@@ -1,0 +1,11 @@
+: 1783694420:0;ping 8.8.8.8+
+: 1783694427:0;ping 8.8.8.8
+: 1783734458:0;vlc screen:// --screen-fps=30 --sout "#transcode{vcodec=h264,acodec=copy}:file{dst=dearkelly.mp4}"
+: 1783734468:0;vlc &
+: 1783734473:0;NIXoi
+: 1783735227:0;vlc
+: 1783735441:0;NIXoi
+: 1783735853:0;vlc
+: 1783735868:0;vlc --help
+: 1783742380:0;nix-shell -p simplescreenrecorderAUS
+: 1783742383:0;AUS
